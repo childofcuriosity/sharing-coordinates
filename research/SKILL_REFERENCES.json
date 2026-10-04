@@ -1,0 +1,53 @@
+{
+  "scope": "Four recommended skills; provenance records content hashes, not an unverified upstream commit.",
+  "skills": [
+    {
+      "installed_name": "paper-review",
+      "source_url": "https://github.com/jam-cc/paper-review.skill/tree/main/.",
+      "ref": "main",
+      "retrieved_date": "2026-09-24",
+      "installation_path": "/root/.codex/skills/paper-review",
+      "upstream_skill_sha256": "05c1684c7769fa7170633c04e4c1a1dcf64b3fe51065407466c2465f5a1e66df",
+      "local_skill_sha256": "05c1684c7769fa7170633c04e4c1a1dcf64b3fe51065407466c2465f5a1e66df",
+      "file_count": 15,
+      "tree_inventory_sha256": "b1efadf736d1ae7fe44d9d6419710cb6ff411d9a65f8d7258f321d893868e0bd",
+      "adaptation": null
+    },
+    {
+      "installed_name": "ml-paper-writing",
+      "source_url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing/ml-paper-writing",
+      "ref": "main",
+      "retrieved_date": "2026-09-24",
+      "installation_path": "/root/.codex/skills/ml-paper-writing",
+      "upstream_skill_sha256": "96733e6d758642d792ed15b7c08eb90548d4775099368cd72a8312127f2fe911",
+      "local_skill_sha256": "96733e6d758642d792ed15b7c08eb90548d4775099368cd72a8312127f2fe911",
+      "file_count": 51,
+      "tree_inventory_sha256": "d9fa64695e790a8f90ac9fabe80772fd4671fadb275f025ed978bcd746713390",
+      "adaptation": null
+    },
+    {
+      "installed_name": "scientific-critical-thinking",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-critical-thinking",
+      "ref": "main",
+      "retrieved_date": "2026-09-24",
+      "installation_path": "/root/.codex/skills/scientific-critical-thinking",
+      "upstream_skill_sha256": "b77ba9ed1872d85d804125a339e2038984052e7aaf3616813ab79f5ad91c0558",
+      "local_skill_sha256": "b77ba9ed1872d85d804125a339e2038984052e7aaf3616813ab79f5ad91c0558",
+      "file_count": 8,
+      "tree_inventory_sha256": "34ebb7c9aef1076c43e7e6b525bb686bd2df77ff8a9dd7bdd4aa204daff3fe93",
+      "adaptation": null
+    },
+    {
+      "installed_name": "kdense-peer-review",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review",
+      "ref": "main",
+      "retrieved_date": "2026-09-24",
+      "installation_path": "/root/.codex/skills/kdense-peer-review",
+      "upstream_skill_sha256": "3422beafc240aa7d2703e71fe16e3400269a5ea17045d8b390a30efe58c3de67",
+      "local_skill_sha256": "a3085d1a5670e571ceda8b52c9e98edf3971775f210937697fcbe23aea578325",
+      "file_count": 24,
+      "tree_inventory_sha256": "dca0c24b775cb6939cdc7f129a60a3d7482964e9d554f042d04d0924fb176084",
+      "adaptation": "Renamed frontmatter name to kdense-peer-review to avoid collision with jam-cc paper-review; body unchanged."
+    }
+  ]
+}

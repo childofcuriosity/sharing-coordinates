@@ -1,0 +1,28 @@
+{
+  "format": "llm-secondary-stress-protocol-v1",
+  "created_utc": "2026-09-24T20:24:48.431564+00:00",
+  "models": [
+    "pythia1b",
+    "qwen4b",
+    "smol17b"
+  ],
+  "seed": 0,
+  "axes": [
+    "router_rank",
+    "router_interior",
+    "basis_rank"
+  ],
+  "levels": [
+    1.0,
+    0.1,
+    0.01,
+    0.001
+  ],
+  "noise": [
+    0.0,
+    0.0001
+  ],
+  "q": 4,
+  "source_sha256": "96f7fc95916b3f75c23586a68e8e9bda75ca929d284b1c9fa9e100618768a98d",
+  "scope": "Registered secondary illustration after calibration, before held-out recovery analysis. No threshold retuning; all 72 cases retained. Not additional trained checkpoints; real backbone is not evaluated after factor transformations."
+}

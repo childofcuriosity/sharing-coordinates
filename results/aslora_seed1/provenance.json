@@ -1,0 +1,424 @@
+{
+  "artifacts": {
+    "checkpoint": "/root/autodl-tmp/v2_1_decision/repo/results_aslora_deterministic/seed1/pre_first_merge_checkpoint.pt",
+    "provenance": "/root/autodl-tmp/v2_1_decision/repo/results_aslora_deterministic/seed1/provenance.json",
+    "results": "/root/autodl-tmp/v2_1_decision/repo/results_aslora_deterministic/seed1/audit.json",
+    "snapshot": "/root/autodl-tmp/v2_1_decision/repo/results_aslora_deterministic/seed1/pre_first_merge_snapshot.pt"
+  },
+  "cache_dir": "/root/autodl-tmp/v2_1_decision/hf/cache",
+  "config": {
+    "a_scope": "per_projection",
+    "alpha": 16.0,
+    "candidate_modes": [
+      "adjacent",
+      "all"
+    ],
+    "dataset_config": "mrpc",
+    "dataset_name": "glue",
+    "dataset_revision": "main",
+    "decision_scopes": [
+      "per_projection",
+      "joint"
+    ],
+    "deterministic_algorithms": true,
+    "device": "cuda",
+    "effective_batch_size": 16,
+    "epochs": 30,
+    "eval_batch_size": 16,
+    "first_merge_step": 560,
+    "gauge_atol": 5e-05,
+    "gauge_condition_limits": [
+      2.0,
+      4.0,
+      8.0,
+      30.0
+    ],
+    "gauge_rtol": 5e-05,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0004,
+    "local_files_only": true,
+    "max_grad_norm": 1.0,
+    "max_length": 512,
+    "merge_count": 7,
+    "merge_interval": 240,
+    "model_name": "/root/autodl-tmp/v2_1_decision/hf/roberta-base",
+    "model_revision": "main",
+    "num_workers": 0,
+    "paper_deviations": {},
+    "primary_action_evaluation_repeats": 2,
+    "primary_decision_scope": "per_projection",
+    "rank": 8,
+    "seed": 1,
+    "start_merge_step": 320,
+    "target_names": [
+      "query",
+      "value"
+    ],
+    "train_batch_size": 16,
+    "train_parquet": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/train-00000-of-00001.parquet",
+    "update_ratio_record_only": 0.5,
+    "validation_parquet": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/validation-00000-of-00001.parquet",
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.1
+  },
+  "dataset": {
+    "config": "mrpc",
+    "name": "glue",
+    "requested_revision": "main",
+    "source": "local_parquet",
+    "train_examples": 3668,
+    "train_fingerprint": "e4ee059d839b9b20",
+    "train_parquet": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/train-00000-of-00001.parquet",
+    "validation_examples": 408,
+    "validation_fingerprint": "040d3a02ffdc9d7f",
+    "validation_parquet": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/validation-00000-of-00001.parquet"
+  },
+  "decision_protocol": {
+    "candidate_evaluation": "same_complete_MRPC_validation_split",
+    "candidate_modes": [
+      "adjacent",
+      "all"
+    ],
+    "current_action_local_metric": "scaled_RMS_LoRA_output_disturbance_using_current_B_and_lower_layer_specific_premerge_activation_moment",
+    "current_action_network_metric": "temporary_parameter_tie_then_complete_validation_loss_accuracy_f1",
+    "gauge_generation_uses_validation": false,
+    "primary_scope": "per_projection",
+    "running_B_metrics": "selection_proxies_not_current_action_costs",
+    "sensitivity_scope": "joint_root_sum_of_squares",
+    "validation_loss_oracle": "post_hoc_baseline_only_not_used_for_gauge_selection"
+  },
+  "execution": {
+    "elapsed_training_seconds": 26.142987489700317,
+    "epoch_one_based": 3,
+    "micro_batch_within_epoch_one_based": 100,
+    "micro_batches_seen": 560,
+    "optimizer_step": 560,
+    "planned_total_optimizer_steps": 6900,
+    "warmup_steps": 414
+  },
+  "format": "aslora-mrpc-provenance-v1",
+  "hardware": {
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "platform": "Linux-5.15.0-136-generic-x86_64-with-glibc2.17",
+    "requested_device": "cuda"
+  },
+  "implementation_choices": {
+    "deterministic_execution": {
+      "cublas_workspace_config": ":4096:8",
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "requested": true,
+      "torch_deterministic_algorithms_enabled": true
+    },
+    "evaluation": "float32_no_autocast_model_eval",
+    "lora_dropout": 0.0,
+    "padding": "dynamic_to_longest_in_batch_with_max_length_512_truncation",
+    "primary_action_evaluation_repeats": 2,
+    "run_boundary": "stop_at_first_merge_without_committing_any_merge",
+    "shared_A_initialization": "normal_std_0.02_B_zero"
+  },
+  "input_artifacts": {
+    "binding_note": "the local model directory and parquet inputs are byte-bound before training; the state digest additionally binds all tensors and buffers after deterministic ASLoRA attachment",
+    "initial_attached_model_state_sha256": "d2f50e9ebacdc54e8e9f1dd5465680620fcd3031e92b38774672eb80920b7483",
+    "local_model": {
+      "file_count": 40,
+      "files": [
+        {
+          "relative_path": ".cache/huggingface/.gitignore",
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+          "size_bytes": 1
+        },
+        {
+          "relative_path": ".cache/huggingface/download/.gitattributes.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/.gitattributes.metadata",
+          "sha256": "bde1de79c12c50baed7d24f7781ac27b6560ff9efa892620852bac678685e7d9",
+          "size_bytes": 101
+        },
+        {
+          "relative_path": ".cache/huggingface/download/README.md.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/README.md.metadata",
+          "sha256": "1291120184ac23980eeda59c79b73a1c043b0b5ca83931298f66ac6869c47ef6",
+          "size_bytes": 100
+        },
+        {
+          "relative_path": ".cache/huggingface/download/config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/config.json.metadata",
+          "sha256": "3c9bbcffff817c03f64f9d5f4c51061c8572b7a3453363b79f5fd7467c712b22",
+          "size_bytes": 101
+        },
+        {
+          "relative_path": ".cache/huggingface/download/dict.txt.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/dict.txt.metadata",
+          "sha256": "2f260750016bac761b00a3555befdd259e0c23bfababdbbcd76fde805e76781c",
+          "size_bytes": 101
+        },
+        {
+          "relative_path": ".cache/huggingface/download/flax_model.msgpack.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/flax_model.msgpack.metadata",
+          "sha256": "b8344a51e7db21fa56510b78e11ab25174dbd98a055bde6e89daf4a7eb8637e9",
+          "size_bytes": 125
+        },
+        {
+          "relative_path": ".cache/huggingface/download/merges.txt.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/merges.txt.metadata",
+          "sha256": "1df79e70a9e249a7578d119f8be681a363e2efce934fac8cfffcc382d08f3a11",
+          "size_bytes": 100
+        },
+        {
+          "relative_path": ".cache/huggingface/download/model.safetensors.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/model.safetensors.metadata",
+          "sha256": "d0ca86b1b105580e280ee5c43aa51025575a0c19e2324d10588d331b800a84be",
+          "size_bytes": 125
+        },
+        {
+          "relative_path": ".cache/huggingface/download/pytorch_model.bin.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/pytorch_model.bin.metadata",
+          "sha256": "50d5df190e175249311f8a7252383bda77000d9af0d1739bd5940355e449a39a",
+          "size_bytes": 124
+        },
+        {
+          "relative_path": ".cache/huggingface/download/rust_model.ot.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/rust_model.ot.metadata",
+          "sha256": "51d8242ca3acdbc5eadbb0aa0cb813971dfd0c204d8e42671310c7afc67089b4",
+          "size_bytes": 124
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tf_model.h5.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tf_model.h5.metadata",
+          "sha256": "44ab9784e5d427208e3c66d577d99eeaca0048bdcbf3604b1a6b1bd8772fcb99",
+          "size_bytes": 124
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tokenizer.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tokenizer.json.metadata",
+          "sha256": "4affbbe3db8234604cba9b373351f137aeff6427bd4c2b2ea40a69190b356dc2",
+          "size_bytes": 101
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "sha256": "912bf54e37ebf267d9f5f3cc370e6c1d2c3d310287be096dda06d11ada46ae7e",
+          "size_bytes": 101
+        },
+        {
+          "relative_path": ".cache/huggingface/download/vocab.json.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "relative_path": ".cache/huggingface/download/vocab.json.metadata",
+          "sha256": "c376f9ef2e043ed7581dfdfb980a4c41a07bb01179eba844c8b077d6fe6f1993",
+          "size_bytes": 100
+        },
+        {
+          "relative_path": ".gitattributes",
+          "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+          "size_bytes": 445
+        },
+        {
+          "relative_path": "README.md",
+          "sha256": "139c5c5c8d734a8841928308cf7f083018aa5cc49f903c5199e3f1563b3ded51",
+          "size_bytes": 9079
+        },
+        {
+          "relative_path": "config.json",
+          "sha256": "ef0185e2aae6e06c5f105a285006952c340e20c7dbf43c86ec82601b13fc45e9",
+          "size_bytes": 481
+        },
+        {
+          "relative_path": "dict.txt",
+          "sha256": "2c31c5b236661067fe8626775eb995ef5fe808ac87d2ad4a6ddbef68550f5cc6",
+          "size_bytes": 603290
+        },
+        {
+          "relative_path": "flax_model.msgpack",
+          "sha256": "7647e7df15dfddb7d5c07fcbed7a21e3881ccfea085791cf09917aa05947bba3",
+          "size_bytes": 498796983
+        },
+        {
+          "relative_path": "merges.txt",
+          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+          "size_bytes": 456318
+        },
+        {
+          "relative_path": "model.safetensors",
+          "sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+          "size_bytes": 498818054
+        },
+        {
+          "relative_path": "pytorch_model.bin",
+          "sha256": "278b7a95739c4392fae9b818bb5343dde20be1b89318f37a6d939e1e1b9e461b",
+          "size_bytes": 501200538
+        },
+        {
+          "relative_path": "rust_model.ot",
+          "sha256": "9eab94d556cd9151ba760802bc2151c7ac51675bb81e017b25de41c1ebd6c3a0",
+          "size_bytes": 655617312
+        },
+        {
+          "relative_path": "tf_model.h5",
+          "sha256": "8ad49e51cdfa998f1d26f24d6966e1a00c3df44c6e334995fdb4d622ce1e4e10",
+          "size_bytes": 657434796
+        },
+        {
+          "relative_path": "tokenizer.json",
+          "sha256": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+          "size_bytes": 1355863
+        },
+        {
+          "relative_path": "tokenizer_config.json",
+          "sha256": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce",
+          "size_bytes": 25
+        },
+        {
+          "relative_path": "vocab.json",
+          "sha256": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655",
+          "size_bytes": 898823
+        }
+      ],
+      "inventory_sha256": "8eba55c3adf87b2a677b3a55677a21648d9cc6548ae8b83f70e36a32aeb2cb9f",
+      "kind": "directory",
+      "resolved_path": "/root/autodl-tmp/v2_1_decision/hf/roberta-base"
+    },
+    "train_parquet": {
+      "file_count": 1,
+      "files": [
+        {
+          "relative_path": "train-00000-of-00001.parquet",
+          "sha256": "61fd41301e0e244b0420c4350a170c8e7cf64740335fc875a4af2d79af0df0af",
+          "size_bytes": 649281
+        }
+      ],
+      "inventory_sha256": "dc2efec8ce087267664001a753607f8153c54824be21a024315f0f8349e5a78b",
+      "kind": "file",
+      "resolved_path": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/train-00000-of-00001.parquet"
+    },
+    "validation_parquet": {
+      "file_count": 1,
+      "files": [
+        {
+          "relative_path": "validation-00000-of-00001.parquet",
+          "sha256": "33c007dbf5bfa8463d87a13e6226df8c0fcf2596c2cd39d0f3bb79754e00f50f",
+          "size_bytes": 75678
+        }
+      ],
+      "inventory_sha256": "51957416363e590d0a64f114a885798681fcfda6880de53734bff4f73b670e53",
+      "kind": "file",
+      "resolved_path": "/root/autodl-tmp/v2_1_decision/hf/glue/mrpc/validation-00000-of-00001.parquet"
+    }
+  },
+  "model": {
+    "architecture": "RobertaForSequenceClassification",
+    "local_files_only": true,
+    "requested_name": "/root/autodl-tmp/v2_1_decision/hf/roberta-base",
+    "requested_revision": "main",
+    "resolved_commit_hash": null,
+    "tokenizer_resolved_commit_hash": null
+  },
+  "optimizer": {
+    "decay_grouping": "bias_and_layernorm_no_decay",
+    "linear_scheduler": true,
+    "max_grad_norm": 1.0,
+    "name": "torch.optim.AdamW",
+    "warmup_ratio": 0.06
+  },
+  "paper_evidence": {
+    "architecture": "ASLoRA arXiv:2412.10135v2 Section 4.1 uses RoBERTa-base on GLUE and fine-tunes W_Q, W_V, and the classification head; the shared A is cross-layer and B is layer-specific before merging.",
+    "candidate_ambiguity": "ASLoRA arXiv:2412.10135v2 Algorithm 1 says to calculate and sort all S_{i,j}, while the prose immediately below it says pairwise similarity between adjacent layers. Both 'all' and 'adjacent' are therefore exposed explicitly.",
+    "decision_scope": "ASLoRA arXiv:2412.10135v2 Figure 3 reports separate query and value sharing configurations, so per-projection selection is the primary interpretation.  Algorithm 1 does not explicitly define multi-target scheduling; a joint root-sum-of-squares interpretation is reported as sensitivity analysis.",
+    "first_merge_timing": "ASLoRA arXiv:2412.10135v2 Algorithm 1 indexes t=1,...,T and merges when t>Ts and (t-Ts)%m==0; for MRPC this makes the first event t=560, not t=320.",
+    "mrpc_hyperparameters": "ASLoRA arXiv:2412.10135v2 Appendix Table 5 gives MRPC: learning rate 4e-4, batch size 16, 30 epochs, weight decay 0.1, max length 512, Ts=320, merge interval 240, rank 8, alpha 16, linear scheduler, and warmup ratio 0.06.",
+    "running_average_timing": "ASLoRA arXiv:2412.10135v2 Algorithm 1 updates the cumulative B average before testing the merge condition.  The paper does not state whether B^t is sampled before or after the optimizer update; this runner declares after-update sampling.",
+    "undefined_update_ratio": "ASLoRA arXiv:2412.10135v2 Appendix Table 5 lists update ratio lambda=0.5 but the available method text does not define an operation using it.  It is recorded in provenance and deliberately not reverse-engineered into the algorithm."
+  },
+  "seed": 1,
+  "source_ambiguities": {
+    "candidate_ambiguity": "ASLoRA arXiv:2412.10135v2 Algorithm 1 says to calculate and sort all S_{i,j}, while the prose immediately below it says pairwise similarity between adjacent layers. Both 'all' and 'adjacent' are therefore exposed explicitly.",
+    "factorization": "ASLoRA arXiv:2412.10135v2 Eq. (2) uses h_i = W_i x + B_i A x: A is shared across layers and B_i is layer specific before merging.",
+    "merge_direction": "The available ASLoRA arXiv:2412.10135v2 states that, when a pair is merged, the lower layer uses the B matrix of the upper layer.  Layer indices here increase from lower to upper.",
+    "qv_scope_ambiguity": "The available ASLoRA arXiv:2412.10135v2 experiments adapt W_Q and W_V, but the text does not unambiguously state whether one A and one merge graph are shared jointly across the Q/V families.  The adapter defaults to one cross-layer A per projection and supports a joint layer-pair decision as an explicit option.",
+    "running_average": "ASLoRA arXiv:2412.10135v2 Eq. (3) defines the similarity input as the cumulative average of each B_i over all observed training steps; it does not specify whether a step is sampled immediately before or after the optimizer update.",
+    "similarity_wording": "ASLoRA arXiv:2412.10135v2 Equation (4) makes smaller L2 distance mean higher similarity and Algorithm 1 selects the minimum distance.  Later prose says 'lowest similarity'; this implementation follows the equation and algorithm."
+  },
+  "source_sha256": {
+    "experiments/run_aslora_mrpc.py": "ab09259c092a9a3fab49e5aceb06aad7f56eb20b923b6edb3965bd8c940576d9",
+    "src/aslora_training.py": "69818d7c8eb7d20ec3c123f49b0c42ec3ffeb66b835bb79429083bcb4a646664",
+    "src/aslora_witness.py": "d57734071e18ab0f4384772a048faa0264813411069ceabe4fca82906d66bc64"
+  },
+  "timeline": {
+    "condition": "t>Ts and (t-Ts)%m==0",
+    "first_merge_epoch_one_based": 3,
+    "first_merge_optimizer_step": 560,
+    "first_merge_step_within_epoch_one_based": 100,
+    "gradient_accumulation_steps": 1,
+    "optimizer_step_indexing": "one_based",
+    "optimizer_steps_per_epoch": 230,
+    "planned_total_optimizer_steps": 6900,
+    "running_average_observation": "after_each_optimizer_update",
+    "train_micro_batches_per_epoch": 230
+  },
+  "undefined_paper_fields": {
+    "handling": "recorded_not_implemented_because_operation_is_unspecified",
+    "update_ratio_lambda": 0.5
+  },
+  "versions": {
+    "cuda_runtime": "11.3",
+    "datasets": "2.16.1",
+    "numpy": "1.22.4",
+    "python": "3.8.10",
+    "tokenizers": "0.15.2",
+    "torch": "1.11.0+cu113",
+    "transformers": "4.36.2"
+  }
+}

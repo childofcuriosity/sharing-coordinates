@@ -1,0 +1,69 @@
+\section{Introduction}
+
+When several layers share a learned bank of parameters, their effective
+weights can be written as $\Theta=AB$: each row of a router $A$ selects a
+convex combination of the rows of a jointly learned basis matrix $B$.
+The router is useful for optimization and compression, but its entries are
+not uniquely determined by the effective weights. What additional observation
+would identify the \emph{current} factors, rather than merely select a
+convenient representation?
+
+Static ambiguity is established simplex-structured matrix factorization
+(SSMF) theory~\citep{vuthanh2023bounded}. For example, the invertible
+transform $M_s=(1-s)I+s\ones\ones^\top/K$, $0<s<1$, preserves the product
+under $(A,B)\mapsto(AM_s,M_s^{-1}B)$ while moving each router row toward
+uniformity. This increases the entropy of nonuniform rows. It preserves
+coordinate ordering and argmax assignments; other feasible, nonuniform
+changes of basis can change the argmax partition
+(Appendix~\ref{app:secondary-theory-statements}). An effective model alone
+therefore need not determine coordinate-based summaries or decisions.
+
+We study an additional observation supplied by a specified optimizer:
+the instantaneous response of the effective parameters to an arbitrary
+effective gradient. With $A=\operatorname{softmax}_{\rm row}(Z/\tau)$,
+fixed temperature, and known positive Euclidean learning rates for $Z$ and
+$B$, this is a linear map $\mathcal R_{A,B}:G\mapsto-\dot\Theta$.
+It describes controlled interventions at a fixed checkpoint. The full map contains more information than a single task-gradient
+response at that checkpoint. It is a controlled observation distinct from
+a passive training trajectory and fixes the optimizer metric being compared.
+
+Our central result is that this observation resolves the static ambiguity.
+For strictly positive, full-column-rank routers and full-row-rank bases
+with the same product, equal response operators imply a common basis
+permutation, and conversely. The proof recovers a Gram matrix and a family
+of router covariances from the response, then reduces the remaining
+ambiguity to simultaneous diagonalization. On uniformly nondegenerate
+domains, the same chain gives an explicit inverse-stability bound.
+
+The complete-operator premise can also be replaced by finite, imperfect
+observations. If $D-K\ge L$, we design $K$ unit-norm queries from a noisy
+observed product. Every pair of factors consistent with the product and
+response error budgets is close modulo permutation, with an explicit bound
+on the diameter of the \emph{entire} feasible set. The true basis need not
+lie in the estimated product subspace, and candidates need not belong to one
+local solution branch. This is an information guarantee on a declared domain,
+not an efficient recovery algorithm or a data-derived certificate of that
+domain's rank and interior margins.
+
+The contributions are:
+\begin{enumerate}
+\item A model-specific characterization of the complete Euclidean-response
+stabilizer on a common product fiber, with rank and observation-boundary
+counterexamples (Section~\ref{sec:response_identifiability}).
+\item An explicit inverse bound for the original factors, a bridge allowing
+small product perturbations, and a whole-feasible-set diameter bound from
+noisy products and $K$ designed response queries
+(Sections~\ref{sec:quantitative}--\ref{sec:finite-observations}).
+\item A frozen-protocol audit of shared modules on nine pretrained language
+models (160M--8B), across three adapter seeds and three gradient domains.
+Recovery, precision failures, transferred rejection rules, and a matched
+structural decision test distinguish coordinate identification from
+downstream usefulness (Section~\ref{sec:experiments}).
+\end{enumerate}
+
+The response, diagonalization, robust-inverse, and probing tools have
+substantial precedents. Our contribution is their complete reduction for
+this observation model and the resulting finite-noisy guarantee, rather
+than a new general symmetry principle. The identified object is the current
+optimizer-dependent factorization. Neither the theorem nor the experiments
+recover the historical process that produced a model.

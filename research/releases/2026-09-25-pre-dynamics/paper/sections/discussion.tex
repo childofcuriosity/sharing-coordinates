@@ -1,0 +1,36 @@
+\section{Discussion and limitations}
+
+Static factors need not be unique, yet a specified optimizer can expose
+additional information about their current coordinates. For the finite
+softmax-router/shared-basis model, complete Euclidean response identifies
+the factors up to permutation on a common full-rank product fiber.
+The quantitative reduction controls original factor error on named
+nondegenerate domains. Its finite-noisy consequence bounds the whole
+feasible set using queries constructed from the observed product, without
+requiring the true basis to lie in an estimated subspace.
+
+The guarantee has substantial conditions: known positive Euclidean block
+rates and temperature, internal access to the effective product and full
+matrix-valued responses, rank and interior margins, and, for the stated
+query construction, $D-K\ge L$. The product error must be below a
+domain-dependent threshold. The constants are conservative, query
+optimality is unproved, and an efficient globally feasible recovery
+algorithm is not supplied. Rank loss, proximity to the simplex boundary,
+and weak observation directions obstruct stronger uniform conclusions.
+
+The numerical results illustrate these distinctions. Precise controlled
+responses permit accurate recovery, while finite arithmetic and noisy
+ill-conditioned problems can produce large errors and falsely accepted
+estimates. The empirical rejection rule and candidate-local check cannot
+replace the global theorem's domain assumptions. No result here identifies
+an AdamW trajectory, a historical sharing graph, or a nonlinear
+output-mixture model. The pretrained-model study covers one fixed-rank,
+64-channel additive module and three dense model families up to 8B;
+it does not establish universality across LLM architectures, sizes, or
+adapter parameterizations. Family comparisons confound architecture,
+pretraining data and, for the selected Qwen3 models, post-training.
+The simple effective-parameter control matches the recovered structural
+partitions, so this study does not establish an incremental decision or
+compression benefit. The useful positive conclusion is specific: finite
+optimizer-response information can resolve a static coordinate ambiguity,
+with an explicit account of the observations and margins required.

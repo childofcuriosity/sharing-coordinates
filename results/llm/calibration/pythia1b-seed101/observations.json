@@ -1,0 +1,148 @@
+{
+  "model": "pythia1b",
+  "seed": 101,
+  "split": "calibration",
+  "freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "observations_sha256": "40171606f823cabad124b4737c03a8d0ac8f1d781e7e255604cf1a09a601325a",
+  "cases": 36,
+  "compression_failures": 0,
+  "controls": [
+    {
+      "family": "designed",
+      "formula_relative": 7.621378970513693e-17,
+      "permutation_gap": 1.0486400504040877e-16,
+      "nonpermutation_gap": 0.2144914843506735,
+      "nonpermutation_product_error": 1.63281290271289e-16
+    },
+    {
+      "family": "gaussian",
+      "formula_relative": 7.095078101986618e-17,
+      "permutation_gap": 1.0500958958438992e-16,
+      "nonpermutation_gap": 0.453361238421912,
+      "nonpermutation_product_error": 1.63281290271289e-16
+    },
+    {
+      "family": "natural_general",
+      "formula_relative": 6.989212636055871e-17,
+      "permutation_gap": 1.0518388001188007e-16,
+      "nonpermutation_gap": 0.45115250034732707,
+      "nonpermutation_product_error": 1.63281290271289e-16
+    }
+  ],
+  "gates": {
+    "formula": true,
+    "permutation": true,
+    "product": true
+  },
+  "finite_steps": [
+    {
+      "dtype": "torch.float64",
+      "step": 0.001,
+      "error": 2.535124236627024e-07
+    },
+    {
+      "dtype": "torch.float64",
+      "step": 0.0001,
+      "error": 2.5351273018078784e-08
+    },
+    {
+      "dtype": "torch.float64",
+      "step": 1e-05,
+      "error": 2.5450321901705815e-09
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 0.001,
+      "error": 0.0011249936818064257
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 0.0001,
+      "error": 0.009221584021426834
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 1e-05,
+      "error": 0.07283146142094762
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 0.001,
+      "error": 1.1323043234278218
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 0.0001,
+      "error": 1.2823030796711574
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 1e-05,
+      "error": 1.008127948110396
+    }
+  ],
+  "timings": [
+    {
+      "family": "designed",
+      "noise": 0.0,
+      "seconds": 2.3738246760331094
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.0,
+      "seconds": 1.6278567602857947
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.0,
+      "seconds": 1.7860240819863975
+    },
+    {
+      "family": "designed",
+      "noise": 1e-06,
+      "seconds": 1.5837392560206354
+    },
+    {
+      "family": "gaussian",
+      "noise": 1e-06,
+      "seconds": 1.548398443032056
+    },
+    {
+      "family": "natural_general",
+      "noise": 1e-06,
+      "seconds": 1.5788031527772546
+    },
+    {
+      "family": "designed",
+      "noise": 0.0001,
+      "seconds": 1.5836610258556902
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.0001,
+      "seconds": 1.547723304014653
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.0001,
+      "seconds": 1.5745900431647897
+    },
+    {
+      "family": "designed",
+      "noise": 0.01,
+      "seconds": 1.5831538289785385
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.01,
+      "seconds": 1.5474243108183146
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.01,
+      "seconds": 1.5782697382383049
+    }
+  ],
+  "peak_gpu_bytes": 1067743744,
+  "seconds": 21.523760661948472
+}

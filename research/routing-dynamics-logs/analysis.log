@@ -1,0 +1,16 @@
+{
+  "checkpoints": 27,
+  "primary_decision_units": 9,
+  "coefficient_vs_weight_different": 7,
+  "router_vs_weight_different": 4,
+  "sufficient_pairwise_separation": 1
+}
+{"model": "pythia160m", "seed": 0, "exact": {"weight": {"partitions": 15400, "best_partition": [[0, 2, 9], [1, 3, 6], [4, 5, 8], [7, 10, 11]], "cost": 0.9846483881954206, "runnerup_gap": 0.007874883377122943, "coefficient_excess": 0.3651045837415424}, "router": {"partitions": 15400, "best_partition": [[0, 2, 4], [1, 6, 7], [3, 10, 11], [5, 8, 9]], "cost": 0.6475868159601661, "runnerup_gap": 0.01435872253733983, "coefficient_excess": 0.10951148567297264}}}
+{"model": "pythia160m", "seed": 1, "exact": {"weight": {"partitions": 15400, "best_partition": [[0, 2, 3], [1, 7, 9], [4, 5, 10], [6, 8, 11]], "cost": 0.6083060496814435, "runnerup_gap": 0.06149632429613805, "coefficient_excess": 0.364773577354885}, "router": {"partitions": 15400, "best_partition": [[0, 2, 3], [1, 7, 9], [4, 5, 10], [6, 8, 11]], "cost": 0.4852049495216462, "runnerup_gap": 0.04738418659396676, "coefficient_excess": 0.07486162924452017}}}
+{"model": "pythia160m", "seed": 2, "exact": {"weight": {"partitions": 15400, "best_partition": [[0, 1, 8], [2, 4, 5], [3, 9, 10], [6, 7, 11]], "cost": 1.7177445444105106, "runnerup_gap": 0.14115448421303434, "coefficient_excess": 0.19880336798756515}, "router": {"partitions": 15400, "best_partition": [[0, 1, 8], [2, 3, 10], [4, 5, 9], [6, 7, 11]], "cost": 0.9735112829013592, "runnerup_gap": 0.10692140471531686, "coefficient_excess": -1.1102230246251565e-16}}}
+Router-boundary speed -0.10692169818808145
+{"t": -0.1, "loss": 0.05580524235878967, "router_partition": [[0, 5], [1, 3], [2, 4]], "router_gap": 0.010808811459254386, "p_minus_q": 0.010808811459253942, "cluster_partition": [[0, 5], [1, 3], [2, 4]], "cluster_gap": 0.010818539458768386, "alpha": 0.13054027121954018, "sigma_a": 0.20416311506382942, "sigma_b": 0.9965224042544913}
+{"t": -0.01, "loss": 0.05368559028934608, "router_partition": [[0, 5], [1, 3], [2, 4]], "router_gap": 0.0010703667410547624, "p_minus_q": 0.0010703667410547624, "cluster_partition": [[0, 5], [1, 3], [2, 4]], "cluster_gap": 0.008735150757251127, "alpha": 0.13044581897732055, "sigma_a": 0.20466333823165056, "sigma_b": 0.9996676847962966}
+{"t": 0.0, "loss": 0.053460849094040724, "router_partition": [[0, 5], [1, 3], [2, 4]], "router_gap": -4.440892098500626e-16, "p_minus_q": 5.551115123125783e-17, "cluster_partition": [[0, 5], [1, 3], [2, 4]], "cluster_gap": 0.008506616257088873, "alpha": 0.13043478260869565, "sigma_a": 0.20472300724955014, "sigma_b": 1.0}
+{"t": 0.01, "loss": 0.05323804601326146, "router_partition": [[0, 3], [1, 5], [2, 4]], "router_gap": 0.0010680707762440456, "p_minus_q": -0.001068070776243657, "cluster_partition": [[0, 5], [1, 3], [2, 4]], "cluster_gap": 0.00827864976102495, "alpha": 0.13042364268192716, "sigma_a": 0.2047834755444661, "sigma_b": 0.9996865211620753}
+{"t": 0.1, "loss": 0.051312033862767004, "router_partition": [[0, 3], [1, 5], [2, 4]], "router_gap": 0.01057908673501018, "p_minus_q": -0.010579086735010235, "cluster_partition": [[0, 5], [1, 3], [2, 4]], "cluster_gap": 0.006251569732855858, "alpha": 0.13031892185965668, "sigma_a": 0.20536281011284227, "sigma_b": 0.9970824649802607}

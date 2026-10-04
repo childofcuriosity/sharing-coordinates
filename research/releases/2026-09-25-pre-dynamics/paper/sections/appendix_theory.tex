@@ -1,0 +1,1377 @@
+\section{Theory proofs, extensions, and scope}
+\label{app:theory}
+
+This appendix gives complete proofs for Section~\ref{sec:theory}.  It also
+records edge cases that are easy to lose when a soft router is visualized as a
+discrete sharing graph.
+
+\subsection{Static SSMF gauge details}
+\label{app:gauge_proof}
+
+The non-identifiability conclusion and the symmetric uniformizing path are
+the unconstrained SSMF result of
+\citet[Section~IV-A]{vuthanh2023bounded} under
+\(X=\Theta^\top\), \(W=B^\top\), and \(H=A^\top\); see
+Appendix~\ref{app:literature}.  The proof below only records the direct local
+row-sum-preserving extension used to delimit which router summaries change.
+
+\begin{proof}[Proof of Proposition~\ref{thm:continuous_gauge}]
+The constraint $H\ones=0$ implies
+\begin{equation}
+  M_t\ones=(I+tH)\ones=\ones.
+  \label{eq:app_rowsum}
+\end{equation}
+The determinant is continuous and $\det(M_0)=1$, so $M_t$ is invertible for
+all sufficiently small $|t|$.  Strict positivity is also an open condition:
+because $A$ has finitely many entries and $A_{ij}>0$, there is a neighborhood
+of zero in which every entry of $AM_t$ remains positive.  Therefore
+\begin{equation}
+  A_t\ones=AM_t\ones=A\ones=\ones,
+  \qquad A_t>0,
+\end{equation}
+and $A_t\in\simplex_K^L$.  The effective parameters are unchanged because
+\begin{equation}
+  A_tB_t=(AM_t)(M_t^{-1}B)=AB.
+\end{equation}
+
+\Eqref{eq:app_rowsum} also gives
+$M_t^{-1}\ones=\ones$.  Hence the augmented basis matrix satisfies
+\begin{equation}
+ [B_t,\ones]
+ =[M_t^{-1}B,M_t^{-1}\ones]
+ =M_t^{-1}[B,\ones].
+ \label{eq:app_affine_rank}
+\end{equation}
+Left multiplication by an invertible matrix preserves row rank, so affine
+independence is preserved exactly, not merely infinitesimally.
+
+It remains to rule out a permutation.  If $A_t=AP$ for a permutation matrix
+$P$, then $A(M_t-P)=0$.  Since $A$ has column rank $K$, it has a left inverse,
+and therefore $M_t=P$.  The identity is the only permutation matrix in a
+sufficiently small neighborhood of $I$.  For nonzero $t$ and nonzero $H$,
+$M_t\ne I$, yielding a contradiction.  Finally, the linear constraint
+$H\ones=0$ supplies $K$ independent equations on $K^2$ entries, so its
+solution space has dimension $K(K-1)$.  Full column rank makes these local
+directions distinct at $A$.
+\end{proof}
+
+Any strictly positive router can be written as a softmax: for fixed
+$\tau>0$, take $z_{ij}=\tau\log A_{ij}$, up to an arbitrary additive constant
+in each row.  Thus softmax normalization does not eliminate the orbit.
+
+\paragraph{Entropy-changing gauges.}
+For $M_s$ in \eqref{eq:uniformizing_gauge}, the eigenvalue along
+$\ones$ is one and every eigenvalue orthogonal to $\ones$ is $1-s$; hence it
+is invertible for $0<s<1$.  Since
+\begin{equation}
+  A\frac{\ones\ones^\top}{K}
+  =\frac{\ones_L\ones^\top}{K}
+  =U,
+\end{equation}
+we have $AM_s=(1-s)A+sU$.  Strict concavity of Shannon entropy gives
+\begin{equation}
+ H((1-s)a_i+su)
+ \ge(1-s)H(a_i)+sH(u)>H(a_i)
+\end{equation}
+for every nonuniform $a_i$, because $u$ is the unique entropy maximizer.
+The effective parameters remain exactly unchanged after replacing $B$ by
+$M_s^{-1}B$.  As $s\uparrow1$, the router can approach uniform while the
+basis norm may grow.  A norm penalty can prefer one member of this orbit, but
+that is a gauge-fixing optimization convention rather than identification by
+the data.
+
+\paragraph{Verification of the argmax counterexample.}
+The matrix $M$ in \eqref{eq:argmax_example} is positive, row
+stochastic, and has determinant $0.5$.  Direct multiplication gives
+\begin{equation}
+ AM=
+ \begin{bmatrix}
+ 0.45&0.55\\
+ 0.55&0.45\\
+ 0.60&0.40\\
+ 0.85&0.15
+ \end{bmatrix}.
+\end{equation}
+Thus two layer assignments flip.  If $B$ has two distinct rows, those rows are
+affinely independent; \eqref{eq:app_affine_rank} shows that
+$M^{-1}B$ remains so.  The example therefore does not rely on collapsed
+bases.
+
+\begin{proof}[Proof of Proposition~\ref{thm:end_to_end_impossibility}]
+Let $(A,B)$ and $(A',B')$ be the two factorizations.  Gauge equivalence gives
+$AB=A'B'=\Theta$.  By assumption, for every input $x$,
+\begin{equation}
+  F(x;A,B)=F(x;AB)=F(x;A'B')=F(x;A',B').
+\end{equation}
+The complete input--output process, including its distribution under any
+design over inputs, is therefore identical in the two worlds.  Every
+possibly randomized estimator has the same output distribution in both
+worlds.  If the two target router summaries differ, the estimator cannot equal
+both with probability one.  The argument already grants the estimator all
+function values, so increasing the sample size cannot repair the failure.
+\end{proof}
+
+The proposition assumes that factors enter the architecture only through the
+parameter product.  If all nonlinear basis modules are executed separately
+and their outputs are mixed, an arbitrary linear change of basis need not
+remain in that model class.  No claim for such output-space mixtures follows
+from this proof.
+
+\subsection{Optimizer-response stabilizer}
+\label{app:response_proofs}
+
+We use the convention of Section~\ref{sec:response_identifiability}.  Set
+\begin{equation}
+ \lambda_Z=\eta_Z/\tau^2,
+ \qquad
+ C_i=\operatorname{Diag}(a_i)-a_ia_i^\top,
+ \qquad
+ H_i=B^\top C_i^2B.
+ \label{eq:app_response_notation}
+\end{equation}
+With rows of the input and output represented as column vectors, the
+\((i,j)\) block of \(\mathcal R_{A,B}\) is
+\begin{equation}
+ [\mathcal R_{A,B}]_{ij}
+ =\eta_B(a_i^\top a_j)I_D
+  +\mathbf 1\{i=j\}\lambda_ZH_i.
+ \label{eq:app_response_blocks}
+\end{equation}
+
+\begin{proof}[Proof of Theorem~\ref{thm:response_stabilizer}]
+Because both factorizations have rank \(K\), their column spaces equal the
+column space of their common product.  Standard full-rank factorization
+algebra therefore gives a unique \(M\in\operatorname{GL}(K)\) satisfying
+\begin{equation}
+ A'=AM,\qquad B'=M^{-1}B.
+ \label{eq:app_response_gauge}
+\end{equation}
+Both routers have unit row sums, so
+\(A(M\ones-\ones)=0\).  Full column rank of \(A\) gives
+\begin{equation}
+ M\ones=\ones.
+ \label{eq:app_response_rowsum}
+\end{equation}
+
+Equality of the response on every \(G\) is equality of every block in
+\eqref{eq:app_response_blocks}.  For \(i\ne j\), it gives
+\begin{equation}
+ a_i^\top a_j=(a_i')^\top a_j'.
+ \label{eq:app_response_offdiag_gram}
+\end{equation}
+For a diagonal block, define
+\(H_i'=(B')^\top(C_i')^2B'\).  Its equality can be rearranged as
+\begin{equation}
+ H_i-H_i'=c_iI_D,
+ \qquad
+ c_i=-\frac{\eta_B}{\lambda_Z}
+   \bigl(\|a_i\|_2^2-\|a_i'\|_2^2\bigr)
+ \label{eq:app_response_scalar_identity}
+\end{equation}
+for a scalar \(c_i\).  Every simplex covariance satisfies
+\(C_i\succeq0\) and \(C_i\ones=0\); full row rank of \(B\) therefore gives
+\(H_i\succeq0\) and \(\operatorname{rank}(H_i)\le K-1<D\).  The same holds for
+\(H_i'\).  If \(c_i>0\), then \(H_i=H_i'+c_iI_D\) would be positive
+definite; if \(c_i<0\), then \(H_i'=H_i-c_iI_D\) would be positive definite.
+Both contradict singularity, so \(c_i=0\).  The remaining scalar part of the
+diagonal block then gives
+\(\|a_i\|_2^2=\|a_i'\|_2^2\).  Together with
+\eqref{eq:app_response_offdiag_gram},
+\begin{equation}
+ AA^\top=A'A'^\top=AMM^\top A^\top.
+\end{equation}
+Multiplication by a left inverse of \(A\) and its transpose yields
+\begin{equation}
+ MM^\top=I_K.
+ \label{eq:app_response_orthogonal}
+\end{equation}
+
+Since \(H_i=H_i'\), substituting \eqref{eq:app_response_gauge} and cancelling
+\(B\) with a right inverse gives
+\begin{equation}
+ C_i^2=M^{-\top}(C_i')^2M^{-1}.
+\end{equation}
+By \eqref{eq:app_response_orthogonal}, this is
+\begin{equation}
+ C_i^2=M(C_i')^2M^\top=(MC_i'M^\top)^2.
+\end{equation}
+Both \(C_i\) and \(MC_i'M^\top\) are positive semidefinite.  Uniqueness of
+the positive-semidefinite square root therefore gives
+\begin{equation}
+ C_i=MC_i'M^\top.
+ \label{eq:app_response_jacobian_conjugacy}
+\end{equation}
+
+In column convention, \(a_i'=M^\top a_i\).  Expanding
+\eqref{eq:app_response_jacobian_conjugacy}, the two rank-one terms cancel and
+leave
+\begin{equation}
+ \operatorname{Diag}(a_i)
+ =M\operatorname{Diag}(a_i')M^\top.
+ \label{eq:app_response_diagonal_algebra}
+\end{equation}
+For distinct \(r,s\), the \((r,s)\) entry says
+\begin{equation}
+ \sum_{\ell=1}^K M_{r\ell}M_{s\ell}a'_{i\ell}=0
+ \qquad\text{for every }i.
+\end{equation}
+The rows of \(A'\) span \(\RR^K\), hence
+\(M_{r\ell}M_{s\ell}=0\) for every \(\ell\).  Thus each column of the
+orthogonal \(M\) has exactly one nonzero entry, equal to \(+1\) or \(-1\):
+\(M\) is a signed permutation.  \Eqref{eq:app_response_rowsum}
+removes the negative signs, so \(M=P\) is a permutation matrix.
+
+Conversely, if \(A'=AP\) and \(B'=P^\top B\), then
+\(a_i'=P^\top a_i\), \(C_i'=P^\top C_iP\), the router Gram matrix is
+unchanged, and
+\begin{equation}
+ (B')^\top(C_i')^2B'=B^\top C_i^2B.
+\end{equation}
+Every block in \eqref{eq:app_response_blocks} is therefore unchanged.  This
+proves both directions.
+\end{proof}
+
+\subsection{A quantitative inverse for the response}
+\label{app:response_quantitative}
+
+The exact stabilizer has a linear inverse on any uniformly interior,
+well-conditioned, norm-bounded set.  The following constants are explicit so
+that the claim is checkable; they are not intended to be numerically tight.
+For a linear map between matrix spaces, \(\|\cdot\|_{F\to F}\) denotes the
+operator norm induced by the Frobenius norm.
+
+\begin{theorem}[Quantitative optimizer-response stability]
+\label{thm:response_stability}
+Let \(K\ge2\), \(L\ge K\), and \(D\ge K\).  Let
+\(A,A'\in\RR^{L\times K}\) be row-stochastic and let
+\(B,B'\in\RR^{K\times D}\).  Suppose
+\begin{align}
+ \min_{i,j}\{A_{ij},A'_{ij}\}&\ge\alpha>0,
+ \label{eq:app_stability_interior}\\
+ \sigma_{\min}(A),\sigma_{\min}(A')&\ge s_A>0,
+ &
+ \sigma_{\min}(B),\sigma_{\min}(B')&\ge s_B>0,
+ \label{eq:app_stability_singular}\\
+ \|A\|_F,\|A'\|_F&\le L_A,
+ &
+ \|B\|_F,\|B'\|_F&\le L_B,
+ \label{eq:app_stability_norms}\\
+ AB&=A'B'.
+ \label{eq:app_stability_product}
+\end{align}
+Both response operators are defined with the same
+\(\tau,\eta_Z,\eta_B>0\).  Put
+\(\lambda_Z=\eta_Z/\tau^2\) and
+\begin{equation}
+ \delta=\|\mathcal R_{A,B}-\mathcal R_{A',B'}\|_{F\to F}.
+ \label{eq:app_stability_delta}
+\end{equation}
+Then
+\begin{equation}
+ \min_{P\in\mathfrak S_K}
+ \left(\|A'-AP\|_F^2+\|B'-P^\top B\|_F^2\right)^{1/2}
+ \le C\delta,
+ \label{eq:app_stability_conclusion}
+\end{equation}
+where the following is one finite, fully explicit choice.  First define the
+factorization and Gram constants
+\begin{equation}
+ L_M=\max\{1,L_A/s_A\},\qquad
+ c_G=\frac{L}{\eta_Bs_A^2},\qquad
+ c_H=\frac{2}{\lambda_Zs_B^2}.
+ \label{eq:app_stability_constants_gram}
+\end{equation}
+Next define the covariance and diagonal-algebra constants
+\begin{align}
+ \mu_*&=\alpha\left(1+\frac{1}{4L_M^2}\right),&
+ c_J&=\frac{L_M^2(c_G+c_H)}{\mu_*},&
+ c_D&=\frac{\sqrt{LK}}{s_A}c_J.
+ \label{eq:app_stability_constants_cov}
+\end{align}
+Finally define the row-rounding and global constants
+\begin{align}
+ c_{\rm row}
+ &=\left[Kc_D^2+(c_G+Kc_D^2)^2\right]^{1/2},
+ \label{eq:app_stability_constants_row}\\
+ \delta_0
+ &=\min\left\{1,\frac{1}{2c_G},
+                    \frac{1}{2\sqrt K\,c_{\rm row}}\right\},
+ \label{eq:app_stability_constants_delta0}\\
+ C_{\rm loc}
+ &=\sqrt{L_A^2+(L_ML_B)^2}\,\sqrt K\,c_{\rm row},&
+ C
+ &=\max\left\{C_{\rm loc},
+       \frac{2\sqrt{L_A^2+L_B^2}}{\delta_0}\right\}.
+ \label{eq:app_stability_constants_global}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Except where a Frobenius norm is displayed explicitly, all matrix norms in
+this proof are spectral norms.  We divide the argument into four steps.
+
+\paragraph{Step 1: recovering the router Gram matrix and an almost-orthogonal
+gauge.}
+Injecting a vector into input block \(j\) and projecting the output onto block
+\(i\) are contractions for the Frobenius-induced operator norm.  Therefore
+each block of
+\(\mathcal R_{A,B}-\mathcal R_{A',B'}\) has spectral norm at most
+\(\delta\).  For \(i\ne j\), \eqref{eq:app_response_blocks} gives
+\begin{equation}
+ \left|(AA^\top-A'A'^\top)_{ij}\right|
+ \le\frac{\delta}{\eta_B}.
+ \label{eq:app_stability_offdiag}
+\end{equation}
+For a diagonal block, write
+\begin{equation}
+ E_i=t_iI_D+\lambda_Z(H_i-H_i'),\qquad
+ t_i=\eta_B(\|a_i\|_2^2-\|a_i'\|_2^2),
+ \label{eq:app_stability_diagblock}
+\end{equation}
+where \(H_i'=(B')^\top(C_i')^2B'\).  Both \(H_i\) and \(H_i'\) are singular
+positive-semidefinite matrices: their ranks are at most \(K-1<D\).  If
+\(t_i\ge0\), evaluating \(E_i\) on a unit vector in
+\(\ker(H_i')\) gives a quadratic form at least \(t_i\).  If \(t_i<0\),
+evaluating it on a unit vector in \(\ker(H_i)\) gives a quadratic form at most
+\(t_i\).  Since \(\|E_i\|_2\le\delta\), in either case
+\begin{equation}
+ |t_i|\le\delta,\qquad
+ \|H_i-H_i'\|_2\le\frac{2\delta}{\lambda_Z}.
+ \label{eq:app_stability_diagseparate}
+\end{equation}
+The diagonal entries of the router Gram difference consequently satisfy the
+same bound as \eqref{eq:app_stability_offdiag}, and hence
+\begin{equation}
+ \|AA^\top-A'A'^\top\|_F\le\frac{L\delta}{\eta_B}.
+ \label{eq:app_stability_gram}
+\end{equation}
+
+The common product has rank \(K\), so full-rank factorization algebra gives a
+unique \(M\in\operatorname{GL}(K)\) with
+\begin{equation}
+ A'=AM,\qquad B'=M^{-1}B,\qquad M\ones=\ones.
+ \label{eq:app_stability_M}
+\end{equation}
+Moreover,
+\begin{equation}
+ M=A^\dagger A',\qquad
+ M^{-1}=(A')^\dagger A,\qquad
+ \|M\|_2,\|M^{-1}\|_2\le L_A/s_A\le L_M.
+ \label{eq:app_stability_M_bounds}
+\end{equation}
+Multiplying \eqref{eq:app_stability_gram} on the left by \(A^\dagger\)
+and on the right by \((A^\dagger)^\top\) yields
+\begin{equation}
+ \|I_K-MM^\top\|_2\le c_G\delta.
+ \label{eq:app_stability_almost_orthogonal}
+\end{equation}
+
+\paragraph{Step 2: recovering the simplex covariance matrices.}
+Let
+\(Q=B^\top(BB^\top)^{-1}\).  Then \(BQ=I_K\) and
+\(\|Q\|_2\le1/s_B\).  Substitute \(B'=M^{-1}B\) in \(H_i'\), and multiply
+\eqref{eq:app_stability_diagseparate} by \(Q^\top\) and \(Q\), to obtain
+\begin{equation}
+ \|C_i^2-M^{-\top}(C_i')^2M^{-1}\|_2\le c_H\delta.
+ \label{eq:app_stability_cov_squares_raw}
+\end{equation}
+Set \(Y_i=M^\top C_iM\).  The identity
+\begin{align}
+ Y_i^2-(C_i')^2
+ ={}&M^\top C_i(MM^\top-I_K)C_iM \notag\\
+ &+M^\top\{C_i^2-M^{-\top}(C_i')^2M^{-1}\}M
+ \label{eq:app_stability_cov_squares}
+\end{align}
+together with \(\|C_i\|_2\le1\),
+\eqref{eq:app_stability_M_bounds},
+\eqref{eq:app_stability_almost_orthogonal}, and
+\eqref{eq:app_stability_cov_squares_raw} gives
+\begin{equation}
+ \|Y_i^2-(C_i')^2\|_2
+ \le L_M^2(c_G+c_H)\delta.
+ \label{eq:app_stability_square_bound}
+\end{equation}
+
+Strict interiority now supplies the spectral gap that is unavailable near the
+simplex boundary.  If \(a\) is a probability vector with
+\(\min_j a_j\ge\alpha\), then
+\begin{equation}
+ C(a)=\operatorname{Diag}(a)-aa^\top
+ \succeq\alpha\Pi_{\ones^\perp}.
+ \label{eq:app_stability_cov_gap}
+\end{equation}
+Indeed, write \(a=\alpha\ones+r\), where \(r\ge0\) and
+\(\ones^\top r=1-K\alpha\le1\).  For \(x\perp\ones\), weighted
+Cauchy--Schwarz gives
+\[
+ x^\top C(a)x
+ =\alpha\|x\|_2^2+\sum_jr_jx_j^2-\left(\sum_jr_jx_j\right)^2
+ \ge\alpha\|x\|_2^2.
+\]
+Both \(Y_i\) and \(C_i'\) have kernel exactly
+\(\operatorname{span}\{\ones\}\): for the former, use
+\(M^{-1}\ones=\ones\).  They are symmetric, so they preserve
+\(\ones^\perp\).  For a unit \(x\perp\ones\), decompose
+\(Mx=c\ones+y\), with \(y\perp\ones\).  Since
+\(x=c\ones+M^{-1}y\), orthogonality of \(x\) and
+\eqref{eq:app_stability_M_bounds} imply
+\begin{equation}
+ |c|\sqrt K\le L_M\|y\|_2,\qquad
+ 1\le |c|\sqrt K+L_M\|y\|_2,
+\end{equation}
+and therefore \(\|y\|_2\ge1/(2L_M)\).  It follows from
+\eqref{eq:app_stability_cov_gap} that, on \(\ones^\perp\),
+\begin{equation}
+ Y_i\succeq\frac{\alpha}{4L_M^2}I,
+ \qquad C_i'\succeq\alpha I.
+ \label{eq:app_stability_two_gaps}
+\end{equation}
+
+On this subspace put \(D_i=Y_i-C_i'\).  The Sylvester equation
+\begin{equation}
+ Y_iD_i+D_iC_i'=Y_i^2-(C_i')^2
+\end{equation}
+has the integral solution
+\begin{equation}
+ D_i=\int_0^\infty
+ e^{-tY_i}\{Y_i^2-(C_i')^2\}e^{-tC_i'}\,dt.
+\end{equation}
+The two lower bounds in \eqref{eq:app_stability_two_gaps} show that the norm of
+this inverse is at most \(1/\mu_*\).  Both sides vanish on
+\(\operatorname{span}\{\ones\}\), so \eqref{eq:app_stability_square_bound}
+proves on the whole space that
+\begin{equation}
+ \|M^\top C_iM-C_i'\|_2\le c_J\delta.
+ \label{eq:app_stability_cov_linear}
+\end{equation}
+The shared exact kernel is what permits a linear estimate here; a generic
+perturbation bound for square roots would only be H\"older of order one half.
+
+\paragraph{Step 3: approximately normalizing the diagonal algebra.}
+Because \(a_i'=M^\top a_i\), expanding the two covariance matrices in
+\eqref{eq:app_stability_cov_linear} cancels their rank-one terms and gives
+\begin{equation}
+ \|M^\top\operatorname{Diag}(a_i)M-\operatorname{Diag}(a_i')\|_2
+ \le c_J\delta.
+ \label{eq:app_stability_diagonal_algebra}
+\end{equation}
+Let \(\operatorname{Off}(X)\) set the diagonal of \(X\) to zero, let
+\(E_{jj}=e_je_j^\top\), and define
+\(X_j=\operatorname{Off}(M^\top E_{jj}M)\).  Taking the off-diagonal part is
+contractive in Frobenius norm, while
+\(\|X\|_F\le\sqrt K\|X\|_2\).  Thus
+\eqref{eq:app_stability_diagonal_algebra} implies
+\begin{equation}
+ \left\|\sum_{j=1}^K A_{ij}X_j\right\|_F
+ \le\sqrt K\,c_J\delta
+ \qquad(1\le i\le L).
+ \label{eq:app_stability_linear_system}
+\end{equation}
+Apply row \(j\) of \(A^\dagger\) to this system in the direct-sum Frobenius
+space.  That row has Euclidean norm at most \(1/s_A\); Cauchy--Schwarz over
+the \(L\) rows gives
+\begin{equation}
+ \|\operatorname{Off}(M^\top E_{jj}M)\|_F
+ \le c_D\delta
+ \qquad(1\le j\le K).
+ \label{eq:app_stability_off_bound}
+\end{equation}
+
+\paragraph{Step 4: rounding the gauge to a permutation.}
+Write \(M^\top E_{jj}M=r_jr_j^\top\), where \(r_j^\top\) is row \(j\) of
+\(M\), and choose \(q\) maximizing \(|r_{jq}|\).  Suppose first that
+\(\delta\le\delta_0\).  From
+\eqref{eq:app_stability_almost_orthogonal},
+\(\|r_j\|_2^2\ge1/2\), so \(r_{jq}^2\ge1/(2K)\).  The squared Frobenius norm
+in \eqref{eq:app_stability_off_bound} contains
+\(2r_{jq}^2\sum_{\ell\ne q}r_{j\ell}^2\).  Consequently
+\begin{align}
+ \sum_{\ell\ne q}r_{j\ell}^2
+ &\le Kc_D^2\delta^2,
+ \label{eq:app_stability_row_tail}\\
+ |r_{jq}^2-1|
+ &\le(c_G+Kc_D^2)\delta.
+ \label{eq:app_stability_row_peak}
+\end{align}
+The second inequality also uses \(\delta\le1\).  Equations
+\eqref{eq:app_stability_row_tail}--\eqref{eq:app_stability_row_peak} show that
+row \(j\) is within \(c_{\rm row}\delta\) of a signed coordinate vector.
+
+Collect the selected signed coordinate rows into a matrix \(S\).  By
+\eqref{eq:app_stability_constants_delta0},
+\begin{equation}
+ \|M-S\|_2\le\|M-S\|_F
+ \le\sqrt K\,c_{\rm row}\delta\le\frac12.
+ \label{eq:app_stability_rounding}
+\end{equation}
+If two rows selected the same coordinate, \(S\) would be singular and
+\(\sigma_{\min}(M)\le1/2\).  This contradicts
+\eqref{eq:app_stability_almost_orthogonal}, which gives
+\(\sigma_{\min}(M)\ge1/\sqrt2\).  The selected coordinates are therefore
+distinct.  Each row of \(M\) sums to one by \eqref{eq:app_stability_M}.  Its
+distance from any negative coordinate vector is consequently at least
+\(2/\sqrt K\), whereas its selected-row distance in
+\eqref{eq:app_stability_rounding} is at most \(1/(2\sqrt K)\).  Every sign is
+positive, so \(S=P\) is a permutation matrix and
+\begin{equation}
+ \|M-P\|_F\le\sqrt K\,c_{\rm row}\delta.
+ \label{eq:app_stability_permutation}
+\end{equation}
+
+Now
+\[
+ \|A'-AP\|_F\le L_A\|M-P\|_F.
+\]
+Using
+\(M^{-1}-P^\top=M^{-1}(P-M)P^\top\) also gives
+\[
+ \|B'-P^\top B\|_F
+ \le L_ML_B\|M-P\|_F.
+\]
+These two bounds and \eqref{eq:app_stability_permutation} prove
+\eqref{eq:app_stability_conclusion} with \(C_{\rm loc}\) whenever
+\(\delta\le\delta_0\).  If \(\delta\ge\delta_0\), choosing the identity
+permutation and using the parameter-set diameter gives
+\[
+ \left(\|A'-A\|_F^2+\|B'-B\|_F^2\right)^{1/2}
+ \le2\sqrt{L_A^2+L_B^2}
+ \le\frac{2\sqrt{L_A^2+L_B^2}}{\delta_0}\delta.
+\]
+Taking the larger of the local and diameter constants completes the proof.
+\end{proof}
+
+\paragraph{Why the quantitative assumptions appear.}
+The exact product constraint \eqref{eq:app_stability_product} cannot be
+replaced by response closeness alone: \((A,B)\) and \((A,-B)\) have identical
+responses but opposite effective matrices.  The two singular-value margins
+keep the factorization gauge and the right inverse of \(B\) bounded.  The
+interior margin creates the uniform covariance gap in
+\eqref{eq:app_stability_cov_gap}; without it, the inverse can become
+arbitrarily ill-conditioned near a simplex face.  Norm bounds make the
+nonlocal diameter argument finite.  Finally, using the same temperature and
+block rates is part of specifying the optimizer metric rather than a
+technical normalization.  These assumptions are sufficient and transparent,
+not asserted to be jointly minimal.
+
+Here are three explicit degenerating families showing that a uniform linear
+constant cannot ignore the interior or either rank margin.  They also make
+clear that these are stability failures, not counterexamples to the exact
+theorem.  Set \(K=L=D=3\), \(U=\ones\ones^\top/3\), and
+\begin{equation}
+ Q=\frac13
+ \begin{bmatrix}
+  2&-1&2\\[-1mm]
+  -1&2&2\\[-1mm]
+  2&2&-1
+ \end{bmatrix}.
+ \label{eq:app_stability_fixed_Q}
+\end{equation}
+Then \(Q\) is a non-permutation orthogonal matrix and \(Q\ones=\ones\).
+
+\emph{Router-rank margin.}
+For \(0<\varepsilon\le1/4\), let
+\[
+ A_\varepsilon=U+\varepsilon(I-U),\quad B_\varepsilon=I,\qquad
+ A_\varepsilon'=A_\varepsilon Q,\quad B_\varepsilon'=Q^\top .
+\]
+Both routers are strictly positive, the basis singular values equal one, and
+all norms and entrywise interior margins remain uniformly bounded.  However,
+\(\sigma_{\min}(A_\varepsilon)=
+\sigma_{\min}(A_\varepsilon')=\varepsilon\).
+The products and router Gram matrices agree exactly.  At
+\(\varepsilon=0\), every router row is uniform and
+\(C_i=(I-U)/3\), which commutes with \(Q\); hence the local response terms
+also agree.  Define the permutation-orbit distance \(d_\varepsilon\) by
+\[
+ d_\varepsilon^2
+ =\min_P\left\{
+   \|A_\varepsilon'-A_\varepsilon P\|_F^2+
+   \|B_\varepsilon'-P^\top B_\varepsilon\|_F^2\right\}.
+\]
+Polynomial dependence on \(\varepsilon\) gives
+\begin{align}
+ \|\mathcal R_{A_\varepsilon,B_\varepsilon}
+       -\mathcal R_{A_\varepsilon',B_\varepsilon'}\|_{F\to F}
+ &=O(\varepsilon),\\
+ d_\varepsilon&\longrightarrow \min_P\|Q-P^\top\|_F>0.
+\end{align}
+Thus no uniform inverse constant survives as \(s_A\downarrow0\).
+
+\emph{Basis-rank margin.}
+Keep \(Q\) from \eqref{eq:app_stability_fixed_Q}, put
+\[
+ A=0.3\ones\ones^\top+0.1I,\quad A'=AQ,\qquad
+ B_\varepsilon=\ones e_1^\top+\varepsilon I,\quad
+ B_\varepsilon'=Q^\top B_\varepsilon .
+\]
+The routers have fixed positive entries and fixed full rank; all norms remain
+bounded, while \(\sigma_{\min}(B_\varepsilon)\to0\).
+Because \(C_i\ones=C_i'\ones=0\), all cross terms with
+\(\ones e_1^\top\) vanish and
+\[
+ B_\varepsilon^\top C_i^2B_\varepsilon=\varepsilon^2C_i^2,\qquad
+ (B_\varepsilon')^\top(C_i')^2B_\varepsilon'
+ =\varepsilon^2Q(C_i')^2Q^\top .
+\]
+The Gram parts again agree exactly, so the response difference is
+\(O(\varepsilon^2)\).  The parameter distance tends to the strictly positive
+distance between \(A'=AQ\) and the finite permutation orbit of the full-rank
+\(A\).  Hence the constant must also deteriorate as \(s_B\downarrow0\).
+
+\emph{Interior margin.}
+Let
+\[
+ S=\frac1{\sqrt3}
+ \begin{bmatrix}0&-1&1\\1&0&-1\\-1&1&0\end{bmatrix},\qquad
+ Q_t=\exp(tS),
+ \]
+and, for sufficiently small \(t>0\), set
+\[
+ A_t=t\ones\ones^\top+(1-3t)I,\quad B_t=I,\qquad
+ A_t'=A_tQ_t,\quad B_t'=Q_t^\top .
+\]
+Here \(S^\top=-S\) and \(S\ones=0\), so \(Q_t\) is orthogonal and fixes
+\(\ones\).  Moreover
+\(A_t'=I+t(\ones\ones^\top-3I+S)+O(t^2)\); its off-diagonal
+first-order coefficients are \(1\pm1/\sqrt3>0\).  Thus both routers are
+strictly positive for all sufficiently small \(t\), while their minimum entry
+is \(\Theta(t)\).  Their smallest singular values are
+\(1-3t\), and both basis singular values equal one, so every rank and norm
+margin stays uniform.  The products and Gram responses agree exactly.  Each
+row tends to a simplex vertex, so
+\(C(a_{t,i})=O(t)\) and \(C(a_{t,i}')=O(t)\); consequently the remaining
+squared-covariance response difference is \(O(t^2)\). For the first row,
+direct expansion gives
+$\operatorname{tr}(C(a_{t,1})^2)=10t^2+O(t^3)$ and
+$\operatorname{tr}(C(a'_{t,1})^2)=12t^2+O(t^3)$.
+Orthogonal conjugation preserves trace, so this block's difference has
+spectral norm at least $(2/3)t^2+O(t^3)$ before the fixed positive
+$\lambda_Z$ multiplier. The full response gap is therefore $\Theta(t^2)$.
+On the other hand,
+the identity is the nearest permutation for small \(t\), and
+\(\|Q_t-I\|_F=\sqrt2\,t+O(t^2)\), so the parameter-orbit distance is
+\(\Theta(t)\).  The ratio of parameter distance to response error therefore
+diverges like \(1/t\).  This supplies the claimed simplex-face
+ill-conditioning while \(s_A,s_B,L_A,L_B\) remain controlled.
+
+\subsection{Finite structured response tomography}
+\label{app:response_tomography}
+
+We now prove Corollary~\ref{cor:response_tomography}.  Write
+
+\[
+ Q=AA^\top,
+ \qquad
+ T_i=\lambda_Z B^\top C_i^2B,
+ \qquad
+ S=\operatorname{row}(\Theta).
+\]
+Under the rank hypotheses, $\operatorname{rank}(\Theta)=K$ and
+
+\begin{equation}
+ S=\operatorname{row}(B),\qquad
+ \operatorname{range}(T_i)\subseteq S,\qquad
+ T_i x=0\ \text{for every }x\in S^\perp.
+ \label{eq:app_tomo_support}
+\end{equation}
+Indeed, a left inverse of $A$ gives
+$B=A^\dagger\Theta$, while $\Theta=AB$ gives the reverse row-space
+inclusion; the remaining claims follow from the two outer factors $B^\top$
+and $B$ in $T_i$.
+
+Choose $u_1,\ldots,u_K$ and $v_1,\ldots,v_L$ as in the corollary and
+define the rows of the $K$ probes by
+\begin{equation}
+ g_j^{(1)}=v_j+u_1,\qquad
+ g_j^{(r)}=u_r\quad(2\le r\le K).
+ \label{eq:app_tomo_probes}
+\end{equation}
+Let $y_i^{(r)}=[\mathcal R_{A,B}(G^{(r)})]_i$.  Then
+\begin{align}
+ Q_{ij}
+ &=\eta_B^{-1}\langle y_i^{(1)},v_j\rangle,
+ \label{eq:app_tomo_Q}\\
+ T_i u_1
+ &=y_i^{(1)}-\eta_B\sum_{j=1}^LQ_{ij}(v_j+u_1),
+ \label{eq:app_tomo_local_first}\\
+ T_i u_r
+ &=y_i^{(r)}-\eta_B\left(\sum_{j=1}^LQ_{ij}\right)u_r,
+ \qquad 2\le r\le K.
+ \label{eq:app_tomo_local_later}
+\end{align}
+
+\begin{proof}[Proof of Corollary~\ref{cor:response_tomography}]
+Project the first response onto $S^\perp$.  By
+\eqref{eq:app_tomo_support},
+\[
+ \Pi_{S^\perp}y_i^{(1)}=\eta_B\sum_{j=1}^LQ_{ij}v_j.
+\]
+Taking its inner product with $v_j$ gives
+\eqref{eq:app_tomo_Q}.  Subtracting the now-known shared term from the
+unprojected response leaves
+$T_i(v_i+u_1)=T_i u_1$, proving
+\eqref{eq:app_tomo_local_first}.  For probe $r\ge2$, the same subtraction
+leaves $T_i u_r$, which proves \eqref{eq:app_tomo_local_later}.
+
+For every $x\in\RR^D$, \Eqref{eq:app_tomo_support} gives
+\[
+ T_i x=\sum_{r=1}^K\langle u_r,x\rangle T_i u_r.
+\]
+Thus Equations~\ref{eq:app_tomo_Q}--\ref{eq:app_tomo_local_later} recover $Q$
+and every complete local block $T_i$, and \eqref{eq:response_blocks}
+then determines the whole response operator.  Two exact charts of the same
+rank-$K$ product have the same $S$, so the same probes recover both
+operators.  Equality on those probes is therefore equivalent to equality of
+the complete responses, and Theorem~\ref{thm:response_stabilizer} gives the
+permutation conclusion and its converse.  The $Z$-level row shifts remain
+unobserved.
+\end{proof}
+
+The complement-code solve in \eqref{eq:app_tomo_Q} and the $S$-coordinate
+solves use orthonormal systems and have condition number one.  That statement
+concerns recovery of $Q,T_1,\ldots,T_L$ from response observations; it does
+not remove the rank and simplex-boundary conditioning in the inverse from
+these components back to the factor chart.
+
+\begin{proposition}[Deterministic observation-noise propagation]
+\label{prop:response_tomography_noise}
+Suppose the observed response to probe $r$ is
+$Y^{(r)}+E^{(r)}$, where
+$\|E^{(r)}\|_F\le\epsilon_r$, and use
+Equations~\ref{eq:app_tomo_Q}--\ref{eq:app_tomo_local_later} for reconstruction.
+Then
+\begin{equation}
+ \|\widehat Q-Q\|_F\le\epsilon_1/\eta_B.
+ \label{eq:app_tomo_noise_Q}
+\end{equation}
+If $T^{(S)}$ stacks the $K\times K$ matrices representing every $T_i$
+in the $u$ basis, then
+\begin{equation}
+ \|\widehat T^{(S)}-T^{(S)}\|_F
+ \le\left[(1+\sqrt{L+1})^2\epsilon_1^2+
+ \sum_{r=2}^K(\epsilon_r+\sqrt L\epsilon_1)^2\right]^{1/2}.
+ \label{eq:app_tomo_noise_local}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Right multiplication by the orthonormal-row complement-code matrix is
+nonexpansive, which proves \eqref{eq:app_tomo_noise_Q}.  The first probe has
+$G^{(1)}(G^{(1)})^\top=I_L+\ones\ones^\top$, hence
+$\|G^{(1)}\|_2=\sqrt{L+1}$.  The error in the reconstructed first local
+column is therefore at most
+\[
+ \epsilon_1+\eta_B\|\widehat Q-Q\|_F\|G^{(1)}\|_2
+ \le(1+\sqrt{L+1})\epsilon_1.
+\]
+For every later probe, the erroneous shared subtraction contributes at most
+$\eta_B\|(\widehat Q-Q)\ones\|_2\le\sqrt L\epsilon_1$, in addition to
+$\epsilon_r$.  Projection into the orthonormal $u$ basis is nonexpansive;
+squaring and summing these $K$ column bounds proves
+\eqref{eq:app_tomo_noise_local}.
+\end{proof}
+
+This gives deterministic error radii, not a noisy ``if and only if.''  Two
+noisy reconstructions can be separated when their component gap exceeds the
+sum of the applicable radii.  Biased, unknown, or optimizer-state-dependent
+observation error requires a different model.
+
+\paragraph{Constructive exact factor recovery.}
+The diagonal-algebra reduction also yields an explicit reconstruction once
+$Q$ and the local blocks are known. Let $U\in\RR^{K\times D}$ contain the
+orthonormal row-space basis, factor $Q=XX^\top$ with $X$ full column rank,
+and put $C=X^\dagger\Theta U^\top$. There is an orthogonal $O$ with
+$X=AO$, so $C=O^\top BU^\top$ is invertible. Writing
+$T_i^{(S)}=UT_iU^\top$ and $x_i=X_{i,:}^\top$, define
+\[
+ D_i=\left[C^{-\top}(T_i^{(S)}/\lambda_Z)C^{-1}\right]^{1/2}
+       +x_ix_i^\top
+     =O^\top\operatorname{diag}(a_i)O,
+\]
+where the square root is the PSD one. A weighted sum of these symmetric
+matrices has distinct eigenvalues whenever the weighted sums of the columns
+of $A$ are distinct. Full column rank makes those columns distinct, so
+continuous Gaussian weights satisfy this condition almost surely. If $V$
+is the resulting orthogonal eigenvector matrix, the diagonals of $V^\top D_iV$
+recover router rows up to one common permutation; eigenvector signs cancel.
+The basis then follows from $\widehat B=\widehat A^\dagger\Theta$.
+This is a constructive use of established joint-diagonalization algebra
+\citep{afsari2008sensitivity,bhaskara2014uniqueness}, not an additional
+uniqueness claim. Its numerical implementation symmetrizes observations and
+clips negative eigenvalues before taking square roots. Such clipping, and
+the conditioning of a chosen weighted eigensystem, require separate analysis
+under noise; the exact argument is not a stability guarantee for that estimator.
+
+\begin{proposition}[Generic probes for the structured response]
+\label{prop:response_tomography_gaussian}
+Let $p=D-K\ge1$, retain the exact product and rank assumptions above, and
+draw $q$ effective-gradient matrices independently with iid standard
+Gaussian entries.  If
+\begin{equation}
+ q\ge\max\left\{K,\left\lceil\frac{L}{p}\right\rceil\right\},
+ \label{eq:app_tomo_gaussian_count}
+\end{equation}
+then their full response vectors determine $Q,T_1,\ldots,T_L$, and hence
+the complete structured response, with probability one.
+\end{proposition}
+
+\begin{proof}
+Express each probe in fixed orthonormal coordinates for $S\oplus S^\perp$.
+Concatenate the $S^\perp$ input coordinates over all probes into
+$X_\perp\in\RR^{L\times qp}$.  The corresponding projected responses obey
+$Y_\perp=\eta_BQX_\perp$.  When $qp\ge L$, the Gaussian matrix
+$X_\perp$ has row rank $L$ almost surely, so it determines $Q$.  After
+subtracting that shared term, the $q$ input coordinates in $S$ for any
+fixed layer form a Gaussian $K\times q$ matrix.  It has row rank $K$
+almost surely when $q\ge K$, and therefore determines that layer's local
+block.  Taking a finite union over layers preserves probability one.
+\end{proof}
+
+At the released dimensions $(L,K,D)=(12,4,787{,}712)$, four complete
+Gaussian probe/response vectors would satisfy
+\eqref{eq:app_tomo_gaussian_count} almost surely if the rank solves were
+actually retained and checked.  The older eight-probe artifacts retain norm
+comparisons rather than a tomographic reconstruction, so they remain a
+fixed-alternative test. The original four-probe artifact instead executes the
+explicit design \eqref{eq:app_tomo_probes}, evaluates the analytic full-
+dimensional response, and records the reconstruction residuals.  It does not
+run four full-model autograd/JVP queries; the analytic formula is validated
+separately on the declared $4\times32$ extraction.
+The additive audit in Table~\ref{tab:autograd-tomography} measures all four
+full-dimensional responses by reverse automatic differentiation followed by
+a forward-mode JVP of the packed factor map. It checks reconstruction on
+two unseen directions per chart and records deterministic noise-bound
+diagnostics. These queries use linear objectives on the packed parameters;
+they do not differentiate the language-model task loss or an AdamW update.
+
+This finite observation result is a structured operator-probing corollary,
+not an independent central innovation.  In particular,
+\citet[Sec.~3.3, Eqs.~(7)--(9)]{novak2022fast} reconstruct a finite NTK from
+identity NTK--vector products; generic and structured matrix probing is
+developed by \citet{chiu2012matrix}, \citet{halikias2024structured}, and
+\citet{amsel2026query}.  Relative to a generic $LD$-dimensional identity
+reconstruction, Equations~\ref{eq:app_tomo_probes}--\ref{eq:app_tomo_local_later}
+only exploit the present model's known support and shared-block structure to
+compress the queries.
+
+Several boundaries are essential.  The packing condition $D-K\ge L$ is
+sufficient for the explicit construction, not a lower bound for all finite
+designs.  When $K=1$, the single probe recovers the shared response and the
+softmax local blocks vanish.  Exact common product is required because both
+charts must share $S$; a small numerical product residual alone gives no
+row-space perturbation theorem.  The implementation accordingly activates the
+common-design conclusion only for charts produced by an explicit exact
+invertible gauge, with the floating-point product residual recorded separately.
+Known $\eta_B>0$ is used in \eqref{eq:app_tomo_Q}; known $\eta_Z>0$ and
+temperature remain part of the chart theorem.  Finally, these interventions
+are executable through linear checkpoint objectives
+$\mathcal L_G(\Theta)=\langle G,\Theta\rangle$, but they need not occur in a
+natural minibatch trajectory.
+
+\begin{proposition}[Finite Gaussian probes for a fixed response alternative]
+\label{prop:response_gaussian_probes}
+Let \(m=LD\), represent a fixed nonzero response difference by
+\(\mathsf D\in\RR^{m\times m}\), and draw independent
+\(x_1,\ldots,x_q\sim\mathcal N(0,I_m)\).  For every \(0<t<1\),
+\begin{equation}
+ \Pr\left[
+   \max_{\ell\le q}\|\mathsf D x_\ell\|_2
+   <t\|\mathsf D\|_2
+ \right]
+ \le[2\Phi(t)-1]^q.
+ \label{eq:app_response_small_ball}
+\end{equation}
+Thus failure probability at most \(\beta\) is obtained when
+\begin{equation}
+ q\ge
+ \frac{\log(1/\beta)}{-\log(2\Phi(t)-1)}.
+ \label{eq:app_response_probe_count}
+\end{equation}
+At \(t=1/2\), the coefficient is approximately \(1.04\).
+This is a fixed-alternative, absolute-threshold statement.  It neither
+calibrates a relative numerical threshold nor uniformly certifies equality
+of arbitrary response operators when \(q<m\).
+\end{proposition}
+
+\begin{proof}
+Let \(v\) be a unit right singular vector for the largest singular value of
+\(\mathsf D\).  An SVD gives
+\(\|\mathsf D x\|_2\ge\|\mathsf D\|_2|v^\top x|\), and
+\(v^\top x\sim\mathcal N(0,1)\).  Independence across probes proves
+\eqref{eq:app_response_small_ball}; solving the right-hand side for \(q\)
+gives \eqref{eq:app_response_probe_count}.
+
+For the uniform limitation, after any \(q<m\) realized probes there exists a
+nonzero linear map whose kernel contains their span, so all its observed
+responses vanish.  Conversely, \(m\) noiseless Gaussian probes form an
+invertible \(m\times m\) probe matrix almost surely and therefore determine an
+arbitrary response operator.  Finally, a reported ratio such as
+\(\|\mathsf D x\|_2/\max\{\|\mathcal R x\|_2,\|\mathcal R'x\|_2\}\) has a
+random denominator; \eqref{eq:app_response_small_ball} does not calibrate it
+without additional bounds on those response norms.
+\end{proof}
+
+\begin{corollary}[Pointwise probe detection from inverse stability]
+\label{cor:response_inverse_gaussian}
+Fix two exact product-equivalent charts in one nondegenerate set from
+Corollary~\ref{cor:response_stability}, fix them before drawing the probes,
+and let $C$ be that set's common inverse constant.  Define
+\[
+ d_{\rm orb}=\min_{P\in\mathfrak S_K}
+ \left(\|A'-AP\|_F^2+\|B'-P^\top B\|_F^2\right)^{1/2}
+\]
+and $\mathsf D=\mathcal R_{A,B}-\mathcal R_{A',B'}$.  If
+$d_{\rm orb}\ge\Delta>0$, then independent standard-Gaussian probes satisfy,
+for every $0<t<1$,
+\begin{equation}
+ \Pr\left[
+   \max_{\ell\le q}\|\mathsf D x_\ell\|_2
+   \ge t\Delta/C
+ \right]
+ \ge 1-[2\Phi(t)-1]^q.
+ \label{eq:app_response_inverse_small_ball}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The inverse bound gives $\|\mathsf D\|_2\ge d_{\rm orb}/C\ge\Delta/C$.
+The complement of the event in
+\eqref{eq:app_response_inverse_small_ball} is therefore contained in the
+small-ball event of Proposition~\ref{prop:response_gaussian_probes}, which
+proves the claim.
+\end{proof}
+
+At $t=1/2$ and $q=8$, the upper bound on the miss probability is about
+$4.62\times10^{-4}$.  This number does not calibrate the released relative
+response ratios: the threshold $t\Delta/C$ is absolute, $C$ may be loose,
+the alternative and common nondegenerate set must be fixed before the draws,
+and the statement is not simultaneous over probe-selected charts.  If each
+observed difference has deterministic error at most $\epsilon$, the
+corresponding observable lower threshold is only
+$t\Delta/C-\epsilon$ when positive.
+
+\paragraph{Why the hypotheses and target matter.}
+The following examples separate exact theorem hypotheses from broader
+interpretations.
+\begin{itemize}
+ \item Equality of the effective model is indispensable.  With \(A'=A\) and
+ \(B'=-B\), the router Gram and every quadratic matrix
+ \(B^\top C_i^2B\) are unchanged, but \(A'B'=-AB\).  The response alone does
+ not identify the represented effective matrix.
+
+ \item Router rank cannot be dropped.  For \(K=D=3\), let every row of
+ \(A\) be \(\ones^\top/3\), let \(B=I_3\), and let \(Q\) be a
+ non-permutation orthogonal rotation on \(\ones^\perp\) with
+ \(Q\ones=\ones\).  Then \(A'=AQ=A\), \(B'=Q^\top\), and both the product
+ and response are unchanged.  The two factors are not permutation
+ equivalent.
+
+ \item Basis rank cannot be dropped.  Let
+ \(K=D=3\),
+ \(A=0.3\ones\ones^\top+0.1I_3\), and
+ \(B=\ones e_1^\top\).  For a sufficiently small non-permutation orthogonal
+ rotation \(Q\) fixing \(\ones\), \(A'=AQ\) remains positive and
+ row-stochastic, while \(B'=Q^\top B=B\).  The products and router Gram
+ matrices agree, and \(C_iB=0\) makes every local softmax response term zero.
+
+ \item Joint router training is material in general.  If \(\eta_Z=0\) and
+ \(K\ge3\), choose any
+ positive full-rank router \(A\) close enough to uniform, a full-row-rank
+ \(B\), and a small non-permutation orthogonal \(Q\) fixing \(\ones\).
+ Then \((AQ,Q^\top B)\) is valid and product equivalent, while the remaining
+ response \(\eta_BAA^\top G\) is unchanged.
+
+ \item Equality on one task gradient is not operator equality.  At a
+ stationary point the observed gradient is zero for every parameterization,
+ regardless of whether their response operators differ.  There is also a
+ nonzero blind direction away from stationarity.  For a non-permutation exact
+ full-rank pair with common row space $S$, suppose $D>K$ and $L>2K$.
+ Choose nonzero $v\in S^\perp$.  Since
+ $\operatorname{rank}(AA^\top-A'(A')^\top)\le2K<L$, choose nonzero
+ $w$ in its kernel and set the rows of $G$ to $g_j=w_jv$.  Both local
+ block differences kill $v$, while the shared difference kills $w$, so
+ $(\mathcal R_{A,B}-\mathcal R_{A',B'})(G)=0$ even though the two response
+ operators differ by Theorem~\ref{thm:response_stabilizer}.  A passive
+ trajectory probes only its realized directions.
+
+ \item Strict positivity is automatic for finite softmax logits.  The exact
+ algebra above in fact only needs each router row to lie in the closed simplex:
+ positive semidefiniteness and \(C_i\ones=0\) make \(H_i\) singular.  Thus
+ the formula-defined response theorem extends to boundary rows when all stated
+ factor ranks remain full.  A uniform interior margin is material only for a
+ quantitative inverse bound.
+\end{itemize}
+These are sufficient conditions, not a claim of a jointly minimal assumption
+set.  In particular, the proof uses \(\eta_B>0\) to recover the router Gram
+matrix, but we have not established that \(\eta_B>0\) is necessary once the
+complete collection of local softmax terms is available.
+
+\paragraph{Partial audit of the \(\eta_B=0\) boundary.}
+Among the partial subcases closed in the released assumption ledger, we state
+two simple ones here without promoting them to separate contributions.  Write
+an equivalent chart as
+\(A'=AM\), \(B'=M^{-1}B\), with \(M\ones=\ones\).  For a router row written
+as a column \(p\), put \(q=M^\top p\).  Equality of the remaining local blocks
+reduces, after cancelling the full-row-rank basis, to
+\begin{equation}
+ C(q)^2=M^\top C(p)^2M.
+ \label{eq:app_etaB_zero_local}
+\end{equation}
+If \(M\ge0\), define
+\(\mathsf K=\operatorname{Diag}(p)M\operatorname{Diag}(q)^{-1}\).
+Then \(\ones^\top\mathsf K=\ones^\top\), and
+\eqref{eq:app_etaB_zero_local} is equivalent to
+\[
+ (\mathsf K-p\ones^\top)^\top(\mathsf K-p\ones^\top)
+ =(I-q\ones^\top)^\top(I-q\ones^\top).
+\]
+Thus every two columns of \(\mathsf K\) are at distance \(\sqrt2\).
+They also lie in the probability simplex, whose diameter \(\sqrt2\) is
+attained only by distinct vertices.  Hence \(\mathsf K=P\); using
+\(\mathsf Kq=p\) in its definition gives \(M=P\).  One positive router row
+therefore rules out every non-permutation nonnegative gauge.
+
+For \(K=2\), no sign restriction is needed.  Up to a candidate column swap,
+write
+\(M=\left[\begin{smallmatrix}x&1-x\\y&1-y\end{smallmatrix}\right]\)
+with \(d=x-y>0\).  A row \((p,1-p)\) maps to first coordinate
+\(q=y+dp\), and \eqref{eq:app_etaB_zero_local} becomes
+\(q(1-q)=d p(1-p)\).  Full router rank supplies two distinct
+\(p_1<p_2\).  Subtracting the two equations gives
+\(q_1+q_2=p_1+p_2=:S\); adding them and using
+\(q_2-q_1=d(p_2-p_1)=d\Delta\) gives
+\[
+ 0=\frac{1-d}{2}\{S(2-S)+d\Delta^2\}.
+\]
+The bracket is positive, so \(d=1\), \(y=0\), and \(M=I\), before undoing
+the possible column swap.  For signed gauges with \(K\ge3\), even when both
+\(A\) and \(AM\) are positive and full rank, compatibility of the rowwise
+regular-simplex congruences remains unresolved.  Numerical searches that
+collapse rank, approach a simplex face, or satisfy only one row are not
+treated as a proof or counterexample.  We therefore retain \(\eta_B>0\) in
+the main theorem while making no necessity claim.
+
+The theorem is specific to the named Euclidean metric and known block rates.
+Natural gradient, Adam/AdamW or momentum state, finite optimizer steps,
+factor-specific penalties, and router auxiliary losses define different
+response objects.  Most importantly, \((\Theta,\mathcal R)\) identifies a
+present optimizer chart, not the factors or graph that historically generated
+the data.
+
+\subsection{Positive recovery results}
+\label{app:positive_proofs}
+
+\begin{lemma}[Unique barycentric coordinates]
+\label{lem:app_barycentric}
+If $b_1,\ldots,b_K$ are affinely independent, then
+$aB=a'B$ for $a,a'\in\simplex_K$ implies $a=a'$.
+\end{lemma}
+
+\begin{proof}
+Set $q=a-a'$.  The simplex constraint gives $q\ones=0$, and equality of the
+effective parameters gives $qB=0$.  A nonzero $q$ satisfying both equations
+would be a nontrivial affine dependence among the rows of $B$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{thm:anchor_recovery}]
+Every effective parameter lies in the convex hull of the bases:
+\(
+\{\theta_i\}\subseteq\operatorname{conv}\{b_j\}
+\).
+Separability supplies the reverse containment at the level of convex hulls,
+because each $b_j$ occurs as an anchor row of $\Theta$.  Therefore
+\begin{equation}
+ \operatorname{conv}\{\theta_1,\ldots,\theta_L\}
+ =\operatorname{conv}\{b_1,\ldots,b_K\}.
+ \label{eq:app_hull}
+\end{equation}
+Affine independence makes the right side a $(K-1)$-simplex whose vertices are
+exactly the unordered set $\{b_1,\ldots,b_K\}$.  Applying the same argument to
+$(A',B')$ shows that its bases are the same vertex set.  Thus
+$B'=P^\top B$ for a permutation matrix $P$.  Relative to these identified
+vertices, Lemma~\ref{lem:app_barycentric} gives unique coordinates for every
+row, hence $A'=AP$.
+
+For the one-hot consequence, $\theta_i=b_{c_i}$.  Affine independence implies
+that bases are pairwise distinct, so
+$\theta_i=\theta_{i'}$ if and only if $c_i=c_{i'}$.  Full basis usage provides
+all anchors and makes the basis set observable.  Without full usage, an unused
+basis is unconstrained; with duplicate bases, their assignment labels are
+observationally interchangeable.
+\end{proof}
+
+Separability must restrict the candidate model class, not merely the planted
+truth.  If alternative bases may lie outside the observed hull and need not
+appear as anchors, a larger simplex can contain the same $\theta_i$ and assign
+them different soft barycentric coordinates.
+
+\begin{proof}[Proof of Theorem~\ref{thm:noisy_recovery}]
+If $c_i=c_{i'}$, the triangle inequality gives
+\begin{equation}
+ \|\widehat\theta_i-\widehat\theta_{i'}\|_2
+ =\|e_i-e_{i'}\|_2\le2\varepsilon.
+\end{equation}
+If $c_i\ne c_{i'}$, the reverse triangle inequality gives
+\begin{equation}
+ \|\widehat\theta_i-\widehat\theta_{i'}\|_2
+ \ge\|b_{c_i}-b_{c_{i'}}\|_2-\|e_i\|_2-\|e_{i'}\|_2
+ \ge\gamma-2\varepsilon>2\varepsilon.
+\end{equation}
+The threshold graph therefore contains all and only within-class edges, so its
+connected components recover the partition.  A cluster mean equals its basis
+plus an average of error vectors.  By convexity of the norm, that average has
+norm at most $\varepsilon$.
+\end{proof}
+
+The $4\varepsilon$ condition is a clean sufficient margin, not a necessary
+one.  Stable recovery without some separation condition is impossible: two
+bases closer than the observation uncertainty can exchange assignments
+without changing the observed data appreciably.
+
+\subsection{Finite-sample recovery by shared-input probes}
+\label{app:probe_proof}
+
+For a pair $(i,j)$ write
+\begin{equation}
+ X_s^{ij}=\|Y_i(H_s)-Y_j(H_s)\|_2^2,
+ \qquad
+ d_{ij}^2=\mathbb E X_s^{ij},
+ \qquad
+ \widehat d_{ij}^2=n^{-1}\sum_{s=1}^nX_s^{ij}.
+\end{equation}
+The observation $Y_i$ may include seeded measurement noise.  The population
+distances and their gap must be computed under that same observation model.
+Noise that differs systematically between layers can close or reverse the
+gap for the clean functional partition, in which case the theorem does not
+apply; it does not silently redefine the recovery target.
+
+\begin{proof}[Proof of Theorem~\ref{thm:probe_recovery}]
+Let $N_p=\binom{L}{2}$.  Substitute $u=\delta/4$ into
+\Eqref{eq:probe_bernstein}.  The stated sample-size condition implies
+for each pair
+\begin{equation}
+ \Pr\left(
+ |\widehat d_{ij}^2-d_{ij}^2|>\delta/4
+ \right)
+ \le \frac{\eta}{N_p}.
+\end{equation}
+A union bound gives, with probability at least $1-\eta$,
+\begin{equation}
+ \max_{i<j}|\widehat d_{ij}^2-d_{ij}^2|\le\delta/4.
+ \label{eq:app_uniform_probe}
+\end{equation}
+On this event, every within-class pair obeys
+\begin{equation}
+ \widehat d_{ij}^2\le w+\delta/4<(w+b)/2,
+\end{equation}
+whereas every between-class pair obeys
+\begin{equation}
+ \widehat d_{ij}^2\ge b-\delta/4>(w+b)/2.
+\end{equation}
+Thresholding therefore recovers all pairwise equivalence decisions and hence
+the partition.
+
+For agglomerative clustering, \Eqref{eq:app_uniform_probe} implies
+that every distance between subsets of one true class is smaller than every
+distance between subsets of different true classes, for single, complete, or
+average linkage.  While more than $K_f$ clusters remain, at least one true class
+is split, and the next merge is necessarily within that class.  Induction
+shows that cutting the dendrogram at $K_f$ clusters returns the true
+partition.  This class count is a property of the functional equivalence
+relation and need not equal the number of router bases.
+\end{proof}
+
+\paragraph{A bounded special case.}
+If the observations are independent across probe draws $s$ with the same
+pairwise expectations, and $0\le X_s^{ij}\le R^2$ almost surely for every
+pair, Hoeffding's inequality
+gives
+\begin{equation}
+ \Pr(|\widehat d_{ij}^2-d_{ij}^2|>u)
+ \le2\exp(-2nu^2/R^4).
+\end{equation}
+Thus it is sufficient that
+\begin{equation}
+ n\ge\frac{8R^4}{\delta^2}
+ \log\frac{2\binom{L}{2}}{\eta}.
+ \label{eq:app_bounded_probe}
+\end{equation}
+For unbounded probes, \Eqref{eq:probe_bernstein} must be justified by
+the probe distribution, module class, and noise model rather than assumed
+silently.  Clipping or normalizing probe responses supplies a directly
+checkable bounded version at the cost of changing the target metric.
+
+The released paired sweep uses iid Gaussian inputs and
+$Y_{is}=r_i(H_s)+\sigma\epsilon_{is}$ with iid Gaussian $\epsilon_{is}$ and a
+fixed absolute $\sigma$.  For its finite MLP and Transformer blocks, LayerNorm
+with a positive numerical stabilizer bounds the normalized inputs, and the
+remaining fixed affine, GELU, softmax-attention, and residual-update maps give a
+bounded clean update.  A bounded vector plus Gaussian noise has a
+sub-exponential squared norm, so Bernstein constants exist for each frozen
+configuration.  The sweep does not estimate uniform numerical values of
+$(\nu,c)$ or the population gap $\delta$; consequently its reported empirical
+gap is descriptive and is not presented as an application of the theorem's
+population certificate.
+
+\paragraph{What the certificate means.}
+The theorem targets equality under the chosen $P_H$ and observation model.
+It cannot certify global functional identity outside the support of $P_H$.
+Nor does it identify a historical generative graph when two distinct teacher
+modules happen to agree on that support.
+
+\subsection{Optimization and initialization effects}
+\label{app:dynamics_proofs}
+
+\begin{proof}[Proof of Proposition~\ref{prop:factor_dynamics}]
+By the chain rule for $\Theta=AB$,
+\begin{equation}
+ \nabla_A\mathcal L=GB^\top,
+ \qquad
+ \nabla_B\mathcal L=A^\top G.
+\end{equation}
+Euclidean gradient flow therefore satisfies
+$\dot A=-GB^\top$ and $\dot B=-A^\top G$.  Differentiating the product gives
+\begin{align}
+ \dot\Theta
+ &=\dot A B+A\dot B\\
+ &=-G(B^\top B)-(AA^\top)G.
+\end{align}
+The right-hand side is not determined by $AB$ alone.  If two factorizations
+induce different linear operators on $G$, choosing $G$ outside the null space
+of their difference produces different initial effective velocities.
+Non-orthogonal gauge transformations generically alter both Gram matrices.
+\end{proof}
+
+The previous calculation optimizes $A$ directly and is useful because its
+preconditioning is explicit.  The constrained softmax model has the same
+coordinate dependence.  In the next derivation vectors are columns, so
+$\theta_i=B^\top a_i$ and $g_i=\nabla_{\theta_i}\mathcal L$.
+
+\begin{proposition}[Exact softmax effective dynamics]
+\label{prop:app_softmax_dynamics}
+Let
+\begin{equation}
+ a_i=\operatorname{softmax}(z_i/\tau),
+ \qquad
+ J_i=\frac1\tau
+ \left(\operatorname{Diag}(a_i)-a_i a_i^\top\right).
+\end{equation}
+Without factor-specific regularizers, Euclidean gradient flow in $Z,B$ obeys
+\begin{align}
+ \dot z_i&=-\eta_ZJ_iBg_i,\\
+ \dot B&=-\eta_B\sum_{r=1}^L a_rg_r^\top,\\
+ \dot\theta_i
+ &=-\eta_ZB^\top J_i^2B\,g_i
+   -\eta_B\sum_{r=1}^L\langle a_i,a_r\rangle g_r.
+ \label{eq:app_softmax_flow}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+The Jacobian of $a_i$ with respect to $z_i$ is the symmetric matrix $J_i$.
+Since $\nabla_{a_i}\mathcal L=Bg_i$, the chain rule gives
+$\nabla_{z_i}\mathcal L=J_iBg_i$.  Similarly,
+$\nabla_B\mathcal L=\sum_r a_rg_r^\top$.  Including the block learning
+rates in the flow therefore gives
+\begin{equation}
+ \dot a_i=J_i\dot z_i=-\eta_ZJ_i^2Bg_i.
+\end{equation}
+Substituting $\dot a_i$ and $\dot B$ into
+$\dot\theta_i=\dot B^\top a_i+B^\top\dot a_i$ yields
+\Eqref{eq:app_softmax_flow}.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:softmax_saturation}]
+Let
+$C_i=\operatorname{Diag}(a_i)-a_i a_i^\top$, so $J_i=C_i/\tau$.
+The matrix $C_i$ is positive semidefinite, hence
+\begin{align}
+ \|C_i\|_2
+ &\le\operatorname{tr}(C_i)
+ =1-\|a_i\|_2^2\\
+ &\le1-(1-\varepsilon)^2
+ \le2\varepsilon.
+\end{align}
+Using $\nabla_{z_i}\mathcal L=J_iBg_i$ gives
+\begin{equation}
+ \|\nabla_{z_i}\mathcal L\|_2
+ \le\|J_i\|_2\|Bg_i\|_2
+ \le\frac{2\varepsilon}{\tau}\|Bg_i\|_2.
+\end{equation}
+The exact router velocity additionally obeys
+\begin{equation}
+ \|\dot a_i\|_2
+ \le\eta_Z\left(\frac{2\varepsilon}{\tau}\right)^2\|Bg_i\|_2.
+\end{equation}
+The bound is instantaneous: it accounts for both temperature and the current
+probability $1-\varepsilon$, while varying $\tau$ at fixed logits changes
+$\varepsilon$ as well.  It does not by itself bound cumulative router motion
+or guarantee preservation of an argmax over a training interval.
+\end{proof}
+
+\begin{proposition}[Symmetric initialization trap]
+\label{prop:app_symmetry_trap}
+If every router row is uniform and every basis is initialized identically,
+then deterministic gradient flow keeps the router uniform and the bases
+identical for all time for which the solution exists.
+\end{proposition}
+
+\begin{proof}
+If all basis rows equal $b$, then
+$Bg_i=(b^\top g_i)\ones$.  Since $J_i\ones=0$, every logit gradient is zero.
+Under a uniform router, every basis receives the same gradient
+$K^{-1}\sum_i g_i$.  Equality of the bases is therefore invariant, which in
+turn keeps every router gradient zero.
+\end{proof}
+
+The proposition is not a claim that practical floating-point training always
+remains symmetric: independent random initialization, parameter-specific
+stochastic perturbations, and implementation nondeterminism can break the
+equality. Shared minibatch sampling alone preserves this symmetry when every
+sampled loss depends on the factors only through $AB$: the same gradient
+equalities hold separately for each minibatch. It identifies the
+source of specialization as an explicit or stochastic symmetry breaker rather
+than information contained in the initial effective model.
+
+\subsection{Detailed claim boundary}
+\label{app:claim_boundary}
+
+The formal results support the following distinctions.
+\begin{itemize}
+ \item Router entropy, smoothness, bandedness, cosine similarity, and argmax
+ graphs are gauge-dependent coordinates.  They require gauge-counterfactual
+ or initialization-intervention evidence before receiving a structural
+ interpretation.
+
+ \item The effective-weight equality partition is gauge invariant.  It is
+ still only a parameter-space partition: neural permutation and scaling
+ symmetries can make unequal parameters functionally equivalent.
+
+ \item Shared-input probes target functional equivalence under a named probe
+ distribution.  They do not establish equality outside its support and need
+ not recover the historical graph that generated a teacher.
+
+ \item A generative graph becomes recoverable under explicit conditions such
+ as one-hot routing, full basis usage, affine independence or separation, and
+ an observation regime strong enough to distinguish the bases.  Low task loss
+ alone supplies none of these conditions.
+
+ \item Affine independence is insufficient for an unknown fully soft
+ factorization.  It ensures unique barycentric coordinates only after vertices
+ are known; anchors or another valid simplex-identification condition are
+ still required.
+
+ \item Factor-specific normalization or regularization may choose a useful
+ gauge.  It does not retroactively make that coordinate the data-generating
+ graph.  Exact equality constraints can reduce the gauge group but require a
+ fresh identifiability analysis.
+
+ \item The dynamics results demonstrate coordinate-dependent preconditioning,
+ saturation, and a symmetry trap.  They do not prove a universal optimization
+ preference for smooth, monotone, periodic, sparse, or low-entropy routers.
+
+ \item No strict function-class hierarchy, generalization improvement, or
+ causal performance benefit follows from the algebraic factorization alone.
+ Such claims require separate approximation, statistical, and compute-matched
+ arguments.
+\end{itemize}

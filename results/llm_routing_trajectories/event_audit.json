@@ -1,0 +1,281 @@
+{
+  "scope": "Replays stored clipped gradients through optimizer, not a fresh language-model backward pass; exact gap decomposition uses retained factors.",
+  "source_sha256": "5f8cf34b53e07fae217e4b510bd73a0d6af88cdc2c3e208a2591f88c4d920d77",
+  "runs": [
+    {
+      "unit": "pythia160m-adamw-seed0",
+      "events": [
+        {
+          "kind": "router_entry",
+          "step": 10,
+          "cpu_update_replay_max_abs": 1.4901161193847656e-08,
+          "checkpoint_sha256": "22b34649d823a40d57cba332027530921a55dfeb611a680f83fb8914b4007bda",
+          "response_boundary": {
+            "gap_before": 0.00026611547695180524,
+            "gap_after": -0.0018561493384882909,
+            "linear_component": -0.0021215176719893564,
+            "quadratic_component": -7.471434508103247e-07,
+            "identity_error": 7.059574923067285e-17
+          }
+        }
+      ]
+    },
+    {
+      "unit": "pythia160m-adamw-seed1",
+      "events": [
+        {
+          "kind": "router_entry",
+          "step": 61,
+          "cpu_update_replay_max_abs": 1.862645149230957e-09,
+          "checkpoint_sha256": "aa043328b2ae7790b399fffddadd9f561565132bc47c0cc9fa12eeb13a88f31d",
+          "response_boundary": {
+            "gap_before": 0.004219412483953338,
+            "gap_after": -0.0008875447930568846,
+            "linear_component": -0.0050963650822075145,
+            "quadratic_component": -1.0592194802685816e-05,
+            "identity_error": 2.2243085194897927e-17
+          }
+        }
+      ]
+    },
+    {
+      "unit": "pythia160m-adamw-seed2",
+      "events": [
+        {
+          "kind": "coefficient_entry",
+          "step": 6,
+          "cpu_update_replay_max_abs": 7.450580596923828e-09,
+          "checkpoint_sha256": "451a2ca35778dde3d0c838055ba6451db9582c54656f06f072f0027325a2ef0a",
+          "weight_boundary": {
+            "gap_before": 5.6842648757319725e-05,
+            "gap_after": -5.512338556079094e-05,
+            "router_component": -4.908609548603276e-06,
+            "basis_component": -8.460212030797943e-05,
+            "bilinear_component": -8.506821126160772e-07,
+            "quadratic_component": -2.1604622348911987e-05,
+            "identity_error": 9.486769009248164e-20
+          }
+        },
+        {
+          "kind": "router_entry",
+          "step": 6,
+          "cpu_update_replay_max_abs": 7.450580596923828e-09,
+          "checkpoint_sha256": "468f9af236b2824ef72ff8914dfa6406378599246c1d7224471952f1bab760d8",
+          "weight_boundary": {
+            "gap_before": 5.6842648757319725e-05,
+            "gap_after": -5.512338556079094e-05,
+            "router_component": -4.908609548603276e-06,
+            "basis_component": -8.460212030797943e-05,
+            "bilinear_component": -8.506821126160772e-07,
+            "quadratic_component": -2.1604622348911987e-05,
+            "identity_error": 9.486769009248164e-20
+          }
+        }
+      ]
+    },
+    {
+      "unit": "pythia160m-sgd-seed0",
+      "events": []
+    },
+    {
+      "unit": "pythia160m-sgd-seed1",
+      "events": []
+    },
+    {
+      "unit": "pythia160m-sgd-seed2",
+      "events": []
+    },
+    {
+      "unit": "qwen06b-adamw-seed0",
+      "events": [
+        {
+          "kind": "router_entry",
+          "step": 8,
+          "cpu_update_replay_max_abs": 2.3283064365386963e-10,
+          "checkpoint_sha256": "4fb1d57bb82b8445059a9da491553ddb4a2db4b7eae1a320bcc7b81e9bc66627",
+          "response_boundary": {
+            "gap_before": 1.4941867696210975e-05,
+            "gap_after": -0.001899019836084915,
+            "linear_component": -0.0019068520105478067,
+            "quadratic_component": -7.109693233301966e-06,
+            "identity_error": 1.7242202674308538e-17
+          }
+        }
+      ]
+    },
+    {
+      "unit": "qwen06b-adamw-seed1",
+      "events": [
+        {
+          "kind": "router_entry",
+          "step": 156,
+          "cpu_update_replay_max_abs": 3.725290298461914e-09,
+          "checkpoint_sha256": "14effd8ba04d8ad3c17aa566715fb54f948fa33cbe6ea2e53d1306896def480f",
+          "response_boundary": {
+            "gap_before": 0.0018061083366808367,
+            "gap_after": -0.0012289741084535039,
+            "linear_component": -0.0030310927868470727,
+            "quadratic_component": -3.98965828716409e-06,
+            "identity_error": 1.0373781911612867e-16
+          }
+        }
+      ]
+    },
+    {
+      "unit": "qwen06b-adamw-seed2",
+      "events": [
+        {
+          "kind": "coefficient_entry",
+          "step": 12,
+          "cpu_update_replay_max_abs": 2.9802322387695312e-08,
+          "checkpoint_sha256": "3f68feac0c796c90019fa874bbb6b2e09518929f0c8ab28b12daa296ad01daa7",
+          "weight_boundary": {
+            "gap_before": 9.75349576896364e-05,
+            "gap_after": -0.00012148029166678424,
+            "router_component": -0.00014276419564156044,
+            "basis_component": -2.774510411819982e-05,
+            "bilinear_component": -2.005406636414237e-05,
+            "quadratic_component": -2.8451883232510132e-05,
+            "identity_error": 7.860465750519907e-18
+          }
+        },
+        {
+          "kind": "router_entry",
+          "step": 12,
+          "cpu_update_replay_max_abs": 2.9802322387695312e-08,
+          "checkpoint_sha256": "81ba7e044f355c3ce0dd3df6eb5ac69060b90da7ed376ab30e832ac83c21ea82",
+          "weight_boundary": {
+            "gap_before": 9.75349576896364e-05,
+            "gap_after": -0.00012148029166678424,
+            "router_component": -0.00014276419564156044,
+            "basis_component": -2.774510411819982e-05,
+            "bilinear_component": -2.005406636414237e-05,
+            "quadratic_component": -2.8451883232510132e-05,
+            "identity_error": 7.860465750519907e-18
+          }
+        }
+      ]
+    },
+    {
+      "unit": "qwen06b-sgd-seed0",
+      "events": []
+    },
+    {
+      "unit": "qwen06b-sgd-seed1",
+      "events": []
+    },
+    {
+      "unit": "qwen06b-sgd-seed2",
+      "events": []
+    },
+    {
+      "unit": "smol360m-adamw-seed0",
+      "events": [
+        {
+          "kind": "router_entry",
+          "step": 5,
+          "cpu_update_replay_max_abs": 2.3283064365386963e-10,
+          "checkpoint_sha256": "01b18fd751f07d514e9e7e0787120caef3b4064a430df60d5aced9141f0c1de7",
+          "response_boundary": {
+            "gap_before": 0.0006376841726412757,
+            "gap_after": -0.0007896839180043073,
+            "linear_component": -0.001426048018797862,
+            "quadratic_component": -1.3200718477416973e-06,
+            "identity_error": 2.059835896956689e-17
+          }
+        }
+      ]
+    },
+    {
+      "unit": "smol360m-adamw-seed1",
+      "events": [
+        {
+          "kind": "coefficient_entry",
+          "step": 71,
+          "cpu_update_replay_max_abs": 3.725290298461914e-09,
+          "checkpoint_sha256": "c809875b4e417af78823f09730c335646c0642b90481247001cb57449bd20129",
+          "coefficient_boundary": {
+            "gap_before": 2.6146444139091285e-05,
+            "gap_after": -0.001661940939415782,
+            "linear_prediction": -0.0016592028111602653,
+            "observed_change": -0.0016880873835548732,
+            "remainder": -2.888457239460791e-05
+          }
+        },
+        {
+          "kind": "router_entry",
+          "step": 97,
+          "cpu_update_replay_max_abs": 5.960464477539063e-08,
+          "checkpoint_sha256": "8f6d5be0d64763c5264743383ae8fa2cb3f33ffed73c6af3fc2cf1e9bdc65a01",
+          "response_boundary": {
+            "gap_before": 0.000829704576631729,
+            "gap_after": -0.010194697672912617,
+            "linear_component": -0.010969878923684881,
+            "quadratic_component": -5.452332585937733e-05,
+            "identity_error": 8.7847481025638e-17
+          }
+        },
+        {
+          "kind": "router_boundary",
+          "step": 71,
+          "cpu_update_replay_max_abs": 3.725290298461914e-09,
+          "checkpoint_sha256": "5f9b5d9235e8771772339aaacb6255c66660c0097b7bb88071eb92fb5d40f57f",
+          "coefficient_boundary": {
+            "gap_before": 2.6146444139091285e-05,
+            "gap_after": -0.001661940939415782,
+            "linear_prediction": -0.0016592028111602653,
+            "observed_change": -0.0016880873835548732,
+            "remainder": -2.888457239460791e-05
+          }
+        }
+      ]
+    },
+    {
+      "unit": "smol360m-adamw-seed2",
+      "events": [
+        {
+          "kind": "coefficient_entry",
+          "step": 26,
+          "cpu_update_replay_max_abs": 1.862645149230957e-09,
+          "checkpoint_sha256": "65593583181c1572f93181b19ffd59e3ffd1397ecf46b027d07176f07a42d1ad",
+          "weight_boundary": {
+            "gap_before": 0.0003874454494295042,
+            "gap_after": -0.0019691996127946037,
+            "router_component": -0.002038847721918423,
+            "basis_component": -8.238674853752878e-05,
+            "bilinear_component": -0.00010235112007510963,
+            "quadratic_component": -0.0001330594716930669,
+            "identity_error": 2.0383000842727483e-17
+          }
+        },
+        {
+          "kind": "router_entry",
+          "step": 26,
+          "cpu_update_replay_max_abs": 1.862645149230957e-09,
+          "checkpoint_sha256": "be73b3c87f033947071c3b117500c86c1ced04aa008c0945975dda614c210ffc",
+          "weight_boundary": {
+            "gap_before": 0.0003874454494295042,
+            "gap_after": -0.0019691996127946037,
+            "router_component": -0.002038847721918423,
+            "basis_component": -8.238674853752878e-05,
+            "bilinear_component": -0.00010235112007510963,
+            "quadratic_component": -0.0001330594716930669,
+            "identity_error": 2.0383000842727483e-17
+          }
+        }
+      ]
+    },
+    {
+      "unit": "smol360m-sgd-seed0",
+      "events": []
+    },
+    {
+      "unit": "smol360m-sgd-seed1",
+      "events": []
+    },
+    {
+      "unit": "smol360m-sgd-seed2",
+      "events": []
+    }
+  ]
+}

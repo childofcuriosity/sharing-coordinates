@@ -1,0 +1,38 @@
+{
+  "format": "autograd-tomography-summary-v1",
+  "rows": [
+    {
+      "seed": 0,
+      "formula_max_relative_error": 3.5188545498153214e-16,
+      "heldout_max_relative_error": 4.68182295503418e-14,
+      "product_max_relative_error": 2.432673422955146e-16,
+      "component_max_relative_error": 5.607317737013238e-11,
+      "permutation_max_relative_gap": 9.726805784677363e-17,
+      "nonpermutation_max_relative_gap": 0.9734402346363842
+    },
+    {
+      "seed": 1,
+      "formula_max_relative_error": 3.3729127510724014e-16,
+      "heldout_max_relative_error": 5.0742302641634705e-14,
+      "product_max_relative_error": 1.8542595176564389e-16,
+      "component_max_relative_error": 5.887188967503082e-11,
+      "permutation_max_relative_gap": 1.0533266540711872e-16,
+      "nonpermutation_max_relative_gap": 0.9730757594219996
+    },
+    {
+      "seed": 2,
+      "formula_max_relative_error": 3.709083487027851e-16,
+      "heldout_max_relative_error": 4.12317005834533e-14,
+      "product_max_relative_error": 2.220675766212303e-16,
+      "component_max_relative_error": 6.509853701757441e-11,
+      "permutation_max_relative_gap": 1.1092976288406829e-16,
+      "nonpermutation_max_relative_gap": 0.9734825105887064
+    }
+  ],
+  "raw_sha256": {
+    "results/autograd_tomography/seed0.json": "200c6578dd6e815bde293337d7389c18a919721b369d3759c879dfc045ce61fb",
+    "results/autograd_tomography/seed1.json": "7a4510aff1ce2d8b970742a79b5309bdc6c3952bbe88db0e6c55d1ccec915a8a",
+    "results/autograd_tomography/seed2.json": "6d3921ecc0c0493717bef815fa2ea5be1111ee163851e21ea750b7d90c913d8d"
+  },
+  "scope": "full packed shared-parameter map; not an end-to-end loss or AdamW trajectory"
+}

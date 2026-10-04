@@ -1,0 +1,36 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-adamw-seed0 64 events 1
+pythia160m-adamw-seed0 128 events 1
+pythia160m-adamw-seed0 192 events 1
+pythia160m-adamw-seed0 256 events 1
+pythia160m-adamw-seed0 complete 1 events validation 4.308152005076408 4.30303692817688
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-adamw-seed1 64 events 1
+pythia160m-adamw-seed1 128 events 1
+pythia160m-adamw-seed1 192 events 1
+pythia160m-adamw-seed1 256 events 1
+pythia160m-adamw-seed1 complete 1 events validation 4.3089709877967834 4.202564239501953
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-adamw-seed2 64 events 3
+pythia160m-adamw-seed2 128 events 3
+pythia160m-adamw-seed2 192 events 3
+pythia160m-adamw-seed2 256 events 3
+pythia160m-adamw-seed2 complete 3 events validation 4.316491007804871 4.2819245755672455
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-sgd-seed0 64 events 0
+pythia160m-sgd-seed0 128 events 0
+pythia160m-sgd-seed0 192 events 0
+pythia160m-sgd-seed0 256 events 0
+pythia160m-sgd-seed0 complete 0 events validation 4.308152005076408 4.3290951400995255
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-sgd-seed1 64 events 0
+pythia160m-sgd-seed1 128 events 0
+pythia160m-sgd-seed1 192 events 0
+pythia160m-sgd-seed1 256 events 0
+pythia160m-sgd-seed1 complete 0 events validation 4.3089709877967834 4.296895116567612
+`torch_dtype` is deprecated! Use `dtype` instead!
+pythia160m-sgd-seed2 64 events 0
+pythia160m-sgd-seed2 128 events 0
+pythia160m-sgd-seed2 192 events 0
+pythia160m-sgd-seed2 256 events 0
+pythia160m-sgd-seed2 complete 0 events validation 4.316491007804871 4.2986034750938416

@@ -1,0 +1,9 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/WillRawData2/llm/will_datasets/toutiao/aslora/task-weighted-response/check_batch_gradient.py", line 27, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/WillRawData2/llm/will_datasets/toutiao/aslora/task-weighted-response/check_batch_gradient.py", line 22, in main
+    assert relative<1e-4,row
+           ^^^^^^^^^^^^^
+AssertionError: {'model': 'pythia160m', 'relative_batch_gradient_difference': 0.3587325999570256, 'batch_loss': 3.7929039001464844, 'mean_recorded_document_loss': 3.79291570186615}

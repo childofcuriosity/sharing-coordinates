@@ -1,0 +1,4820 @@
+{
+  "distillation": {
+    "groups": [
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "matched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.03505363315343857,
+            "n": 5,
+            "std": 0.0024588750035406887
+          },
+          "test_hidden_loss": {
+            "mean": 0.018782930448651314,
+            "n": 5,
+            "std": 0.00029688051781771
+          },
+          "test_task_loss": {
+            "mean": 0.005664754845201969,
+            "n": 5,
+            "std": 8.556610538822672e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "mismatched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.16666666666666666,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857313156128,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.03378384262323379,
+            "n": 5,
+            "std": 0.002428716551246739
+          },
+          "test_hidden_loss": {
+            "mean": 0.014879563637077809,
+            "n": 5,
+            "std": 0.00028109335611519067
+          },
+          "test_task_loss": {
+            "mean": 0.005580800212919712,
+            "n": 5,
+            "std": 7.004698951535408e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.2830871686373233,
+            "n": 5,
+            "std": 0.08169583225466585
+          },
+          "assignment_accuracy": {
+            "mean": 0.575,
+            "n": 5,
+            "std": 0.06846531968814576
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857551574707,
+            "n": 5,
+            "std": 0.061858979535662724
+          },
+          "normalized_entropy": {
+            "mean": 0.9981126070022583,
+            "n": 5,
+            "std": 0.0012447965483196343
+          },
+          "test_hidden_loss": {
+            "mean": 0.015841980651021003,
+            "n": 5,
+            "std": 0.0003524914334012626
+          },
+          "test_task_loss": {
+            "mean": 0.01220163144171238,
+            "n": 5,
+            "std": 0.00019948066895663974
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "matched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.032756684347987175,
+            "n": 5,
+            "std": 0.002459334707096883
+          },
+          "test_hidden_loss": {
+            "mean": 0.007298991270363331,
+            "n": 5,
+            "std": 0.0001361324834075028
+          },
+          "test_task_loss": {
+            "mean": 0.005463605374097824,
+            "n": 5,
+            "std": 6.209320827938464e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "mismatched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.16666666666666666,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857313156128,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.0337484497576952,
+            "n": 5,
+            "std": 0.0024608794418690487
+          },
+          "test_hidden_loss": {
+            "mean": 0.011809544637799263,
+            "n": 5,
+            "std": 0.00015022864150861457
+          },
+          "test_task_loss": {
+            "mean": 0.005566123034805059,
+            "n": 5,
+            "std": 7.649330374922617e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.2260408666740709,
+            "n": 5,
+            "std": 0.055944710876394986
+          },
+          "assignment_accuracy": {
+            "mean": 0.35,
+            "n": 5,
+            "std": 0.05590169943749474
+          },
+          "graph_accuracy": {
+            "mean": 0.5071428894996644,
+            "n": 5,
+            "std": 0.05868456258281555
+          },
+          "normalized_entropy": {
+            "mean": 0.9981439709663391,
+            "n": 5,
+            "std": 0.0010231302745393846
+          },
+          "test_hidden_loss": {
+            "mean": 0.00807336401194334,
+            "n": 5,
+            "std": 0.00016415538079268377
+          },
+          "test_task_loss": {
+            "mean": 0.012041439488530158,
+            "n": 5,
+            "std": 0.00018498953066524098
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.07713490266103977,
+            "n": 5,
+            "std": 0.062273464767579265
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.08838834764831845
+          },
+          "graph_accuracy": {
+            "mean": 0.6071428894996643,
+            "n": 5,
+            "std": 0.08375743517492247
+          },
+          "normalized_entropy": {
+            "mean": 0.9980287671089172,
+            "n": 5,
+            "std": 0.0011134476193845684
+          },
+          "test_hidden_loss": {
+            "mean": 0.007746214885264635,
+            "n": 5,
+            "std": 0.00018585925036565914
+          },
+          "test_task_loss": {
+            "mean": 0.011270633712410928,
+            "n": 5,
+            "std": 0.00022397430511587047
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "structured_other",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.05660377358490567,
+            "n": 10,
+            "std": 0.13921977120238146
+          },
+          "assignment_accuracy": {
+            "mean": 0.5625,
+            "n": 10,
+            "std": 0.06588078458684124
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857611179352,
+            "n": 10,
+            "std": 0.037646176084369036
+          },
+          "normalized_entropy": {
+            "mean": 0.031699462421238424,
+            "n": 10,
+            "std": 0.0022689758386260405
+          },
+          "test_hidden_loss": {
+            "mean": 0.009617190668359398,
+            "n": 10,
+            "std": 0.002490104559339705
+          },
+          "test_task_loss": {
+            "mean": 0.005003369925543666,
+            "n": 10,
+            "std": 0.00012050902038653336
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.05316554965497229,
+            "n": 5,
+            "std": 0.12958853015037997
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.08838834764831845
+          },
+          "graph_accuracy": {
+            "mean": 0.6142857432365417,
+            "n": 5,
+            "std": 0.05297284719751786
+          },
+          "normalized_entropy": {
+            "mean": 0.9986809849739074,
+            "n": 5,
+            "std": 0.0007444735673411737
+          },
+          "test_hidden_loss": {
+            "mean": 0.01101807039231062,
+            "n": 5,
+            "std": 0.001188779351574966
+          },
+          "test_task_loss": {
+            "mean": 0.012086064368486405,
+            "n": 5,
+            "std": 0.00019127414281747417
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "mlp",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "structured_other",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.07916666666666665,
+            "n": 10,
+            "std": 0.19685999599891124
+          },
+          "assignment_accuracy": {
+            "mean": 0.5375,
+            "n": 10,
+            "std": 0.0843685697138191
+          },
+          "graph_accuracy": {
+            "mean": 0.7357143104076386,
+            "n": 10,
+            "std": 0.04821062850649765
+          },
+          "normalized_entropy": {
+            "mean": 0.03338360674679279,
+            "n": 10,
+            "std": 0.0024367574746916947
+          },
+          "test_hidden_loss": {
+            "mean": 0.012416111398488283,
+            "n": 10,
+            "std": 0.002432695485542454
+          },
+          "test_task_loss": {
+            "mean": 0.005549961887300015,
+            "n": 10,
+            "std": 8.80574194559922e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "matched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.008128415606915951,
+            "n": 5,
+            "std": 0.00038884288437048106
+          },
+          "test_hidden_loss": {
+            "mean": 0.4345218658447266,
+            "n": 5,
+            "std": 0.02913086892857845
+          },
+          "test_task_loss": {
+            "mean": 0.0004032673023175448,
+            "n": 5,
+            "std": 9.103943692188038e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "mismatched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.16666666666666666,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857313156128,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.008025621436536312,
+            "n": 5,
+            "std": 0.0003117528656477307
+          },
+          "test_hidden_loss": {
+            "mean": 0.43221457600593566,
+            "n": 5,
+            "std": 0.01969438575274086
+          },
+          "test_task_loss": {
+            "mean": 0.00040929800597950817,
+            "n": 5,
+            "std": 9.890089354991051e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.2048270752914571,
+            "n": 5,
+            "std": 0.05003612444298771
+          },
+          "assignment_accuracy": {
+            "mean": 0.525,
+            "n": 5,
+            "std": 0.10458250331675945
+          },
+          "graph_accuracy": {
+            "mean": 0.6214286088943481,
+            "n": 5,
+            "std": 0.08964215519890371
+          },
+          "normalized_entropy": {
+            "mean": 0.9991261482238769,
+            "n": 5,
+            "std": 0.0003988501654735494
+          },
+          "test_hidden_loss": {
+            "mean": 0.1933027982711792,
+            "n": 5,
+            "std": 0.018396833691801714
+          },
+          "test_task_loss": {
+            "mean": 0.0005242682236712426,
+            "n": 5,
+            "std": 0.00013019733997584929
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "matched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.008064564596861602,
+            "n": 5,
+            "std": 0.0003194265560571952
+          },
+          "test_hidden_loss": {
+            "mean": 0.43612130284309386,
+            "n": 5,
+            "std": 0.02551333075639876
+          },
+          "test_task_loss": {
+            "mean": 0.0003903131349943578,
+            "n": 5,
+            "std": 6.515400988983757e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "mismatched",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.16666666666666666,
+            "n": 5,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 0.5,
+            "n": 5,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857313156128,
+            "n": 5,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.008139093406498432,
+            "n": 5,
+            "std": 0.00029852266227643347
+          },
+          "test_hidden_loss": {
+            "mean": 0.4477168321609497,
+            "n": 5,
+            "std": 0.03793924592152241
+          },
+          "test_task_loss": {
+            "mean": 0.000403753126738593,
+            "n": 5,
+            "std": 7.895163164946025e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.032434376123696505,
+            "n": 5,
+            "std": 0.12190665880539304
+          },
+          "assignment_accuracy": {
+            "mean": 0.45,
+            "n": 5,
+            "std": 0.06846531968814576
+          },
+          "graph_accuracy": {
+            "mean": 0.5428571701049805,
+            "n": 5,
+            "std": 0.10227014955991012
+          },
+          "normalized_entropy": {
+            "mean": 0.9996042370796203,
+            "n": 5,
+            "std": 0.00010347721173699919
+          },
+          "test_hidden_loss": {
+            "mean": 0.18242095410823822,
+            "n": 5,
+            "std": 0.03690807870090845
+          },
+          "test_task_loss": {
+            "mean": 0.0004984435101505369,
+            "n": 5,
+            "std": 9.518760610914941e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.0911002476316094,
+            "n": 5,
+            "std": 0.03181195442110446
+          },
+          "assignment_accuracy": {
+            "mean": 0.475,
+            "n": 5,
+            "std": 0.05590169943749474
+          },
+          "graph_accuracy": {
+            "mean": 0.5000000238418579,
+            "n": 5,
+            "std": 0.07576143281344648
+          },
+          "normalized_entropy": {
+            "mean": 0.9995611667633056,
+            "n": 5,
+            "std": 0.00024366303913748877
+          },
+          "test_hidden_loss": {
+            "mean": 0.18697824478149414,
+            "n": 5,
+            "std": 0.02577381661011451
+          },
+          "test_task_loss": {
+            "mean": 0.0004985002393368632,
+            "n": 5,
+            "std": 8.182944921666013e-05
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "structured_other",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.05660377358490567,
+            "n": 10,
+            "std": 0.13921977120238146
+          },
+          "assignment_accuracy": {
+            "mean": 0.5625,
+            "n": 10,
+            "std": 0.06588078458684124
+          },
+          "graph_accuracy": {
+            "mean": 0.7142857611179352,
+            "n": 10,
+            "std": 0.037646176084369036
+          },
+          "normalized_entropy": {
+            "mean": 0.00813167542219162,
+            "n": 10,
+            "std": 0.00022202733863755273
+          },
+          "test_hidden_loss": {
+            "mean": 0.4847001791000366,
+            "n": 10,
+            "std": 0.024845888692359833
+          },
+          "test_task_loss": {
+            "mean": 0.00040676765202078967,
+            "n": 10,
+            "std": 5.604190011336151e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "neutral",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.007200569612669331,
+            "n": 5,
+            "std": 0.15860964255772522
+          },
+          "assignment_accuracy": {
+            "mean": 0.55,
+            "n": 5,
+            "std": 0.06846531968814577
+          },
+          "graph_accuracy": {
+            "mean": 0.6500000357627869,
+            "n": 5,
+            "std": 0.06869781549241019
+          },
+          "normalized_entropy": {
+            "mean": 0.999608325958252,
+            "n": 5,
+            "std": 9.080608104078259e-05
+          },
+          "test_hidden_loss": {
+            "mean": 0.1905219465494156,
+            "n": 5,
+            "std": 0.013624869698412007
+          },
+          "test_task_loss": {
+            "mean": 0.0004722106154076755,
+            "n": 5,
+            "std": 0.00011096516069331853
+          }
+        },
+        "n_records": 5,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      },
+      {
+        "architecture": "transformer",
+        "hard": false,
+        "hidden_weight": 0.0,
+        "init_relation": "structured_other",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.07916666666666665,
+            "n": 10,
+            "std": 0.19685999599891124
+          },
+          "assignment_accuracy": {
+            "mean": 0.5375,
+            "n": 10,
+            "std": 0.0843685697138191
+          },
+          "graph_accuracy": {
+            "mean": 0.7357143104076386,
+            "n": 10,
+            "std": 0.04821062850649765
+          },
+          "normalized_entropy": {
+            "mean": 0.008064547972753643,
+            "n": 10,
+            "std": 0.0002231781247250265
+          },
+          "test_hidden_loss": {
+            "mean": 0.4581918269395828,
+            "n": 10,
+            "std": 0.029929288513379712
+          },
+          "test_task_loss": {
+            "mean": 0.0003836533607682213,
+            "n": 10,
+            "std": 6.749705265913818e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ],
+        "usage_strength": 0.0,
+        "vertex_strength": 0.0
+      }
+    ],
+    "n_records": 120
+  },
+  "factorization": {
+    "groups": [
+      {
+        "init_relation": "neutral",
+        "method": "kmeans",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "kmeans",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "kmeans",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "kmeans",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "kmeans",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "oracle",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "oracle",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "oracle",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "oracle",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "oracle",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0,
+            "n": 10,
+            "std": 0.0
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.5660658657550812,
+            "n": 10,
+            "std": 0.011403319214215958
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.003361774329096079,
+            "n": 10,
+            "std": 0.0008041477992982446
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.6358234295415959,
+            "n": 10,
+            "std": 0.15828523314771062
+          },
+          "assignment_accuracy": {
+            "mean": 0.725,
+            "n": 10,
+            "std": 0.14191155304938666
+          },
+          "graph_accuracy": {
+            "mean": 0.850000011920929,
+            "n": 10,
+            "std": 0.07740629551160166
+          },
+          "normalized_entropy": {
+            "mean": 0.8187056303024292,
+            "n": 10,
+            "std": 0.0007914513651527318
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.003990710037760437,
+            "n": 10,
+            "std": 0.0006869885687193598
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9290322580645161,
+            "n": 10,
+            "std": 0.14961313661011688
+          },
+          "assignment_accuracy": {
+            "mean": 0.95,
+            "n": 10,
+            "std": 0.10540925533894598
+          },
+          "graph_accuracy": {
+            "mean": 0.9727272748947143,
+            "n": 10,
+            "std": 0.057495952888238736
+          },
+          "normalized_entropy": {
+            "mean": 0.8868232369422913,
+            "n": 10,
+            "std": 0.004544449293363497
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.004675871576182544,
+            "n": 10,
+            "std": 0.0014344078731430955
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9290322580645161,
+            "n": 10,
+            "std": 0.14961313661011688
+          },
+          "assignment_accuracy": {
+            "mean": 0.95,
+            "n": 10,
+            "std": 0.10540925533894598
+          },
+          "graph_accuracy": {
+            "mean": 0.9727272748947143,
+            "n": 10,
+            "std": 0.057495952888238736
+          },
+          "normalized_entropy": {
+            "mean": 0.7921653151512146,
+            "n": 10,
+            "std": 0.044455248516122516
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0059174585621804,
+            "n": 10,
+            "std": 0.003269248273789894
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 0.5660917341709137,
+            "n": 10,
+            "std": 0.011407591778567249
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.003460474149324,
+            "n": 10,
+            "std": 0.0008360158511213864
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.6358234295415959,
+            "n": 10,
+            "std": 0.15828523314771062
+          },
+          "assignment_accuracy": {
+            "mean": 0.725,
+            "n": 10,
+            "std": 0.14191155304938666
+          },
+          "graph_accuracy": {
+            "mean": 0.850000011920929,
+            "n": 10,
+            "std": 0.07740629551160166
+          },
+          "normalized_entropy": {
+            "mean": 0.8187062501907348,
+            "n": 10,
+            "std": 0.0007921735252414742
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.00368655186612159,
+            "n": 10,
+            "std": 0.0007917122526024538
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.893548387096774,
+            "n": 10,
+            "std": 0.17140338086890736
+          },
+          "assignment_accuracy": {
+            "mean": 0.925,
+            "n": 10,
+            "std": 0.12076147288491199
+          },
+          "graph_accuracy": {
+            "mean": 0.9590909123420716,
+            "n": 10,
+            "std": 0.06586988906599221
+          },
+          "normalized_entropy": {
+            "mean": 0.887080705165863,
+            "n": 10,
+            "std": 0.004333549754522919
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.00393882435746491,
+            "n": 10,
+            "std": 0.0009076800177803604
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.893548387096774,
+            "n": 10,
+            "std": 0.17140338086890736
+          },
+          "assignment_accuracy": {
+            "mean": 0.925,
+            "n": 10,
+            "std": 0.12076147288491199
+          },
+          "graph_accuracy": {
+            "mean": 0.9590909123420716,
+            "n": 10,
+            "std": 0.06586988906599221
+          },
+          "normalized_entropy": {
+            "mean": 0.7990396320819855,
+            "n": 10,
+            "std": 0.030034275775502065
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.005363598628900945,
+            "n": 10,
+            "std": 0.0016916736655293845
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9969359331476323,
+            "n": 10,
+            "std": 0.009689430156504777
+          },
+          "assignment_accuracy": {
+            "mean": 0.9916666686534882,
+            "n": 10,
+            "std": 0.026352307551855275
+          },
+          "graph_accuracy": {
+            "mean": 0.9984848499298096,
+            "n": 10,
+            "std": 0.004791325218765748
+          },
+          "normalized_entropy": {
+            "mean": 0.8916711747646332,
+            "n": 10,
+            "std": 0.0079836423290938
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.005974657810293138,
+            "n": 10,
+            "std": 0.004116712206547014
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.959538604385401,
+            "n": 10,
+            "std": 0.08624067268488443
+          },
+          "assignment_accuracy": {
+            "mean": 0.9583333432674408,
+            "n": 10,
+            "std": 0.04392051258642546
+          },
+          "graph_accuracy": {
+            "mean": 0.9803030371665955,
+            "n": 10,
+            "std": 0.04167814083636912
+          },
+          "normalized_entropy": {
+            "mean": 0.8582295596599578,
+            "n": 10,
+            "std": 0.02089537368633643
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0042104866122826936,
+            "n": 10,
+            "std": 0.0018077831159048709
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.7062750642133773,
+            "n": 20,
+            "std": 0.30199154814257095
+          },
+          "assignment_accuracy": {
+            "mean": 0.8083333313465119,
+            "n": 20,
+            "std": 0.19886373541696212
+          },
+          "graph_accuracy": {
+            "mean": 0.8469697058200836,
+            "n": 20,
+            "std": 0.15737472544207343
+          },
+          "normalized_entropy": {
+            "mean": 0.6901003360748291,
+            "n": 20,
+            "std": 0.0366686660747207
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.1461774486815557,
+            "n": 20,
+            "std": 0.14622322587179698
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9400000000000001,
+            "n": 10,
+            "std": 0.1264911064067352
+          },
+          "assignment_accuracy": {
+            "mean": 0.9666666626930237,
+            "n": 10,
+            "std": 0.07027284526980561
+          },
+          "graph_accuracy": {
+            "mean": 0.9757575750350952,
+            "n": 10,
+            "std": 0.051107519263217736
+          },
+          "normalized_entropy": {
+            "mean": 0.8915690004825592,
+            "n": 10,
+            "std": 0.004060779399375831
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.006792257167398929,
+            "n": 10,
+            "std": 0.006269426164645884
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9099999999999999,
+            "n": 10,
+            "std": 0.1449137674618944
+          },
+          "assignment_accuracy": {
+            "mean": 0.9499999940395355,
+            "n": 10,
+            "std": 0.08050765818720092
+          },
+          "graph_accuracy": {
+            "mean": 0.9636363625526428,
+            "n": 10,
+            "std": 0.05855101890127725
+          },
+          "normalized_entropy": {
+            "mean": 0.8034044861793518,
+            "n": 10,
+            "std": 0.03834728755746582
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.005356525676324964,
+            "n": 10,
+            "std": 0.0021504642350317223
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9549999999999998,
+            "n": 20,
+            "std": 0.10990426455975699
+          },
+          "assignment_accuracy": {
+            "mean": 0.9749999970197678,
+            "n": 20,
+            "std": 0.06105793203409237
+          },
+          "graph_accuracy": {
+            "mean": 0.9818181812763214,
+            "n": 20,
+            "std": 0.044405764781882545
+          },
+          "normalized_entropy": {
+            "mean": 0.4359161972999573,
+            "n": 20,
+            "std": 0.073040731361521
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0038732720306143163,
+            "n": 20,
+            "std": 0.0007142477336819779
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.8580645161290322,
+            "n": 10,
+            "std": 0.18323792175604983
+          },
+          "assignment_accuracy": {
+            "mean": 0.9,
+            "n": 10,
+            "std": 0.12909944487358058
+          },
+          "graph_accuracy": {
+            "mean": 0.9454545497894287,
+            "n": 10,
+            "std": 0.0704178734256428
+          },
+          "normalized_entropy": {
+            "mean": 0.8864436984062195,
+            "n": 10,
+            "std": 0.004096019349665808
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.005005975440144539,
+            "n": 10,
+            "std": 0.0018215454119347627
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.8556989247311828,
+            "n": 10,
+            "std": 0.2541589166712392
+          },
+          "assignment_accuracy": {
+            "mean": 0.9,
+            "n": 10,
+            "std": 0.17480147469502527
+          },
+          "graph_accuracy": {
+            "mean": 0.9318181872367859,
+            "n": 10,
+            "std": 0.1325216234418836
+          },
+          "normalized_entropy": {
+            "mean": 0.8045437753200531,
+            "n": 10,
+            "std": 0.03521525982106205
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.006500900886021554,
+            "n": 10,
+            "std": 0.0026130158033787565
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "soft",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.8911827956989248,
+            "n": 20,
+            "std": 0.23957779708748914
+          },
+          "assignment_accuracy": {
+            "mean": 0.925,
+            "n": 20,
+            "std": 0.16423667133294656
+          },
+          "graph_accuracy": {
+            "mean": 0.9454545497894287,
+            "n": 20,
+            "std": 0.1282260841681312
+          },
+          "normalized_entropy": {
+            "mean": 0.5689689964056015,
+            "n": 20,
+            "std": 0.16786637299546944
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0036665544495917855,
+            "n": 20,
+            "std": 0.0008387507062364686
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.004200932616367936,
+            "n": 10,
+            "std": 0.0014364247383380827
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 1.045041173597383e-08,
+            "n": 10,
+            "std": 6.420531958013647e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.008910017396556214,
+            "n": 10,
+            "std": 0.024999492441353185
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 6.150846207364502e-09,
+            "n": 10,
+            "std": 4.792201119935063e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0057593557285144925,
+            "n": 10,
+            "std": 0.016163011643896576
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 9.733817396551103e-09,
+            "n": 10,
+            "std": 2.9497622594110963e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0036237808410078285,
+            "n": 10,
+            "std": 0.004882931470046129
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.004200932709500194,
+            "n": 10,
+            "std": 0.0014364247325811415
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 1.0450411824791672e-08,
+            "n": 10,
+            "std": 6.42053188091299e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.008910017419839277,
+            "n": 10,
+            "std": 0.02499949243352972
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 1.2600194487788486e-08,
+            "n": 10,
+            "std": 4.851366265476336e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0008444549952400848,
+            "n": 10,
+            "std": 0.0009054167081621235
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 6.867440346947085e-09,
+            "n": 10,
+            "std": 5.959663725928482e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.006197978396085091,
+            "n": 10,
+            "std": 0.01540345284575571
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 9.733817352142183e-09,
+            "n": 10,
+            "std": 3.795620346697825e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.00791197398211807,
+            "n": 10,
+            "std": 0.013375262499348724
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.6979923192704216,
+            "n": 10,
+            "std": 0.2753107541383664
+          },
+          "assignment_accuracy": {
+            "mean": 0.8,
+            "n": 10,
+            "std": 0.18087578643526622
+          },
+          "graph_accuracy": {
+            "mean": 0.8439394116401673,
+            "n": 10,
+            "std": 0.14303721038021794
+          },
+          "normalized_entropy": {
+            "mean": 7.942331779753342e-09,
+            "n": 10,
+            "std": 6.0428533718283355e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.21552620348520576,
+            "n": 10,
+            "std": 0.14999190764526127
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.7200555699418405,
+            "n": 20,
+            "std": 0.2874673685903423
+          },
+          "assignment_accuracy": {
+            "mean": 0.8291666746139527,
+            "n": 20,
+            "std": 0.1762071907263194
+          },
+          "graph_accuracy": {
+            "mean": 0.8545454710721969,
+            "n": 20,
+            "std": 0.149378862675099
+          },
+          "normalized_entropy": {
+            "mean": 1.6721318663037721e-09,
+            "n": 20,
+            "std": 3.762344543536027e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.15915802381932737,
+            "n": 20,
+            "std": 0.1373028665184514
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 8.658926109461617e-09,
+            "n": 10,
+            "std": 5.652572009788078e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0009966982441255822,
+            "n": 10,
+            "std": 0.0005347799247673536
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9690763052208835,
+            "n": 10,
+            "std": 0.09778930916986553
+          },
+          "assignment_accuracy": {
+            "mean": 0.975,
+            "n": 10,
+            "std": 0.07905694150420949
+          },
+          "graph_accuracy": {
+            "mean": 0.9893939435482025,
+            "n": 10,
+            "std": 0.03353929538000389
+          },
+          "normalized_entropy": {
+            "mean": 6.867440559277238e-09,
+            "n": 10,
+            "std": 4.289601685565525e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.045993434640695344,
+            "n": 10,
+            "std": 0.1275923775213163
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 6.1508460998116465e-09,
+            "n": 20,
+            "std": 5.823960232821181e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0063548268226441,
+            "n": 20,
+            "std": 0.018456968351189946
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 1.0092114788307071e-08,
+            "n": 10,
+            "std": 3.7004770847659697e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0005970974278170615,
+            "n": 10,
+            "std": 0.00024973284432931264
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9188557516737674,
+            "n": 10,
+            "std": 0.17274053296883637
+          },
+          "assignment_accuracy": {
+            "mean": 0.9416666686534881,
+            "n": 10,
+            "std": 0.1245361716333476
+          },
+          "graph_accuracy": {
+            "mean": 0.9696969747543335,
+            "n": 10,
+            "std": 0.06428242330063627
+          },
+          "normalized_entropy": {
+            "mean": 9.017223367990822e-09,
+            "n": 10,
+            "std": 3.8700515213731385e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.10469927520025521,
+            "n": 10,
+            "std": 0.20856019025282355
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "straight_through",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 20,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 7.046588988701696e-09,
+            "n": 20,
+            "std": 4.572954484716665e-09
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0029446096465107984,
+            "n": 20,
+            "std": 0.004846845565355738
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.004538512951694429,
+            "n": 10,
+            "std": 0.0023452600839146695
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.22222222222222224,
+            "n": 10,
+            "std": 2.925694557147251e-17
+          },
+          "assignment_accuracy": {
+            "mean": 0.3333333432674408,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.6363636255264282,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.8551040530204773,
+            "n": 10,
+            "std": 0.0016541791605636073
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.00052120667824056,
+            "n": 10,
+            "std": 6.090761803291467e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.52517854177047,
+            "n": 10,
+            "std": 0.29670806294813534
+          },
+          "assignment_accuracy": {
+            "mean": 0.7916666626930237,
+            "n": 10,
+            "std": 0.15340779670213578
+          },
+          "graph_accuracy": {
+            "mean": 0.8545454680919647,
+            "n": 10,
+            "std": 0.09124515932802643
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.4924367006868124,
+            "n": 10,
+            "std": 0.22033218225539317
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "contiguous",
+        "teacher_patterns": [
+          "contiguous"
+        ]
+      },
+      {
+        "init_relation": "matched",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.004538513044826687,
+            "n": 10,
+            "std": 0.0023452600912835333
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "mismatched",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.22222222222222224,
+            "n": 10,
+            "std": 2.925694557147251e-17
+          },
+          "assignment_accuracy": {
+            "mean": 0.3333333432674408,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 0.6363636255264282,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.8542379379272461,
+            "n": 10,
+            "std": 0.001446110746129708
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "pattern_contiguous"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.000492647587088868,
+            "n": 10,
+            "std": 3.8932869291281095e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.522620827105132,
+            "n": 10,
+            "std": 0.3331303109202554
+          },
+          "assignment_accuracy": {
+            "mean": 0.7833333313465118,
+            "n": 10,
+            "std": 0.17213259252353108
+          },
+          "graph_accuracy": {
+            "mean": 0.8545454621315003,
+            "n": 10,
+            "std": 0.10156413195984568
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.47458579670637846,
+            "n": 10,
+            "std": 0.2714181529269764
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "cycle",
+        "teacher_patterns": [
+          "cycle"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.08962385077494762,
+            "n": 10,
+            "std": 0.10129893371616769
+          },
+          "assignment_accuracy": {
+            "mean": 0.4583333283662796,
+            "n": 10,
+            "std": 0.04392052829362851
+          },
+          "graph_accuracy": {
+            "mean": 0.5212121337652207,
+            "n": 10,
+            "std": 0.05354489047187663
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.6624989688396454,
+            "n": 10,
+            "std": 0.07003776933054034
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.07841091616201659,
+            "n": 10,
+            "std": 0.09792564650251213
+          },
+          "assignment_accuracy": {
+            "mean": 0.4999999970197678,
+            "n": 10,
+            "std": 0.03928370772442822
+          },
+          "graph_accuracy": {
+            "mean": 0.5136363804340363,
+            "n": 10,
+            "std": 0.05221840950509872
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.6584967613220215,
+            "n": 10,
+            "std": 0.0643075499107758
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.002604166666666691,
+            "n": 20,
+            "std": 0.029390004877439313
+          },
+          "assignment_accuracy": {
+            "mean": 0.4583333283662796,
+            "n": 20,
+            "std": 0.04274910309963769
+          },
+          "graph_accuracy": {
+            "mean": 0.4696969836950302,
+            "n": 20,
+            "std": 0.015545127010025632
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 20,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.7090277642011642,
+            "n": 20,
+            "std": 0.014078152144222013
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "imbalanced",
+        "teacher_patterns": [
+          "imbalanced"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.9355481163015955,
+            "n": 10,
+            "std": 0.16267084200164306
+          },
+          "assignment_accuracy": {
+            "mean": 0.9583333373069763,
+            "n": 10,
+            "std": 0.10577461951346702
+          },
+          "graph_accuracy": {
+            "mean": 0.9787878870964051,
+            "n": 10,
+            "std": 0.053066351502029346
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.09216391225636471,
+            "n": 10,
+            "std": 0.20085753093597264
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.3590494879499601,
+            "n": 10,
+            "std": 0.2371916857869719
+          },
+          "assignment_accuracy": {
+            "mean": 0.7083333253860473,
+            "n": 10,
+            "std": 0.1317615733622713
+          },
+          "graph_accuracy": {
+            "mean": 0.7939394176006317,
+            "n": 10,
+            "std": 0.07565650114446125
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.6042640328407287,
+            "n": 10,
+            "std": 0.1355705994734188
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.05217391304347825,
+            "n": 20,
+            "std": 0.1962741195293338
+          },
+          "assignment_accuracy": {
+            "mean": 0.4166666716337204,
+            "n": 20,
+            "std": 0.08549819091100658
+          },
+          "graph_accuracy": {
+            "mean": 0.6666666865348816,
+            "n": 20,
+            "std": 0.06218050804010253
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 20,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.8512675285339355,
+            "n": 20,
+            "std": 0.05758813837737854
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "palindrome",
+        "teacher_patterns": [
+          "palindrome"
+        ]
+      },
+      {
+        "init_relation": "neutral",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "assignment_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "graph_accuracy": {
+            "mean": 1.0,
+            "n": 10,
+            "std": 0.0
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.0004996353440219536,
+            "n": 10,
+            "std": 4.461074391957115e-05
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "neutral"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "random",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": 0.4973836499786978,
+            "n": 10,
+            "std": 0.3430700656391791
+          },
+          "assignment_accuracy": {
+            "mean": 0.7750000059604645,
+            "n": 10,
+            "std": 0.1622089002738912
+          },
+          "graph_accuracy": {
+            "mean": 0.8454545617103577,
+            "n": 10,
+            "std": 0.10565095840646148
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 10,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.4926557330181822,
+            "n": 10,
+            "std": 0.27875420041574545
+          }
+        },
+        "n_records": 10,
+        "raw_initializations": [
+          "random"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      },
+      {
+        "init_relation": "structured_other",
+        "method": "vertex_hard",
+        "metrics": {
+          "adjusted_rand": {
+            "mean": -0.028703703703703693,
+            "n": 20,
+            "std": 0.14741228062120137
+          },
+          "assignment_accuracy": {
+            "mean": 0.4833333283662796,
+            "n": 20,
+            "std": 0.11015671231610089
+          },
+          "graph_accuracy": {
+            "mean": 0.6939394116401673,
+            "n": 20,
+            "std": 0.04385821112097886
+          },
+          "normalized_entropy": {
+            "mean": 5.979471084938126e-11,
+            "n": 20,
+            "std": 0.0
+          },
+          "relative_reconstruction_error": {
+            "mean": 0.7909256249666214,
+            "n": 20,
+            "std": 0.054791754863011806
+          }
+        },
+        "n_records": 20,
+        "raw_initializations": [
+          "pattern_contiguous",
+          "pattern_cycle"
+        ],
+        "teacher_pattern": "random_balanced",
+        "teacher_patterns": [
+          "random_balanced"
+        ]
+      }
+    ],
+    "n_records": 700
+  },
+  "gauge": {
+    "exact_argmax_flip": {
+      "alpha": [
+        [
+          0.1,
+          0.9
+        ],
+        [
+          0.3,
+          0.7
+        ],
+        [
+          0.4,
+          0.6
+        ],
+        [
+          0.9,
+          0.1
+        ]
+      ],
+      "argmax_after": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "argmax_before": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "effective_max_abs_error": 6.661338147750939e-16,
+      "entropy_after": 0.8915848731994629,
+      "entropy_before": 0.6975581645965576,
+      "transformed_alpha": [
+        [
+          0.45000000000000007,
+          0.55
+        ],
+        [
+          0.55,
+          0.44999999999999996
+        ],
+        [
+          0.6000000000000001,
+          0.4
+        ],
+        [
+          0.8500000000000001,
+          0.15000000000000002
+        ]
+      ]
+    },
+    "gauge_trials": {
+      "metrics": {
+        "argmax_agreement": {
+          "mean": 0.86875,
+          "n": 20,
+          "std": 0.1695339975219999
+        },
+        "coassignment_relative_change": {
+          "mean": 0.059157933574169874,
+          "n": 20,
+          "std": 0.01928825398845864
+        },
+        "effective_max_abs_error": {
+          "mean": 2.1117739379405975e-07,
+          "n": 20,
+          "std": 5.407657405628209e-08
+        },
+        "initial_loss_difference": {
+          "mean": 4.32133674621582e-08,
+          "n": 20,
+          "std": 4.684800552117054e-08
+        },
+        "original_entropy": {
+          "mean": 0.9455972015857697,
+          "n": 20,
+          "std": 0.02141309756973881
+        },
+        "original_logit_gradient_norm": {
+          "mean": 0.5033517494797707,
+          "n": 20,
+          "std": 0.12139640653383792
+        },
+        "post_step_effective_relative_difference": {
+          "mean": 0.002151141327340156,
+          "n": 20,
+          "std": 0.0009899849814066582
+        },
+        "transformed_entropy": {
+          "mean": 0.9718913048505783,
+          "n": 20,
+          "std": 0.010538707780870411
+        },
+        "transformed_logit_gradient_norm": {
+          "mean": 0.8285950601100922,
+          "n": 20,
+          "std": 0.19702021037188863
+        }
+      },
+      "n_records": 20
+    },
+    "saturation": {
+      "groups": [
+        {
+          "margin": 0.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 8.07080539289018e-08,
+              "n": 5,
+              "std": 2.9588615733239904e-10
+            },
+            "initial_gradient_norm": {
+              "mean": 0.007831184566020966,
+              "n": 5,
+              "std": 4.178253577464483e-05
+            },
+            "step_to_90pct": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 0.5,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 7.883944306286139e-08,
+              "n": 5,
+              "std": 2.077897161874971e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0021651866380125286,
+              "n": 5,
+              "std": 1.041250292910165e-10
+            },
+            "step_to_90pct": {
+              "mean": 11.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 1.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 5.99866353923062e-08,
+              "n": 5,
+              "std": 1.8641424169862084e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 4.62209529359825e-05,
+              "n": 5,
+              "std": 1.6269535826721328e-12
+            },
+            "step_to_90pct": {
+              "mean": 21.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 2.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 1.9443779919470217e-08,
+              "n": 5,
+              "std": 9.266897978415395e-14
+            },
+            "initial_gradient_norm": {
+              "mean": 1.547356696107727e-08,
+              "n": 5,
+              "std": 7.944109290391273e-16
+            },
+            "step_to_90pct": {
+              "mean": 49.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 4.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": -0.22222222222222224,
+              "n": 5,
+              "std": 3.1031676915590914e-17
+            },
+            "assignment_accuracy": {
+              "mean": 0.3333333432674408,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 0.02083333395421505,
+              "n": 5,
+              "std": 2.2812650937430355e-09
+            },
+            "initial_gradient_norm": {
+              "mean": 9.139574651091598e-16,
+              "n": 5,
+              "std": 1.1598476304031598e-22
+            },
+            "step_to_90pct": {
+              "mean": null,
+              "n": 0,
+              "std": null
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 8.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": -0.22222222222222224,
+              "n": 5,
+              "std": 3.1031676915590914e-17
+            },
+            "assignment_accuracy": {
+              "mean": 0.3333333432674408,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 0.02083333395421505,
+              "n": 5,
+              "std": 2.2812650937430355e-09
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "step_to_90pct": {
+              "mean": null,
+              "n": 0,
+              "std": null
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.25
+        },
+        {
+          "margin": 0.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.5193577357640606e-07,
+              "n": 5,
+              "std": 6.307253371475107e-10
+            },
+            "initial_gradient_norm": {
+              "mean": 0.003905794257298112,
+              "n": 5,
+              "std": 8.643240627820236e-06
+            },
+            "step_to_90pct": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 0.5,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.678796590771526e-07,
+              "n": 5,
+              "std": 4.131425670343793e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0036360851023346185,
+              "n": 5,
+              "std": 2.654677781041567e-10
+            },
+            "step_to_90pct": {
+              "mean": 11.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 1.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.7594672928898946e-07,
+              "n": 5,
+              "std": 2.9577701617990205e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0010825933190062643,
+              "n": 5,
+              "std": 5.206251464550825e-11
+            },
+            "step_to_90pct": {
+              "mean": 20.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 2.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.491280554295372e-07,
+              "n": 5,
+              "std": 3.0172559552489054e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 2.311047646799125e-05,
+              "n": 5,
+              "std": 8.134767913360664e-13
+            },
+            "step_to_90pct": {
+              "mean": 36.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 4.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 1.444320446353231e-07,
+              "n": 5,
+              "std": 9.617295015509984e-14
+            },
+            "initial_gradient_norm": {
+              "mean": 7.736783480538634e-09,
+              "n": 5,
+              "std": 3.9720546451956367e-16
+            },
+            "step_to_90pct": {
+              "mean": 93.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 8.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": -0.22222222222222224,
+              "n": 5,
+              "std": 3.1031676915590914e-17
+            },
+            "assignment_accuracy": {
+              "mean": 0.3333333432674408,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 0.02083333395421505,
+              "n": 5,
+              "std": 2.2812650937430355e-09
+            },
+            "initial_gradient_norm": {
+              "mean": 4.569787325545799e-16,
+              "n": 5,
+              "std": 5.799238152015799e-23
+            },
+            "step_to_90pct": {
+              "mean": null,
+              "n": 0,
+              "std": null
+            }
+          },
+          "n_records": 5,
+          "temperature": 0.5
+        },
+        {
+          "margin": 0.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 7.245019560286891e-07,
+              "n": 5,
+              "std": 7.4269318169256e-10
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0019530653255060316,
+              "n": 5,
+              "std": 1.7304898621296071e-06
+            },
+            "step_to_90pct": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 0.5,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 7.168000024648791e-07,
+              "n": 5,
+              "std": 4.670163413366874e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.002003587083891034,
+              "n": 5,
+              "std": 2.8515813671787943e-10
+            },
+            "step_to_90pct": {
+              "mean": 10.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 1.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 7.576876100756636e-07,
+              "n": 5,
+              "std": 5.915540323598041e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0018180425511673092,
+              "n": 5,
+              "std": 1.3273388905207834e-10
+            },
+            "step_to_90pct": {
+              "mean": 21.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 2.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 7.660682626919879e-07,
+              "n": 5,
+              "std": 3.5178683098742574e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0005412966595031321,
+              "n": 5,
+              "std": 2.6031257322754125e-11
+            },
+            "step_to_90pct": {
+              "mean": 37.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 4.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 6.678625368294888e-07,
+              "n": 5,
+              "std": 6.329815235892535e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 1.1555238233995625e-05,
+              "n": 5,
+              "std": 4.067383956680332e-13
+            },
+            "step_to_90pct": {
+              "mean": 61.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 8.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 4.912461008643732e-07,
+              "n": 5,
+              "std": 1.1878778568278074e-12
+            },
+            "initial_gradient_norm": {
+              "mean": 3.868391740269317e-09,
+              "n": 5,
+              "std": 1.9860273225978183e-16
+            },
+            "step_to_90pct": {
+              "mean": 213.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 1.0
+        },
+        {
+          "margin": 0.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.126178378603072e-06,
+              "n": 5,
+              "std": 4.742452560716095e-10
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0009764920687302947,
+              "n": 5,
+              "std": 1.8094101610325637e-07
+            },
+            "step_to_90pct": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        },
+        {
+          "margin": 0.5,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.0950982161593857e-06,
+              "n": 5,
+              "std": 1.1549150348583039e-12
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0009904328035190701,
+              "n": 5,
+              "std": 8.231806349783991e-11
+            },
+            "step_to_90pct": {
+              "mean": 10.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        },
+        {
+          "margin": 1.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.093169587169541e-06,
+              "n": 5,
+              "std": 1.1858360094634279e-12
+            },
+            "initial_gradient_norm": {
+              "mean": 0.001001793541945517,
+              "n": 5,
+              "std": 1.4257906835893972e-10
+            },
+            "step_to_90pct": {
+              "mean": 20.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        },
+        {
+          "margin": 2.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.1862897028768204e-06,
+              "n": 5,
+              "std": 2.6826239634379138e-12
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0009090212755836546,
+              "n": 5,
+              "std": 6.636694452603917e-11
+            },
+            "step_to_90pct": {
+              "mean": 40.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        },
+        {
+          "margin": 4.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 2.172609174522222e-06,
+              "n": 5,
+              "std": 3.483346897796317e-12
+            },
+            "initial_gradient_norm": {
+              "mean": 0.0002706483297515661,
+              "n": 5,
+              "std": 1.3015628661377062e-11
+            },
+            "step_to_90pct": {
+              "mean": 68.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        },
+        {
+          "margin": 8.0,
+          "metrics": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 5,
+              "std": 0.0
+            },
+            "final_mse": {
+              "mean": 1.8237531548948028e-06,
+              "n": 5,
+              "std": 9.89793937136661e-13
+            },
+            "initial_gradient_norm": {
+              "mean": 5.777619116997812e-06,
+              "n": 5,
+              "std": 2.033691978340166e-13
+            },
+            "step_to_90pct": {
+              "mean": 104.0,
+              "n": 5,
+              "std": 0.0
+            }
+          },
+          "n_records": 5,
+          "temperature": 2.0
+        }
+      ],
+      "n_records": 120
+    }
+  },
+  "generated": {
+    "figures": [
+      "distillation_loss_vs_ari.pdf",
+      "factorization_loss_vs_ari.pdf",
+      "gauge_equivalence.pdf",
+      "language_router_tradeoff.pdf",
+      "probe_phase_diagram.pdf",
+      "saturation_recovery.pdf"
+    ],
+    "tables": [
+      "distillation_full_table.tex",
+      "distillation_table.tex",
+      "factorization_full_table.tex",
+      "factorization_table.tex",
+      "gauge_table.tex",
+      "key_numbers.tex",
+      "language_table.tex",
+      "probe_table.tex",
+      "saturation_table.tex"
+    ]
+  },
+  "inputs": {
+    "factorization_full.json": {
+      "records": 700,
+      "status": "loaded"
+    },
+    "gauge_full.json": {
+      "records": 140,
+      "status": "loaded"
+    },
+    "language_full.json": {
+      "records": 12,
+      "status": "loaded"
+    },
+    "probes_mlp.json": {
+      "records": 1680,
+      "status": "loaded"
+    },
+    "probes_transformer.json": {
+      "records": 1680,
+      "status": "loaded"
+    },
+    "teacher_baselines.json": {
+      "records": 40,
+      "status": "loaded"
+    },
+    "teacher_student_mlp.json": {
+      "records": 60,
+      "status": "loaded"
+    },
+    "teacher_student_transformer.json": {
+      "records": 60,
+      "status": "loaded"
+    }
+  },
+  "language": {
+    "groups": [
+      {
+        "hard": false,
+        "metrics": {
+          "best_validation_bpb": {
+            "mean": 2.4332404539098285,
+            "n": 3,
+            "std": 0.010532310739634346
+          },
+          "elapsed_seconds": {
+            "mean": 76.20906162261963,
+            "n": 3,
+            "std": 1.116319561734787
+          },
+          "router_entropy": {
+            "mean": 0.9998922546704611,
+            "n": 3,
+            "std": 3.322761594645403e-05
+          },
+          "router_mean_l1_movement": {
+            "mean": 0.01162003818899393,
+            "n": 3,
+            "std": 0.0028967057010553295
+          },
+          "test_bpb": {
+            "mean": 2.414979178390452,
+            "n": 3,
+            "std": 0.0087381501271907
+          }
+        },
+        "n_records": 3,
+        "pairwise_router_ari": {
+          "mean": 0.09896420385019733,
+          "n": 3,
+          "std": 0.15740952835359331
+        },
+        "router_init": "neutral",
+        "router_pattern": "--",
+        "router_trainable": true
+      },
+      {
+        "hard": false,
+        "metrics": {
+          "best_validation_bpb": {
+            "mean": 2.1200370743927026,
+            "n": 3,
+            "std": 0.006548128191386046
+          },
+          "elapsed_seconds": {
+            "mean": 75.5047226746877,
+            "n": 3,
+            "std": 1.5916416568182612
+          },
+          "router_entropy": {
+            "mean": 0.0066375271417200565,
+            "n": 3,
+            "std": 1.5241348750470987e-05
+          },
+          "router_mean_l1_movement": {
+            "mean": 0.00031017587753012776,
+            "n": 3,
+            "std": 1.3531610557638698e-05
+          },
+          "test_bpb": {
+            "mean": 2.1107849053794197,
+            "n": 3,
+            "std": 0.008197607376422176
+          }
+        },
+        "n_records": 3,
+        "pairwise_router_ari": {
+          "mean": 1.0,
+          "n": 3,
+          "std": 0.0
+        },
+        "router_init": "pattern_contiguous",
+        "router_pattern": "--",
+        "router_trainable": true
+      },
+      {
+        "hard": false,
+        "metrics": {
+          "best_validation_bpb": {
+            "mean": 2.1905360266388056,
+            "n": 3,
+            "std": 0.009240567760883707
+          },
+          "elapsed_seconds": {
+            "mean": 75.81502683957417,
+            "n": 3,
+            "std": 0.6890098972528053
+          },
+          "router_entropy": {
+            "mean": 0.007011186641951402,
+            "n": 3,
+            "std": 3.8049980098656436e-05
+          },
+          "router_mean_l1_movement": {
+            "mean": 0.00034951923104623955,
+            "n": 3,
+            "std": 4.598787861796636e-05
+          },
+          "test_bpb": {
+            "mean": 2.1806949488996836,
+            "n": 3,
+            "std": 0.010731795430568437
+          }
+        },
+        "n_records": 3,
+        "pairwise_router_ari": {
+          "mean": 1.0,
+          "n": 3,
+          "std": 0.0
+        },
+        "router_init": "pattern_cycle",
+        "router_pattern": "--",
+        "router_trainable": true
+      },
+      {
+        "hard": false,
+        "metrics": {
+          "best_validation_bpb": {
+            "mean": 2.331918804226072,
+            "n": 3,
+            "std": 0.011146599685429418
+          },
+          "elapsed_seconds": {
+            "mean": 75.71641643842061,
+            "n": 3,
+            "std": 1.4014923156182846
+          },
+          "router_entropy": {
+            "mean": 0.8000028332074484,
+            "n": 3,
+            "std": 0.02913237409113992
+          },
+          "router_mean_l1_movement": {
+            "mean": 0.06525260334213574,
+            "n": 3,
+            "std": 0.007541285841730799
+          },
+          "test_bpb": {
+            "mean": 2.3189098083511586,
+            "n": 3,
+            "std": 0.015212379399218814
+          }
+        },
+        "n_records": 3,
+        "pairwise_router_ari": {
+          "mean": -0.0448439399531457,
+          "n": 3,
+          "std": 0.1121836470438757
+        },
+        "router_init": "random",
+        "router_pattern": "--",
+        "router_trainable": true
+      }
+    ],
+    "n_records": 12
+  },
+  "probes": {
+    "artifacts": {
+      "mlp": {
+        "generation": {
+          "architecture": "mlp",
+          "completed_at_utc": "2026-08-22T21:58:28.634271+00:00",
+          "device_argument": "cuda",
+          "elapsed_seconds": 64.23050887137651,
+          "projection_dimension": 0,
+          "record_count": 1680,
+          "source_sha256": {
+            "experiments/run_probes.py": "780eaee4c23612870b88ccf33e8f32f6ec3c7c497112166388120f08b8adaa7f",
+            "src/metrics.py": "0922d66d1912377d119320efe37876c7b4d010e77c9f855b3d8b29cf65602b51",
+            "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+            "src/patterns.py": "a9f2a75dd3148759bc68760e1f4493f2628244e20c00ab967c6d23f4edb2b4c2",
+            "src/probes.py": "e9fe07226bee6699253bfd82e2dfe7410ce80b12df64f9a2d2c67dd516df81d8"
+          },
+          "started_at_utc": "2026-08-22T21:57:24.403447+00:00",
+          "sweep": true,
+          "sweep_seeds": 10
+        },
+        "protocol_fingerprint_sha256": "915e00102458bea94bcda01931bab95d958cf4366e2ae71892d3d2295ab4b061",
+        "protocol_version": "paired-crn-fixed-gaussian-v1",
+        "schema_version": "probe-sweep-v2"
+      },
+      "transformer": {
+        "generation": {
+          "architecture": "transformer",
+          "completed_at_utc": "2026-08-22T21:58:43.306546+00:00",
+          "device_argument": "cuda",
+          "elapsed_seconds": 79.90188056789339,
+          "projection_dimension": 0,
+          "record_count": 1680,
+          "source_sha256": {
+            "experiments/run_probes.py": "780eaee4c23612870b88ccf33e8f32f6ec3c7c497112166388120f08b8adaa7f",
+            "src/metrics.py": "0922d66d1912377d119320efe37876c7b4d010e77c9f855b3d8b29cf65602b51",
+            "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+            "src/patterns.py": "a9f2a75dd3148759bc68760e1f4493f2628244e20c00ab967c6d23f4edb2b4c2",
+            "src/probes.py": "e9fe07226bee6699253bfd82e2dfe7410ce80b12df64f9a2d2c67dd516df81d8"
+          },
+          "started_at_utc": "2026-08-22T21:57:23.404339+00:00",
+          "sweep": true,
+          "sweep_seeds": 10
+        },
+        "protocol_fingerprint_sha256": "915e00102458bea94bcda01931bab95d958cf4366e2ae71892d3d2295ab4b061",
+        "protocol_version": "paired-crn-fixed-gaussian-v1",
+        "schema_version": "probe-sweep-v2"
+      }
+    },
+    "groups": [
+      {
+        "architecture": "mlp",
+        "modes": {
+          "counterfactual": {
+            "adjusted_rand": {
+              "mean": 0.676373456215284,
+              "n": 1680,
+              "std": 0.4323963376409495
+            },
+            "assignment_accuracy": {
+              "mean": 0.8327380937657186,
+              "n": 1680,
+              "std": 0.22688553774795708
+            },
+            "empirical_gap": {
+              "mean": -27.19158185684965,
+              "n": 1680,
+              "std": 66.23248027979285
+            },
+            "graph_accuracy": {
+              "mean": 0.8614899060555867,
+              "n": 1680,
+              "std": 0.1923426357756046
+            }
+          },
+          "effective_parameter": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            },
+            "empirical_gap": {
+              "mean": 0.007736597023904323,
+              "n": 1680,
+              "std": 5.823264313238557e-05
+            },
+            "graph_accuracy": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            }
+          },
+          "native": {
+            "adjusted_rand": {
+              "mean": 0.6750843537512612,
+              "n": 1680,
+              "std": 0.43355747760293534
+            },
+            "assignment_accuracy": {
+              "mean": 0.8319940463240657,
+              "n": 1680,
+              "std": 0.22783742712958452
+            },
+            "empirical_gap": {
+              "mean": -27.293472831208437,
+              "n": 1680,
+              "std": 66.17334966102212
+            },
+            "graph_accuracy": {
+              "mean": 0.8603084485445703,
+              "n": 1680,
+              "std": 0.19386978675598238
+            }
+          }
+        },
+        "n_records": 1680,
+        "paired_adjusted_rand_comparisons": [
+          {
+            "adjusted_rand_difference": {
+              "mean": 0.001289102464022991,
+              "n": 1680,
+              "std": 0.052351872622771196
+            },
+            "first": "counterfactual",
+            "losses": 45,
+            "per_seed_mean_difference": {
+              "max": 0.0065140651770896184,
+              "mean": 0.001289102464022991,
+              "min": -0.0031831644145173116,
+              "n": 10,
+              "negative_seeds": 4,
+              "positive_seeds": 6,
+              "std": 0.0037339492150377652,
+              "zero_seeds": 0
+            },
+            "second": "native",
+            "ties": 1570,
+            "wins": 65
+          },
+          {
+            "adjusted_rand_difference": {
+              "mean": -0.32362654378471584,
+              "n": 1680,
+              "std": 0.4323963376409494
+            },
+            "first": "counterfactual",
+            "losses": 650,
+            "per_seed_mean_difference": {
+              "max": -0.3117882858356518,
+              "mean": -0.323626543784716,
+              "min": -0.33919839432915094,
+              "n": 10,
+              "negative_seeds": 10,
+              "positive_seeds": 0,
+              "std": 0.00936608557897215,
+              "zero_seeds": 0
+            },
+            "second": "effective_parameter",
+            "ties": 1030,
+            "wins": 0
+          },
+          {
+            "adjusted_rand_difference": {
+              "mean": -0.3249156462487388,
+              "n": 1680,
+              "std": 0.4335574776029354
+            },
+            "first": "native",
+            "losses": 652,
+            "per_seed_mean_difference": {
+              "max": -0.3141512202540791,
+              "mean": -0.3249156462487389,
+              "min": -0.3457124595062406,
+              "n": 10,
+              "negative_seeds": 10,
+              "positive_seeds": 0,
+              "std": 0.009683445533877962,
+              "zero_seeds": 0
+            },
+            "second": "effective_parameter",
+            "ties": 1028,
+            "wins": 0
+          }
+        ]
+      },
+      {
+        "architecture": "transformer",
+        "modes": {
+          "counterfactual": {
+            "adjusted_rand": {
+              "mean": 0.500606329930932,
+              "n": 1680,
+              "std": 0.4712625373405935
+            },
+            "assignment_accuracy": {
+              "mean": 0.7384920612864551,
+              "n": 1680,
+              "std": 0.24970999498580612
+            },
+            "empirical_gap": {
+              "mean": -88.70584353776205,
+              "n": 1680,
+              "std": 190.52686958682472
+            },
+            "graph_accuracy": {
+              "mean": 0.776993155621347,
+              "n": 1680,
+              "std": 0.2193338545147716
+            }
+          },
+          "effective_parameter": {
+            "adjusted_rand": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            },
+            "assignment_accuracy": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            },
+            "empirical_gap": {
+              "mean": 0.0090319343842566,
+              "n": 1680,
+              "std": 2.084812699912871e-05
+            },
+            "graph_accuracy": {
+              "mean": 1.0,
+              "n": 1680,
+              "std": 0.0
+            }
+          },
+          "native": {
+            "adjusted_rand": {
+              "mean": 0.5008650964543467,
+              "n": 1680,
+              "std": 0.4703966537027571
+            },
+            "assignment_accuracy": {
+              "mean": 0.7388392836387668,
+              "n": 1680,
+              "std": 0.24938600378503117
+            },
+            "empirical_gap": {
+              "mean": -88.75837218444128,
+              "n": 1680,
+              "std": 190.48979805150498
+            },
+            "graph_accuracy": {
+              "mean": 0.7768308180428687,
+              "n": 1680,
+              "std": 0.2194815291568589
+            }
+          }
+        },
+        "n_records": 1680,
+        "paired_adjusted_rand_comparisons": [
+          {
+            "adjusted_rand_difference": {
+              "mean": -0.00025876652341473084,
+              "n": 1680,
+              "std": 0.044508703054002945
+            },
+            "first": "counterfactual",
+            "losses": 61,
+            "per_seed_mean_difference": {
+              "max": 0.0031855846822281984,
+              "mean": -0.00025876652341473084,
+              "min": -0.003090119695430705,
+              "n": 10,
+              "negative_seeds": 7,
+              "positive_seeds": 3,
+              "std": 0.0021592016320370754,
+              "zero_seeds": 0
+            },
+            "second": "native",
+            "ties": 1558,
+            "wins": 61
+          },
+          {
+            "adjusted_rand_difference": {
+              "mean": -0.49939367006906793,
+              "n": 1680,
+              "std": 0.4712625373405935
+            },
+            "first": "counterfactual",
+            "losses": 935,
+            "per_seed_mean_difference": {
+              "max": -0.4722248382789265,
+              "mean": -0.49939367006906793,
+              "min": -0.5162270828135763,
+              "n": 10,
+              "negative_seeds": 10,
+              "positive_seeds": 0,
+              "std": 0.015361137747107007,
+              "zero_seeds": 0
+            },
+            "second": "effective_parameter",
+            "ties": 745,
+            "wins": 0
+          },
+          {
+            "adjusted_rand_difference": {
+              "mean": -0.4991349035456532,
+              "n": 1680,
+              "std": 0.47039665370275713
+            },
+            "first": "native",
+            "losses": 939,
+            "per_seed_mean_difference": {
+              "max": -0.47159639945639525,
+              "mean": -0.49913490354565326,
+              "min": -0.5148677068448754,
+              "n": 10,
+              "negative_seeds": 10,
+              "positive_seeds": 0,
+              "std": 0.014599320769606808,
+              "zero_seeds": 0
+            },
+            "second": "effective_parameter",
+            "ties": 741,
+            "wins": 0
+          }
+        ]
+      }
+    ],
+    "n_records": 3360
+  },
+  "teacher_baselines": {
+    "groups": [
+      {
+        "architecture": "mlp",
+        "metrics": {
+          "reference_loss": {
+            "mean": 0.08616529926657676,
+            "n": 20,
+            "std": 0.007031066414298022
+          }
+        },
+        "n_records": 20,
+        "reference_type": "identity"
+      },
+      {
+        "architecture": "transformer",
+        "metrics": {
+          "reference_loss": {
+            "mean": 0.012724567437544465,
+            "n": 20,
+            "std": 0.0014985052678040188
+          }
+        },
+        "n_records": 20,
+        "reference_type": "uniform_logits"
+      }
+    ],
+    "n_records": 40
+  }
+}

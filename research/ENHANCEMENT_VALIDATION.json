@@ -1,0 +1,78 @@
+{
+  "scope": "2026-09-25 authorized enhancement; local research-draft completion, not public submission",
+  "scientific_review": "research/ENHANCEMENT_REVIEW.md",
+  "primary_environment": {
+    "tests_passed": 156,
+    "warnings": 1,
+    "skips": 0,
+    "release_verification": "passed, including historical and additive source bindings and derived outputs",
+    "log": ".artifact-handover/enhancement-final-verify.log",
+    "log_sha256": "5cd09fca5d8e22e987d8185db95c4e369b0e7b3d9c2fc228e0d9938e89e90f07"
+  },
+  "independent_cpu_environment": {
+    "python": "3.12.3",
+    "torch": "2.7.1+cpu",
+    "system_site_packages": false,
+    "tests_passed": 156,
+    "warnings": 309,
+    "skips": 0,
+    "warning_scope": "dependency deprecations, principally matplotlib/pyparsing and transformers",
+    "tests_log_sha256": "f2a214a926e9177cc6e3f8af86c88f47bcad5840c90ea2076cc418219773a660",
+    "raw_summary_exact": true,
+    "synthetic_replay_cells": 450,
+    "synthetic_statuses_match": true,
+    "synthetic_numerical_identity": false,
+    "synthetic_comparison": "research/CLEAN_REPLAY_COMPARISON.json",
+    "requirements": "research/clean_cpu_requirements.txt",
+    "isolation_fix": "Unset inherited LD_LIBRARY_PATH and PYTHONPATH for CPU subprocesses; global environment unchanged.",
+    "limitations": "CPU tests, raw derivation and synthetic replay; not full GPU training replay"
+  },
+  "new_evidence": {
+    "training_seeds": [
+      10,
+      11,
+      12
+    ],
+    "training_steps_per_seed": 6000,
+    "task_gradient_checkpoint_seeds": [
+      0,
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
+    "equal_size_positive_search_successes": 3,
+    "signed_local_search_successes": 0,
+    "synthetic_primary_cells": 450,
+    "primary_summary_sha256": "290bdaab54a6751c5cf5d0380a22a216983d1402188c9d6e329a0a3cec1d680c"
+  },
+  "manuscript": {
+    "file": "paper/main.pdf",
+    "sha256": "3ba9d385f035ef673ff9bbac25f9456baf8c49f757b42978d08a5b59d3b0c5a7",
+    "pages": 47,
+    "template": "ICLR 2027 retained",
+    "authors": "placeholder retained"
+  },
+  "package": {
+    "archive": "dist/sharing-coordinates-arxiv-draft.tar.gz",
+    "sha256": "83af8aa33d7efe3c1ff37ec37f3b9808bcbeb2a78bb8dcd4add5528c8561f4f4",
+    "dependency_count": 44,
+    "clean_build": true,
+    "text_matches": true
+  },
+  "visual_review": {
+    "scope": "Targeted newly affected title, empirical tables, corollary/proof and final figure/appendix pages; prior full baseline review retained",
+    "figure_byte_identical_regeneration": true,
+    "undefined_references": false,
+    "overfull_boxes": false
+  },
+  "citation_coverage": {
+    "primary_text_checks": 47,
+    "limited_technical_checks": 2,
+    "software_attribution_metadata_checks": 1
+  },
+  "final_sequence_note": "After the successful full verification, only manuscript/documentation were edited. The final archive was rebuilt and checked; refresh and check the manifest after this record.",
+  "public_submission": false,
+  "all_gpu_jobs_finished": true
+}

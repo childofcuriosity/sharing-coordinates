@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Unchanged calibration policies transferred to 1,620 held-out cases per estimator. Coverage includes all 540 insufficient-rank cases at $q=1$; joint fitting is not run there. Bad means permutation-aligned factor error $>0.10$. An empty accepted set has undefined bad fraction. Raw spectral estimates fail the strict simplex gate in calibration, yielding an all-reject policy.}
+\label{tab:llm-acceptance}
+\begin{tabular}{llrrrr}
+\toprule
+Estimator & Score & Accepted & Coverage & Bad & Bad / accepted\\
+\midrule
+Spectral & Residual & 0 & 0.0\% & 0 & --\\
+Spectral & Condition & 0 & 0.0\% & 0 & --\\
+Spectral & Combined & 0 & 0.0\% & 0 & --\\
+Projected & Residual & 1037 & 64.0\% & 20 & 1.93\%\\
+Projected & Condition & 960 & 59.3\% & 48 & 5.00\%\\
+Projected & Combined & 1056 & 65.2\% & 43 & 4.07\%\\
+Joint & Residual & 868 & 53.6\% & 0 & 0.00\%\\
+Joint & Condition & 1080 & 66.7\% & 0 & 0.00\%\\
+Joint & Combined & 1080 & 66.7\% & 0 & 0.00\%\\
+\bottomrule
+\end{tabular}
+\end{table}

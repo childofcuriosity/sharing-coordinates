@@ -1,0 +1,18 @@
+{
+  "core_tests": {
+    "passed": 29,
+    "files": [
+      "test_factorization.py",
+      "test_gauge.py",
+      "test_response_identifiability.py",
+      "test_response_tomography.py",
+      "test_routing_geometry.py"
+    ]
+  },
+  "study_tests": {
+    "original_passed": 5,
+    "batch_correction_passed": 5
+  },
+  "scope": "CPU source tests only; no full experimental replay in the lightweight handoff",
+  "credential_pattern_scan": "No token/private-key pattern matches in eligible text files"
+}

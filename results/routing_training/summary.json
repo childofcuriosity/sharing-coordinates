@@ -1,0 +1,586 @@
+{
+  "scope": "Exploratory grids, one selected local real-model follow-up, and a controlled construction; no prevalence or downstream-recovery claim.",
+  "toy": {
+    "primary": {
+      "runs": 8,
+      "eligible": 8,
+      "crossings": 8,
+      "sustained": 8,
+      "nonincreasing_loss": 8
+    },
+    "perturbations": {
+      "0.0001": {
+        "runs": 20,
+        "eligible": 20,
+        "crossings": 20,
+        "sustained": 20,
+        "nonincreasing_loss": 20
+      },
+      "0.001": {
+        "runs": 20,
+        "eligible": 20,
+        "crossings": 20,
+        "sustained": 20,
+        "nonincreasing_loss": 20
+      },
+      "0.01": {
+        "runs": 20,
+        "eligible": 16,
+        "crossings": 16,
+        "sustained": 16,
+        "nonincreasing_loss": 20
+      }
+    },
+    "control_crossing": false
+  },
+  "real": {
+    "adamw": {
+      "runs": 9,
+      "validation_improved": 9,
+      "coefficient_entry": {
+        "runs_with_event": 4,
+        "runs_with_sustained_event": 4
+      },
+      "router_boundary": {
+        "runs_with_event": 1,
+        "runs_with_sustained_event": 1
+      },
+      "router_entry": {
+        "runs_with_event": 9,
+        "runs_with_sustained_event": 8
+      }
+    },
+    "sgd": {
+      "runs": 9,
+      "validation_improved": 7,
+      "coefficient_entry": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      },
+      "router_boundary": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      },
+      "router_entry": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      }
+    }
+  },
+  "local_fp32": {
+    "crossing_runs": 4,
+    "runs": 5,
+    "convergence": [
+      {
+        "coarse_lr": 0.02,
+        "fine_lr": 0.01,
+        "endpoint_parameter_distance": 1.0220784523497029e-05
+      },
+      {
+        "coarse_lr": 0.01,
+        "fine_lr": 0.005,
+        "endpoint_parameter_distance": 2.1077738452194485e-05
+      },
+      {
+        "coarse_lr": 0.005,
+        "fine_lr": 0.0025,
+        "endpoint_parameter_distance": 4.652195850233706e-05
+      }
+    ]
+  },
+  "outer_fp64_with_fp32_norm": {
+    "convergence": [
+      {
+        "coarse_lr": 0.02,
+        "fine_lr": 0.01,
+        "endpoint_parameter_distance": 2.055353255059331e-06
+      },
+      {
+        "coarse_lr": 0.01,
+        "fine_lr": 0.005,
+        "endpoint_parameter_distance": 1.0274953234383313e-06
+      },
+      {
+        "coarse_lr": 0.005,
+        "fine_lr": 0.0025,
+        "endpoint_parameter_distance": 5.132734045384862e-07
+      }
+    ],
+    "crossing_runs": 4
+  },
+  "local_fp64": {
+    "crossing_runs": 4,
+    "runs": 4,
+    "first_crossing_times": [
+      0.18,
+      0.17,
+      0.17,
+      0.17
+    ],
+    "convergence": [
+      {
+        "coarse_lr": 0.02,
+        "fine_lr": 0.01,
+        "endpoint_parameter_distance": 2.055111361372317e-06
+      },
+      {
+        "coarse_lr": 0.01,
+        "fine_lr": 0.005,
+        "endpoint_parameter_distance": 1.0272097407868568e-06
+      },
+      {
+        "coarse_lr": 0.005,
+        "fine_lr": 0.0025,
+        "endpoint_parameter_distance": 5.135184481072954e-07
+      }
+    ],
+    "initial_gap_velocity": -0.0001579293754365605,
+    "linearized_crossing_time": 0.16555782650813075,
+    "min_a": 0.006781004709199226,
+    "min_sigma_a": 0.8567272801612199,
+    "min_sigma_b": 2.054078341901479
+  },
+  "natural_witness": {
+    "unit": "smol360m-adamw-seed1",
+    "step": 71,
+    "before": {
+      "step": 70,
+      "a": [
+        [
+          0.06640333215342524,
+          0.19031544983665757,
+          0.6817814771594951,
+          0.06149974085042205
+        ],
+        [
+          0.7750000728795582,
+          0.11806602099771343,
+          0.06898827663729037,
+          0.03794562948543786
+        ],
+        [
+          0.04903179392379539,
+          0.5936329027803203,
+          0.04577178158569024,
+          0.3115635217101941
+        ],
+        [
+          0.02911403067014349,
+          0.8680366190245167,
+          0.04542478319175114,
+          0.05742456711358882
+        ],
+        [
+          0.044824418205986996,
+          0.028316239534554723,
+          0.8173068310011077,
+          0.1095525112583505
+        ],
+        [
+          0.16116485434810524,
+          0.08740511754395507,
+          0.03522799956440811,
+          0.7162020285435314
+        ],
+        [
+          0.9159727006259302,
+          0.05935431028087351,
+          0.007657937865284886,
+          0.017015051227911308
+        ],
+        [
+          0.187715833324088,
+          0.08776149724601666,
+          0.0730966754943227,
+          0.6514259939355727
+        ],
+        [
+          0.9159668432464354,
+          0.03042874292440947,
+          0.03836862029360638,
+          0.015235793535548785
+        ],
+        [
+          0.14135049029492033,
+          0.1238070076553296,
+          0.6566558581874528,
+          0.07818664386229732
+        ],
+        [
+          0.07705366206815575,
+          0.46576009121183265,
+          0.07157269346459348,
+          0.385613553255418
+        ],
+        [
+          0.896337350153242,
+          0.006782565412765415,
+          0.08672831089203567,
+          0.010151773541957027
+        ]
+      ],
+      "gram": [
+        [
+          19.78111235574648,
+          8.622537918316102,
+          9.802697146943572,
+          7.91847893337873
+        ],
+        [
+          8.622537918316102,
+          16.408449279863916,
+          9.76555955099327,
+          12.186373959337525
+        ],
+        [
+          9.802697146943572,
+          9.76555955099327,
+          16.308552808412923,
+          10.14951952199086
+        ],
+        [
+          7.91847893337873,
+          12.186373959337525,
+          10.14951952199086,
+          16.561726262381566
+        ]
+      ],
+      "coefficient": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "labels": [
+          2,
+          3,
+          1,
+          1,
+          2,
+          3,
+          0,
+          3,
+          0,
+          2,
+          1,
+          0
+        ],
+        "score": 8.217024325354874,
+        "gap": 2.614644413867495e-05
+      },
+      "weight": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "cost": 6.0791522135072,
+        "gap": 1.8425293132888765
+      },
+      "router": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "cost": 0.7072080297897899,
+        "gap": 0.15030814107405222
+      },
+      "min_a": 0.006782565412765415,
+      "sigma_a": 0.8567272801612199,
+      "sigma_b": 2.054078341901479,
+      "nll": 3.229165554046631,
+      "batch_indices": [
+        2862,
+        3143,
+        3909,
+        1422
+      ],
+      "gradient_norm": 0.058546390384435654,
+      "lr_multiplier": 0.895142095358239
+    },
+    "after": {
+      "step": 71,
+      "a": [
+        [
+          0.06530615696378403,
+          0.18682641010573112,
+          0.6874158217685151,
+          0.06045161116196972
+        ],
+        [
+          0.7796171152314623,
+          0.11555900272965229,
+          0.06760097767169879,
+          0.03722290436718669
+        ],
+        [
+          0.04810342316169367,
+          0.5963269032491318,
+          0.04488101074773035,
+          0.3106886628414442
+        ],
+        [
+          0.028556150797029483,
+          0.8706452169957412,
+          0.04454048752305279,
+          0.05625814468417653
+        ],
+        [
+          0.044041172322499954,
+          0.0278277870529215,
+          0.820730648576974,
+          0.1074003920476044
+        ],
+        [
+          0.15824974267464303,
+          0.08586638197968186,
+          0.034632922115380195,
+          0.7212509532302949
+        ],
+        [
+          0.9174679177959355,
+          0.058288859195396565,
+          0.007524403442274347,
+          0.01671881956639356
+        ],
+        [
+          0.18438729343276672,
+          0.08636570246705674,
+          0.07191045234387725,
+          0.6573365517562992
+        ],
+        [
+          0.9175887530916061,
+          0.02984220104555331,
+          0.03762399062900964,
+          0.014945055233830865
+        ],
+        [
+          0.1388623320255875,
+          0.12150825596771427,
+          0.6629008978855291,
+          0.07672851412116916
+        ],
+        [
+          0.07583756042735264,
+          0.46526609805292884,
+          0.07030440088983961,
+          0.38859194062987895
+        ],
+        [
+          0.8985010070903703,
+          0.006655256965460735,
+          0.08488414455986443,
+          0.00995959138430459
+        ]
+      ],
+      "gram": [
+        [
+          20.286589434129997,
+          8.786837475930048,
+          9.98806998881584,
+          8.066874828986233
+        ],
+        [
+          8.786837475930048,
+          16.80407760129637,
+          9.953700163311336,
+          12.454045063419418
+        ],
+        [
+          9.98806998881584,
+          9.953700163311336,
+          16.69604154573094,
+          10.33653416510381
+        ],
+        [
+          8.066874828986233,
+          12.454045063419418,
+          10.33653416510381,
+          16.971114601885198
+        ]
+      ],
+      "coefficient": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            7,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "labels": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          3,
+          0,
+          2,
+          3,
+          0
+        ],
+        "score": 8.254315614799928,
+        "gap": 0.0016619409394156293
+      },
+      "weight": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "cost": 6.388644049792039,
+        "gap": 1.8639497026434606
+      },
+      "router": {
+        "partition": [
+          [
+            0,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "cost": 0.7194468297875105,
+        "gap": 0.14816271455306484
+      },
+      "min_a": 0.006655256965460735,
+      "sigma_a": 0.8640067933901527,
+      "sigma_b": 2.0868839138360133,
+      "nll": 3.2875020503997803,
+      "batch_indices": [
+        1067,
+        3389,
+        1925,
+        2529
+      ],
+      "gradient_norm": 0.062201496213674545,
+      "lr_multiplier": 0.8913168356620278
+    }
+  },
+  "input_sha256": {
+    "results/llm_routing_trajectories/pythia160m-adamw-seed0/trajectory.json": "013b9d70274ae3d15c7b4ac44de66bdf82c792638c4fcb083e66dbe36dc3d54b",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed1/trajectory.json": "2ef25c9f2aaf5d8c1d8c2cf1651029c26c73745a0a94739063d367f7f95e64e2",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed2/trajectory.json": "c66cc1a7d8e2062d185f824ea550687becc6a78318f844b5e2278f5b1f3f00b3",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed0/trajectory.json": "cf215a6d07f8354b1c722d7129988bf650ee7e6c9f33491efeaf725783490583",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed1/trajectory.json": "bead21a19a076bbe3f7ea5bc5e2b3f66b39345dc6f56db74e6bf5c9541d872ff",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed2/trajectory.json": "fd9396e3d898a0a7206c07278cc8d7101a552bc8df248e3788e117f47b273062",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed0/trajectory.json": "3ed923830b3354a0e59bc217279450716c9e8f00cd96b25d913a0c87ca294b9a",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed1/trajectory.json": "e1a9fbb2426a4198d0cc4a0171e8eae1933f1ca98d36ec9aba4bd20755bdf7ac",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed2/trajectory.json": "c66f94a25b27b0946a612dcf2d8611591e479dd7b80eba83e650f40a1e5b3fec",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed0/trajectory.json": "6e989a29df79928f532e9112039f21ec1560e5be70edb509915cf465b842d006",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed1/trajectory.json": "79b059620d1e36334cd74078b6f2251d61affafd66a0ca663295c0ffa90e2f3c",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed2/trajectory.json": "997a44ceb7b890db715b6ecdc39bad7fb2b9d5cdf4426d5ae76599b5eae8740f",
+    "results/llm_routing_trajectories/smol360m-adamw-seed0/trajectory.json": "6e613d7d191dd070c06fda88864435b6443f81bf2107c318d09ef88133727ad1",
+    "results/llm_routing_trajectories/smol360m-adamw-seed1/trajectory.json": "5b57f8ce4bdc383f16edb5eed9531975dbd4d5599142e035871f396836c81bea",
+    "results/llm_routing_trajectories/smol360m-adamw-seed2/trajectory.json": "6ccc61a26021eee63139c531b0fc9083eb3ef5219b57661c19922d47b548a5c3",
+    "results/llm_routing_trajectories/smol360m-sgd-seed0/trajectory.json": "7aa0a040e949d185918666445bea7bbe256329d9d8713bd8766df108a42dcb00",
+    "results/llm_routing_trajectories/smol360m-sgd-seed1/trajectory.json": "034a350e1e38cfb91214495fabd861a58efb87b7e3122d4b629ff8447cfeb217",
+    "results/llm_routing_trajectories/smol360m-sgd-seed2/trajectory.json": "c47ef9f2c1ebeb705e465376ca1218497ba6a3cd9482f08d0dfda9e75d02c90e",
+    "results/routing_training/training.json": "8aa55c789a11f3d1e60628ace6f54e305b50d17e2a1106f1598f75f44c79d884",
+    "results/llm_local_flow/local_flow.json": "280c3e97534fc105d91d553e1dee846936a65dc0b293f20fa58a829f288ddb89",
+    "results/llm_local_flow_fp64/local_flow.json": "fd69544fe7a5f57073fb0102e1e384c986a7d0c7648274c0846897e7b70e4d3b",
+    "results/llm_local_flow_fp64_norm/local_flow.json": "358793b08076f0b473a4be994ec70195b09032c13a0e2ab9d46f71a2abc54050"
+  },
+  "source_sha256": "2313d991fe66b8ae7443a951bdba4afa91e7b96b9a5ceabe501ba14419bf89af"
+}

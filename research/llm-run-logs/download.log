@@ -1,0 +1,61 @@
+START EleutherAI/pythia-160m
+START Qwen/Qwen3-0.6B
+START EleutherAI/pythia-1b
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s][A
+
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s][A[A
+Fetching 6 files:  17%|█▋        | 1/6 [00:00<00:03,  1.50it/s][AFetching 9 files:  11%|█         | 1/9 [00:00<00:05,  1.43it/s]
+
+Fetching 6 files:  17%|█▋        | 1/6 [00:01<00:05,  1.13s/it][A[AFetching 9 files:  44%|████▍     | 4/9 [00:01<00:01,  3.65it/s]Fetching 9 files:  56%|█████▌    | 5/9 [00:01<00:01,  3.46it/s]
+Fetching 6 files:  50%|█████     | 3/6 [00:29<00:32, 10.90s/it][AFetching 6 files: 100%|██████████| 6/6 [00:29<00:00,  4.94s/it]
+END EleutherAI/pythia-160m downloaded
+START EleutherAI/pythia-2.8b
+
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s][A
+Fetching 6 files:  17%|█▋        | 1/6 [00:00<00:02,  1.79it/s][AFetching 9 files:  67%|██████▋   | 6/9 [02:08<01:48, 36.29s/it]Fetching 9 files: 100%|██████████| 9/9 [02:08<00:00, 14.26s/it]
+END Qwen/Qwen3-0.6B downloaded
+START Qwen/Qwen3-1.7B
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:01<00:11,  1.20s/it]Fetching 11 files:  36%|███▋      | 4/11 [00:01<00:01,  3.83it/s]Fetching 11 files:  36%|███▋      | 4/11 [00:17<00:01,  3.83it/s]
+
+Fetching 6 files:  50%|█████     | 3/6 [03:25<03:47, 75.84s/it][A[AFetching 6 files: 100%|██████████| 6/6 [03:25<00:00, 34.18s/it]
+END EleutherAI/pythia-1b downloaded
+START Qwen/Qwen3-4B
+
+
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s][A[A
+
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:08,  1.32it/s][A[A
+
+Fetching 12 files:  33%|███▎      | 4/12 [00:01<00:02,  3.43it/s][A[A
+
+Fetching 12 files:  42%|████▏     | 5/12 [00:01<00:02,  3.24it/s][A[AFetching 11 files:  55%|█████▍    | 6/11 [04:13<04:35, 55.09s/it]Fetching 11 files: 100%|██████████| 11/11 [04:13<00:00, 23.05s/it]
+END Qwen/Qwen3-1.7B downloaded
+START Qwen/Qwen3-8B
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files:   7%|▋         | 1/14 [00:00<00:09,  1.40it/s]Fetching 14 files:  29%|██▊       | 4/14 [00:01<00:02,  3.71it/s]Fetching 14 files:  36%|███▌      | 5/14 [00:01<00:02,  3.37it/s]
+Fetching 6 files:  50%|█████     | 3/6 [08:19<09:14, 184.76s/it][AFetching 6 files: 100%|██████████| 6/6 [08:19<00:00, 83.17s/it] 
+END EleutherAI/pythia-2.8b downloaded
+START HuggingFaceTB/SmolLM2-360M
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s][A
+Fetching 9 files:  11%|█         | 1/9 [00:01<00:10,  1.33s/it][A
+Fetching 9 files:  44%|████▍     | 4/9 [00:02<00:02,  1.91it/s][A
+
+Fetching 12 files:  50%|█████     | 6/12 [05:53<10:01, 100.24s/it][A[AFetching 12 files: 100%|██████████| 12/12 [05:53<00:00, 29.42s/it]
+END Qwen/Qwen3-4B downloaded
+START HuggingFaceTB/SmolLM2-1.7B
+
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s][A[A
+
+Fetching 9 files:  11%|█         | 1/9 [00:01<00:12,  1.60s/it][A[A
+
+Fetching 9 files:  44%|████▍     | 4/9 [00:02<00:02,  1.93it/s][A[A
+Fetching 9 files:  56%|█████▌    | 5/9 [01:12<01:19, 19.88s/it][AFetching 9 files: 100%|██████████| 9/9 [01:12<00:00,  8.04s/it]
+END HuggingFaceTB/SmolLM2-360M downloaded
+Fetching 14 files:  43%|████▎     | 6/14 [06:03<13:45, 103.17s/it]
+
+Fetching 9 files:  56%|█████▌    | 5/9 [04:27<04:56, 74.10s/it][A[AFetching 9 files: 100%|██████████| 9/9 [04:27<00:00, 29.68s/it]
+END HuggingFaceTB/SmolLM2-1.7B downloaded
+Fetching 14 files:  64%|██████▍   | 9/14 [08:51<06:26, 77.31s/it] Fetching 14 files: 100%|██████████| 14/14 [08:51<00:00, 37.97s/it]
+END Qwen/Qwen3-8B downloaded

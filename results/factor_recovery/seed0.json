@@ -1,0 +1,176 @@
+{
+  "format": "factor-recovery-pilot-v1",
+  "seed": 0,
+  "tau": 1.0,
+  "eta_z": 1.0,
+  "eta_b": 1.0,
+  "dimensions": {
+    "L": 12,
+    "K": 4,
+    "D": 787712
+  },
+  "weight_seed": 520000,
+  "noise_seed": 540000,
+  "device": "cuda:0",
+  "torch_version": "2.7.0a0+7c8ec84dab.nv25.03",
+  "checkpoint_sha256": "6f9fce092e9a7dba6a24de9178736425cbf27d62b2e385ecce0b2210a217324d",
+  "source_sha256": {
+    "experiments/run_factor_recovery.py": "2ba0e71794d14a1a07257b3f681751630fa8dcf57278cd9c0901f822fd34cfee",
+    "src/response_factor_recovery.py": "5a547467d14607f7000033633cc516dcd611c382e28da76fce221061ff670718",
+    "experiments/run_autograd_tomography.py": "3ba5fc82dd58faf09ddbacbae2c69c50ab510f9d3f6937a03b9658b883faea56",
+    "src/response_tomography.py": "88a4dd2c335e8d6e1cea0636705abc31331a60201f0a03ce7cba3548b066a6d0",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "research/FACTOR_RECOVERY_PROTOCOL.md": "a5a4df676c6960bb62fdf756ef3a067fb747cb3761bf53405fc93a5d6a65fa7f"
+  },
+  "records": [
+    {
+      "relative_noise": 0.0,
+      "absolute_noise_norms": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "status": "ok",
+      "orbit_relative_error": 3.6608926379654347e-09,
+      "router_relative_error": 2.911098582449191e-09,
+      "basis_relative_error": 2.219828810960843e-09,
+      "evaluation_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": {
+        "combined_eigenvalue_gap": 0.01672090449181418,
+        "gram_min_eigenvalue": -2.882519291133069e-14,
+        "pullback_min_eigenvalue": -7.179109788905268e-17,
+        "psd_clipped_negative_norm": 1.2081934088541253e-16,
+        "joint_diagonalization_relative_residual": 3.045293858733032e-07,
+        "product_relative_residual": 1.8949343756363293e-09,
+        "router_min_entry": 0.0002883332584069498,
+        "router_row_sum_max_error": 1.0938640881974493e-08
+      }
+    },
+    {
+      "relative_noise": 1e-10,
+      "absolute_noise_norms": [
+        1.199436590217669e-09,
+        1.0394150309626334e-09,
+        1.0394179389146957e-09,
+        1.039446506328857e-09
+      ],
+      "status": "ok",
+      "orbit_relative_error": 1.47465439202566e-08,
+      "router_relative_error": 1.161118845888384e-08,
+      "basis_relative_error": 9.090701852131085e-09,
+      "evaluation_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": {
+        "combined_eigenvalue_gap": 0.016720904495555522,
+        "gram_min_eigenvalue": -1.1068615245194453e-12,
+        "pullback_min_eigenvalue": -4.069282570700699e-15,
+        "psd_clipped_negative_norm": 5.3055891279590145e-15,
+        "joint_diagonalization_relative_residual": 8.089597195589843e-08,
+        "product_relative_residual": 7.273456649380542e-09,
+        "router_min_entry": 0.00028833255725670495,
+        "router_row_sum_max_error": 4.1494249591877974e-08
+      }
+    },
+    {
+      "relative_noise": 1e-08,
+      "absolute_noise_norms": [
+        1.199436590217669e-07,
+        1.0394150309626334e-07,
+        1.0394179389146957e-07,
+        1.0394465063288572e-07
+      ],
+      "status": "ok",
+      "orbit_relative_error": 1.8903512830823218e-07,
+      "router_relative_error": 1.4569467694801264e-07,
+      "basis_relative_error": 1.204464231246575e-07,
+      "evaluation_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": {
+        "combined_eigenvalue_gap": 0.016720903507120743,
+        "gram_min_eigenvalue": -1.466033801091468e-10,
+        "pullback_min_eigenvalue": -3.6391931280205435e-13,
+        "psd_clipped_negative_norm": 4.5224088368768234e-13,
+        "joint_diagonalization_relative_residual": 9.192241029441409e-06,
+        "product_relative_residual": 8.258866666513504e-08,
+        "router_min_entry": 0.00028833244379692177,
+        "router_row_sum_max_error": 4.897240339918341e-07
+      }
+    },
+    {
+      "relative_noise": 1e-06,
+      "absolute_noise_norms": [
+        1.1994365902176692e-05,
+        1.0394150309626332e-05,
+        1.0394179389146955e-05,
+        1.039446506328857e-05
+      ],
+      "status": "ok",
+      "orbit_relative_error": 2.134119821346139e-06,
+      "router_relative_error": 1.663053262640317e-06,
+      "basis_relative_error": 1.3374308421312382e-06,
+      "evaluation_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": {
+        "combined_eigenvalue_gap": 0.016720830928465436,
+        "gram_min_eigenvalue": -1.5054212692893437e-08,
+        "pullback_min_eigenvalue": -3.2627745302290084e-11,
+        "psd_clipped_negative_norm": 4.948253570404521e-11,
+        "joint_diagonalization_relative_residual": 0.0002086696558807181,
+        "product_relative_residual": 9.95375224296921e-07,
+        "router_min_entry": 0.0002883049320225803,
+        "router_row_sum_max_error": 6.261242905702957e-06
+      }
+    },
+    {
+      "relative_noise": 0.0001,
+      "absolute_noise_norms": [
+        0.001199436590217669,
+        0.0010394150309626334,
+        0.0010394179389146957,
+        0.0010394465063288574
+      ],
+      "status": "ok",
+      "orbit_relative_error": 1.8127570381179785e-05,
+      "router_relative_error": 1.5399094096670396e-05,
+      "basis_relative_error": 9.564345713456704e-06,
+      "evaluation_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": {
+        "combined_eigenvalue_gap": 0.01672104331745161,
+        "gram_min_eigenvalue": -1.0450676398995418e-06,
+        "pullback_min_eigenvalue": -2.6008500406524825e-09,
+        "psd_clipped_negative_norm": 5.142643304459845e-09,
+        "joint_diagonalization_relative_residual": 0.001451471773287602,
+        "product_relative_residual": 1.213150231708724e-05,
+        "router_min_entry": 0.00028590142620914537,
+        "router_row_sum_max_error": 6.062206038381923e-05
+      }
+    }
+  ],
+  "seconds": 11.29036747990176,
+  "noiseless_gate": true
+}

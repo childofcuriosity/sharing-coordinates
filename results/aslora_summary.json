@@ -1,0 +1,3540 @@
+{
+  "across_seed_mode_scope": [
+    {
+      "action_change_counts_by_seed": {
+        "0": 2,
+        "1": 6,
+        "2": 3
+      },
+      "candidate_mode": "adjacent",
+      "chain_holds_in_all_three_seeds": true,
+      "decision_scope": "per_projection",
+      "delta_from_seed_identity_action": {
+        "accuracy": {
+          "max": 0.0098038911819458,
+          "min": -0.002451002597808838
+        },
+        "f1": {
+          "max": 0.005659439629292384,
+          "min": -0.002246155282257134
+        },
+        "loss": {
+          "max": 0.00886300556799946,
+          "min": -0.0530944957452662
+        }
+      },
+      "seed_count": 3,
+      "seeds_with_action_change": 3,
+      "seeds_with_nonzero_validation_consequence": 3,
+      "total_action_change_count": 11,
+      "total_gauge_instances": 30,
+      "unique_actions_across_seeds": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-2",
+        "query:0-1|value:10-11",
+        "query:0-1|value:2-3",
+        "query:0-1|value:9-10",
+        "query:2-3|value:0-1",
+        "query:2-3|value:10-11"
+      ]
+    },
+    {
+      "action_change_counts_by_seed": {
+        "0": 0,
+        "1": 5,
+        "2": 0
+      },
+      "candidate_mode": "adjacent",
+      "chain_holds_in_all_three_seeds": false,
+      "decision_scope": "joint",
+      "delta_from_seed_identity_action": {
+        "accuracy": {
+          "max": 0.0,
+          "min": -0.004902005195617676
+        },
+        "f1": {
+          "max": 0.0,
+          "min": -0.005118601747815199
+        },
+        "loss": {
+          "max": 0.007709831583733673,
+          "min": 0.0
+        }
+      },
+      "seed_count": 3,
+      "seeds_with_action_change": 1,
+      "seeds_with_nonzero_validation_consequence": 1,
+      "total_action_change_count": 5,
+      "total_gauge_instances": 30,
+      "unique_actions_across_seeds": [
+        "query:0-1|value:0-1",
+        "query:2-3|value:2-3"
+      ]
+    },
+    {
+      "action_change_counts_by_seed": {
+        "0": 4,
+        "1": 7,
+        "2": 3
+      },
+      "candidate_mode": "all",
+      "chain_holds_in_all_three_seeds": true,
+      "decision_scope": "per_projection",
+      "delta_from_seed_identity_action": {
+        "accuracy": {
+          "max": 0.0098038911819458,
+          "min": -0.002451002597808838
+        },
+        "f1": {
+          "max": 0.005659439629292384,
+          "min": -0.002246155282257134
+        },
+        "loss": {
+          "max": 0.002723619049670667,
+          "min": -0.0530944957452662
+        }
+      },
+      "seed_count": 3,
+      "seeds_with_action_change": 3,
+      "seeds_with_nonzero_validation_consequence": 3,
+      "total_action_change_count": 14,
+      "total_gauge_instances": 30,
+      "unique_actions_across_seeds": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-11",
+        "query:0-1|value:1-2",
+        "query:0-1|value:1-3",
+        "query:0-1|value:9-10",
+        "query:0-2|value:0-10",
+        "query:0-2|value:0-11",
+        "query:0-2|value:0-2",
+        "query:0-2|value:10-11",
+        "query:0-2|value:2-10",
+        "query:2-3|value:0-1"
+      ]
+    },
+    {
+      "action_change_counts_by_seed": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "candidate_mode": "all",
+      "chain_holds_in_all_three_seeds": false,
+      "decision_scope": "joint",
+      "delta_from_seed_identity_action": {
+        "accuracy": {
+          "max": 0.0,
+          "min": 0.0
+        },
+        "f1": {
+          "max": 0.0,
+          "min": 0.0
+        },
+        "loss": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "seed_count": 3,
+      "seeds_with_action_change": 0,
+      "seeds_with_nonzero_validation_consequence": 0,
+      "total_action_change_count": 0,
+      "total_gauge_instances": 30,
+      "unique_actions_across_seeds": [
+        "query:0-1|value:0-1",
+        "query:0-2|value:0-2"
+      ]
+    }
+  ],
+  "chain_assessment": {
+    "canonical_scientific_chain_observed_across_seeds": true,
+    "conclusion": "Across all three seeds, in the primary per-projection scope and under both adjacent and all-pairs candidate interpretations, gauge-equivalent running factors select different raw-B actions and at least one changed action has a different canonical validation outcome from the identity-gauge action. The joint sensitivity result is not uniform across both modes. The generation-time source hashes embedded in all three artifacts match one another and the released source snapshot.",
+    "fully_source_attested_chain": true,
+    "joint_sensitivity_chain_holds_for_both_candidate_modes_in_all_three_seeds": false,
+    "primary_per_projection_chain_holds_for_both_candidate_modes_in_all_three_seeds": true
+  },
+  "definitions": {
+    "canonical_action_audit": "Gauge-transformed float64 factors select a layer-index action; that action is mapped to and evaluated in the unchanged canonical model.",
+    "factorized_float32_reexecution": "Numerical diagnostic only; finite-precision reassociation may alter logits and it is not the equivalence gate.",
+    "gauge_invariant_current_effective_baseline": "Frobenius distance between current effective updates B_i A.",
+    "gauge_invariant_current_local_activation_baseline": "Exact lower-layer local RMS output disturbance under the current B substitution and lower-layer activation moment; it is not network validation loss.",
+    "raw_B_rule": "ASLoRA's first action minimizes Euclidean distance between cumulative running-average layer-specific B factors.",
+    "validation_loss_oracle": "Post-hoc complete labeled validation enumeration over every query-only pair, value-only pair, and joint same-pair action. It is never used for raw gauge selection, and it is not a full query-pair by value-pair Cartesian oracle."
+  },
+  "format": "aslora-three-seed-first-merge-summary-v1",
+  "inputs": [
+    {
+      "audit_path": "results/aslora_seed0/audit.json",
+      "audit_sha256": "52eff7b8a736e0c89e8c65d26733c873c154dc192dda0dea7591785c72f9f29c",
+      "provenance_path": "results/aslora_seed0/provenance.json",
+      "provenance_sha256": "41d1d14cb18d168c4c1e808a65558da6779013ce88fb35a910e7c0b5a2acc45c",
+      "seed": 0,
+      "snapshot_path": "results/aslora_seed0/pre_first_merge_snapshot.pt",
+      "snapshot_sha256": "207e032bb7162ae01cc127b5f03f5f517bb277abc8dbb7a6f0b7bb8620c8642f"
+    },
+    {
+      "audit_path": "results/aslora_seed1/audit.json",
+      "audit_sha256": "a63f164472792eb540730ff19af1cf432c8b3ed9c3d4b83eedce8bc5d3ffb9d7",
+      "provenance_path": "results/aslora_seed1/provenance.json",
+      "provenance_sha256": "72dd7a94d56cc2a08664429189ecb171ad42d6766fb0bb9a684463f5693935bd",
+      "seed": 1,
+      "snapshot_path": "results/aslora_seed1/pre_first_merge_snapshot.pt",
+      "snapshot_sha256": "30ec81ed1d9ab7726d164edb379a951f14e1bab95c77a5533a989b2def554178"
+    },
+    {
+      "audit_path": "results/aslora_seed2/audit.json",
+      "audit_sha256": "56959e6f52d5771285b3e2e317d4122fd40fd885695250aba577c61ea31dd2f4",
+      "provenance_path": "results/aslora_seed2/provenance.json",
+      "provenance_sha256": "f90018f78fd8ea1c0ed3ae06247c0fe6d45bcafed1325e611be58a5116d5bd23",
+      "seed": 2,
+      "snapshot_path": "results/aslora_seed2/pre_first_merge_snapshot.pt",
+      "snapshot_sha256": "4a87391140835fb94378cf6a0bdf438e2e3d17794ade8d848ced44c2fc353113"
+    }
+  ],
+  "protocol": {
+    "candidate_modes": [
+      "adjacent",
+      "all"
+    ],
+    "canonical_protocol_sha256": "d0738410278380579006a44ca87a94bb336c16f9bb24ca4acfc48bef223706ab",
+    "cross_seed_protocol_hash_pass": true,
+    "dataset_fingerprint_note": "Hugging Face processing fingerprints are retained as secondary metadata. The local model directory and both parquet files are also byte-bound at generation; their inventory SHA256 values are part of the cross-seed protocol identity.",
+    "decision_scopes": [
+      "per_projection",
+      "joint"
+    ],
+    "gauge_count_per_seed": 10,
+    "gauge_names": [
+      "identity",
+      "orthogonal_k1",
+      "diagonal_k2",
+      "dense_k2",
+      "diagonal_k4",
+      "dense_k4",
+      "diagonal_k8",
+      "dense_k8",
+      "diagonal_k30",
+      "dense_k30"
+    ],
+    "generation_input_artifact_bindings": {
+      "0": {
+        "initial_attached_model_state_sha256": "a1159c03632499f406e912f9a5b3e6519bd134c3acd86e7298fbf0104d8b5e3f",
+        "local_model_inventory_sha256": "8eba55c3adf87b2a677b3a55677a21648d9cc6548ae8b83f70e36a32aeb2cb9f",
+        "train_parquet_inventory_sha256": "dc2efec8ce087267664001a753607f8153c54824be21a024315f0f8349e5a78b",
+        "validation_parquet_inventory_sha256": "51957416363e590d0a64f114a885798681fcfda6880de53734bff4f73b670e53"
+      },
+      "1": {
+        "initial_attached_model_state_sha256": "d2f50e9ebacdc54e8e9f1dd5465680620fcd3031e92b38774672eb80920b7483",
+        "local_model_inventory_sha256": "8eba55c3adf87b2a677b3a55677a21648d9cc6548ae8b83f70e36a32aeb2cb9f",
+        "train_parquet_inventory_sha256": "dc2efec8ce087267664001a753607f8153c54824be21a024315f0f8349e5a78b",
+        "validation_parquet_inventory_sha256": "51957416363e590d0a64f114a885798681fcfda6880de53734bff4f73b670e53"
+      },
+      "2": {
+        "initial_attached_model_state_sha256": "7dfd2fd04bdf4dbea3f56fcbc9d0908865adc2824b43ba579a67c2b46d24adfd",
+        "local_model_inventory_sha256": "8eba55c3adf87b2a677b3a55677a21648d9cc6548ae8b83f70e36a32aeb2cb9f",
+        "train_parquet_inventory_sha256": "dc2efec8ce087267664001a753607f8153c54824be21a024315f0f8349e5a78b",
+        "validation_parquet_inventory_sha256": "51957416363e590d0a64f114a885798681fcfda6880de53734bff4f73b670e53"
+      }
+    },
+    "per_seed_dataset_processing_fingerprints": {
+      "0": {
+        "train_fingerprint": "89355e86ed4eb5bf",
+        "validation_fingerprint": "694058b67e797e32"
+      },
+      "1": {
+        "train_fingerprint": "e4ee059d839b9b20",
+        "validation_fingerprint": "040d3a02ffdc9d7f"
+      },
+      "2": {
+        "train_fingerprint": "bb03af0f892142e9",
+        "validation_fingerprint": "f75f3ae33d67ddab"
+      }
+    },
+    "per_seed_protocol_sha256": {
+      "0": "d0738410278380579006a44ca87a94bb336c16f9bb24ca4acfc48bef223706ab",
+      "1": "d0738410278380579006a44ca87a94bb336c16f9bb24ca4acfc48bef223706ab",
+      "2": "d0738410278380579006a44ca87a94bb336c16f9bb24ca4acfc48bef223706ab"
+    },
+    "primary_decision_scope": "per_projection",
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "seed_mode_scope_rows": [
+    {
+      "action_change_count": 2,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:10-11",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0049019455909729,
+            "f1": 0.0014925416306307282,
+            "loss": -0.03364973383791303
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8406862616539001,
+            "f1": 0.888507718696398,
+            "loss": 0.33910608934421166
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:6-7",
+              "validation_metrics": {
+                "accuracy": 0.845588207244873,
+                "f1": 0.8911917098445595,
+                "loss": 0.3318703516441233
+              }
+            },
+            "value_only": {
+              "action_key": "value:10-11",
+              "validation_metrics": {
+                "accuracy": 0.8406862616539001,
+                "f1": 0.888507718696398,
+                "loss": 0.33887847556787376
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [
+        "dense_k4",
+        "dense_k30"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0098038911819458,
+            "min": 0.002451002597808838
+          },
+          "f1": {
+            "max": 0.005659439629292384,
+            "min": 0.001498336447746218
+          },
+          "loss": {
+            "max": -0.007296082143690041,
+            "min": -0.019626289898273974
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0098038911819458,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.005659439629292384,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": -0.019626289898273974
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.845588207244873,
+            "min": 0.8357843160629272
+          },
+          "f1": {
+            "max": 0.8926746166950597,
+            "min": 0.8870151770657673
+          },
+          "loss": {
+            "max": 0.3727558231821247,
+            "min": 0.3531295332838507
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.001498336447746218,
+            "loss": -0.007296082143690041
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8885135135135135,
+            "loss": 0.36545974103843465
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:2-3|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0098038911819458,
+            "f1": 0.005659439629292384,
+            "loss": -0.019626289898273974
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.845588207244873,
+            "f1": 0.8926746166950597,
+            "loss": 0.3531295332838507
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 0,
+      "unique_action_count": 3,
+      "unique_actions": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-2",
+        "query:2-3|value:0-1"
+      ]
+    },
+    {
+      "action_change_count": 0,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": false,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:3-4|value:3-4",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8529411554336548,
+            "f1": 0.8961937716262975,
+            "loss": 0.3331277659710716
+          }
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": null,
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8357843160629272,
+            "min": 0.8357843160629272
+          },
+          "f1": {
+            "max": 0.8870151770657673,
+            "min": 0.8870151770657673
+          },
+          "loss": {
+            "max": 0.3727558231821247,
+            "min": 0.3727558231821247
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 0,
+      "unique_action_count": 1,
+      "unique_actions": [
+        "query:0-1|value:0-1"
+      ]
+    },
+    {
+      "action_change_count": 4,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:1-11",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0011204161545717017,
+            "loss": -0.007450254232275688
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.888135593220339,
+            "loss": 0.365305568949849
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-11",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": -0.0007690188347124205
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.37198680434741227
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:6-9",
+              "validation_metrics": {
+                "accuracy": 0.845588207244873,
+                "f1": 0.8911917098445595,
+                "loss": 0.328134889403979
+              }
+            },
+            "value_only": {
+              "action_key": "value:10-11",
+              "validation_metrics": {
+                "accuracy": 0.8406862616539001,
+                "f1": 0.888507718696398,
+                "loss": 0.33887847556787376
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [
+        "diagonal_k4",
+        "dense_k4",
+        "diagonal_k8",
+        "dense_k30"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0098038911819458,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.005659439629292384,
+            "min": -0.0007672993068538192
+          },
+          "loss": {
+            "max": -0.0067138087515737355,
+            "min": -0.019626289898273974
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0098038911819458,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.005659439629292384,
+            "min": -0.0007672993068538192
+          },
+          "loss": {
+            "max": 0.0,
+            "min": -0.019626289898273974
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.845588207244873,
+            "min": 0.8357843160629272
+          },
+          "f1": {
+            "max": 0.8926746166950597,
+            "min": 0.8862478777589134
+          },
+          "loss": {
+            "max": 0.3727558231821247,
+            "min": 0.3531295332838507
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0011204161545717017,
+            "loss": -0.007450254232275688
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.888135593220339,
+            "loss": 0.365305568949849
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-3",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": -0.0007672993068538192,
+            "loss": -0.0067138087515737355
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8862478777589134,
+            "loss": 0.36604201443055095
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0011204161545717017,
+            "loss": -0.007450254232275688
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.888135593220339,
+            "loss": 0.365305568949849
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:2-3|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0098038911819458,
+            "f1": 0.005659439629292384,
+            "loss": -0.019626289898273974
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.845588207244873,
+            "f1": 0.8926746166950597,
+            "loss": 0.3531295332838507
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 0,
+      "unique_action_count": 4,
+      "unique_actions": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-11",
+        "query:0-1|value:1-3",
+        "query:2-3|value:0-1"
+      ]
+    },
+    {
+      "action_change_count": 0,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": false,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:3-11|value:3-11",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8578431606292725,
+            "f1": 0.9,
+            "loss": 0.33045541597347633
+          }
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": null,
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8357843160629272,
+            "min": 0.8357843160629272
+          },
+          "f1": {
+            "max": 0.8870151770657673,
+            "min": 0.8870151770657673
+          },
+          "loss": {
+            "max": 0.3727558231821247,
+            "min": 0.3727558231821247
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.8870151770657673,
+            "loss": 0.3727558231821247
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 0,
+      "unique_action_count": 1,
+      "unique_actions": [
+        "query:0-1|value:0-1"
+      ]
+    },
+    {
+      "action_change_count": 6,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:10-11",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0020897848831996635,
+            "loss": 0.001765942456675551
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33373333192339133
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.004902005195617676,
+            "f1": 0.004171829822387396,
+            "loss": 0.00013882856743008265
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:2-3",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8736059479553904,
+            "loss": 0.3319673894667158
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:4-5",
+              "validation_metrics": {
+                "accuracy": 0.843137264251709,
+                "f1": 0.8810408921933085,
+                "loss": 0.3290914063360177
+              }
+            },
+            "value_only": {
+              "action_key": "value:3-4",
+              "validation_metrics": {
+                "accuracy": 0.8382353186607361,
+                "f1": 0.8773234200743495,
+                "loss": 0.33030002432710986
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [
+        "diagonal_k2",
+        "dense_k2",
+        "diagonal_k4",
+        "diagonal_k8",
+        "diagonal_k30",
+        "dense_k30"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.004902005195617676,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.003259723686400706,
+            "min": -0.00047161959718144963
+          },
+          "loss": {
+            "max": 0.00886300556799946,
+            "min": 0.001765942456675551
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.004902005195617676,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.003259723686400706,
+            "min": -0.00047161959718144963
+          },
+          "loss": {
+            "max": 0.00886300556799946,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8382353186607361,
+            "min": 0.8333333134651184
+          },
+          "f1": {
+            "max": 0.8768656716417911,
+            "min": 0.8731343283582089
+          },
+          "loss": {
+            "max": 0.34083039503471524,
+            "min": 0.3319673894667158
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8736059479553904,
+            "loss": 0.3319673894667158
+          }
+        },
+        {
+          "action_key": "query:0-1|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8736059479553904,
+            "loss": 0.3319673894667158
+          }
+        },
+        {
+          "action_key": "query:0-1|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0020897848831996635,
+            "loss": 0.001765942456675551
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33373333192339133
+          }
+        },
+        {
+          "action_key": "query:0-1|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0020897848831996635,
+            "loss": 0.001765942456675551
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33373333192339133
+          }
+        },
+        {
+          "action_key": "query:0-1|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0020897848831996635,
+            "loss": 0.001765942456675551
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33373333192339133
+          }
+        },
+        {
+          "action_key": "query:0-1|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8736059479553904,
+            "loss": 0.3319673894667158
+          }
+        },
+        {
+          "action_key": "query:0-1|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.002451002597808838,
+            "f1": 0.0020897848831996635,
+            "loss": 0.001765942456675551
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33373333192339133
+          }
+        },
+        {
+          "action_key": "query:0-1|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8736059479553904,
+            "loss": 0.3319673894667158
+          }
+        },
+        {
+          "action_key": "query:0-1|value:9-10",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": -0.00047161959718144963,
+            "loss": 0.003228326054180386
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8731343283582089,
+            "loss": 0.33519571552089616
+          }
+        },
+        {
+          "action_key": "query:2-3|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.004902005195617676,
+            "f1": 0.003259723686400706,
+            "loss": 0.00886300556799946
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8768656716417911,
+            "loss": 0.34083039503471524
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:2-3",
+      "seed": 1,
+      "unique_action_count": 4,
+      "unique_actions": [
+        "query:0-1|value:10-11",
+        "query:0-1|value:2-3",
+        "query:0-1|value:9-10",
+        "query:2-3|value:10-11"
+      ]
+    },
+    {
+      "action_change_count": 5,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:0-1|value:0-1",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [
+        "dense_k4",
+        "diagonal_k8",
+        "dense_k8",
+        "diagonal_k30",
+        "dense_k30"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": -0.004902005195617676,
+            "min": -0.004902005195617676
+          },
+          "f1": {
+            "max": -0.005118601747815199,
+            "min": -0.005118601747815199
+          },
+          "loss": {
+            "max": 0.007709831583733673,
+            "min": 0.007709831583733673
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": -0.004902005195617676
+          },
+          "f1": {
+            "max": 0.0,
+            "min": -0.005118601747815199
+          },
+          "loss": {
+            "max": 0.007709831583733673,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8382353186607361,
+            "min": 0.8333333134651184
+          },
+          "f1": {
+            "max": 0.8777777777777778,
+            "min": 0.8726591760299626
+          },
+          "loss": {
+            "max": 0.33981604961787953,
+            "min": 0.33210621803414586
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33210621803414586
+          }
+        },
+        {
+          "action_key": "query:2-3|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": -0.004902005195617676,
+            "f1": -0.005118601747815199,
+            "loss": 0.007709831583733673
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8726591760299626,
+            "loss": 0.33981604961787953
+          }
+        },
+        {
+          "action_key": "query:2-3|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": -0.004902005195617676,
+            "f1": -0.005118601747815199,
+            "loss": 0.007709831583733673
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8726591760299626,
+            "loss": 0.33981604961787953
+          }
+        },
+        {
+          "action_key": "query:2-3|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": -0.004902005195617676,
+            "f1": -0.005118601747815199,
+            "loss": 0.007709831583733673
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8726591760299626,
+            "loss": 0.33981604961787953
+          }
+        },
+        {
+          "action_key": "query:2-3|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": -0.004902005195617676,
+            "f1": -0.005118601747815199,
+            "loss": 0.007709831583733673
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8726591760299626,
+            "loss": 0.33981604961787953
+          }
+        },
+        {
+          "action_key": "query:2-3|value:2-3",
+          "delta_from_identity_action": {
+            "accuracy": -0.004902005195617676,
+            "f1": -0.005118601747815199,
+            "loss": 0.007709831583733673
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8333333134651184,
+            "f1": 0.8726591760299626,
+            "loss": 0.33981604961787953
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 1,
+      "unique_action_count": 2,
+      "unique_actions": [
+        "query:0-1|value:0-1",
+        "query:2-3|value:2-3"
+      ]
+    },
+    {
+      "action_change_count": 7,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-3|value:10-11",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": -0.0004543577034282764,
+            "loss": 0.0027515245418922585
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8773234200743495,
+            "loss": 0.3338879545529683
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-3|value:0-11",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": -0.0004822126790589021
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33065421733201716
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-2|value:0-2",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:4-11",
+              "validation_metrics": {
+                "accuracy": 0.845588207244873,
+                "f1": 0.8835489833641405,
+                "loss": 0.32615138210502326
+              }
+            },
+            "value_only": {
+              "action_key": "value:3-5",
+              "validation_metrics": {
+                "accuracy": 0.8480392098426819,
+                "f1": 0.8856088560885609,
+                "loss": 0.32648592953588446
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [
+        "diagonal_k2",
+        "dense_k2",
+        "diagonal_k4",
+        "diagonal_k8",
+        "dense_k8",
+        "diagonal_k30",
+        "dense_k30"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0,
+            "min": -0.0020820449391877327
+          },
+          "loss": {
+            "max": 0.002723619049670667,
+            "min": -0.0005684465754265955
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0,
+            "min": -0.0020820449391877327
+          },
+          "loss": {
+            "max": 0.002723619049670667,
+            "min": -0.0005684465754265955
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8382353186607361,
+            "min": 0.8357843160629272
+          },
+          "f1": {
+            "max": 0.8777777777777778,
+            "min": 0.87569573283859
+          },
+          "loss": {
+            "max": 0.33386004906074673,
+            "min": 0.33056798343564947
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.0020820449391877327,
+            "loss": 0.002723619049670667
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33386004906074673
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-11",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": -0.0005684465754265955
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33056798343564947
+          }
+        },
+        {
+          "action_key": "query:0-2|value:2-10",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.0020820449391877327,
+            "loss": -4.448142706175995e-05
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.3310919485840143
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.0020820449391877327,
+            "loss": 0.002723619049670667
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33386004906074673
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-10",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": -0.00013108931335747975
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.3310053406977186
+          }
+        },
+        {
+          "action_key": "query:0-2|value:2-10",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.0020820449391877327,
+            "loss": -4.448142706175995e-05
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.3310919485840143
+          }
+        },
+        {
+          "action_key": "query:0-2|value:10-11",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.0020820449391877327,
+            "loss": 0.002723619049670667
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8357843160629272,
+            "f1": 0.87569573283859,
+            "loss": 0.33386004906074673
+          }
+        }
+      ],
+      "identity_action_key": "query:0-2|value:0-2",
+      "seed": 1,
+      "unique_action_count": 5,
+      "unique_actions": [
+        "query:0-2|value:0-10",
+        "query:0-2|value:0-11",
+        "query:0-2|value:0-2",
+        "query:0-2|value:10-11",
+        "query:0-2|value:2-10"
+      ]
+    },
+    {
+      "action_change_count": 0,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": false,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-3|value:0-3",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 3.096753475712033e-05
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.3311673975458332
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-3|value:0-3",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 3.096753475712033e-05
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.3311673975458332
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-2|value:0-2",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:4-11|value:4-11",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8480392098426819,
+            "f1": 0.8860294117647058,
+            "loss": 0.3300884967925502
+          }
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": null,
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8382353186607361,
+            "min": 0.8382353186607361
+          },
+          "f1": {
+            "max": 0.8777777777777778,
+            "min": 0.8777777777777778
+          },
+          "loss": {
+            "max": 0.33113643001107607,
+            "min": 0.33113643001107607
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        },
+        {
+          "action_key": "query:0-2|value:0-2",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8382353186607361,
+            "f1": 0.8777777777777778,
+            "loss": 0.33113643001107607
+          }
+        }
+      ],
+      "identity_action_key": "query:0-2|value:0-2",
+      "seed": 1,
+      "unique_action_count": 1,
+      "unique_actions": [
+        "query:0-2|value:0-2"
+      ]
+    },
+    {
+      "action_change_count": 3,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:8-9",
+              "validation_metrics": {
+                "accuracy": 0.8504902124404907,
+                "f1": 0.8950086058519794,
+                "loss": 0.38927747513733657
+              }
+            },
+            "value_only": {
+              "action_key": "value:8-9",
+              "validation_metrics": {
+                "accuracy": 0.8504902124404907,
+                "f1": 0.893542757417103,
+                "loss": 0.3966069464005676
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [
+        "dense_k2",
+        "dense_k4",
+        "dense_k8"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0024509429931640625,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0008254447742320759,
+            "min": -0.002246155282257134
+          },
+          "loss": {
+            "max": -0.013078137940051526,
+            "min": -0.0530944957452662
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0024509429931640625,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0008254447742320759,
+            "min": -0.002246155282257134
+          },
+          "loss": {
+            "max": 0.0,
+            "min": -0.0530944957452662
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8529411554336548,
+            "min": 0.8480392098426819
+          },
+          "f1": {
+            "max": 0.8969072164948454,
+            "min": 0.8938356164383562
+          },
+          "loss": {
+            "max": 0.47049934869887783,
+            "min": 0.4174048529536116
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-2",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.002246155282257134,
+            "loss": -0.013078137940051526
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8480392098426819,
+            "f1": 0.8938356164383562,
+            "loss": 0.4574212107588263
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-2",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.002246155282257134,
+            "loss": -0.013078137940051526
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8480392098426819,
+            "f1": 0.8938356164383562,
+            "loss": 0.4574212107588263
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:9-10",
+          "delta_from_identity_action": {
+            "accuracy": 0.0024509429931640625,
+            "f1": 0.0008254447742320759,
+            "loss": -0.0530944957452662
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8529411554336548,
+            "f1": 0.8969072164948454,
+            "loss": 0.4174048529536116
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 2,
+      "unique_action_count": 3,
+      "unique_actions": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-2",
+        "query:0-1|value:9-10"
+      ]
+    },
+    {
+      "action_change_count": 0,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": false,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:8-9|value:8-9",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8676470518112183,
+            "f1": 0.9028776978417267,
+            "loss": 0.33910772905630227
+          }
+        }
+      },
+      "candidate_mode": "adjacent",
+      "changed_gauges": [],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": null,
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8504902124404907,
+            "min": 0.8504902124404907
+          },
+          "f1": {
+            "max": 0.8960817717206133,
+            "min": 0.8960817717206133
+          },
+          "loss": {
+            "max": 0.47049934869887783,
+            "min": 0.47049934869887783
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 2,
+      "unique_action_count": 1,
+      "unique_actions": [
+        "query:0-1|value:0-1"
+      ]
+    },
+    {
+      "action_change_count": 3,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": true,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "validation_loss_oracle": {
+          "components": {
+            "query_only": {
+              "action_key": "query:8-11",
+              "validation_metrics": {
+                "accuracy": 0.8578431606292725,
+                "f1": 0.8989547038327527,
+                "loss": 0.3738816871362574
+              }
+            },
+            "value_only": {
+              "action_key": "value:8-11",
+              "validation_metrics": {
+                "accuracy": 0.8578431606292725,
+                "f1": 0.8986013986013986,
+                "loss": 0.3910309973300672
+              }
+            }
+          },
+          "coverage": "componentwise_query_and_value_only_not_full_cartesian",
+          "not_claimed": "exact oracle over all query-pair by value-pair composites"
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [
+        "dense_k2",
+        "dense_k4",
+        "dense_k8"
+      ],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0024509429931640625,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0008254447742320759,
+            "min": -0.002246155282257134
+          },
+          "loss": {
+            "max": -0.013078137940051526,
+            "min": -0.0530944957452662
+          }
+        },
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0024509429931640625,
+            "min": -0.002451002597808838
+          },
+          "f1": {
+            "max": 0.0008254447742320759,
+            "min": -0.002246155282257134
+          },
+          "loss": {
+            "max": 0.0,
+            "min": -0.0530944957452662
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8529411554336548,
+            "min": 0.8480392098426819
+          },
+          "f1": {
+            "max": 0.8969072164948454,
+            "min": 0.8938356164383562
+          },
+          "loss": {
+            "max": 0.47049934869887783,
+            "min": 0.4174048529536116
+          }
+        }
+      },
+      "decision_scope": "per_projection",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-2",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.002246155282257134,
+            "loss": -0.013078137940051526
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8480392098426819,
+            "f1": 0.8938356164383562,
+            "loss": 0.4574212107588263
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:1-2",
+          "delta_from_identity_action": {
+            "accuracy": -0.002451002597808838,
+            "f1": -0.002246155282257134,
+            "loss": -0.013078137940051526
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8480392098426819,
+            "f1": 0.8938356164383562,
+            "loss": 0.4574212107588263
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:9-10",
+          "delta_from_identity_action": {
+            "accuracy": 0.0024509429931640625,
+            "f1": 0.0008254447742320759,
+            "loss": -0.0530944957452662
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8529411554336548,
+            "f1": 0.8969072164948454,
+            "loss": 0.4174048529536116
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 2,
+      "unique_action_count": 3,
+      "unique_actions": [
+        "query:0-1|value:0-1",
+        "query:0-1|value:1-2",
+        "query:0-1|value:9-10"
+      ]
+    },
+    {
+      "action_change_count": 0,
+      "at_least_one_changed_action_has_nonzero_validation_consequence": false,
+      "baselines": {
+        "gauge_invariant_current_effective_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "Frobenius distance between current effective LoRA updates B_i A",
+          "name": "current_effective_update_frobenius",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "gauge_invariant_current_local_activation_baseline": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "complete validation inputs without labels, post hoc diagnostic",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "estimand": "lower-layer local RMS LoRA output disturbance using current B and the lower layer activation moment",
+          "name": "current_lower_local_activation_rms",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "raw_B_rule": {
+          "action_key": "query:0-1|value:0-1",
+          "data_usage": "prevalidation snapshot only",
+          "delta_from_raw_B_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge_property": "not invariant under a general GL(rank) gauge",
+          "input": "cumulative running-average B only",
+          "name": "running_raw_B_selection_proxy",
+          "selected_action_validation_metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        "validation_loss_oracle": {
+          "action_key": "query:8-9|value:8-9",
+          "coverage": "exact_over_declared_joint_same_pair_candidate_family",
+          "validation_metrics": {
+            "accuracy": 0.8676470518112183,
+            "f1": 0.9028776978417267,
+            "loss": 0.33910772905630227
+          }
+        }
+      },
+      "candidate_mode": "all",
+      "changed_gauges": [],
+      "consequence_ranges": {
+        "changed_gauges_delta_from_identity_action": null,
+        "delta_from_identity_action": {
+          "accuracy": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "f1": {
+            "max": 0.0,
+            "min": 0.0
+          },
+          "loss": {
+            "max": 0.0,
+            "min": 0.0
+          }
+        },
+        "selected_action_validation_metrics": {
+          "accuracy": {
+            "max": 0.8504902124404907,
+            "min": 0.8504902124404907
+          },
+          "f1": {
+            "max": 0.8960817717206133,
+            "min": 0.8960817717206133
+          },
+          "loss": {
+            "max": 0.47049934869887783,
+            "min": 0.47049934869887783
+          }
+        }
+      },
+      "decision_scope": "joint",
+      "gauge_count": 10,
+      "gauge_records": [
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "identity",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "orthogonal_k1",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k2",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k4",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k8",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "diagonal_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        },
+        {
+          "action_key": "query:0-1|value:0-1",
+          "delta_from_identity_action": {
+            "accuracy": 0.0,
+            "f1": 0.0,
+            "loss": 0.0
+          },
+          "gauge": "dense_k30",
+          "metrics": {
+            "accuracy": 0.8504902124404907,
+            "f1": 0.8960817717206133,
+            "loss": 0.47049934869887783
+          }
+        }
+      ],
+      "identity_action_key": "query:0-1|value:0-1",
+      "seed": 2,
+      "unique_action_count": 1,
+      "unique_actions": [
+        "query:0-1|value:0-1"
+      ]
+    }
+  ],
+  "validation": {
+    "candidate_coverage": {
+      "0": {
+        "actual_candidate_evaluation_count": 204,
+        "extra_selected_composite_count": 6,
+        "layer_count": 12,
+        "missing_action_count": 0,
+        "pass": true,
+        "required_family_action_count": 198,
+        "required_union_action_count": 204,
+        "selected_action_count": 7,
+        "unexpected_action_count": 0
+      },
+      "1": {
+        "actual_candidate_evaluation_count": 208,
+        "extra_selected_composite_count": 10,
+        "layer_count": 12,
+        "missing_action_count": 0,
+        "pass": true,
+        "required_family_action_count": 198,
+        "required_union_action_count": 208,
+        "selected_action_count": 14,
+        "unexpected_action_count": 0
+      },
+      "2": {
+        "actual_candidate_evaluation_count": 200,
+        "extra_selected_composite_count": 2,
+        "layer_count": 12,
+        "missing_action_count": 0,
+        "pass": true,
+        "required_family_action_count": 198,
+        "required_union_action_count": 200,
+        "selected_action_count": 3,
+        "unexpected_action_count": 0
+      }
+    },
+    "candidate_coverage_all_pass": true,
+    "canonical_scientific_gate_all_pass": true,
+    "equivalence_and_restoration": {
+      "0": {
+        "canonical_action_audit_all_pass": true,
+        "deterministic_primary_action_repeatability_all_pass": true,
+        "factorized_float32_reexecution_all_pass": true,
+        "factorized_float32_role": "diagnostic_only_not_scientific_gate",
+        "pass": true,
+        "product_and_declared_distance_invariances_all_pass": true,
+        "restoration_all_pass": true
+      },
+      "1": {
+        "canonical_action_audit_all_pass": true,
+        "deterministic_primary_action_repeatability_all_pass": true,
+        "factorized_float32_reexecution_all_pass": true,
+        "factorized_float32_role": "diagnostic_only_not_scientific_gate",
+        "pass": true,
+        "product_and_declared_distance_invariances_all_pass": true,
+        "restoration_all_pass": true
+      },
+      "2": {
+        "canonical_action_audit_all_pass": true,
+        "deterministic_primary_action_repeatability_all_pass": true,
+        "factorized_float32_reexecution_all_pass": true,
+        "factorized_float32_role": "diagnostic_only_not_scientific_gate",
+        "pass": true,
+        "product_and_declared_distance_invariances_all_pass": true,
+        "restoration_all_pass": true
+      }
+    },
+    "fully_attested_reproducibility_gate": true,
+    "result_integrity_gate_without_generation_source_attestation": true,
+    "source_hashes": {
+      "generation_source_attestation_available": true,
+      "generation_source_attestation_pass": true,
+      "local_current_source_bundle_sha256": "d92bcfab481c6fa865ad0a7ef9a3c7543a18e1f4800be26e3e8cad10f7c510cd",
+      "local_current_source_sha256": {
+        "experiments/run_aslora_mrpc.py": "ab09259c092a9a3fab49e5aceb06aad7f56eb20b923b6edb3965bd8c940576d9",
+        "src/aslora_training.py": "69818d7c8eb7d20ec3c123f49b0c42ec3ffeb66b835bb79429083bcb4a646664",
+        "src/aslora_witness.py": "d57734071e18ab0f4384772a048faa0264813411069ceabe4fca82906d66bc64"
+      },
+      "recorded_source_sha256": {
+        "experiments/run_aslora_mrpc.py": "ab09259c092a9a3fab49e5aceb06aad7f56eb20b923b6edb3965bd8c940576d9",
+        "src/aslora_training.py": "69818d7c8eb7d20ec3c123f49b0c42ec3ffeb66b835bb79429083bcb4a646664",
+        "src/aslora_witness.py": "d57734071e18ab0f4384772a048faa0264813411069ceabe4fca82906d66bc64"
+      }
+    }
+  }
+}

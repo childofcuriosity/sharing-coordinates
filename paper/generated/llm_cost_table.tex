@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-checkpoint costs: median over three seeds; maximum allocated GPU memory across training and observation. Training excludes loading, evaluation and gradient collection; observation covers the entire noise/query sweep; recovery is single-thread CPU time elapsed for all three estimators. Timings are local measurements under concurrent jobs.}
+\label{tab:llm-cost}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Adapter (M) & Train (s) & Observe (s) & Recover (s) & Peak (GiB)\\
+\midrule
+Pythia 160M & 0.197 & 3.2 & 14.9 & 10.4 & 0.75\\
+Pythia 1B & 0.524 & 5.8 & 35.6 & 9.7 & 2.65\\
+Pythia 2.8B & 0.655 & 11.8 & 45.3 & 34.4 & 6.68\\
+Qwen3 0.6B & 0.524 & 10.4 & 36.3 & 25.3 & 2.82\\
+Qwen3 1.7B & 0.524 & 12.4 & 36.1 & 26.7 & 5.26\\
+Qwen3 4B & 1.049 & 20.0 & 72.4 & 43.3 & 10.95\\
+Qwen3 8B & 1.049 & 34.3 & 72.4 & 43.3 & 19.08\\
+SmolLM2 360M & 0.246 & 9.9 & 18.9 & 36.0 & 1.50\\
+SmolLM2 1.7B & 0.524 & 9.4 & 35.8 & 19.6 & 4.49\\
+\bottomrule
+\end{tabular}
+\end{table}

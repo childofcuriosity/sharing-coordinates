@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\small
+\caption{Four natural task-gradient probes with known response structure. Original and new checkpoints use the separately registered 1,500- and 6,000-step configurations. Recovery error is the combined relative factor error after evaluation-only permutation alignment. These are FP64 fixed-checkpoint measurements, not observed training trajectories.}
+\label{tab:natural-gradients}
+\begin{tabular}{llrr}
+\toprule
+Configuration & Seed & Max. held-out response error & Factor error \\
+\midrule
+Original & 0 & $9.57\times10^{-14}$ & $3.02\times10^{-8}$ \\
+Original & 1 & $8.22\times10^{-14}$ & $5.37\times10^{-9}$ \\
+Original & 2 & $8.63\times10^{-14}$ & $1.36\times10^{-8}$ \\
+New & 10 & $9.39\times10^{-14}$ & $2.31\times10^{-8}$ \\
+New & 11 & $6.45\times10^{-14}$ & $1.35\times10^{-8}$ \\
+New & 12 & $9.95\times10^{-14}$ & $1.48\times10^{-8}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

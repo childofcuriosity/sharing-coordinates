@@ -1,0 +1,58 @@
+\section{Model and observation}
+\label{sec:problem}
+
+Let $L$ be the number of layers, $K$ the number of shared bases, and $D$
+the number of mixed parameters per layer. Write
+\begin{equation}
+ \Theta=AB,\qquad A\in\simplex_K^L,\quad B\in\RR^{K\times D},
+ \label{eq:factorization}
+\end{equation}
+where $\simplex_K^L$ denotes nonnegative, row-stochastic $L\times K$
+matrices. The architecture uses the product row $a_iB$ as parameters.
+The results do not automatically apply to mixtures of nonlinear expert
+\emph{outputs}. Two factors are product-equivalent when
+\begin{equation}
+ (A,B)\sim_\Theta(A',B')\quad\Longleftrightarrow\quad AB=A'B'.
+ \label{eq:effective_equivalence}
+\end{equation}
+We measure factor discrepancy modulo the unavoidable basis labels:
+\begin{equation}
+ d_{\rm perm}((A,B),(A',B'))=
+ \min_{P\in\mathfrak S_K}
+ \bigl(\|A'-AP\|_F^2+\|B'-P^\top B\|_F^2\bigr)^{1/2}.
+ \label{eq:permutation-distance}
+\end{equation}
+Here $\mathfrak S_K$ is the set of permutation matrices and
+$\|\mathcal S\|_{F\to F}=\sup_{\|G\|_F=1}\|\mathcal S(G)\|_F$.
+
+\paragraph{Controlled Euclidean observation.}
+Set $A=\operatorname{softmax}_{\rm row}(Z/\tau)$ with fixed $\tau>0$.
+For a loss $\mathcal L=\ell(\Theta)$ and known positive block rates, let
+\begin{align}
+ \dot Z=-\eta_Z\nabla_Z\mathcal L,\qquad
+ \dot B=-\eta_B\nabla_B\mathcal L,
+ \label{eq:response_flow}\\
+ \mathcal R_{A,B}(G)=-\dot\Theta.
+ \label{eq:response_operator}
+\end{align}
+where $G=\nabla_\Theta\ell$. Every $G\in\RR^{L\times D}$ is admissible,
+using the test loss $\ell_G(\Theta)=\langle G,\Theta\rangle$.
+The comparison fixes $\tau,\eta_Z,\eta_B$ across charts. Direct factor
+penalties, adaptive preconditioning, and unknown optimizer state define
+different observation laws.
+
+\paragraph{Target and scope.}
+We identify the \emph{current factors} under this law. An effective-parameter
+partition instead groups equal rows of $\Theta$; a functional partition
+groups equal transition functions on a stated input distribution; a
+historical graph describes the process that generated the model. These are
+different targets. Likewise, a coordinate-derived action $r$ is product
+invariant only if
+\begin{equation}
+ r(A,B)=r(A',B')\quad\text{whenever }(A,B)\sim_\Theta(A',B').
+ \label{eq:action_invariance}
+\end{equation}
+Identification relative to an optimizer does not itself imply this property,
+small action regret, or stable argmax decisions without a coordinate gap.
+The auxiliary decision experiments evaluate actions in a common canonical
+model rather than assign them a historical ground truth.

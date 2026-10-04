@@ -1,0 +1,512 @@
+{
+  "all_checks_pass": true,
+  "checkpoint": {
+    "language_config": {
+      "amp": true,
+      "batch_size": 32,
+      "checkpoint_load": null,
+      "checkpoint_save": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed0.pt",
+      "depth": 12,
+      "dimension": 256,
+      "eval_batches": 100,
+      "hard": false,
+      "hidden_dimension": 1024,
+      "log_every": 250,
+      "lr": 0.0003,
+      "num_bases": 4,
+      "num_heads": 8,
+      "router_init": "pattern_cycle",
+      "router_pattern": null,
+      "router_trainable": true,
+      "seed": 0,
+      "sequence_length": 128,
+      "steps": 1500,
+      "tau_end": 1.0,
+      "tau_start": 1.0,
+      "test_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/test.txt",
+      "train_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/train.txt",
+      "usage_strength": 0.0,
+      "validation_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/valid.txt",
+      "vertex_strength": 0.0,
+      "warmup_steps": 500,
+      "weight_decay": 0.1
+    },
+    "metadata": {
+      "corpus_sha256": {
+        "combined": "f6981cccae2eed9c691dcb5589c1f5027c2edf3ea7b99b04b9e068c1f3d1adae",
+        "test": "d790b833ef8cf03a90db7bf1271b7520b83c45ce07ba3c1a9699df81e239eca0",
+        "train": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+        "validation": "f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8"
+      },
+      "extra": {
+        "best_validation_bpb": 2.1926625846641428,
+        "checkpoint_kind": "final_predeclared_training_step",
+        "elapsed_seconds": 90.92243504524231,
+        "final_probabilities": [
+          [
+            0.9986087679862976,
+            0.0004635108052752912,
+            0.00046558480244129896,
+            0.00046218192437663674
+          ],
+          [
+            0.00034736396628431976,
+            0.9989553689956665,
+            0.0003485034394543618,
+            0.0003487511130515486
+          ],
+          [
+            0.00028833255055360496,
+            0.0002892077318392694,
+            0.9991323351860046,
+            0.00029015258769504726
+          ],
+          [
+            0.00031058586318977177,
+            0.00030631705885753036,
+            0.00030671810964122415,
+            0.9990763664245605
+          ],
+          [
+            0.9986054301261902,
+            0.0004626429872587323,
+            0.00046307843877002597,
+            0.00046881529851816595
+          ],
+          [
+            0.0003877529816236347,
+            0.998833954334259,
+            0.00039013769128359854,
+            0.0003882243763655424
+          ],
+          [
+            0.00029354498838074505,
+            0.00029065346461720765,
+            0.9991214871406555,
+            0.00029422828811220825
+          ],
+          [
+            0.00030756829073652625,
+            0.00030190718825906515,
+            0.0003013120440300554,
+            0.999089241027832
+          ],
+          [
+            0.9986823201179504,
+            0.00043709593592211604,
+            0.0004370642709545791,
+            0.0004435375740285963
+          ],
+          [
+            0.00040964578511193395,
+            0.998762845993042,
+            0.00041408362449146807,
+            0.0004133251204621047
+          ],
+          [
+            0.0003516498545650393,
+            0.00034838926512748003,
+            0.9989473223686218,
+            0.00035269639920443296
+          ],
+          [
+            0.00033714380697347224,
+            0.00033490697387605906,
+            0.00033384159905835986,
+            0.9989941716194153
+          ]
+        ],
+        "initial_probabilities": [
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ],
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ],
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ]
+        ],
+        "router_mean_l1_movement": 0.00033489512861706316,
+        "saved_at_step": 1500,
+        "test_bpb": 2.1858875293531037
+      },
+      "format_version": 1
+    },
+    "path": "E:\\copyofxhy\\after2024\\2026\\ai4s\\project\\v2.1explorer\\results\\checkpoints\\language_seed0.pt",
+    "primary_checks": {
+      "all_pass": true,
+      "checks": {
+        "checkpoint_kind_is_predeclared_final": true,
+        "positive_final_temperature": true,
+        "router_was_trainable": true,
+        "saved_at_step_is_1500": true,
+        "soft_router_not_hard": true,
+        "training_steps_is_1500": true
+      }
+    },
+    "sha256": "6f9fce092e9a7dba6a24de9178736425cbf27d62b2e385ecce0b2210a217324d"
+  },
+  "claim_boundary": "The K designed probes uniformly determine the complete structured instantaneous Euclidean response over exact full-rank factorizations of this Theta. They identify the current Euclidean chart only after the exact stabilizer theorem; they do not identify AdamW state, a finite-step trajectory, functional equivalence, or historical truth.",
+  "component_reconstruction_relative_tolerance": 5e-10,
+  "factor_diagnostics": {
+    "A_condition_number": 1.0017358623956734,
+    "A_frobenius_norm": 3.4602946387015807,
+    "A_full_column_rank": true,
+    "A_sigma_max": 1.732066150117043,
+    "A_sigma_min": 1.7290647316696524,
+    "B_condition_number": 1.068195042097396,
+    "B_frobenius_norm": 57.26115800053438,
+    "B_full_row_rank": true,
+    "B_sigma_max": 29.316803419045407,
+    "B_sigma_min": 27.44517832762264,
+    "depth_n": 12,
+    "effective_dimension_d": 787712,
+    "maximum_A_entry": 0.999132307392902,
+    "minimum_A_entry": 0.00028833255954248383,
+    "num_bases_K": 4,
+    "rank_A": 4,
+    "rank_B": 4,
+    "theorem_rank_assumptions_pass": true
+  },
+  "format": "response-tomography-audit-v2",
+  "maximum_component_reconstruction_relative_error": 5.70672252721863e-11,
+  "permutation_control": {
+    "equivalence": {
+      "condition_number": 1.0,
+      "effective_max_abs_error": 2.7755575615628914e-17,
+      "effective_relative_l2_error": 8.683734349158401e-17,
+      "minimum_transformed_probability": 0.00028833255954248383,
+      "row_sum_max_abs_error": 0.0
+    },
+    "gauge": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "tomography": {
+      "common_design_operator_determining_theorem_applies": true,
+      "common_product_numerical_tolerance_pass": true,
+      "design": {
+        "complement_codes_orthonormal_max_abs_error": 5.88418203051333e-14,
+        "complement_dimension_D_minus_K": 787708,
+        "construction": "deterministic_projected_coordinate_gram_schmidt",
+        "depth_L": 12,
+        "dimension_condition_D_minus_K_ge_L": true,
+        "effective_dimension_D": 787712,
+        "num_bases_K": 4,
+        "probe_count": 4,
+        "row_basis_orthonormal_max_abs_error": 6.639133687258436e-14,
+        "row_complement_cross_max_abs_error": 1.6968968080984538e-16,
+        "theta_rank": 4,
+        "theta_rowspace_relative_residual": 3.9311426393027713e-14,
+        "theta_singular_values": [
+          50.749771492234835,
+          50.580406245458164,
+          49.2732884285413,
+          47.46958876230046,
+          9.631995750215226e-13,
+          9.021744441456167e-13,
+          8.265823318831062e-13,
+          5.380000155749502e-13,
+          3.0510598974456944e-15,
+          3.049713305162341e-15,
+          2.9547388983263126e-15,
+          2.830205644411667e-15
+        ]
+      },
+      "equality_relative_tolerance": 5e-11,
+      "exact_common_product_holds_by_symbolic_gauge_construction": true,
+      "format": "structured-response-tomography-v2",
+      "interpretation": "The reference design satisfies the recorded rank/dimension checks. These K probes determine both complete structured Euclidean responses under the additional exact-common-product construction attestation. The product tolerance is only an implementation check, not an approximate-product theorem, noisy-observation confidence interval, or historical-graph certificate.",
+      "probe_records": [
+        {
+          "candidate_response_frobenius_norm": 11.994365902177183,
+          "construction": "orthogonal_complement_layer_codes_plus_row_basis_1",
+          "gradient_frobenius_norm": 4.898979485566518,
+          "index": 0,
+          "reference_response_frobenius_norm": 11.994365902177183,
+          "relative_response_difference": 8.866658465242406e-17,
+          "response_difference_frobenius_norm": 1.0634994596175418e-15
+        },
+        {
+          "candidate_response_frobenius_norm": 10.394150309626415,
+          "construction": "shared_row_basis_2",
+          "gradient_frobenius_norm": 3.4641016151378565,
+          "index": 1,
+          "reference_response_frobenius_norm": 10.394150309626415,
+          "relative_response_difference": 8.972345206746466e-17,
+          "response_difference_frobenius_norm": 9.325990470877886e-16
+        },
+        {
+          "candidate_response_frobenius_norm": 10.394179389146895,
+          "construction": "shared_row_basis_3",
+          "gradient_frobenius_norm": 3.464101615137615,
+          "index": 2,
+          "reference_response_frobenius_norm": 10.394179389146894,
+          "relative_response_difference": 9.115191958307732e-17,
+          "response_difference_frobenius_norm": 9.474494038115976e-16
+        },
+        {
+          "candidate_response_frobenius_norm": 10.394465063288933,
+          "construction": "shared_row_basis_4",
+          "gradient_frobenius_norm": 3.464101615137726,
+          "index": 3,
+          "reference_response_frobenius_norm": 10.394465063288933,
+          "relative_response_difference": 9.43560526260365e-17,
+          "response_difference_frobenius_norm": 9.807806925311884e-16
+        }
+      ],
+      "reconstruction": {
+        "candidate_local_blocks_relative_error": 5.70672252721863e-11,
+        "candidate_router_gram_relative_error": 3.501807979826492e-14,
+        "local_blocks_pair_relative_difference": 1.849316399866449e-13,
+        "maximum_probe_relative_response_difference": 9.43560526260365e-17,
+        "reference_local_blocks_relative_error": 5.698951903127401e-11,
+        "reference_router_gram_relative_error": 3.50240454259883e-14,
+        "router_gram_pair_relative_difference": 8.083837986377932e-17
+      },
+      "reference_design_rank_dimension_pass": true,
+      "response_equal_on_operator_determining_probes_within_tolerance": true,
+      "response_operators_distinguished_within_tolerance": false,
+      "same_effective_product_relative_error": 8.683734349158401e-17
+    }
+  },
+  "positive_stochastic_nonpermutation": {
+    "equivalence": {
+      "condition_number": 1.5384615384615385,
+      "effective_max_abs_error": 5.551115123125783e-17,
+      "effective_relative_l2_error": 1.6721177333035677e-16,
+      "minimum_transformed_probability": 0.0876874161637026,
+      "row_sum_max_abs_error": 0.0
+    },
+    "gauge": [
+      [
+        0.7375,
+        0.0875,
+        0.0875,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.7375,
+        0.0875,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.0875,
+        0.7375,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.0875,
+        0.0875,
+        0.7375
+      ]
+    ],
+    "tomography": {
+      "common_design_operator_determining_theorem_applies": true,
+      "common_product_numerical_tolerance_pass": true,
+      "design": {
+        "complement_codes_orthonormal_max_abs_error": 5.88418203051333e-14,
+        "complement_dimension_D_minus_K": 787708,
+        "construction": "deterministic_projected_coordinate_gram_schmidt",
+        "depth_L": 12,
+        "dimension_condition_D_minus_K_ge_L": true,
+        "effective_dimension_D": 787712,
+        "num_bases_K": 4,
+        "probe_count": 4,
+        "row_basis_orthonormal_max_abs_error": 6.639133687258436e-14,
+        "row_complement_cross_max_abs_error": 1.6968968080984538e-16,
+        "theta_rank": 4,
+        "theta_rowspace_relative_residual": 3.9311426393027713e-14,
+        "theta_singular_values": [
+          50.749771492234835,
+          50.580406245458164,
+          49.2732884285413,
+          47.46958876230046,
+          9.631995750215226e-13,
+          9.021744441456167e-13,
+          8.265823318831062e-13,
+          5.380000155749502e-13,
+          3.0510598974456944e-15,
+          3.049713305162341e-15,
+          2.9547388983263126e-15,
+          2.830205644411667e-15
+        ]
+      },
+      "equality_relative_tolerance": 5e-11,
+      "exact_common_product_holds_by_symbolic_gauge_construction": true,
+      "format": "structured-response-tomography-v2",
+      "interpretation": "The reference design satisfies the recorded rank/dimension checks. These K probes determine both complete structured Euclidean responses under the additional exact-common-product construction attestation. The product tolerance is only an implementation check, not an approximate-product theorem, noisy-observation confidence interval, or historical-graph certificate.",
+      "probe_records": [
+        {
+          "candidate_response_frobenius_norm": 184.45752457896225,
+          "construction": "orthogonal_complement_layer_codes_plus_row_basis_1",
+          "gradient_frobenius_norm": 4.898979485566518,
+          "index": 0,
+          "reference_response_frobenius_norm": 11.994365902177183,
+          "relative_response_difference": 0.9717191711212602,
+          "response_difference_frobenius_norm": 179.24091289094866
+        },
+        {
+          "candidate_response_frobenius_norm": 277.0852866530446,
+          "construction": "shared_row_basis_2",
+          "gradient_frobenius_norm": 3.4641016151378565,
+          "index": 1,
+          "reference_response_frobenius_norm": 10.394150309626415,
+          "relative_response_difference": 0.9734402346364124,
+          "response_difference_frobenius_norm": 269.7259664538373
+        },
+        {
+          "candidate_response_frobenius_norm": 239.75949256471685,
+          "construction": "shared_row_basis_3",
+          "gradient_frobenius_norm": 3.464101615137615,
+          "index": 2,
+          "reference_response_frobenius_norm": 10.394179389146894,
+          "relative_response_difference": 0.972349445642537,
+          "response_difference_frobenius_norm": 233.1300096828384
+        },
+        {
+          "candidate_response_frobenius_norm": 224.34696841857863,
+          "construction": "shared_row_basis_4",
+          "gradient_frobenius_norm": 3.464101615137726,
+          "index": 3,
+          "reference_response_frobenius_norm": 10.394465063288933,
+          "relative_response_difference": 0.9712411608672724,
+          "response_difference_frobenius_norm": 217.8950100439136
+        }
+      ],
+      "reconstruction": {
+        "candidate_local_blocks_relative_error": 4.4087054986494706e-14,
+        "candidate_router_gram_relative_error": 1.0105391084556358e-12,
+        "local_blocks_pair_relative_difference": 69970.92652583399,
+        "maximum_probe_relative_response_difference": 0.9734402346364124,
+        "reference_local_blocks_relative_error": 5.698951903127401e-11,
+        "reference_router_gram_relative_error": 3.50240454259883e-14,
+        "router_gram_pair_relative_difference": 0.4997622428903863
+      },
+      "reference_design_rank_dimension_pass": true,
+      "response_equal_on_operator_determining_probes_within_tolerance": false,
+      "response_operators_distinguished_within_tolerance": true,
+      "same_effective_product_relative_error": 1.6721177333035677e-16
+    }
+  },
+  "probe_count_K": 4,
+  "protocol": {
+    "checkpoint": "E:\\copyofxhy\\after2024\\2026\\ai4s\\project\\v2.1explorer\\results\\checkpoints\\language_seed0.pt",
+    "device": "cpu",
+    "equality_relative_tolerance": 5e-11,
+    "eta_b": 1.0,
+    "eta_z": 1.0,
+    "exact_common_product_holds_by_symbolic_gauge_construction": true,
+    "gauge_family": "deterministic_positive_stochastic_shrink_to_uniform",
+    "gauge_strength": 0.35,
+    "gauge_strength_matches_gaussian_audit": true,
+    "minimum_probability": 1e-12,
+    "old_source_attested_response_generator_modified": false,
+    "operator_materialized": false,
+    "output": "E:\\copyofxhy\\after2024\\2026\\ai4s\\project\\v2.1explorer\\results\\response_tomography_seed0.json",
+    "probe_design": "effective_rowspace_structured_deterministic_K_probe"
+  },
+  "source_sha256": {
+    "experiments/run_response_tomography.py": "aad2155138ab00a7b640455438f0d212de8835ce7d3cd93d5f0cd7fc4975f60c",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/response_tomography.py": "88a4dd2c335e8d6e1cea0636705abc31331a60201f0a03ce7cba3548b066a6d0"
+  },
+  "status": "completed_operator_determining_response_tomography",
+  "versions": {
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "python": "3.13.11",
+    "torch": "2.11.0+cpu"
+  }
+}

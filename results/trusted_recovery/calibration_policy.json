@@ -1,0 +1,96 @@
+{
+  "format": "trusted-calibration-v1",
+  "created_utc": "2026-09-24T17:53:56.118328+00:00",
+  "freeze_sha256": "0d68f88eb3afd77c958afdc902312e2a35faf96694ad5df105896fb5dd5e28ba",
+  "calibration_sha256": {
+    "results/trusted_recovery/calibration/synthetic100.json": "36aeff96ec2eef329cea130672150638ad778e1786c33fe9f170d71cbbb11703",
+    "results/trusted_recovery/calibration/synthetic101.json": "8b2b4218bc30de5180022bb932e637d5848ef0cb36ce30a969447d116687039c",
+    "results/trusted_recovery/calibration/synthetic102.json": "337115e3d88764ef31e0c3917fbc5530ba26315982e4541b2524587f81234198",
+    "results/trusted_recovery/calibration/synthetic103.json": "6f103786023ab03e548e12e96f7761b638e756e9a09329585f14d10998daf448",
+    "results/trusted_recovery/calibration/synthetic104.json": "4e1c8d236ad3776f89dc77554bce7110660b098dc5152385a68b5596699d55f6",
+    "results/trusted_recovery/calibration/synthetic105.json": "2f480c0f27f03b7ddc5f6e31da180bd7a9c8a0a409da78936d3d9aa1ef9ffd86",
+    "results/trusted_recovery/calibration/synthetic106.json": "93a59d9f34d61566b42b12e4a33b26cbdf214d5e562383a7bf9a67766d0625c4",
+    "results/trusted_recovery/calibration/synthetic107.json": "5a8d3c6431bc401eb3d768320d93d3f3eff91970321c86aa8d7fc2e506b97dff",
+    "results/trusted_recovery/calibration/synthetic108.json": "a982d6c4c2f9f9b38f5197c599f34f5aa959599730efcd840da203a2df4bd89c",
+    "results/trusted_recovery/calibration/synthetic109.json": "3c76870922b96509d51506a258c022bc89f10e7c71553462c595e1b7eb147c77",
+    "results/trusted_recovery/calibration/synthetic110.json": "e566c42b30a09e0522105072c5259bd7ca6dfc797e2bae7a6b5e79fdd396f0ab",
+    "results/trusted_recovery/calibration/synthetic111.json": "f51aa9999525c84ac9f8f48fe53043198d433645b24705aa07fa76f3b805b516",
+    "results/trusted_recovery/calibration/synthetic112.json": "3e54788599f08a023f6f4396880a707a2442499786f0621ba01ce6848362f175",
+    "results/trusted_recovery/calibration/synthetic113.json": "749f79d8b3d19d22fac5585bc63327633eb76aa0eb0afa2d405c020051bf0689",
+    "results/trusted_recovery/calibration/synthetic114.json": "d4fe16bf7e5652fc57b2f58406db77961ff833e6b2f800f8d2cd0907f6d616c6",
+    "results/trusted_recovery/calibration/synthetic115.json": "fa234c791a5595e6c7c79a4fd99ea749c603f3bf9bf2df3b39311731065c5dfc",
+    "results/trusted_recovery/calibration/synthetic116.json": "9791e98111b1a291ce0d000d7dd812b1647450e52515345a03b68452be51889a",
+    "results/trusted_recovery/calibration/synthetic117.json": "31f7f6b11ae03a5dd3001e92127191e147fbcff3864bd3014141bd0769e78760",
+    "results/trusted_recovery/calibration/synthetic118.json": "21ce547d1db2883f31d91c14c7efab5d8e325a41c37ae9de23224e631d3aa940",
+    "results/trusted_recovery/calibration/synthetic119.json": "0199e6e8240f5447995de72e000a1af94f91779291da18835216b73e18cca37d",
+    "results/trusted_recovery/calibration/language20.json": "c20aba550f5f8bc9fd535fabeeb3b0f9b812e83986785fcec3c808f8917a16ab",
+    "results/trusted_recovery/calibration/language21.json": "b8e7192a2342996397b2fea971aff96568e7e6554234180fd9462d3f0c3e44e8"
+  },
+  "scope": "Pooled calibration, fixed separately per method/score; same thresholds transferred to both domains.",
+  "constraints": {
+    "max_bad_fraction": 0.05,
+    "min_accepted_synthetic": 20
+  },
+  "rules": {
+    "spectral": {
+      "empirical_score": {
+        "threshold": 0.0004434779753720944,
+        "accepted": 83,
+        "bad": 0,
+        "synthetic_accepted": 82
+      },
+      "residual_only_score": {
+        "threshold": 1.0511276931050035e-06,
+        "accepted": 83,
+        "bad": 0,
+        "synthetic_accepted": 82
+      },
+      "condition_only_score": {
+        "threshold": 474.6979104511683,
+        "accepted": 83,
+        "bad": 0,
+        "synthetic_accepted": 82
+      }
+    },
+    "projected_spectral": {
+      "empirical_score": {
+        "threshold": 32.67413622546998,
+        "accepted": 710,
+        "bad": 35,
+        "synthetic_accepted": 687
+      },
+      "residual_only_score": {
+        "threshold": 0.5628313042314651,
+        "accepted": 714,
+        "bad": 35,
+        "synthetic_accepted": 691
+      },
+      "condition_only_score": {
+        "threshold": 3.9214185304046736,
+        "accepted": 222,
+        "bad": 11,
+        "synthetic_accepted": 222
+      }
+    },
+    "joint_fit": {
+      "empirical_score": {
+        "threshold": 14.790947922312998,
+        "accepted": 915,
+        "bad": 45,
+        "synthetic_accepted": 891
+      },
+      "residual_only_score": {
+        "threshold": 0.12168855958452948,
+        "accepted": 914,
+        "bad": 45,
+        "synthetic_accepted": 890
+      },
+      "condition_only_score": {
+        "threshold": 4.968372006120164,
+        "accepted": 246,
+        "bad": 12,
+        "synthetic_accepted": 246
+      }
+    }
+  }
+}

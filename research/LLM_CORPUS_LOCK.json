@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-09-24T19:58:52.380008+00:00",
+  "purpose": "Next-token gradients/losses; no generation accuracy; public pretraining overlap unknown.",
+  "documents": [
+    {
+      "domain": "math",
+      "repository": "openai/grade-school-math",
+      "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+      "path": "data/llm-domains/math.jsonl",
+      "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+      "documents": 7473
+    },
+    {
+      "domain": "code",
+      "repository": "google-research/google-research",
+      "revision": "d36068b845da4c2b24927fee2cea1e6ef98dadda",
+      "url": "https://raw.githubusercontent.com/google-research/google-research/d36068b845da4c2b24927fee2cea1e6ef98dadda/mbpp/mbpp.jsonl",
+      "path": "data/llm-domains/code.jsonl",
+      "sha256": "ccf64ceae9c5403bf50a044cb6d505bfd2a2963ee58338ba268fd65beab92a9f",
+      "documents": 974
+    },
+    {
+      "domain": "general",
+      "split": "train",
+      "path": "data/wikitext-2/train.txt",
+      "sha256": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f"
+    },
+    {
+      "domain": "general",
+      "split": "valid",
+      "path": "data/wikitext-2/valid.txt",
+      "sha256": "f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8"
+    },
+    {
+      "domain": "general",
+      "split": "test",
+      "path": "data/wikitext-2/test.txt",
+      "sha256": "d790b833ef8cf03a90db7bf1271b7520b83c45ce07ba3c1a9699df81e239eca0"
+    }
+  ]
+}

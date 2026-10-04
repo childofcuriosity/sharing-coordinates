@@ -1,0 +1,12 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+EleutherAI/pythia-160m 1 4.589258193969727
+EleutherAI/pythia-160m 11 4.354822635650635
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/WillRawData2/llm/will_datasets/toutiao/aslora/sharing-coordinates/experiments/run_llm_pilot.py", line 131, in <module>
+    run(args)
+  File "/WillRawData2/llm/will_datasets/toutiao/aslora/sharing-coordinates/experiments/run_llm_pilot.py", line 81, in run
+    analytic=apply_euclidean_response(a,b,grad[0],tau=1.,eta_z=1.,eta_b=1.)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: apply_euclidean_response() got an unexpected keyword argument 'tau'

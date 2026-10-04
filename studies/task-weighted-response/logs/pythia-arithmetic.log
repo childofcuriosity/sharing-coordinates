@@ -1,0 +1,4 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+{'mode': 'fp32_math', 'relative_gradient_difference': 0.001441266413777501, 'batch_loss': 3.7929015159606934, 'mean_single_loss': 3.792905032634735}
+{'mode': 'fp32_eager', 'relative_gradient_difference': 0.0012161398238907677, 'batch_loss': 3.792914390563965, 'mean_single_loss': 3.7929086089134216}
+{'mode': 'fp64_math', 'relative_gradient_difference': 7.562908858604141e-16, 'batch_loss': 3.792915105819702, 'mean_single_loss': 3.7929152250289917}

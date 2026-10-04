@@ -1,0 +1,82 @@
+{
+  "across_seed": {
+    "all_fixed_nonpermutations_distinguished": true,
+    "all_permutation_controls_pass": true,
+    "all_rank_and_dimension_checks_pass": true,
+    "maximum_component_reconstruction_relative_error": 6.853653630597927e-11,
+    "maximum_permutation_probe_relative_response_difference": 9.43560526260365e-17,
+    "minimum_nonpermutation_probe_relative_response_difference": 0.9730757594220084
+  },
+  "claim_boundary": "Four deterministic effective-gradient probes reconstruct the complete instantaneous Euclidean response under the recorded symbolic exact-common-product construction, exact-rank, and dimension conditions. The numerical product tolerance alone is not a theorem premise. This is a structured matrix-probing corollary, not an AdamW, finite-trajectory, functional, or historical-graph result.",
+  "dimensions": {
+    "depth_L": 12,
+    "effective_D": 787712,
+    "num_bases_K": 4
+  },
+  "format": "response-tomography-summary-v2",
+  "probe_count_K": 4,
+  "raw_result_sha256": {
+    "results/response_tomography_seed0.json": "8fe17d12153cc5c4a251ca654fe23448fb8ed28dc8a1f283c9e9a521920752c9",
+    "results/response_tomography_seed1.json": "03cecd7450149b1e49cc33f9769c93d1aebfdb4f36e999b60824a0384fe939cc",
+    "results/response_tomography_seed2.json": "59dda786953d93bd64f656300388ac9c61fc9f3a955748292d5c0ad75b21170e"
+  },
+  "seed_rows": [
+    {
+      "A_condition_number": 1.0017358623956734,
+      "B_condition_number": 1.068195042097396,
+      "checkpoint_sha256": "6f9fce092e9a7dba6a24de9178736425cbf27d62b2e385ecce0b2210a217324d",
+      "complement_codes_orthonormal_max_abs_error": 5.88418203051333e-14,
+      "maximum_component_reconstruction_relative_error": 5.70672252721863e-11,
+      "nonpermutation_maximum_probe_relative_response_difference": 0.9734402346364124,
+      "permutation_maximum_probe_relative_response_difference": 9.43560526260365e-17,
+      "rank_A": 4,
+      "rank_B": 4,
+      "row_basis_orthonormal_max_abs_error": 6.639133687258436e-14,
+      "row_complement_cross_max_abs_error": 1.6968968080984538e-16,
+      "seed": 0,
+      "theta_rank": 4,
+      "theta_rowspace_relative_residual": 3.9311426393027713e-14
+    },
+    {
+      "A_condition_number": 1.0017384342476292,
+      "B_condition_number": 1.0760503322466481,
+      "checkpoint_sha256": "ae09aaf044be8bbcdc7acf08827d96a47423a4422bff361e2d0b82513ab7a4d5",
+      "complement_codes_orthonormal_max_abs_error": 6.872280522429719e-14,
+      "maximum_component_reconstruction_relative_error": 6.853653630597927e-11,
+      "nonpermutation_maximum_probe_relative_response_difference": 0.9730757594220084,
+      "permutation_maximum_probe_relative_response_difference": 9.260905047244224e-17,
+      "rank_A": 4,
+      "rank_B": 4,
+      "row_basis_orthonormal_max_abs_error": 6.217248937900877e-14,
+      "row_complement_cross_max_abs_error": 3.042562260268095e-16,
+      "seed": 1,
+      "theta_rank": 4,
+      "theta_rowspace_relative_residual": 5.295846674648567e-14
+    },
+    {
+      "A_condition_number": 1.0017679598255127,
+      "B_condition_number": 1.0766899547705335,
+      "checkpoint_sha256": "77006e2d6d5c024ddca274f3cd029c9d4672a0c53ed1d99ac7528453521c2fe4",
+      "complement_codes_orthonormal_max_abs_error": 6.228351168147128e-14,
+      "maximum_component_reconstruction_relative_error": 5.0604161572930156e-11,
+      "nonpermutation_maximum_probe_relative_response_difference": 0.9734825105887456,
+      "permutation_maximum_probe_relative_response_difference": 9.419662694657299e-17,
+      "rank_A": 4,
+      "rank_B": 4,
+      "row_basis_orthonormal_max_abs_error": 5.861977570020827e-14,
+      "row_complement_cross_max_abs_error": 1.3412148001626516e-16,
+      "seed": 2,
+      "theta_rank": 4,
+      "theta_rowspace_relative_residual": 4.1748909667945605e-14
+    }
+  ],
+  "source_sha256": {
+    "experiments/run_response_tomography.py": "aad2155138ab00a7b640455438f0d212de8835ce7d3cd93d5f0cd7fc4975f60c",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/response_tomography.py": "88a4dd2c335e8d6e1cea0636705abc31331a60201f0a03ce7cba3548b066a6d0"
+  },
+  "status": "validated_three_seed_structured_response_tomography",
+  "summary_source_sha256": "4d44abc032bced9ed84645b39783ee62c844361d08847dbf525f7a52bb2cb9d9"
+}

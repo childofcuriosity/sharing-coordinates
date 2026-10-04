@@ -1,0 +1,5190 @@
+{
+  "format": "routing-dynamics-analysis-v1",
+  "scope": "Post hoc analysis of every existing evaluation checkpoint; no new language-model training or new downstream-loss comparisons. Constructed examples establish possibility, not typicality.",
+  "original_llm_freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "input_sha256": {
+    "results/llm/evaluation/pythia160m-seed0/checkpoint.pt": "3a0456dedc1d4d5e83ece07016666b53e7fca4e46b4f29a8a07494a19f1a8e20",
+    "results/llm/evaluation/pythia160m-seed1/checkpoint.pt": "1c3f19391edfbf872ae22374189fe453c4012800d0fbdb5106337911b20c0ee0",
+    "results/llm/evaluation/pythia160m-seed2/checkpoint.pt": "6977cba3611b1b07ec33f7d20e0ce7a3e43c537a79bfaa09bc9cc985eb1f6636",
+    "results/llm/evaluation/pythia1b-seed0/checkpoint.pt": "4fdb31d2b565e68a60ff0f091dc83c73ddea49dbbf7552e44d1bc4d8eba11b0f",
+    "results/llm/evaluation/pythia1b-seed1/checkpoint.pt": "52b44ec1f5b13ca05c06693fb41c4ffd060e447a04d18d8036392760f0b12eef",
+    "results/llm/evaluation/pythia1b-seed2/checkpoint.pt": "f679fd3dac82ad5d7a744faaf48bd55fe43b22545e03b1af161de67773a2e8ea",
+    "results/llm/evaluation/pythia28b-seed0/checkpoint.pt": "03317a5d226908a1ca96ba771b2af300b6778bd2dc6fc51863c02564ec7b61f9",
+    "results/llm/evaluation/pythia28b-seed1/checkpoint.pt": "5eda209296ebef7c85418bedbbb45f5f3d56c4367a6cc721e76ee94c7f354239",
+    "results/llm/evaluation/pythia28b-seed2/checkpoint.pt": "59c95e9b6636fe25c02c5be1b00f712c68fcce64431c72ce4d8fc5b1cf5b192e",
+    "results/llm/evaluation/qwen06b-seed0/checkpoint.pt": "eb94cc606245a4d87427cba3ff1920960768912b401b29300ef00b7e41bd19d0",
+    "results/llm/evaluation/qwen06b-seed1/checkpoint.pt": "677fb114357e141404e5052a8182c85d975a72cab08b683d243cfe31e900f13c",
+    "results/llm/evaluation/qwen06b-seed2/checkpoint.pt": "1fb60f37249e71b5c10f4eafe8be1d16248231011bde20257bbaf560d6e9bcb5",
+    "results/llm/evaluation/qwen17b-seed0/checkpoint.pt": "9a5a5756d4d74f058d63afa5bfe3ccbe5e6dd0b334273c86c253388732d0ae90",
+    "results/llm/evaluation/qwen17b-seed1/checkpoint.pt": "65945d7c02c96967992edaddc56c2e9e8ec4552944a3ae056cfd542c952c3cc6",
+    "results/llm/evaluation/qwen17b-seed2/checkpoint.pt": "8eb3d8fa18b65763d8ea4140a76e31681d32373db963e5a139672c97054935a2",
+    "results/llm/evaluation/qwen4b-seed0/checkpoint.pt": "65c6b782112694490004b9a22023a10f940c9718170d7ff4a8670aef03376346",
+    "results/llm/evaluation/qwen4b-seed1/checkpoint.pt": "00ff2a63d142c1a559218b2b7c2a7f583c17a9bad56132b7c9b79d9bf8a9f6bf",
+    "results/llm/evaluation/qwen4b-seed2/checkpoint.pt": "15d0f656129bf8ae4a59bf34a17200f5120ef165814ac34221060f8c2ce4550f",
+    "results/llm/evaluation/qwen8b-seed0/checkpoint.pt": "09b9e98bf6a366471b3e03b7bf8b91bc09393e5db62c9475fa57d2a6488e12bb",
+    "results/llm/evaluation/qwen8b-seed1/checkpoint.pt": "d729ea298867b09b03940ff192861f5a4450fb3d96cb22717c6eee112a0700cd",
+    "results/llm/evaluation/qwen8b-seed2/checkpoint.pt": "2ddd869c665f7d306a558d652df59acc879d7dd15d5821a9682c11013c35fe3c",
+    "results/llm/evaluation/smol360m-seed0/checkpoint.pt": "ced86ad398f9cc1309893376fbf3fb6fb33b70ce0ac899311a88ef60ecf5ba77",
+    "results/llm/evaluation/smol360m-seed1/checkpoint.pt": "773422fe9a55e6e889dd2addf8fe5cd1c5e5f3ded8a68355b33a38bed57b61ac",
+    "results/llm/evaluation/smol360m-seed2/checkpoint.pt": "0c1c204bc5bd32ef656434738ce6cb2ad73d916f223a94761557d115e4012ee3",
+    "results/llm/evaluation/smol17b-seed0/checkpoint.pt": "820308344efa200b9ca39434a7a3a82dfa643a57769b08d7d306229222f7e3af",
+    "results/llm/evaluation/smol17b-seed1/checkpoint.pt": "cc879da688e2cd8ab5fa693673367e1411f31fbfdb9a6d4fc228fa88426d6fa3",
+    "results/llm/evaluation/smol17b-seed2/checkpoint.pt": "3a523540d69c34fc5a55f967b5e78cc59b16b590d99dbb06f2fdf79246d65741"
+  },
+  "source_sha256": {
+    "src/routing_geometry.py": "08bb612abc2c4b2b31c508e3e707d1324dc684122205e0f550e30e8b7889220f",
+    "experiments/analyze_routing_dynamics.py": "f4ce97d7bcea74078e58aa5067132c40e555f1f2759af81632c6d08fd49bb731"
+  },
+  "exact_certificates": {
+    "k3": {
+      "labeled_assignments": 90,
+      "unlabeled_partitions": 15,
+      "router_best_score_numerator": 60,
+      "router_runnerup_score_numerator": 59,
+      "router_best_score_ties": 1,
+      "router_next_distinct_score": 59,
+      "router_best_labels": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "cluster_pair_sum_numerator": 28,
+      "cluster_runnerup_pair_sum_numerator": 62,
+      "cluster_partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "pair_sum_to_sse_divisor": 2,
+      "router_partition_pair_sum": 82
+    },
+    "k3_denominator": 23,
+    "k4": {
+      "labeled_assignments": 2520,
+      "unlabeled_partitions": 105,
+      "router_best_score_numerator": 1880,
+      "router_runnerup_score_numerator": 1864,
+      "router_best_score_ties": 1,
+      "router_next_distinct_score": 1864,
+      "router_best_labels": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        3,
+        3
+      ],
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "cluster_pair_sum_numerator": 7168,
+      "cluster_runnerup_pair_sum_numerator": 15872,
+      "cluster_partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "pair_sum_to_sse_divisor": 2,
+      "router_partition_pair_sum": 20992
+    },
+    "k4_denominator": 460,
+    "same_product_router_change": {
+      "labeled_assignments": 90,
+      "unlabeled_partitions": 15,
+      "router_best_score_numerator": 510,
+      "router_runnerup_score_numerator": 496,
+      "router_best_score_ties": 1,
+      "router_next_distinct_score": 496,
+      "router_best_labels": [
+        1,
+        2,
+        1,
+        0,
+        0,
+        2
+      ],
+      "router_partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cluster_pair_sum_numerator": 376,
+      "cluster_runnerup_pair_sum_numerator": 472,
+      "cluster_partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "pair_sum_to_sse_divisor": 2,
+      "router_partition_pair_sum": 376
+    },
+    "same_product_dynamic_geometry": {
+      "labeled_assignments": 90,
+      "unlabeled_partitions": 15,
+      "router_best_score_numerator": 504,
+      "router_runnerup_score_numerator": 503,
+      "router_best_score_ties": 1,
+      "router_next_distinct_score": 503,
+      "router_best_labels": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "cluster_pair_sum_numerator": 400,
+      "cluster_runnerup_pair_sum_numerator": 424,
+      "cluster_partition": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "pair_sum_to_sse_divisor": 2,
+      "router_partition_pair_sum": 694
+    },
+    "gauges": {
+      "router": [
+        [
+          0.1,
+          0.4,
+          0.5
+        ],
+        [
+          0.5,
+          0.4,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.3
+        ]
+      ],
+      "dynamic": [
+        [
+          0.2,
+          0.1,
+          0.7
+        ],
+        [
+          0.4,
+          0.4,
+          0.2
+        ],
+        [
+          0.5,
+          0.2,
+          0.3
+        ]
+      ]
+    }
+  },
+  "static_examples": [
+    {
+      "name": "original",
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "weight_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "dynamic_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "alpha": 0.17391304347826086,
+      "sigma_a": 0.2441301098506178,
+      "sigma_b": 1.0,
+      "weight_cost_at_weight_optimum": 0.026465028355387523,
+      "weight_cost_at_dynamic_optimum": 0.026465028355387523,
+      "router_sse_at_weight_optimum": 0.026465028355387523,
+      "router_sse_at_dynamic_optimum": 0.026465028355387523,
+      "operator_constant_range": 2.842170943040401e-14,
+      "product_difference_from_original": 0.0
+    },
+    {
+      "name": "anisotropic",
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "weight_optimum": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "dynamic_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "alpha": 0.17391304347826086,
+      "sigma_a": 0.2441301098506178,
+      "sigma_b": 1.0,
+      "weight_cost_at_weight_optimum": 0.12287334593572782,
+      "weight_cost_at_dynamic_optimum": 0.224952741020794,
+      "router_sse_at_weight_optimum": 0.09451795841209833,
+      "router_sse_at_dynamic_optimum": 0.026465028355387523,
+      "operator_constant_range": 2.842170943040401e-14,
+      "product_difference_from_original": 2.641103051910859
+    },
+    {
+      "name": "gauge_router",
+      "router_partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "weight_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "dynamic_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "alpha": 0.24782608695652175,
+      "sigma_a": 0.05376041748282874,
+      "sigma_b": 0.9959960059356043,
+      "weight_cost_at_weight_optimum": 0.02646502835538751,
+      "weight_cost_at_dynamic_optimum": 0.02646502835538751,
+      "router_sse_at_weight_optimum": 0.0035538752362948988,
+      "router_sse_at_dynamic_optimum": 0.0035538752362948988,
+      "operator_constant_range": 2.842170943040401e-14,
+      "product_difference_from_original": 4.594365265244385e-16
+    },
+    {
+      "name": "gauge_dynamic",
+      "router_partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "weight_optimum": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "dynamic_optimum": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "alpha": 0.1956521739130435,
+      "sigma_a": 0.04282833875778339,
+      "sigma_b": 0.9748524407039718,
+      "weight_cost_at_weight_optimum": 0.026465028355387554,
+      "weight_cost_at_dynamic_optimum": 0.09451795841209844,
+      "router_sse_at_weight_optimum": 0.004007561436672973,
+      "router_sse_at_dynamic_optimum": 0.00378071833648394,
+      "operator_constant_range": 2.842170943040401e-14,
+      "product_difference_from_original": 5.374844106186573e-16
+    }
+  ],
+  "boundary_flow": {
+    "integer": {
+      "labeled_assignments": 90,
+      "unlabeled_partitions": 15,
+      "router_best_score_numerator": 238,
+      "router_runnerup_score_numerator": 238,
+      "router_best_score_ties": 2,
+      "router_next_distinct_score": 228,
+      "router_best_labels": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        0
+      ],
+      "router_partition": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cluster_pair_sum_numerator": 1012,
+      "cluster_runnerup_pair_sum_numerator": 1156,
+      "cluster_partition": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "pair_sum_to_sse_divisor": 2,
+      "router_partition_pair_sum": 1012
+    },
+    "denominator": 92,
+    "a": [
+      [
+        0.43478260869565216,
+        0.2608695652173913,
+        0.30434782608695654
+      ],
+      [
+        0.2608695652173913,
+        0.4782608695652174,
+        0.2608695652173913
+      ],
+      [
+        0.34782608695652173,
+        0.30434782608695654,
+        0.34782608695652173
+      ],
+      [
+        0.4673913043478261,
+        0.40217391304347827,
+        0.13043478260869565
+      ],
+      [
+        0.2608695652173913,
+        0.21739130434782608,
+        0.5217391304347826
+      ],
+      [
+        0.40217391304347827,
+        0.33695652173913043,
+        0.2608695652173913
+      ]
+    ],
+    "b": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "p": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      0
+    ],
+    "q": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      1
+    ],
+    "target": [
+      [
+        0.43478260869565216,
+        0.2608695652173913,
+        0.30434782608695654,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2608695652173913,
+        0.4782608695652174,
+        0.2608695652173913,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.34782608695652173,
+        0.30434782608695654,
+        0.34782608695652173,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.6572005956060764,
+        0.21749231036552902,
+        0.12530709402839468,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2608695652173913,
+        0.21739130434782608,
+        0.5217391304347826,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2613597431219871,
+        0.46659872257817836,
+        0.2720415342998345,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "score_gap_derivative": -0.10692169818808145,
+    "trajectory": [
+      {
+        "t": -0.1,
+        "loss": 0.05580524235878967,
+        "router_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "router_gap": 0.010808811459254386,
+        "p_minus_q": 0.010808811459253942,
+        "cluster_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cluster_gap": 0.010818539458768386,
+        "alpha": 0.13054027121954018,
+        "sigma_a": 0.20416311506382942,
+        "sigma_b": 0.9965224042544913
+      },
+      {
+        "t": -0.01,
+        "loss": 0.05368559028934608,
+        "router_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "router_gap": 0.0010703667410547624,
+        "p_minus_q": 0.0010703667410547624,
+        "cluster_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cluster_gap": 0.008735150757251127,
+        "alpha": 0.13044581897732055,
+        "sigma_a": 0.20466333823165056,
+        "sigma_b": 0.9996676847962966
+      },
+      {
+        "t": 0.0,
+        "loss": 0.053460849094040724,
+        "router_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "router_gap": -4.440892098500626e-16,
+        "p_minus_q": 5.551115123125783e-17,
+        "cluster_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cluster_gap": 0.008506616257088873,
+        "alpha": 0.13043478260869565,
+        "sigma_a": 0.20472300724955014,
+        "sigma_b": 1.0
+      },
+      {
+        "t": 0.01,
+        "loss": 0.05323804601326146,
+        "router_partition": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "router_gap": 0.0010680707762440456,
+        "p_minus_q": -0.001068070776243657,
+        "cluster_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cluster_gap": 0.00827864976102495,
+        "alpha": 0.13042364268192716,
+        "sigma_a": 0.2047834755444661,
+        "sigma_b": 0.9996865211620753
+      },
+      {
+        "t": 0.1,
+        "loss": 0.051312033862767004,
+        "router_partition": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "router_gap": 0.01057908673501018,
+        "p_minus_q": -0.010579086735010235,
+        "cluster_partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "cluster_gap": 0.006251569732855858,
+        "alpha": 0.13031892185965668,
+        "sigma_a": 0.20536281011284227,
+        "sigma_b": 0.9970824649802607
+      }
+    ],
+    "scope": "Constructed squared effective-weight loss and Euclidean factor gradient flow. Negative time selects an ordinary earlier initial state, not a different objective. Numeric integration illustrates, but does not prove, the transverse-crossing theorem."
+  },
+  "trained_checkpoints": [
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            5,
+            8
+          ],
+          [
+            1,
+            6,
+            9
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            7,
+            10,
+            11
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            2,
+            9
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            7,
+            10,
+            11
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            3,
+            10,
+            11
+          ],
+          [
+            5,
+            8,
+            9
+          ]
+        ]
+      },
+      "router_score": 6.5052408110551365,
+      "router_assignment_gap": 0.01163788847402536,
+      "tangent_basis_gram_eigenvalues": [
+        0.45024801129083303,
+        1.048951269558009,
+        3.580507767742089
+      ],
+      "tangent_gram_condition": 7.952301127276489,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 8.331189923103165e-05,
+      "within_max_squared": 0.9020739392722571,
+      "argmax_counts": [
+        4,
+        3,
+        3,
+        2
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 1.349752971936963,
+        "weight_lloyd": 0.9846483881954207,
+        "router_lloyd": 1.2803068236991038
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.7570983016331387,
+        "weight_lloyd": 0.763432748012176,
+        "router_lloyd": 0.6475868159601663
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 20.323957313671908,
+        "weight_lloyd": 20.361963991946133,
+        "router_lloyd": 19.666888399634075
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": true,
+      "exhaustive": {
+        "weight": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              2,
+              9
+            ],
+            [
+              1,
+              3,
+              6
+            ],
+            [
+              4,
+              5,
+              8
+            ],
+            [
+              7,
+              10,
+              11
+            ]
+          ],
+          "cost": 0.9846483881954206,
+          "runnerup_gap": 0.007874883377122943,
+          "coefficient_excess": 0.3651045837415424
+        },
+        "router": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              6,
+              7
+            ],
+            [
+              3,
+              10,
+              11
+            ],
+            [
+              5,
+              8,
+              9
+            ]
+          ],
+          "cost": 0.6475868159601661,
+          "runnerup_gap": 0.01435872253733983,
+          "coefficient_excess": 0.10951148567297264
+        }
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            5,
+            7,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            7,
+            9
+          ],
+          [
+            4,
+            5,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            7,
+            9
+          ],
+          [
+            4,
+            5,
+            10
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ]
+      },
+      "router_score": 6.274668693156724,
+      "router_assignment_gap": 0.002979817879507962,
+      "tangent_basis_gram_eigenvalues": [
+        0.5920045463993572,
+        1.3227523374749433,
+        2.3363628181697176
+      ],
+      "tangent_gram_condition": 3.946528506207861,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.05017184982474699,
+      "within_max_squared": 0.870323172628139,
+      "argmax_counts": [
+        7,
+        3,
+        1,
+        1
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 0.9730796270363286,
+        "weight_lloyd": 0.6083060496814435,
+        "router_lloyd": 0.6083060496814435
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.5600665787661664,
+        "weight_lloyd": 0.4852049495216462,
+        "router_lloyd": 0.4852049495216462
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 22.0635826610719,
+        "weight_lloyd": 21.614412885604782,
+        "router_lloyd": 21.614412885604782
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": false,
+      "exhaustive": {
+        "weight": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              7,
+              9
+            ],
+            [
+              4,
+              5,
+              10
+            ],
+            [
+              6,
+              8,
+              11
+            ]
+          ],
+          "cost": 0.6083060496814435,
+          "runnerup_gap": 0.06149632429613805,
+          "coefficient_excess": 0.364773577354885
+        },
+        "router": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              7,
+              9
+            ],
+            [
+              4,
+              5,
+              10
+            ],
+            [
+              6,
+              8,
+              11
+            ]
+          ],
+          "cost": 0.4852049495216462,
+          "runnerup_gap": 0.04738418659396676,
+          "coefficient_excess": 0.07486162924452017
+        }
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            4,
+            5,
+            9
+          ],
+          [
+            6,
+            7,
+            11
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            4,
+            5,
+            9
+          ],
+          [
+            6,
+            7,
+            11
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2,
+            3,
+            10
+          ],
+          [
+            4,
+            5,
+            9
+          ],
+          [
+            6,
+            7,
+            11
+          ]
+        ]
+      },
+      "router_score": 7.488403645396514,
+      "router_assignment_gap": 0.11047893452175028,
+      "tangent_basis_gram_eigenvalues": [
+        0.6776736984340918,
+        2.048806440750472,
+        2.9552708674874997
+      ],
+      "tangent_gram_condition": 4.360905365393813,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.02297747524061708,
+      "within_max_squared": 2.3600388016330744,
+      "argmax_counts": [
+        2,
+        4,
+        2,
+        4
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 1.9165479123980758,
+        "weight_lloyd": 1.9165479123980758,
+        "router_lloyd": 1.9165479123980758
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.9735112829013591,
+        "weight_lloyd": 0.9735112829013591,
+        "router_lloyd": 0.9735112829013591
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 17.290553678044894,
+        "weight_lloyd": 17.290553678044894,
+        "router_lloyd": 17.290553678044894
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false,
+      "exhaustive": {
+        "weight": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              1,
+              8
+            ],
+            [
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              9,
+              10
+            ],
+            [
+              6,
+              7,
+              11
+            ]
+          ],
+          "cost": 1.7177445444105106,
+          "runnerup_gap": 0.14115448421303434,
+          "coefficient_excess": 0.19880336798756515
+        },
+        "router": {
+          "partitions": 15400,
+          "best_partition": [
+            [
+              0,
+              1,
+              8
+            ],
+            [
+              2,
+              3,
+              10
+            ],
+            [
+              4,
+              5,
+              9
+            ],
+            [
+              6,
+              7,
+              11
+            ]
+          ],
+          "cost": 0.9735112829013592,
+          "runnerup_gap": 0.10692140471531686,
+          "coefficient_excess": -1.1102230246251565e-16
+        }
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            12,
+            13,
+            15
+          ],
+          [
+            1,
+            2,
+            6,
+            9
+          ],
+          [
+            3,
+            7,
+            10,
+            11
+          ],
+          [
+            4,
+            5,
+            8,
+            14
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            12,
+            13,
+            15
+          ],
+          [
+            1,
+            2,
+            6,
+            9
+          ],
+          [
+            3,
+            7,
+            10,
+            11
+          ],
+          [
+            4,
+            5,
+            8,
+            14
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            12,
+            13,
+            15
+          ],
+          [
+            1,
+            2,
+            6,
+            9
+          ],
+          [
+            3,
+            7,
+            10,
+            11
+          ],
+          [
+            4,
+            5,
+            8,
+            14
+          ]
+        ]
+      },
+      "router_score": 13.31089396187795,
+      "router_assignment_gap": 0.2530134882731616,
+      "tangent_basis_gram_eigenvalues": [
+        18.91509388457032,
+        20.228860004223566,
+        28.020030278285688
+      ],
+      "tangent_gram_condition": 1.4813582448640432,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 1.4895966715637867,
+      "within_max_squared": 17.59439604005536,
+      "argmax_counts": [
+        3,
+        4,
+        5,
+        4
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 18.063095170242708,
+        "weight_lloyd": 18.063095170242708,
+        "router_lloyd": 18.063095170242708
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.8591070122293524,
+        "weight_lloyd": 0.8591070122293524,
+        "router_lloyd": 0.8591070122293524
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 12.151212937553181,
+        "weight_lloyd": 12.151212937553181,
+        "router_lloyd": 12.151212937553181
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            4,
+            9
+          ],
+          [
+            2,
+            3,
+            12,
+            14
+          ],
+          [
+            5,
+            7,
+            10,
+            13
+          ],
+          [
+            6,
+            8,
+            11,
+            15
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            4,
+            9
+          ],
+          [
+            2,
+            3,
+            12,
+            14
+          ],
+          [
+            5,
+            7,
+            10,
+            13
+          ],
+          [
+            6,
+            8,
+            11,
+            15
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            4,
+            9
+          ],
+          [
+            2,
+            3,
+            12,
+            14
+          ],
+          [
+            5,
+            7,
+            10,
+            13
+          ],
+          [
+            6,
+            8,
+            11,
+            15
+          ]
+        ]
+      },
+      "router_score": 13.072810681884437,
+      "router_assignment_gap": 0.0740899007900957,
+      "tangent_basis_gram_eigenvalues": [
+        17.359745143193326,
+        19.59175402774536,
+        26.405310727654246
+      ],
+      "tangent_gram_condition": 1.5210655749751973,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.14134061218781768,
+      "within_max_squared": 32.98449535083703,
+      "argmax_counts": [
+        5,
+        4,
+        3,
+        4
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 27.137882848443468,
+        "weight_lloyd": 27.137882848443468,
+        "router_lloyd": 27.137882848443468
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.234252587110077,
+        "weight_lloyd": 1.234252587110077,
+        "router_lloyd": 1.234252587110077
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 16.809786885601866,
+        "weight_lloyd": 16.809786885601866,
+        "router_lloyd": 16.809786885601866
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            3,
+            10,
+            14
+          ],
+          [
+            1,
+            8,
+            13,
+            15
+          ],
+          [
+            2,
+            5,
+            9,
+            11
+          ],
+          [
+            4,
+            6,
+            7,
+            12
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            3,
+            10,
+            14
+          ],
+          [
+            1,
+            8,
+            13,
+            15
+          ],
+          [
+            2,
+            5,
+            9,
+            11
+          ],
+          [
+            4,
+            6,
+            7,
+            12
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            3,
+            10,
+            14
+          ],
+          [
+            1,
+            8,
+            13,
+            15
+          ],
+          [
+            2,
+            5,
+            9,
+            11
+          ],
+          [
+            4,
+            6,
+            7,
+            12
+          ]
+        ]
+      },
+      "router_score": 12.596965969462108,
+      "router_assignment_gap": 0.015138890159143159,
+      "tangent_basis_gram_eigenvalues": [
+        19.134421181111488,
+        21.005508008538058,
+        28.06914282446182
+      ],
+      "tangent_gram_condition": 1.466944965765164,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.007331259496897823,
+      "within_max_squared": 44.454274414010776,
+      "argmax_counts": [
+        3,
+        6,
+        2,
+        5
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 48.54843684408381,
+        "weight_lloyd": 48.54843684408381,
+        "router_lloyd": 48.54843684408381
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.0329911425010603,
+        "weight_lloyd": 2.0329911425010603,
+        "router_lloyd": 2.0329911425010603
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 25.467105032810057,
+        "weight_lloyd": 25.467105032810057,
+        "router_lloyd": 25.467105032810057
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            21,
+            24,
+            26,
+            28,
+            29
+          ],
+          [
+            3,
+            7,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            18,
+            24,
+            26,
+            28,
+            29
+          ],
+          [
+            3,
+            7,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31
+          ]
+        ]
+      },
+      "router_score": 26.520196931116754,
+      "router_assignment_gap": 0.011441193191121357,
+      "tangent_basis_gram_eigenvalues": [
+        20.56510243188157,
+        24.68242151004557,
+        29.779103855171783
+      ],
+      "tangent_gram_condition": 1.4480406287209138,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 5.468499346017095,
+      "within_max_squared": 34.668398176744844,
+      "argmax_counts": [
+        7,
+        8,
+        8,
+        9
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 45.07425717547588,
+        "weight_lloyd": 41.78111290526683,
+        "router_lloyd": 42.70110268758791
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.7072911986480503,
+        "weight_lloyd": 1.7528443208209277,
+        "router_lloyd": 1.6249609255984239
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 49.43100147208509,
+        "weight_lloyd": 50.15985142685113,
+        "router_lloyd": 48.113717103291066
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": true
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            10,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            10,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            10,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ]
+      },
+      "router_score": 28.09739683290894,
+      "router_assignment_gap": 0.6565034174080786,
+      "tangent_basis_gram_eigenvalues": [
+        22.78553491810149,
+        24.85362352824691,
+        29.38718375353649
+      ],
+      "tangent_gram_condition": 1.2897298158311157,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 5.050388862529247,
+      "within_max_squared": 13.576147791623598,
+      "argmax_counts": [
+        8,
+        9,
+        8,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 12.904150847651138,
+        "weight_lloyd": 12.904150847651138,
+        "router_lloyd": 12.904150847651138
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.538417836639285,
+        "weight_lloyd": 0.538417836639285,
+        "router_lloyd": 0.538417836639285
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 24.380457453187162,
+        "weight_lloyd": 24.380457453187162,
+        "router_lloyd": 24.380457453187162
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30,
+            31
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30,
+            31
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30,
+            31
+          ]
+        ]
+      },
+      "router_score": 27.178182839440556,
+      "router_assignment_gap": 0.12115551653497292,
+      "tangent_basis_gram_eigenvalues": [
+        25.076890718113642,
+        25.579503569438803,
+        30.489493721310815
+      ],
+      "tangent_gram_condition": 1.2158402755764102,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 1.0449061245079858,
+      "within_max_squared": 33.212512291409624,
+      "argmax_counts": [
+        8,
+        9,
+        8,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 33.883691855233565,
+        "weight_lloyd": 33.883691855233565,
+        "router_lloyd": 33.883691855233565
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.3302444130299447,
+        "weight_lloyd": 1.3302444130299447,
+        "router_lloyd": 1.3302444130299447
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 39.70714335587342,
+        "weight_lloyd": 39.70714335587342,
+        "router_lloyd": 39.70714335587342
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            16,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            18,
+            23,
+            25
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25
+          ]
+        ]
+      },
+      "router_score": 20.068440661952764,
+      "router_assignment_gap": 0.0028283351324134287,
+      "tangent_basis_gram_eigenvalues": [
+        6.96310630742298,
+        14.914423615741535,
+        15.033801998524751
+      ],
+      "tangent_gram_condition": 2.159065413448887,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.06579088999365924,
+      "within_max_squared": 5.866487701131012,
+      "argmax_counts": [
+        8,
+        7,
+        5,
+        8
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 17.77947997518958,
+        "weight_lloyd": 17.629069451283918,
+        "router_lloyd": 17.629069451283918
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.4930667595097258,
+        "weight_lloyd": 1.4852434118111475,
+        "router_lloyd": 1.4852434118111475
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 65.08415876813189,
+        "weight_lloyd": 64.9746319003518,
+        "router_lloyd": 64.9746319003518
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            12,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            10,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            10,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            10,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ]
+      },
+      "router_score": 20.79780927331994,
+      "router_assignment_gap": 0.00037766151740470377,
+      "tangent_basis_gram_eigenvalues": [
+        9.477156717518186,
+        13.26871611040038,
+        13.938920287255703
+      ],
+      "tangent_gram_condition": 1.470791367361279,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.4684994229951416,
+      "within_max_squared": 6.173355270452824,
+      "argmax_counts": [
+        7,
+        8,
+        6,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 17.273252143150014,
+        "weight_lloyd": 17.133408382743863,
+        "router_lloyd": 17.133408382743863
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.472648894421328,
+        "weight_lloyd": 1.4583346379141378,
+        "router_lloyd": 1.4583346379141378
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 57.36405404869229,
+        "weight_lloyd": 57.16365445759163,
+        "router_lloyd": 57.16365445759163
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            8,
+            10,
+            13,
+            15,
+            17
+          ],
+          [
+            2,
+            5,
+            9,
+            21,
+            23,
+            24,
+            26
+          ],
+          [
+            3,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            3,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ],
+          [
+            5,
+            9,
+            10,
+            21,
+            23,
+            24,
+            26
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            8,
+            10,
+            13,
+            15,
+            17
+          ],
+          [
+            2,
+            5,
+            9,
+            21,
+            23,
+            24,
+            26
+          ],
+          [
+            3,
+            14,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ]
+        ]
+      },
+      "router_score": 20.78044287803923,
+      "router_assignment_gap": 0.037482451013609364,
+      "tangent_basis_gram_eigenvalues": [
+        12.388594107419861,
+        13.040458784043324,
+        14.228720160514541
+      ],
+      "tangent_gram_condition": 1.1485338882797507,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.5199441939528788,
+      "within_max_squared": 11.018583323414369,
+      "argmax_counts": [
+        8,
+        7,
+        6,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 19.953459344530593,
+        "weight_lloyd": 19.905519135250387,
+        "router_lloyd": 19.953459344530593
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.4764775614453542,
+        "weight_lloyd": 1.5146031916912341,
+        "router_lloyd": 1.4764775614453542
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 57.95594952011929,
+        "weight_lloyd": 58.48970834356161,
+        "router_lloyd": 57.95594952011929
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": true
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18,
+            27
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            21,
+            24,
+            26
+          ],
+          [
+            3,
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25
+          ]
+        ]
+      },
+      "router_score": 23.415401989868425,
+      "router_assignment_gap": 0.4374583581561353,
+      "tangent_basis_gram_eigenvalues": [
+        11.859179316563315,
+        23.871982629019683,
+        25.022659230537556
+      ],
+      "tangent_gram_condition": 2.109982365777137,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 1.251094656382108,
+      "within_max_squared": 11.128757882267465,
+      "argmax_counts": [
+        8,
+        7,
+        5,
+        8
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 17.272036019808446,
+        "weight_lloyd": 17.272036019808446,
+        "router_lloyd": 17.272036019808446
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.9594533474779665,
+        "weight_lloyd": 0.9594533474779665,
+        "router_lloyd": 0.9594533474779665
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 33.01937971382635,
+        "weight_lloyd": 33.01937971382635,
+        "router_lloyd": 33.01937971382635
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            10,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            10,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            10,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26
+          ],
+          [
+            2,
+            3,
+            12,
+            14,
+            18,
+            24,
+            27
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25
+          ]
+        ]
+      },
+      "router_score": 23.62243017013132,
+      "router_assignment_gap": 0.13024945714094827,
+      "tangent_basis_gram_eigenvalues": [
+        16.29776413026204,
+        21.2025810332489,
+        22.56532220974534
+      ],
+      "tangent_gram_condition": 1.3845655164345865,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 1.664720179874066,
+      "within_max_squared": 18.651553700738358,
+      "argmax_counts": [
+        7,
+        8,
+        6,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 18.104566363219128,
+        "weight_lloyd": 18.104566363219128,
+        "router_lloyd": 18.104566363219128
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.0171166189269523,
+        "weight_lloyd": 1.0171166189269523,
+        "router_lloyd": 1.0171166189269523
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 30.66719482754051,
+        "weight_lloyd": 30.66719482754051,
+        "router_lloyd": 30.66719482754051
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            3,
+            10,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ],
+          [
+            5,
+            9,
+            14,
+            21,
+            23,
+            24,
+            26
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ],
+          [
+            5,
+            9,
+            20,
+            21,
+            23,
+            24,
+            26
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            3,
+            10,
+            16,
+            18,
+            20,
+            22,
+            25
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            27
+          ],
+          [
+            5,
+            9,
+            14,
+            21,
+            23,
+            24,
+            26
+          ]
+        ]
+      },
+      "router_score": 23.939044841646755,
+      "router_assignment_gap": 0.002766048495683293,
+      "tangent_basis_gram_eigenvalues": [
+        19.80803466781888,
+        21.49655376738612,
+        23.897260988212032
+      ],
+      "tangent_gram_condition": 1.2064428091413184,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.015702236970168267,
+      "within_max_squared": 33.27939216412868,
+      "argmax_counts": [
+        8,
+        7,
+        6,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 31.028545378944987,
+        "weight_lloyd": 30.95966271608233,
+        "router_lloyd": 31.028545378944987
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.368159646595609,
+        "weight_lloyd": 1.368990634997958,
+        "router_lloyd": 1.368159646595609
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 33.12906853746942,
+        "weight_lloyd": 33.140702375102315,
+        "router_lloyd": 33.12906853746942
+      },
+      "coefficient_vs_weight_different": true,
+      "router_vs_weight_different": true
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            3,
+            10,
+            11,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            31,
+            32,
+            35
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            3,
+            10,
+            11,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            31,
+            32,
+            35
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            3,
+            10,
+            11,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            31,
+            32,
+            35
+          ]
+        ]
+      },
+      "router_score": 28.15612619786607,
+      "router_assignment_gap": 0.023736996851955183,
+      "tangent_basis_gram_eigenvalues": [
+        30.360771426676827,
+        34.15534537269858,
+        38.402645729243496
+      ],
+      "tangent_gram_condition": 1.2648771399629388,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.8325115562204266,
+      "within_max_squared": 45.131545846462586,
+      "argmax_counts": [
+        11,
+        7,
+        7,
+        11
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 94.40748424566944,
+        "weight_lloyd": 94.40748424566944,
+        "router_lloyd": 94.40748424566944
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.756560454706199,
+        "weight_lloyd": 2.756560454706199,
+        "router_lloyd": 2.756560454706199
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 89.0352945841658,
+        "weight_lloyd": 89.0352945841658,
+        "router_lloyd": 89.0352945841658
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ]
+      },
+      "router_score": 29.021781843635477,
+      "router_assignment_gap": 0.09980474511288762,
+      "tangent_basis_gram_eigenvalues": [
+        29.32066235166234,
+        35.85950104910628,
+        38.71198372062454
+      ],
+      "tangent_gram_condition": 1.320297040234828,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.6079159519822783,
+      "within_max_squared": 45.835168433244434,
+      "argmax_counts": [
+        11,
+        9,
+        9,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 60.91822554486286,
+        "weight_lloyd": 60.91822554486286,
+        "router_lloyd": 60.91822554486286
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.682283332365338,
+        "weight_lloyd": 1.682283332365338,
+        "router_lloyd": 1.682283332365338
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 71.08531012161913,
+        "weight_lloyd": 71.08531012161913,
+        "router_lloyd": 71.08531012161913
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            21,
+            22,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            24,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            21,
+            22,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            24,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            21,
+            22,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            23,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            24,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ]
+      },
+      "router_score": 29.298912673894257,
+      "router_assignment_gap": 0.077944612545501,
+      "tangent_basis_gram_eigenvalues": [
+        30.653746755627118,
+        32.32778347904362,
+        41.136246558914
+      ],
+      "tangent_gram_condition": 1.3419647159890042,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.43650081578756467,
+      "within_max_squared": 40.967655012444055,
+      "argmax_counts": [
+        8,
+        10,
+        10,
+        8
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 77.07627839560126,
+        "weight_lloyd": 77.07627839560126,
+        "router_lloyd": 77.07627839560126
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.2875340569934264,
+        "weight_lloyd": 2.2875340569934264,
+        "router_lloyd": 2.2875340569934264
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 72.59779129925042,
+        "weight_lloyd": 72.59779129925042,
+        "router_lloyd": 72.59779129925042
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31,
+            32
+          ],
+          [
+            9,
+            10,
+            11,
+            17,
+            18,
+            19,
+            20,
+            22,
+            35
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31,
+            32
+          ],
+          [
+            9,
+            10,
+            11,
+            17,
+            18,
+            19,
+            20,
+            22,
+            35
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            21,
+            27,
+            30,
+            33
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            24,
+            26,
+            28,
+            29,
+            34
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23,
+            25,
+            31,
+            32
+          ],
+          [
+            9,
+            10,
+            11,
+            17,
+            18,
+            19,
+            20,
+            22,
+            35
+          ]
+        ]
+      },
+      "router_score": 29.16539552537214,
+      "router_assignment_gap": 0.094311047909585,
+      "tangent_basis_gram_eigenvalues": [
+        42.48249452825521,
+        47.25488762357121,
+        53.9820233639308
+      ],
+      "tangent_gram_condition": 1.2706886439549172,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 2.494803678456115,
+      "within_max_squared": 69.51287425882484,
+      "argmax_counts": [
+        10,
+        6,
+        9,
+        11
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 151.71460493307723,
+        "weight_lloyd": 151.71460493307723,
+        "router_lloyd": 151.71460493307723
+      },
+      "router_cost": {
+        "coefficient_assignment": 3.1815601636410182,
+        "weight_lloyd": 3.1815601636410182,
+        "router_lloyd": 3.1815601636410182
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 85.76900420712823,
+        "weight_lloyd": 85.76900420712823,
+        "router_lloyd": 85.76900420712823
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29,
+            33
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30,
+            35
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            27,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            32,
+            34
+          ]
+        ]
+      },
+      "router_score": 31.423446242709712,
+      "router_assignment_gap": 0.21871411588337963,
+      "tangent_basis_gram_eigenvalues": [
+        40.41087758523717,
+        48.08082186018473,
+        50.06753284843833
+      ],
+      "tangent_gram_condition": 1.238961780595651,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 1.4114163559304749,
+      "within_max_squared": 61.02477903017977,
+      "argmax_counts": [
+        10,
+        9,
+        9,
+        8
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 61.53930885201892,
+        "weight_lloyd": 61.53930885201892,
+        "router_lloyd": 61.53930885201892
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.2727206270690754,
+        "weight_lloyd": 1.2727206270690754,
+        "router_lloyd": 1.2727206270690754
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 42.54713564284461,
+        "weight_lloyd": 42.54713564284461,
+        "router_lloyd": 42.54713564284461
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            24,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            24,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            2,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23,
+            35
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            24,
+            25,
+            27
+          ],
+          [
+            5,
+            9,
+            21,
+            26,
+            28,
+            30,
+            32,
+            33,
+            34
+          ]
+        ]
+      },
+      "router_score": 30.550180326287126,
+      "router_assignment_gap": 0.014213504446175307,
+      "tangent_basis_gram_eigenvalues": [
+        43.045359777095406,
+        45.58138482478473,
+        57.35406866148193
+      ],
+      "tangent_gram_condition": 1.332410019534794,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.11734260264311115,
+      "within_max_squared": 74.73469820903053,
+      "argmax_counts": [
+        7,
+        11,
+        10,
+        8
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 122.32831716029273,
+        "weight_lloyd": 122.32831716029273,
+        "router_lloyd": 122.32831716029273
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.592030147132776,
+        "weight_lloyd": 2.592030147132776,
+        "router_lloyd": 2.592030147132776
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 66.92665162577232,
+        "weight_lloyd": 66.92665162577232,
+        "router_lloyd": 66.92665162577232
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            18,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            9,
+            21,
+            24,
+            29
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            28,
+            31
+          ],
+          [
+            10,
+            11,
+            16,
+            17,
+            19,
+            20,
+            22,
+            26
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            18,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            9,
+            21,
+            24,
+            29
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            28,
+            31
+          ],
+          [
+            10,
+            11,
+            16,
+            17,
+            19,
+            20,
+            22,
+            26
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            3,
+            12,
+            13,
+            15,
+            18,
+            27,
+            30
+          ],
+          [
+            1,
+            2,
+            6,
+            7,
+            9,
+            21,
+            24,
+            29
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            23,
+            25,
+            28,
+            31
+          ],
+          [
+            10,
+            11,
+            16,
+            17,
+            19,
+            20,
+            22,
+            26
+          ]
+        ]
+      },
+      "router_score": 26.05429443809724,
+      "router_assignment_gap": 0.008287296419432266,
+      "tangent_basis_gram_eigenvalues": [
+        25.050342717404376,
+        30.60966757242968,
+        37.645101256075904
+      ],
+      "tangent_gram_condition": 1.5027778933308162,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.020985313284311934,
+      "within_max_squared": 57.886713802607915,
+      "argmax_counts": [
+        6,
+        6,
+        9,
+        11
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 128.93904130630412,
+        "weight_lloyd": 128.93904130630412,
+        "router_lloyd": 128.93904130630412
+      },
+      "router_cost": {
+        "coefficient_assignment": 4.020184155151004,
+        "weight_lloyd": 4.020184155151004,
+        "router_lloyd": 4.020184155151004
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 85.18452178031427,
+        "weight_lloyd": 85.18452178031427,
+        "router_lloyd": 85.18452178031427
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            27
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            27
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21,
+            28,
+            29
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16,
+            26,
+            30
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18,
+            24,
+            31
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23,
+            25,
+            27
+          ]
+        ]
+      },
+      "router_score": 28.40848062710132,
+      "router_assignment_gap": 0.03336544616459136,
+      "tangent_basis_gram_eigenvalues": [
+        27.744730017121153,
+        30.775434474846968,
+        35.63950782577671
+      ],
+      "tangent_gram_condition": 1.2845505364003804,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.019607810418665612,
+      "within_max_squared": 45.50113387221545,
+      "argmax_counts": [
+        9,
+        9,
+        8,
+        6
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 59.74109617073589,
+        "weight_lloyd": 59.74109617073589,
+        "router_lloyd": 59.74109617073589
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.9565476607695855,
+        "weight_lloyd": 1.9565476607695855,
+        "router_lloyd": 1.9565476607695855
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 41.81313536539245,
+        "weight_lloyd": 41.81313536539245,
+        "router_lloyd": 41.81313536539245
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "primary_decision_unit": false,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            2,
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            25,
+            27
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            2,
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            25,
+            27
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17,
+            29,
+            31
+          ],
+          [
+            2,
+            5,
+            9,
+            21,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            23
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19,
+            25,
+            27
+          ]
+        ]
+      },
+      "router_score": 27.94632822633192,
+      "router_assignment_gap": 0.23032468477402546,
+      "tangent_basis_gram_eigenvalues": [
+        29.115321690156613,
+        34.06600865206652,
+        39.493131288185175
+      ],
+      "tangent_gram_condition": 1.3564380881128002,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.9267119694919654,
+      "within_max_squared": 51.80270084432814,
+      "argmax_counts": [
+        6,
+        9,
+        8,
+        9
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 81.42839690399335,
+        "weight_lloyd": 81.42839690399335,
+        "router_lloyd": 81.42839690399335
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.42229947582783,
+        "weight_lloyd": 2.42229947582783,
+        "router_lloyd": 2.42229947582783
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 51.14987030889203,
+        "weight_lloyd": 51.14987030889203,
+        "router_lloyd": 51.14987030889203
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18
+          ],
+          [
+            1,
+            2,
+            3,
+            6,
+            7,
+            21
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23
+          ],
+          [
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18
+          ],
+          [
+            1,
+            2,
+            3,
+            6,
+            7,
+            21
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23
+          ],
+          [
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            9,
+            12,
+            13,
+            15,
+            18
+          ],
+          [
+            1,
+            2,
+            3,
+            6,
+            7,
+            21
+          ],
+          [
+            4,
+            5,
+            8,
+            14,
+            16,
+            23
+          ],
+          [
+            10,
+            11,
+            17,
+            19,
+            20,
+            22
+          ]
+        ]
+      },
+      "router_score": 20.66454248758483,
+      "router_assignment_gap": 0.10013472546957658,
+      "tangent_basis_gram_eigenvalues": [
+        32.43371113801509,
+        50.39305519911778,
+        64.52145170204841
+      ],
+      "tangent_gram_condition": 1.9893329945343114,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.23029804679951407,
+      "within_max_squared": 75.22357218260122,
+      "argmax_counts": [
+        4,
+        7,
+        7,
+        6
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 80.3286112220484,
+        "weight_lloyd": 80.3286112220484,
+        "router_lloyd": 80.3286112220484
+      },
+      "router_cost": {
+        "coefficient_assignment": 1.7329256710334187,
+        "weight_lloyd": 1.7329256710334187,
+        "router_lloyd": 1.7329256710334187
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 30.484507973381195,
+        "weight_lloyd": 30.484507973381195,
+        "router_lloyd": 30.484507973381195
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            4,
+            9,
+            17,
+            19,
+            21
+          ],
+          [
+            1,
+            6,
+            8,
+            11,
+            15,
+            16
+          ],
+          [
+            2,
+            3,
+            10,
+            12,
+            14,
+            18
+          ],
+          [
+            5,
+            7,
+            13,
+            20,
+            22,
+            23
+          ]
+        ]
+      },
+      "router_score": 22.249027705673985,
+      "router_assignment_gap": 1.1674179354233551,
+      "tangent_basis_gram_eigenvalues": [
+        37.45383428080755,
+        52.41158742071556,
+        64.9709776813793
+      ],
+      "tangent_gram_condition": 1.7346949632516622,
+      "pairwise_separation_certificate": true,
+      "between_min_squared": 35.09084729197673,
+      "within_max_squared": 9.124375032244114,
+      "argmax_counts": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 10.32316040220335,
+        "weight_lloyd": 10.32316040220335,
+        "router_lloyd": 10.32316040220335
+      },
+      "router_cost": {
+        "coefficient_assignment": 0.20367135967416472,
+        "weight_lloyd": 0.20367135967416472,
+        "router_lloyd": 0.20367135967416472
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 5.977446327928183,
+        "weight_lloyd": 5.977446327928183,
+        "router_lloyd": 5.977446327928183
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "primary_decision_unit": true,
+      "actions": {
+        "coefficient_assignment": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            2,
+            5,
+            9,
+            20,
+            21,
+            23
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            22
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19
+          ]
+        ],
+        "weight_lloyd": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            2,
+            5,
+            9,
+            20,
+            21,
+            23
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            22
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19
+          ]
+        ],
+        "router_lloyd": [
+          [
+            0,
+            1,
+            8,
+            13,
+            15,
+            17
+          ],
+          [
+            2,
+            5,
+            9,
+            20,
+            21,
+            23
+          ],
+          [
+            3,
+            10,
+            14,
+            16,
+            18,
+            22
+          ],
+          [
+            4,
+            6,
+            7,
+            11,
+            12,
+            19
+          ]
+        ]
+      },
+      "router_score": 21.0608055853533,
+      "router_assignment_gap": 0.026016136965271386,
+      "tangent_basis_gram_eigenvalues": [
+        44.77295506265296,
+        58.58976322310383,
+        66.58680320308987
+      ],
+      "tangent_gram_condition": 1.4872103730904458,
+      "pairwise_separation_certificate": false,
+      "between_min_squared": 0.10709125459293657,
+      "within_max_squared": 109.02223021033647,
+      "argmax_counts": [
+        7,
+        5,
+        5,
+        7
+      ],
+      "weight_cost": {
+        "coefficient_assignment": 119.89677995938163,
+        "weight_lloyd": 119.89677995938163,
+        "router_lloyd": 119.89677995938163
+      },
+      "router_cost": {
+        "coefficient_assignment": 2.0502547368863895,
+        "weight_lloyd": 2.0502547368863895,
+        "router_lloyd": 2.0502547368863895
+      },
+      "response_partition_term": {
+        "coefficient_assignment": 31.28105989337894,
+        "weight_lloyd": 31.28105989337894,
+        "router_lloyd": 31.28105989337894
+      },
+      "coefficient_vs_weight_different": false,
+      "router_vs_weight_different": false
+    }
+  ],
+  "counts": {
+    "checkpoints": 27,
+    "primary_decision_units": 9,
+    "coefficient_vs_weight_different": 7,
+    "router_vs_weight_different": 4,
+    "sufficient_pairwise_separation": 1
+  }
+}

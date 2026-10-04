@@ -1,0 +1,24 @@
+{
+  "scope": "Additive dynamics theory and post hoc checkpoint geometry; no new training or manuscript integration",
+  "tests": {
+    "new_math_checks_passed": 7,
+    "full_repository_passed": 178,
+    "full_verify": "passed"
+  },
+  "original_llm_delivery_hashes": "all preserved",
+  "limitations": [
+    "No independent external proof review",
+    "Constructed gradient-flow crossing does not establish natural-training typicality",
+    "Euclidean flow theory does not model the actual AdamW trajectory",
+    "No new downstream advantage demonstrated",
+    "Full response-Gram information suffices for the specified response decision; full factor recovery is not necessary"
+  ],
+  "files": {
+    "research/ROUTING_DYNAMICS_THEORY.md": "8fbc2f4f211d6b7bef364601bc4c82eead78d62aea4d83ed754f7b01b3afd779",
+    "src/routing_geometry.py": "08bb612abc2c4b2b31c508e3e707d1324dc684122205e0f550e30e8b7889220f",
+    "experiments/analyze_routing_dynamics.py": "f4ce97d7bcea74078e58aa5067132c40e555f1f2759af81632c6d08fd49bb731",
+    "tests/test_routing_geometry.py": "cb6700dfdb249a6a498205c03c5385978c28cfac9a29a0270669346bbbb16313",
+    "results/routing_dynamics/analysis.json": "c3e0d267daea91efcfc24c3f0450bafff226e0a6605c6cb6e05f943980d89599",
+    "research/routing-dynamics-logs/verify.log": "179b7439b1d2fa8788bb582621430d42da8f9246e1a3239ebbd349c72c28c2e7"
+  }
+}

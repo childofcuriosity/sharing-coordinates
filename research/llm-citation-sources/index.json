@@ -1,0 +1,38 @@
+[
+  {
+    "arxiv": "2304.01373",
+    "url": "https://arxiv.org/bibtex/2304.01373",
+    "status": 200,
+    "is_bibtex": true
+  },
+  {
+    "arxiv": "2505.09388",
+    "url": "https://arxiv.org/bibtex/2505.09388",
+    "status": 200,
+    "is_bibtex": true
+  },
+  {
+    "arxiv": "2502.02737",
+    "url": "https://arxiv.org/bibtex/2502.02737",
+    "status": 200,
+    "is_bibtex": true
+  },
+  {
+    "arxiv": "1609.07843",
+    "url": "https://arxiv.org/bibtex/1609.07843",
+    "status": 200,
+    "is_bibtex": true
+  },
+  {
+    "arxiv": "2110.14168",
+    "url": "https://arxiv.org/bibtex/2110.14168",
+    "status": 200,
+    "is_bibtex": true
+  },
+  {
+    "arxiv": "2108.07732",
+    "url": "https://arxiv.org/bibtex/2108.07732",
+    "status": 200,
+    "is_bibtex": true
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "scope": "CPU PyTorch 2.7.1 versus original NVIDIA PyTorch CPU synthetic execution; not bitwise equivalence",
+  "records": 450,
+  "config_status_keys_match": true,
+  "raw_sha256": "50b2465b21e7a7b8efd21d22187875de96e817d6154d5d01a2d833a44f54c8e1",
+  "replay_sha256": "27a1b23df9eaae864b4e9ace6a96c8689be651e6376d0b4606cb0a00874cfb07",
+  "metrics": [
+    {
+      "regime": "interior",
+      "noise": 0.0,
+      "original_max": 1.0130624025874351e-08,
+      "replay_max": 1.4978257249033235e-08
+    },
+    {
+      "regime": "interior",
+      "noise": 1e-06,
+      "original_max": 0.0007778005513274054,
+      "replay_max": 0.00044923783536123327
+    },
+    {
+      "regime": "interior",
+      "noise": 0.01,
+      "original_max": 0.13504137965207666,
+      "replay_max": 0.32079365318555697
+    },
+    {
+      "regime": "rank",
+      "noise": 0.0,
+      "original_max": 3.666017282184471e-07,
+      "replay_max": 4.2749791058044936e-07
+    },
+    {
+      "regime": "rank",
+      "noise": 1e-06,
+      "original_max": 66.84806112516304,
+      "replay_max": 68.77926156719036
+    },
+    {
+      "regime": "rank",
+      "noise": 0.01,
+      "original_max": 689.8921033697834,
+      "replay_max": 689.6622595851226
+    },
+    {
+      "regime": "boundary",
+      "noise": 0.0,
+      "original_max": 1.5468524248761154e-08,
+      "replay_max": 1.5468541627215834e-08
+    },
+    {
+      "regime": "boundary",
+      "noise": 1e-06,
+      "original_max": 0.0006653770565748543,
+      "replay_max": 0.0005563947184969712
+    },
+    {
+      "regime": "boundary",
+      "noise": 0.01,
+      "original_max": 0.19710334521360373,
+      "replay_max": 0.1535656602843509
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+\section{Related work}
+\label{sec:related-work}
+
+\paragraph{Static factorization and coordinate dependence.}
+Under $X=\Theta^\top$, $W=B^\top$, and $H=A^\top$, our static model is
+unconstrained SSMF. The uniformizing path of
+\citet[Sec.~IV-A]{vuthanh2023bounded} is exactly the one above after
+$s=\delta/(1+\delta)$; positive static recovery requires additional
+geometric conditions~\citep{fu2018identifiability,abdolali2021simplex}.
+Low-rank factor gauges, ordinary-update dependence on coordinates, and
+gauge-sensitive merging are also established
+\citep{yen2025lora,zheng2026loras,gong2026twistedmerge}.
+Our auxiliary ASLoRA experiment applies this perspective to its documented
+first-merge rule~\citep{hu2024aslorav2}.
+
+\paragraph{Optimizer response and identifiability.}
+Jacobian--Gram operators and induced factor flows are standard
+\citep{jacot2018neural,marcotte2026intrinsic}.
+\citet[Lem.~D.2]{varre2026gradient} already derive the single-router
+squared-covariance softmax flow; Euclidean factor isometries and compatible
+softmax permutation/shift updates are studied by
+\citet{singh2026loss,lau2026symmetry}.
+Function-level and conditional-density softmax-MoE identifiability and
+inverse bounds use different observations
+\citep{tran2025linear,nguyen2023demystifying}.
+Our question is a converse at two fixed factorizations of the same finite
+product: does equal complete response exclude every non-permutation gauge?
+It is metric-specific; natural-gradient or quotient geometries can instead
+remove chart dependence~\citep{vanoostrum2023invariance,mishra2014fixedrank}.
+
+\paragraph{The tools behind the inverse.}
+Orthogonal-to-permutation mechanisms, joint-diagonalizer uniqueness and
+sensitivity, and robust tensor uniqueness precede our final algebraic steps
+\citep{dorrell2026convex,afsari2008sensitivity,bhaskara2014uniqueness}.
+In particular, \citet[Thm.~5]{bhaskara2014uniqueness} already give a linear
+robust inverse when their conditioning parameters are fixed. That work establishes linear dependence and global robust uniqueness.
+Our quantitative analysis tracks the stable reduction from response observations to diagonal data,
+eliminates scaling through the simplex constraints, and controls both
+original factors with explicit constants. Matrix--vector and structured
+operator probing are likewise established
+\citep{novak2022fast,chiu2012matrix,halikias2024structured,amsel2026query}.
+The noisy-product result combines a uniform bound outside the observed
+subspace with this response inverse. Whether $K$ queries are optimal remains open.
+Appendix~\ref{app:literature} maps the closest results, the wider sharing
+literature, and unresolved full-text access limitations.
+
+
+\paragraph{Clustering and preserving training dynamics.}
+Kernel $k$-means already expresses within-cluster distortion as a
+Gram-matrix trace objective~\citep{dhillon2004kernel}.
+Neural Tangent Transfer matches both initial outputs and empirical training
+kernels to construct trainable sparse networks~\citep{pmlr-v119-liu20o}.
+These works establish Gram-based clustering, kernel preservation, and
+the tradeoff between matching initial states and training dynamics. Here
+we reduce the \emph{complete softmax-factor response} exactly to balanced
+router clustering: its local covariance blocks contribute a partition-independent
+term. The product-preserving decision counterexample and the explicit
+transverse crossing delimit the information and dynamical consequences for
+this shared-basis model. A standard Gronwall bound relates the two distortion objectives along
+training trajectories.

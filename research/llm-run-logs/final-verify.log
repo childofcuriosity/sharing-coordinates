@@ -1,0 +1,168 @@
+verified generation-time source hashes against release (response=4, router_decision=4, aslora_audit=3, aslora_provenance=3, probes=5, response_tomography=5)
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.1.1, pluggy-1.5.0
+rootdir: /WillRawData2/llm/will_datasets/toutiao/aslora/sharing-coordinates
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.8.0, xdist-3.6.1, rerunfailures-15.0, shard-0.1.2, flakefinder-1.1.0, hypothesis-6.127.9, xdoctest-1.0.2, typeguard-4.3.0
+collected 171 items
+Running 171 items in this shard
+
+tests/test_analysis.py ......                                            [  3%]
+tests/test_artifact_contract.py ........                                 [  8%]
+tests/test_aslora_canonical_results_independent.py .....                 [ 11%]
+tests/test_aslora_training.py ............                               [ 18%]
+tests/test_aslora_witness.py .....                                       [ 21%]
+tests/test_autograd_tomography.py .                                      [ 21%]
+tests/test_canonical_results.py ....                                     [ 23%]
+tests/test_cross_platform_derived_newlines.py ....                       [ 26%]
+tests/test_decision_audit.py ..........                                  [ 32%]
+tests/test_enhancement.py ...                                            [ 33%]
+tests/test_enhancement_summary.py ..                                     [ 35%]
+tests/test_eta_b_zero_boundary.py ......                                 [ 38%]
+tests/test_factorization.py ...                                          [ 40%]
+tests/test_gauge.py ..                                                   [ 41%]
+tests/test_generate_paper_audit_tables.py ...                            [ 43%]
+tests/test_generate_response_tomography_latex.py ..                      [ 44%]
+tests/test_joint_stability_projection.py .                               [ 45%]
+tests/test_language.py ...                                               [ 46%]
+tests/test_llm_observations.py ...                                       [ 48%]
+tests/test_llm_protocol.py ..                                            [ 49%]
+tests/test_llm_shared.py ....                                            [ 52%]
+tests/test_manifest.py ..                                                [ 53%]
+tests/test_models.py ...                                                 [ 54%]
+tests/test_natural_tomography.py ..                                      [ 56%]
+tests/test_patterns_metrics.py ..                                        [ 57%]
+tests/test_probes.py .......                                             [ 61%]
+tests/test_response_factor_recovery.py ...                               [ 63%]
+tests/test_response_identifiability.py .........                         [ 68%]
+tests/test_response_quantitative_stability.py .......                    [ 72%]
+tests/test_response_tomography.py ........                               [ 77%]
+tests/test_router_decisions.py .......                                   [ 81%]
+tests/test_source_attestation.py .....                                   [ 84%]
+tests/test_summarize_aslora_audit.py ......                              [ 87%]
+tests/test_summarize_autograd_tomography.py .......                      [ 91%]
+tests/test_summarize_response_audit.py ..                                [ 92%]
+tests/test_summarize_response_tomography.py ..                           [ 94%]
+tests/test_summarize_router_decisions.py ....                            [ 96%]
+tests/test_trusted_recovery.py ......                                    [100%]
+
+=============================== warnings summary ===============================
+tests/test_aslora_witness.py::test_optional_transformers_roberta_wq_wv_attachment_without_download
+  /WillRawData2/llm/will_datasets/toutiao/aslora/sharing-coordinates/.venv/lib/python3.12/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+    _torch_pytree._register_pytree_node(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 171 passed, 1 warning in 23.44s ========================
+verified autodiff tomography records and derived artifacts
+factor recovery pilot artifacts checked
+Enhancement source bindings and derivatives verified
+{
+  "synthetic": {
+    "n": 1920,
+    "successes": 1920,
+    "failures": 0,
+    "good": 1639,
+    "bad": 227,
+    "intermediate": 54,
+    "accepted": 1782,
+    "accepted_bad": 92,
+    "coverage": 0.928125,
+    "bad_rejection_recall": 0.5947136563876652,
+    "good_false_rejection": 0.0018303843807199512,
+    "accepted_bad_fraction": 0.051627384960718295,
+    "median_error": 0.00010056622944568715,
+    "selected_solver_budget_exhausted": 70,
+    "p90_error": 0.12926821070200267,
+    "max_error": 10.541373118686701,
+    "numerical_local_pass": 140,
+    "cluster_bootstrap": {
+      "unit": "synthetic seed; all 48 variants retained together",
+      "resamples": 2000,
+      "percentile_95": {
+        "coverage": [
+          0.9208333333333333,
+          0.9354166666666667
+        ],
+        "accepted_bad_fraction": [
+          0.04504314601279188,
+          0.05793932216514641
+        ],
+        "bad_rejection_recall": [
+          0.5479237053873087,
+          0.6382135443694862
+        ],
+        "good_false_rejection": [
+          0.0,
+          0.004881025015253203
+        ]
+      }
+    }
+  },
+  "language": {
+    "n": 48,
+    "successes": 48,
+    "failures": 0,
+    "good": 48,
+    "bad": 0,
+    "intermediate": 0,
+    "accepted": 48,
+    "accepted_bad": 0,
+    "coverage": 1.0,
+    "bad_rejection_recall": null,
+    "good_false_rejection": 0.0,
+    "accepted_bad_fraction": 0.0,
+    "median_error": 3.2932694098949014e-05,
+    "selected_solver_budget_exhausted": 0,
+    "p90_error": 0.007516239935783527,
+    "max_error": 0.01063424566236688,
+    "numerical_local_pass": 2
+  }
+}
+{
+  "spectral": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 4,
+    "max_abs_error_difference": 4.036177770645916e-07,
+    "local_pass": 0
+  },
+  "projected_spectral": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 0,
+    "max_abs_error_difference": 2.9070884401960484e-06,
+    "local_pass": 0
+  },
+  "joint_fit": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 2,
+    "max_abs_error_difference": 0.017003249361467132,
+    "local_pass": 0
+  }
+}
+{"checked_estimates": 8850, "recorded_failures": 6, "max_residual_recompute_difference": 2.7755575615628914e-17}
+{"models": 9, "checkpoints": 27, "recovery_cases": 1620, "method_outputs": 4860}
+{"method": "spectral", "summary": {"total": 1620, "status": {"ok": 1620}, "errors": {"n": 1620, "median": 0.006017717896068265, "p90": 0.49212307319950094, "max": 6.132737802511728, "min": 1.443691255091449e-12}, "heldout": {"n": 1620, "median": 0.010603057658478061, "p90": 0.4137016466872909, "max": 2.641219891723608, "min": 1.841834500017243e-12}, "bad": 580, "good": 970, "admissible": 2, "acceptance": {"residual_only_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}, "condition_only_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}, "empirical_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}}}}
+{"method": "projected_spectral", "summary": {"total": 1620, "status": {"ok": 1620}, "errors": {"n": 1620, "median": 0.00749141843001478, "p90": 0.2987693110804694, "max": 6.191348820697759, "min": 2.2076207112030776e-12}, "heldout": {"n": 1620, "median": 0.011469875181374309, "p90": 0.2845341598041766, "max": 2.703555889446743, "min": 3.216153925013367e-12}, "bad": 531, "good": 958, "admissible": 1080, "acceptance": {"residual_only_score": {"accepted": 1037, "bad": 20, "coverage": 0.6401234567901235, "accepted_bad_fraction": 0.019286403085824494, "errors": {"n": 1037, "median": 0.00022572029198312366, "p90": 0.03599951386417893, "max": 0.520906595853538, "min": 2.2076207112030776e-12}}, "condition_only_score": {"accepted": 960, "bad": 48, "coverage": 0.5925925925925926, "accepted_bad_fraction": 0.05, "errors": {"n": 960, "median": 0.00023478536745950943, "p90": 0.051234128287877184, "max": 6.191348820697759, "min": 2.2076207112030776e-12}}, "empirical_score": {"accepted": 1056, "bad": 43, "coverage": 0.6518518518518519, "accepted_bad_fraction": 0.04071969696969697, "errors": {"n": 1056, "median": 0.0002441974885234718, "p90": 0.04676795665727136, "max": 6.191348820697759, "min": 2.2076207112030776e-12}}}}}
+{"method": "joint_fit", "summary": {"total": 1620, "status": {"not_run_insufficient_query_rank": 540, "ok": 1080}, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}, "heldout": {"n": 1080, "median": 5.0500108563932517e-05, "p90": 0.009999597806560678, "max": 0.010002958940455808, "min": 1.9012362566543835e-14}, "bad": 0, "good": 1080, "admissible": 1080, "acceptance": {"residual_only_score": {"accepted": 868, "bad": 0, "coverage": 0.5358024691358024, "accepted_bad_fraction": 0.0, "errors": {"n": 868, "median": 4.249316661675868e-07, "p90": 8.337076682269492e-05, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}, "condition_only_score": {"accepted": 1080, "bad": 0, "coverage": 0.6666666666666666, "accepted_bad_fraction": 0.0, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}, "empirical_score": {"accepted": 1080, "bad": 0, "coverage": 0.6666666666666666, "accepted_bad_fraction": 0.0, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}}}}
+wrote /tmp/tmp.O5UHeunqg1/results/response_summary.json, /tmp/tmp.O5UHeunqg1/results/response_table.csv, and /tmp/tmp.O5UHeunqg1/results/response_table.md
+wrote response tomography summary: /tmp/tmp.O5UHeunqg1/results/response_tomography_summary.json
+wrote /tmp/tmp.O5UHeunqg1/results/aslora_summary.json, /tmp/tmp.O5UHeunqg1/results/aslora_summary.csv, and /tmp/tmp.O5UHeunqg1/results/aslora_summary.md
+wrote /tmp/tmp.O5UHeunqg1/results/router_decisions_summary.json, /tmp/tmp.O5UHeunqg1/results/router_decisions_table.csv, and /tmp/tmp.O5UHeunqg1/results/router_decisions_table.md
+wrote /tmp/tmp.O5UHeunqg1/generated/response_table.tex, /tmp/tmp.O5UHeunqg1/generated/aslora_table.tex, /tmp/tmp.O5UHeunqg1/generated/aslora_metric_detail_table.tex, /tmp/tmp.O5UHeunqg1/generated/aslora_baseline_table.tex, /tmp/tmp.O5UHeunqg1/generated/router_decision_table.tex, /tmp/tmp.O5UHeunqg1/generated/router_decision_detail_table.tex
+wrote response tomography LaTeX: /tmp/tmp.O5UHeunqg1/generated/response_tomography_numbers.tex
+[loaded] gauge_full.json: 140 records
+[loaded] factorization_full.json: 700 records
+[loaded] teacher_student_mlp.json: 60 records
+[loaded] teacher_student_transformer.json: 60 records
+[loaded] teacher_baselines.json: 40 records
+[loaded] probes_mlp.json: 1680 records
+[loaded] probes_transformer.json: 1680 records
+[loaded] language_full.json: 12 records
+[wrote] summary.json
+[figures] distillation_loss_vs_ari.pdf, factorization_loss_vs_ari.pdf, gauge_equivalence.pdf, language_router_tradeoff.pdf, probe_phase_diagram.pdf, saturation_recovery.pdf
+[tables] distillation_full_table.tex, distillation_table.tex, factorization_full_table.tex, factorization_table.tex, gauge_table.tex, key_numbers.tex, language_table.tex, probe_table.tex, saturation_table.tex
+verified MANIFEST.sha256
+release verification passed

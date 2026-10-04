@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{style/iclr2027/iclr2027_conference,times}
+\input{style/iclr2027/math_commands.tex}
+\usepackage{amsmath,amssymb,amsthm,booktabs,multirow,graphicx,subcaption,float}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{url}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newcommand{\simplex}{\Delta}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\TyingBench}{\textsc{TyingBench}}
+\newcommand{\method}{\textsc{ShareProbe}}
+\IfFileExists{generated/key_numbers.tex}{\input{generated/key_numbers.tex}}{}
+\IfFileExists{generated/response_tomography_numbers.tex}{%
+  \input{generated/response_tomography_numbers.tex}}{}
+
+\title{Sharing Coordinates:\\
+Identifiability from Optimizer Response}
+
+\author{Author information pending}
+
+% Local preprint draft: use the template's unnumbered layout, then replace
+% its conference-publication header immediately after the title.
+\iclrfinalcopy
+
+\begin{document}
+\maketitle
+\lhead{Preprint draft --- September 2026}
+
+\begin{abstract}
+Learned parameter sharing writes effective weights as $\Theta=AB$, with
+a simplex router $A$ and jointly learned bases $B$. Static factors are
+non-unique, as established by simplex-structured matrix factorization
+theory. We ask when instantaneous optimizer response identifies the current
+factors. For strictly positive, full-column-rank softmax routers and
+full-row-rank bases with the same effective product, the complete response
+under fixed, known positive Euclidean block learning rates and temperature
+is identical if and only if the factors differ by a common permutation.
+We give an explicit inverse-stability bound on uniformly nondegenerate
+domains and extend it to small product perturbations. Under $D-K\ge L$,
+$K$ unit-norm queries designed from a noisy observed product control the
+diameter of the entire feasible factor set, with explicit constants and a
+stated product-noise threshold. The proof uniformly bounds basis components
+outside the observed subspace; no candidate-local assumption is needed.
+Audits of shared modules on nine pretrained language models from 160M to 8B
+parameters recover factors with error below $0.034$ in all 1,080 declared
+sufficient-rank cases, including noisy observations. They also expose
+finite-precision failures and unreliable empirical rejection for simpler
+estimators. Recovered structural decisions do not outperform
+effective-parameter clustering in the tested setting. The results identify current coordinates relative to
+a specified optimizer metric. They neither guarantee an efficient recovery
+algorithm nor recover a historical sharing graph or an AdamW trajectory.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/problem}
+\input{sections/theory}
+\input{sections/experiments}
+\input{sections/discussion}
+
+\bibliography{references}
+\bibliographystyle{style/iclr2027/iclr2027_conference}
+
+\input{sections/ai_disclosure}
+
+\appendix
+\input{sections/appendix_secondary_theory}
+\input{sections/appendix_theory}
+\input{sections/appendix_enhancement_theory}
+\input{sections/appendix_finite_noisy_theory}
+\input{sections/appendix_trusted_theory}
+\input{sections/appendix_literature}
+\input{sections/appendix_llm_study}
+\input{sections/appendix_earlier_experiments}
+\input{sections/benchmark}
+\input{sections/appendix_detailed_results}
+\input{sections/appendix}
+\input{sections/appendix_enhancement_experiments}
+\input{sections/appendix_trusted_experiments}
+
+\end{document}

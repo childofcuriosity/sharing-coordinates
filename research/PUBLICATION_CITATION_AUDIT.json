@@ -1,0 +1,15 @@
+{
+  "scope": "Structural citation inventory from the compiled manuscript; primary-source verification for two newly added citations. Older citations inherit archived audit scope and limitations, not a claimed fresh full re-audit.",
+  "date": "2026-09-25",
+  "bibliography_entries": 70,
+  "cited_entries": 59,
+  "missing_keys": [],
+  "new_cited_keys": [
+    "dhillon2004kernel",
+    "pmlr-v119-liu20o"
+  ],
+  "prior_inventory": "research/CITATION_INVENTORY.json",
+  "new_primary_source_record": "research/publication-sources/CITATION_EXTRACTION.json",
+  "fulltext_scope": "research/frontier_sharing_dynamics.md",
+  "bibliography_sha256": "b551ba1308a92c18d17615756b74cab790b4da6c97caabb16adbca423b011ec0"
+}

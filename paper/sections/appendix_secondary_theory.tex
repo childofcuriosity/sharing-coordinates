@@ -1,0 +1,191 @@
+\section{Secondary theoretical statements}
+\label{app:secondary-theory-statements}
+
+This section preserves the auxiliary static, recovery, probe, and optimization
+statements referenced by the main text.  They are separated from the central
+optimizer-response theorem because the static change of basis is SSMF prior
+art and the positive results use standard additional assumptions.  Complete
+proofs and failure cases follow in Appendix~\ref{app:theory}.
+
+\subsection{Static router-coordinate consequences}
+
+The rows $b_1,\ldots,b_K$ are affinely independent when
+$[B,\ones]$ has row rank $K$.
+
+\begin{proposition}[Local form of the SSMF gauge]
+\label{thm:continuous_gauge}
+Assume $K\ge2$, $A$ is strictly positive and has column rank $K$, and the
+rows of $B$ are affinely independent.  For every nonzero
+$H\in\RR^{K\times K}$ satisfying $H\ones=0$, and every sufficiently small
+$t\ne0$,
+\begin{equation}
+ M_t=I+tH,\qquad A_t=AM_t,\qquad B_t=M_t^{-1}B
+ \label{eq:gauge_path}
+\end{equation}
+is a valid factorization with $A_t\in\simplex_K^L$, affinely independent
+bases, and $A_tB_t=AB$.  It is not permutation equivalent to $(A,B)$.  The
+local equivalence class therefore has at least $K(K-1)$ continuous
+directions.
+\end{proposition}
+
+The condition $H\ones=0$ preserves row sums; positivity and invertibility
+survive a small perturbation; and
+$[B_t,\ones]=M_t^{-1}[B,\ones]$ preserves affine independence.  Full column
+rank of $A$ rules out a hidden permutation.
+
+For $0<s<1$, the gauge
+\begin{equation}
+ M_s=(1-s)I+s\ones\ones^\top/K
+ \label{eq:uniformizing_gauge}
+\end{equation}
+moves every router row toward uniform and strictly increases its entropy
+unless it was already uniform, while $M_s^{-1}B$ keeps $\Theta$ fixed.
+This uniformizing path preserves argmax assignments. They are not
+invariant under other feasible gauges, however. For example,
+\begin{equation}
+ A=\begin{bmatrix}.1&.9\\.3&.7\\.4&.6\\.9&.1\end{bmatrix},\qquad
+ M=\begin{bmatrix}.9&.1\\.4&.6\end{bmatrix}
+ \label{eq:argmax_example}
+\end{equation}
+gives argmax labels $(2,2,2,1)$ before and $(2,1,1,1)$ after multiplication
+by $M$.  Yet $(AM)(M^{-1}B)=AB$ for every $B$.
+
+This ambiguity does not erase every partition statistic.  Because $M$ is
+invertible, $a_i=a_j$ iff $a_iM=a_jM$; affine independence of the rows of
+$B$ already makes this equivalent to $\theta_i=\theta_j$.  Indeed,
+$qB=0$ and $q\ones=0$ imply $q=0$ when $[B,\ones]$ has row rank $K$.
+
+\begin{proposition}[End-to-end impossibility]
+\label{thm:end_to_end_impossibility}
+Suppose an architecture and its observation law depend on $(A,B)$ only through
+$\Theta=AB$.  If two gauge-equivalent factorizations have different router
+summaries, no estimator based on end-to-end input--output observations can
+recover the correct summary in both worlds.  This remains true with oracle
+access to the predictor on every input.
+\end{proposition}
+
+This result concerns router coordinates; it neither equates effective-weight
+equality with functional equivalence nor asserts that either equals a planted
+generative graph.  The latter is independently impossible under composition:
+a two-layer linear teacher with $W_1=W_2=I$ (tied) and one with
+$W_1=2I,\ W_2=I/2$ (untied) both implement $x\mapsto x$.
+
+\subsection{Positive recovery under additional information}
+
+Call a factorization \emph{separable} if every basis has an anchor layer
+$i_j$ with $a_{i_j}=e_j$.
+
+\begin{proposition}[Standard separable recovery]
+\label{thm:anchor_recovery}
+If two $K$-separable factorizations of the same $\Theta$ have affinely
+independent bases, they are permutation equivalent.  Consequently, if routing
+is one-hot with discrete label $c_i\in\{1,\ldots,K\}$, every basis is used,
+and the bases are affinely independent, then
+\begin{equation}
+ c_i=c_{i'}\quad\Longleftrightarrow\quad\theta_i=\theta_{i'},
+ \label{eq:onehot_partition}
+\end{equation}
+so the sharing partition is recoverable up to basis relabeling.
+\end{proposition}
+
+This is standard separable-SSMF geometry specialized to layer rows, not a new
+simplex-identification result~\citep{abdolali2021simplex}.  Separability makes
+$\operatorname{conv}\{\theta_i\}$ equal the simplex whose vertices are the
+bases; vertices are unique, and affine independence gives unique barycentric
+coordinates.  The restriction to the separable model class is essential: an
+unrestricted soft factorization may place a larger simplex outside the
+observed convex hull.
+
+\begin{theorem}[Stable noisy one-hot recovery]
+\label{thm:noisy_recovery}
+Assume $K\ge2$.  Suppose $c_i\in\{1,\ldots,K\}$ and
+$\widehat\theta_i=b_{c_i}+e_i$, $\|e_i\|_2\le\varepsilon$, and
+$\gamma=\min_{j\ne k}\|b_j-b_k\|_2>4\varepsilon$.  Connecting two layers
+when their observed parameters are at distance at most $2\varepsilon$
+recovers the exact one-hot partition.  Each cluster mean estimates its basis
+to error at most $\varepsilon$.
+\end{theorem}
+
+Parameter access is not always available.  Shared-input probes instead target
+the clean functional partition defined in Section~\ref{sec:problem}.  Let
+$Y_i(H)$ be the possibly noisy observation of layer $i$'s residual update on
+a common probe.  The result below applies only when the distances induced by
+that observation law retain a positive gap for the clean target partition;
+layer-dependent noise can destroy this condition.  Define
+\begin{equation}
+ d_{ij}^2=\mathbb E\|Y_i(H)-Y_j(H)\|_2^2,\qquad
+ \widehat d_{ij}^2=\frac1n\sum_{s=1}^n
+ \|Y_i(H_s)-Y_j(H_s)\|_2^2.
+ \label{eq:probe_distances}
+\end{equation}
+
+\begin{theorem}[Finite-probe partition recovery]
+\label{thm:probe_recovery}
+Let $L\ge2$, let $0<\eta<1$, and suppose the target partition has at least
+two classes. Let it have population within-class radius
+$w=\max_{i\sim_f j}d_{ij}^2$ and between-class separation
+$b=\min_{i\not\sim_f j}d_{ij}^2$, with gap $\delta=b-w>0$.  Suppose the
+centered squared-distance observations satisfy, uniformly over layer pairs,
+the Bernstein tail
+\begin{equation}
+ \Pr\!\left(\left|\widehat d_{ij}^2-d_{ij}^2\right|>u\right)
+ \le2\exp\!\left[-n\min\!\left\{\frac{u^2}{2\nu^2},
+                                      \frac{u}{2c}\right\}\right].
+ \label{eq:probe_bernstein}
+\end{equation}
+If, for failure probability $\eta$,
+\begin{equation}
+ n\ge
+ \max\!\left\{\frac{32\nu^2}{\delta^2},\frac{8c}{\delta}\right\}
+ \log\frac{2\binom{L}{2}}{\eta},
+ \label{eq:probe_sample_complexity}
+\end{equation}
+then thresholding $\widehat d_{ij}^2$ at $(w+b)/2$ recovers the functional
+partition with probability at least $1-\eta$.  The same strict separation
+guarantees recovery by single, complete, or average agglomerative linkage when
+the number $K_f$ of functional equivalence classes is known.  In general
+$K_f$ need not equal the number $K$ of router bases.
+\end{theorem}
+
+The result follows by a union bound and certifies equivalence only under the
+specified probe distribution; behavior off its support remains unidentified.
+
+\subsection{Optimization and initialization effects}
+
+Let $G=\nabla_\Theta\mathcal L$.
+
+\begin{proposition}[Factorization-induced dynamics]
+\label{prop:factor_dynamics}
+For Euclidean gradient flow on unconstrained factors, without factor-specific
+regularizers,
+\begin{equation}
+ \dot\Theta=-G(B^\top B)-(AA^\top)G.
+ \label{eq:effective_gradient_flow}
+\end{equation}
+Gauge-equivalent initializations therefore generally have different effective
+parameter trajectories despite identical initial $\Theta$, predictions, and
+loss.
+\end{proposition}
+
+\begin{proposition}[Softmax saturation]
+\label{prop:softmax_saturation}
+Let $a_i=\operatorname{softmax}(z_i/\tau)$ and suppose
+$\max_j a_{ij}=1-\varepsilon$.  With
+$g_i=\nabla_{\theta_i}\mathcal L$,
+\begin{equation}
+ \|\nabla_{z_i}\mathcal L\|_2
+ \le \frac{2\varepsilon}{\tau}\|Bg_i\|_2.
+ \label{eq:saturation_bound}
+\end{equation}
+Thus the instantaneous logit gradient is attenuated as the current router row
+approaches the simplex boundary.  This pointwise bound alone does not imply
+that an initial argmax graph remains fixed over a finite training trajectory;
+the loss gradients, basis norm, and probability margin can all change.
+\end{proposition}
+
+These results justify testing gauge-equivalent initializations, final--initial
+router movement, and recovery under deliberately wrong initial graphs.  They
+do not prove that gradient descent prefers a universal smooth, banded, or
+low-entropy structure.  Nor do reconstruction loss or end-to-end accuracy by
+themselves identify router coordinates, the effective-weight equality
+partition, functional equivalence, or a latent generative graph.

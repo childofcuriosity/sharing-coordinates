@@ -1,0 +1,89 @@
+{
+  "real": {
+    "adamw": {
+      "runs": 9,
+      "validation_improved": 9,
+      "coefficient_entry": {
+        "runs_with_event": 4,
+        "runs_with_sustained_event": 4
+      },
+      "router_boundary": {
+        "runs_with_event": 1,
+        "runs_with_sustained_event": 1
+      },
+      "router_entry": {
+        "runs_with_event": 9,
+        "runs_with_sustained_event": 8
+      }
+    },
+    "sgd": {
+      "runs": 9,
+      "validation_improved": 7,
+      "coefficient_entry": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      },
+      "router_boundary": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      },
+      "router_entry": {
+        "runs_with_event": 0,
+        "runs_with_sustained_event": 0
+      }
+    }
+  },
+  "local_fp32": {
+    "crossing_runs": 4,
+    "runs": 5,
+    "convergence": [
+      {
+        "coarse_lr": 0.02,
+        "fine_lr": 0.01,
+        "endpoint_parameter_distance": 1.0220784523497029e-05
+      },
+      {
+        "coarse_lr": 0.01,
+        "fine_lr": 0.005,
+        "endpoint_parameter_distance": 2.1077738452194485e-05
+      },
+      {
+        "coarse_lr": 0.005,
+        "fine_lr": 0.0025,
+        "endpoint_parameter_distance": 4.652195850233706e-05
+      }
+    ]
+  },
+  "local_fp64": {
+    "crossing_runs": 4,
+    "runs": 4,
+    "first_crossing_times": [
+      0.18,
+      0.17,
+      0.17,
+      0.17
+    ],
+    "convergence": [
+      {
+        "coarse_lr": 0.02,
+        "fine_lr": 0.01,
+        "endpoint_parameter_distance": 2.055111361372317e-06
+      },
+      {
+        "coarse_lr": 0.01,
+        "fine_lr": 0.005,
+        "endpoint_parameter_distance": 1.0272097407868568e-06
+      },
+      {
+        "coarse_lr": 0.005,
+        "fine_lr": 0.0025,
+        "endpoint_parameter_distance": 5.135184481072954e-07
+      }
+    ],
+    "initial_gap_velocity": -0.0001579293754365605,
+    "linearized_crossing_time": 0.16555782650813075,
+    "min_a": 0.006781004709199226,
+    "min_sigma_a": 0.8567272801612199,
+    "min_sigma_b": 2.054078341901479
+  }
+}

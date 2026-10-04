@@ -1,0 +1,66 @@
+{
+  "scope": "Theory goal: complete proof of the user-approved whole-feasible-set finite noisy observation theorem.",
+  "timestamp_utc": "2026-09-24T18:53:51.407712+00:00",
+  "result": "Proved explicit measurement-layer corollary of existing global full-response inverse theorem.",
+  "acceptance": {
+    "probes_from_noisy_product_only": true,
+    "probe_count": "K",
+    "probe_frobenius_norm": 1,
+    "finite_stacked_noise_model": true,
+    "all_feasible_factors_in_original_space": true,
+    "no_local_truth_neighborhood": true,
+    "no_connected_component_assumption": true,
+    "no_true_subspace_oracle": true,
+    "all_constants_expanded": true,
+    "explicit_product_noise_threshold": "min(alpha*s_B/4, s_A*s_B/8)",
+    "response_noise_smallness_required": false,
+    "original_theorem_dependencies_audited": true,
+    "numerical_experiments_used_as_proof": false,
+    "unproved_mathematical_gaps_identified": []
+  },
+  "independent_model_review": {
+    "work_lines": [
+      "independent derivation",
+      "foundation and constant audit",
+      "adversarial counterexample/quantifier audit"
+    ],
+    "rounds": "independent construction, complete proof review, final LaTeX review",
+    "corrected_issue": "Main statement contain every could permit a superset; replaced by consist of all.",
+    "external_human_peer_review": false,
+    "proof_assistant_formalization": false
+  },
+  "source_sha256": {
+    "research/FINITE_NOISY_GOAL.md": "9e4c63eb091544bcc277e205ea56ae5e845f18e3069268b680daf8dff57ad17b",
+    "research/FINITE_NOISY_THEOREM.md": "4ab7bf5fcd962eb2502b3238f9eaaa926a304d09e1c2fd693c607881f323649f",
+    "research/FINITE_NOISY_INDEPENDENT_ROUTE.md": "9c43d8e2ada39f7c361f0548dfe04087dfc3f9b6014690ca0ec745464bbaa07b",
+    "research/FINITE_NOISY_FOUNDATION_AUDIT.md": "a35c6b99ba3844ddd8d38fd9a22e4b56ba7157f8a8cad2dde9fe7eb01f7d3cec",
+    "research/FINITE_NOISY_ADVERSARIAL_AUDIT.md": "1afe565843e571259f82b021c7922b048da47159d419f3685e64eae63953cb4b",
+    "paper/sections/appendix_finite_noisy_theory.tex": "edfc698ea8469b97bf259510057661f12a27ad53f7b43574866acefefc463293",
+    "paper/sections/theory.tex": "e4c2ab1507e5144456b51a696f9aa555b75aeb4fce138f49e3c5632688f937b2",
+    "paper/sections/appendix_theory.tex": "4ac846c9e423a4d79e1ac5afe365b8afc1242e8c49bb79276ccda5559841bffd",
+    "paper/sections/appendix_enhancement_theory.tex": "853b38c7683f27f5206fa5bd818e69d210355e2ef40bf0d3cc9a2d0f4f3c85ea"
+  },
+  "manuscript": {
+    "path": "paper/main.pdf",
+    "sha256": "49f03f899d7529cfcaffed6584f60f0116ffb5863a775ff74fedd43448953cea",
+    "pages": 55,
+    "main_location": "Corollary 3",
+    "full_location": "Appendix D, Theorem 5",
+    "template": "ICLR 2027 retained",
+    "authors": "placeholder retained"
+  },
+  "artifact_checks": {
+    "clean_archive_files": 50,
+    "clean_compile": true,
+    "archive_pdf_text_matches": true,
+    "archive_sha256": "ded08d679a3de24a59fc7dbaaf96e87ccb64b80067b7ef91b05fffdb7906767b",
+    "new_numerical_tests_run": false,
+    "reason": "Only mathematical manuscript/review documents changed; code and frozen experiment sources unchanged."
+  },
+  "limits": [
+    "Conditional on fixed interior/rank/norm domain and known positive Euclidean metric.",
+    "Conservative constants, no optimal probe-count or minimax claim.",
+    "No guarantee a numerical solver finds a feasible point or verifies domain membership.",
+    "No claim to a new general inverse theorem; the finite noisy bridge composes prior proved machinery."
+  ]
+}

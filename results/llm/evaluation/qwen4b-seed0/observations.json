@@ -1,0 +1,202 @@
+{
+  "model": "qwen4b",
+  "seed": 0,
+  "split": "evaluation",
+  "freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "observations_sha256": "f78dc55c3dc96eda237b07711bf96aa96c5feab6fd45f3ebb6f90086983ed674",
+  "cases": 60,
+  "compression_failures": 0,
+  "controls": [
+    {
+      "family": "designed",
+      "formula_relative": 9.933518132383929e-17,
+      "permutation_gap": 1.0155609196491563e-16,
+      "nonpermutation_gap": 0.17637720154501144,
+      "nonpermutation_product_error": 1.5346203602300028e-16
+    },
+    {
+      "family": "gaussian",
+      "formula_relative": 9.666956960177713e-17,
+      "permutation_gap": 1.041536363131278e-16,
+      "nonpermutation_gap": 0.42250373535654245,
+      "nonpermutation_product_error": 1.5346203602300028e-16
+    },
+    {
+      "family": "natural_general",
+      "formula_relative": 8.266832939532137e-17,
+      "permutation_gap": 1.0450331345666215e-16,
+      "nonpermutation_gap": 0.42633543802085183,
+      "nonpermutation_product_error": 1.5346203602300028e-16
+    },
+    {
+      "family": "natural_code",
+      "formula_relative": 8.55134979792981e-17,
+      "permutation_gap": 1.0446028040409135e-16,
+      "nonpermutation_gap": 0.4247331192917423,
+      "nonpermutation_product_error": 1.5346203602300028e-16
+    },
+    {
+      "family": "natural_math",
+      "formula_relative": 7.960809863843656e-17,
+      "permutation_gap": 1.045198187722238e-16,
+      "nonpermutation_gap": 0.42619891651038566,
+      "nonpermutation_product_error": 1.5346203602300028e-16
+    }
+  ],
+  "gates": {
+    "formula": true,
+    "permutation": true,
+    "product": true
+  },
+  "finite_steps": [
+    {
+      "dtype": "torch.float64",
+      "step": 0.001,
+      "error": 3.675759800386311e-07
+    },
+    {
+      "dtype": "torch.float64",
+      "step": 0.0001,
+      "error": 3.6757589965703635e-08
+    },
+    {
+      "dtype": "torch.float64",
+      "step": 1e-05,
+      "error": 3.687539064000931e-09
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 0.001,
+      "error": 0.00160352015196693
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 0.0001,
+      "error": 0.013229190266534619
+    },
+    {
+      "dtype": "torch.float32",
+      "step": 1e-05,
+      "error": 0.09528063905558183
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 0.001,
+      "error": 1.1901642654345492
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 0.0001,
+      "error": 1.2646794339881242
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "step": 1e-05,
+      "error": 1.0202777953728615
+    }
+  ],
+  "timings": [
+    {
+      "family": "designed",
+      "noise": 0.0,
+      "seconds": 4.158150099217892
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.0,
+      "seconds": 3.2932949610985816
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.0,
+      "seconds": 3.5802689250558615
+    },
+    {
+      "family": "natural_code",
+      "noise": 0.0,
+      "seconds": 3.4235452539287508
+    },
+    {
+      "family": "natural_math",
+      "noise": 0.0,
+      "seconds": 3.4232046199031174
+    },
+    {
+      "family": "designed",
+      "noise": 1e-06,
+      "seconds": 3.325413901824504
+    },
+    {
+      "family": "gaussian",
+      "noise": 1e-06,
+      "seconds": 3.1335296076722443
+    },
+    {
+      "family": "natural_general",
+      "noise": 1e-06,
+      "seconds": 3.2681852760724723
+    },
+    {
+      "family": "natural_code",
+      "noise": 1e-06,
+      "seconds": 3.257293315138668
+    },
+    {
+      "family": "natural_math",
+      "noise": 1e-06,
+      "seconds": 3.2590653519146144
+    },
+    {
+      "family": "designed",
+      "noise": 0.0001,
+      "seconds": 3.324720796197653
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.0001,
+      "seconds": 3.134765621740371
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.0001,
+      "seconds": 3.2659492576494813
+    },
+    {
+      "family": "natural_code",
+      "noise": 0.0001,
+      "seconds": 3.2647912511602044
+    },
+    {
+      "family": "natural_math",
+      "noise": 0.0001,
+      "seconds": 3.265403461176902
+    },
+    {
+      "family": "designed",
+      "noise": 0.01,
+      "seconds": 3.3238776586949825
+    },
+    {
+      "family": "gaussian",
+      "noise": 0.01,
+      "seconds": 3.133864493109286
+    },
+    {
+      "family": "natural_general",
+      "noise": 0.01,
+      "seconds": 3.2430738219991326
+    },
+    {
+      "family": "natural_code",
+      "noise": 0.01,
+      "seconds": 3.264235026668757
+    },
+    {
+      "family": "natural_math",
+      "noise": 0.01,
+      "seconds": 3.264047265984118
+    }
+  ],
+  "peak_gpu_bytes": 4718961664,
+  "seconds": 72.35691619617864
+}

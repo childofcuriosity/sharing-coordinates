@@ -1,0 +1,198 @@
+verified generation-time source hashes against release (response=4, router_decision=4, aslora_audit=3, aslora_provenance=3, probes=5, response_tomography=5)
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.1.1, pluggy-1.5.0
+rootdir: /WillRawData2/llm/will_datasets/toutiao/aslora/sharing-coordinates
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.8.0, xdist-3.6.1, rerunfailures-15.0, shard-0.1.2, flakefinder-1.1.0, hypothesis-6.127.9, xdoctest-1.0.2, typeguard-4.3.0
+collected 181 items
+Running 181 items in this shard
+
+tests/test_analysis.py ......                                            [  3%]
+tests/test_artifact_contract.py ........                                 [  7%]
+tests/test_aslora_canonical_results_independent.py .....                 [ 10%]
+tests/test_aslora_training.py ............                               [ 17%]
+tests/test_aslora_witness.py .....                                       [ 19%]
+tests/test_autograd_tomography.py .                                      [ 20%]
+tests/test_canonical_results.py ....                                     [ 22%]
+tests/test_cross_platform_derived_newlines.py ....                       [ 24%]
+tests/test_decision_audit.py ..........                                  [ 30%]
+tests/test_enhancement.py ...                                            [ 32%]
+tests/test_enhancement_summary.py ..                                     [ 33%]
+tests/test_eta_b_zero_boundary.py ......                                 [ 36%]
+tests/test_factorization.py ...                                          [ 38%]
+tests/test_gauge.py ..                                                   [ 39%]
+tests/test_generate_paper_audit_tables.py ...                            [ 40%]
+tests/test_generate_response_tomography_latex.py ..                      [ 41%]
+tests/test_joint_stability_projection.py .                               [ 42%]
+tests/test_language.py ...                                               [ 44%]
+tests/test_llm_observations.py ...                                       [ 45%]
+tests/test_llm_protocol.py ..                                            [ 46%]
+tests/test_llm_shared.py ....                                            [ 49%]
+tests/test_manifest.py ..                                                [ 50%]
+tests/test_models.py ...                                                 [ 51%]
+tests/test_natural_tomography.py ..                                      [ 53%]
+tests/test_patterns_metrics.py ..                                        [ 54%]
+tests/test_probes.py .......                                             [ 58%]
+tests/test_response_factor_recovery.py ...                               [ 59%]
+tests/test_response_identifiability.py .........                         [ 64%]
+tests/test_response_quantitative_stability.py .......                    [ 68%]
+tests/test_response_tomography.py ........                               [ 72%]
+tests/test_router_decisions.py .......                                   [ 76%]
+tests/test_routing_geometry.py .......                                   [ 80%]
+tests/test_routing_training.py ...                                       [ 82%]
+tests/test_source_attestation.py .....                                   [ 85%]
+tests/test_summarize_aslora_audit.py ......                              [ 88%]
+tests/test_summarize_autograd_tomography.py .......                      [ 92%]
+tests/test_summarize_response_audit.py ..                                [ 93%]
+tests/test_summarize_response_tomography.py ..                           [ 94%]
+tests/test_summarize_router_decisions.py ....                            [ 96%]
+tests/test_trusted_recovery.py ......                                    [100%]
+
+============================= 181 passed in 24.90s =============================
+verified autodiff tomography records and derived artifacts
+factor recovery pilot artifacts checked
+Enhancement source bindings and derivatives verified
+{
+  "synthetic": {
+    "n": 1920,
+    "successes": 1920,
+    "failures": 0,
+    "good": 1639,
+    "bad": 227,
+    "intermediate": 54,
+    "accepted": 1782,
+    "accepted_bad": 92,
+    "coverage": 0.928125,
+    "bad_rejection_recall": 0.5947136563876652,
+    "good_false_rejection": 0.0018303843807199512,
+    "accepted_bad_fraction": 0.051627384960718295,
+    "median_error": 0.00010056622944568715,
+    "selected_solver_budget_exhausted": 70,
+    "p90_error": 0.12926821070200267,
+    "max_error": 10.541373118686701,
+    "numerical_local_pass": 140,
+    "cluster_bootstrap": {
+      "unit": "synthetic seed; all 48 variants retained together",
+      "resamples": 2000,
+      "percentile_95": {
+        "coverage": [
+          0.9208333333333333,
+          0.9354166666666667
+        ],
+        "accepted_bad_fraction": [
+          0.04504314601279188,
+          0.05793932216514641
+        ],
+        "bad_rejection_recall": [
+          0.5479237053873087,
+          0.6382135443694862
+        ],
+        "good_false_rejection": [
+          0.0,
+          0.004881025015253203
+        ]
+      }
+    }
+  },
+  "language": {
+    "n": 48,
+    "successes": 48,
+    "failures": 0,
+    "good": 48,
+    "bad": 0,
+    "intermediate": 0,
+    "accepted": 48,
+    "accepted_bad": 0,
+    "coverage": 1.0,
+    "bad_rejection_recall": null,
+    "good_false_rejection": 0.0,
+    "accepted_bad_fraction": 0.0,
+    "median_error": 3.2932694098949014e-05,
+    "selected_solver_budget_exhausted": 0,
+    "p90_error": 0.007516239935783527,
+    "max_error": 0.01063424566236688,
+    "numerical_local_pass": 2
+  }
+}
+{
+  "spectral": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 4,
+    "max_abs_error_difference": 4.036177770645916e-07,
+    "local_pass": 0
+  },
+  "projected_spectral": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 0,
+    "max_abs_error_difference": 2.9070884401960484e-06,
+    "local_pass": 0
+  },
+  "joint_fit": {
+    "status": 0,
+    "quality": 0,
+    "acceptance": 2,
+    "max_abs_error_difference": 0.017003249361467132,
+    "local_pass": 0
+  }
+}
+{"checked_estimates": 8850, "recorded_failures": 6, "max_residual_recompute_difference": 2.7755575615628914e-17}
+{"models": 9, "checkpoints": 27, "recovery_cases": 1620, "method_outputs": 4860}
+{"method": "spectral", "summary": {"total": 1620, "status": {"ok": 1620}, "errors": {"n": 1620, "median": 0.006017717896068265, "p90": 0.49212307319950094, "max": 6.132737802511728, "min": 1.443691255091449e-12}, "heldout": {"n": 1620, "median": 0.010603057658478061, "p90": 0.4137016466872909, "max": 2.641219891723608, "min": 1.841834500017243e-12}, "bad": 580, "good": 970, "admissible": 2, "acceptance": {"residual_only_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}, "condition_only_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}, "empirical_score": {"accepted": 0, "bad": 0, "coverage": 0.0, "accepted_bad_fraction": null, "errors": {"n": 0, "median": null, "p90": null, "max": null, "min": null}}}}}
+{"method": "projected_spectral", "summary": {"total": 1620, "status": {"ok": 1620}, "errors": {"n": 1620, "median": 0.00749141843001478, "p90": 0.2987693110804694, "max": 6.191348820697759, "min": 2.2076207112030776e-12}, "heldout": {"n": 1620, "median": 0.011469875181374309, "p90": 0.2845341598041766, "max": 2.703555889446743, "min": 3.216153925013367e-12}, "bad": 531, "good": 958, "admissible": 1080, "acceptance": {"residual_only_score": {"accepted": 1037, "bad": 20, "coverage": 0.6401234567901235, "accepted_bad_fraction": 0.019286403085824494, "errors": {"n": 1037, "median": 0.00022572029198312366, "p90": 0.03599951386417893, "max": 0.520906595853538, "min": 2.2076207112030776e-12}}, "condition_only_score": {"accepted": 960, "bad": 48, "coverage": 0.5925925925925926, "accepted_bad_fraction": 0.05, "errors": {"n": 960, "median": 0.00023478536745950943, "p90": 0.051234128287877184, "max": 6.191348820697759, "min": 2.2076207112030776e-12}}, "empirical_score": {"accepted": 1056, "bad": 43, "coverage": 0.6518518518518519, "accepted_bad_fraction": 0.04071969696969697, "errors": {"n": 1056, "median": 0.0002441974885234718, "p90": 0.04676795665727136, "max": 6.191348820697759, "min": 2.2076207112030776e-12}}}}}
+{"method": "joint_fit", "summary": {"total": 1620, "status": {"not_run_insufficient_query_rank": 540, "ok": 1080}, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}, "heldout": {"n": 1080, "median": 5.0500108563932517e-05, "p90": 0.009999597806560678, "max": 0.010002958940455808, "min": 1.9012362566543835e-14}, "bad": 0, "good": 1080, "admissible": 1080, "acceptance": {"residual_only_score": {"accepted": 868, "bad": 0, "coverage": 0.5358024691358024, "accepted_bad_fraction": 0.0, "errors": {"n": 868, "median": 4.249316661675868e-07, "p90": 8.337076682269492e-05, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}, "condition_only_score": {"accepted": 1080, "bad": 0, "coverage": 0.6666666666666666, "accepted_bad_fraction": 0.0, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}, "empirical_score": {"accepted": 1080, "bad": 0, "coverage": 0.6666666666666666, "accepted_bad_fraction": 0.0, "errors": {"n": 1080, "median": 1.86179164585256e-05, "p90": 0.004381968808862457, "max": 0.03377528628589339, "min": 1.4342788557731225e-14}}}}}
+Dynamics tables and vector figures match frozen records
+{"exact_integer_certificates": {"0": {"best": 14, "runner_up": 31, "partition": [[0, 2], [1, 5], [3, 4]]}, "1": {"best": 65, "runner_up": 119, "partition": [[0, 1], [2, 5], [3, 4]]}, "2": {"best": 200, "runner_up": 212, "partition": [[0, 1], [2, 5], [3, 4]]}, "3": {"best": 506, "runner_up": 578, "partition": [[0, 5], [1, 3], [2, 4]]}}, "four_basis_extension": "passed", "boundary_dual_and_rank_checks": "passed"}
+{
+  "projector_checks": 120,
+  "max_absolute_cost_difference": 7.105427357601002e-14,
+  "historical_llm_validation_verified_against_versioned_snapshot": true,
+  "source_sha256": "5121b09ed95fcd88c108f79705ed5f7569362e921df25e91bda0566ea045ccb6",
+  "input_sha256": {
+    "results/llm_routing_trajectories/pythia160m-adamw-seed0/trajectory.json": "013b9d70274ae3d15c7b4ac44de66bdf82c792638c4fcb083e66dbe36dc3d54b",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed1/trajectory.json": "2ef25c9f2aaf5d8c1d8c2cf1651029c26c73745a0a94739063d367f7f95e64e2",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed2/trajectory.json": "c66cc1a7d8e2062d185f824ea550687becc6a78318f844b5e2278f5b1f3f00b3",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed0/trajectory.json": "cf215a6d07f8354b1c722d7129988bf650ee7e6c9f33491efeaf725783490583",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed1/trajectory.json": "bead21a19a076bbe3f7ea5bc5e2b3f66b39345dc6f56db74e6bf5c9541d872ff",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed2/trajectory.json": "fd9396e3d898a0a7206c07278cc8d7101a552bc8df248e3788e117f47b273062",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed0/trajectory.json": "3ed923830b3354a0e59bc217279450716c9e8f00cd96b25d913a0c87ca294b9a",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed1/trajectory.json": "e1a9fbb2426a4198d0cc4a0171e8eae1933f1ca98d36ec9aba4bd20755bdf7ac",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed2/trajectory.json": "c66f94a25b27b0946a612dcf2d8611591e479dd7b80eba83e650f40a1e5b3fec",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed0/trajectory.json": "6e989a29df79928f532e9112039f21ec1560e5be70edb509915cf465b842d006",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed1/trajectory.json": "79b059620d1e36334cd74078b6f2251d61affafd66a0ca663295c0ffa90e2f3c",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed2/trajectory.json": "997a44ceb7b890db715b6ecdc39bad7fb2b9d5cdf4426d5ae76599b5eae8740f",
+    "results/llm_routing_trajectories/smol360m-adamw-seed0/trajectory.json": "6e613d7d191dd070c06fda88864435b6443f81bf2107c318d09ef88133727ad1",
+    "results/llm_routing_trajectories/smol360m-adamw-seed1/trajectory.json": "5b57f8ce4bdc383f16edb5eed9531975dbd4d5599142e035871f396836c81bea",
+    "results/llm_routing_trajectories/smol360m-adamw-seed2/trajectory.json": "6ccc61a26021eee63139c531b0fc9083eb3ef5219b57661c19922d47b548a5c3",
+    "results/llm_routing_trajectories/smol360m-sgd-seed0/trajectory.json": "7aa0a040e949d185918666445bea7bbe256329d9d8713bd8766df108a42dcb00",
+    "results/llm_routing_trajectories/smol360m-sgd-seed1/trajectory.json": "034a350e1e38cfb91214495fabd861a58efb87b7e3122d4b629ff8447cfeb217",
+    "results/llm_routing_trajectories/smol360m-sgd-seed2/trajectory.json": "c47ef9f2c1ebeb705e465376ca1218497ba6a3cd9482f08d0dfda9e75d02c90e",
+    "results/routing_training/training.json": "8aa55c789a11f3d1e60628ace6f54e305b50d17e2a1106f1598f75f44c79d884",
+    "results/llm_local_flow/local_flow.json": "280c3e97534fc105d91d553e1dee846936a65dc0b293f20fa58a829f288ddb89",
+    "results/llm_local_flow_fp64/local_flow.json": "fd69544fe7a5f57073fb0102e1e384c986a7d0c7648274c0846897e7b70e4d3b",
+    "results/llm_local_flow_fp64_norm/local_flow.json": "358793b08076f0b473a4be994ec70195b09032c13a0e2ab9d46f71a2abc54050"
+  },
+  "archived_files_verified": 106
+}
+Independent projector objective checks 120 maximum error 7.105427357601002e-14 historical LLM validation resolved against versioned snapshot
+wrote /tmp/tmp.HWURh0WOox/results/response_summary.json, /tmp/tmp.HWURh0WOox/results/response_table.csv, and /tmp/tmp.HWURh0WOox/results/response_table.md
+wrote response tomography summary: /tmp/tmp.HWURh0WOox/results/response_tomography_summary.json
+wrote /tmp/tmp.HWURh0WOox/results/aslora_summary.json, /tmp/tmp.HWURh0WOox/results/aslora_summary.csv, and /tmp/tmp.HWURh0WOox/results/aslora_summary.md
+wrote /tmp/tmp.HWURh0WOox/results/router_decisions_summary.json, /tmp/tmp.HWURh0WOox/results/router_decisions_table.csv, and /tmp/tmp.HWURh0WOox/results/router_decisions_table.md
+wrote /tmp/tmp.HWURh0WOox/generated/response_table.tex, /tmp/tmp.HWURh0WOox/generated/aslora_table.tex, /tmp/tmp.HWURh0WOox/generated/aslora_metric_detail_table.tex, /tmp/tmp.HWURh0WOox/generated/aslora_baseline_table.tex, /tmp/tmp.HWURh0WOox/generated/router_decision_table.tex, /tmp/tmp.HWURh0WOox/generated/router_decision_detail_table.tex
+wrote response tomography LaTeX: /tmp/tmp.HWURh0WOox/generated/response_tomography_numbers.tex
+[loaded] gauge_full.json: 140 records
+[loaded] factorization_full.json: 700 records
+[loaded] teacher_student_mlp.json: 60 records
+[loaded] teacher_student_transformer.json: 60 records
+[loaded] teacher_baselines.json: 40 records
+[loaded] probes_mlp.json: 1680 records
+[loaded] probes_transformer.json: 1680 records
+[loaded] language_full.json: 12 records
+[wrote] summary.json
+[figures] distillation_loss_vs_ari.pdf, factorization_loss_vs_ari.pdf, gauge_equivalence.pdf, language_router_tradeoff.pdf, probe_phase_diagram.pdf, saturation_recovery.pdf
+[tables] distillation_full_table.tex, distillation_table.tex, factorization_full_table.tex, factorization_table.tex, gauge_table.tex, key_numbers.tex, language_table.tex, probe_table.tex, saturation_table.tex
+verified MANIFEST.sha256
+release verification passed

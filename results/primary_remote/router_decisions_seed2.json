@@ -1,0 +1,270 @@
+{
+  "checkpoint": {
+    "add_one_byte_unigram_bpb": 4.624227674425976,
+    "corpus_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/test.txt",
+    "corpus_sha256": "d790b833ef8cf03a90db7bf1271b7520b83c45ce07ba3c1a9699df81e239eca0",
+    "corpus_split": "test",
+    "cuda_version": "11.3",
+    "device": "cuda",
+    "file_sha256": "77006e2d6d5c024ddca274f3cd029c9d4672a0c53ed1d99ac7528453521c2fe4",
+    "format_version": 1,
+    "language_config": {
+      "amp": true,
+      "batch_size": 32,
+      "checkpoint_load": null,
+      "checkpoint_save": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed2.pt",
+      "depth": 12,
+      "dimension": 256,
+      "eval_batches": 100,
+      "hard": false,
+      "hidden_dimension": 1024,
+      "log_every": 250,
+      "lr": 0.0003,
+      "num_bases": 4,
+      "num_heads": 8,
+      "router_init": "pattern_cycle",
+      "router_pattern": null,
+      "router_trainable": true,
+      "seed": 2,
+      "sequence_length": 128,
+      "steps": 1500,
+      "tau_end": 1.0,
+      "tau_start": 1.0,
+      "test_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/test.txt",
+      "train_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/train.txt",
+      "usage_strength": 0.0,
+      "validation_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/valid.txt",
+      "vertex_strength": 0.0,
+      "warmup_steps": 500,
+      "weight_decay": 0.1
+    },
+    "path": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed2.pt",
+    "source_sha256": {
+      "experiments/run_router_decisions.py": "1c7095bf14e32b4f61b803ecc6912727c90a558439d98a433db87da89938e1ed",
+      "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+      "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+      "src/router_decisions.py": "161c004bb8170297afd3e57afeda5f5867881ac4cdd10237cb10fc7658826cf9"
+    },
+    "torch_version": "1.11.0+cu113",
+    "train_corpus_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/train.txt",
+    "train_corpus_sha256": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+    "training_metadata": {
+      "best_validation_bpb": 2.1804175609484844,
+      "checkpoint_kind": "final_predeclared_training_step",
+      "elapsed_seconds": 90.05190348625183,
+      "final_probabilities": [
+        [
+          0.9985421895980835,
+          0.0004869117110501975,
+          0.00048701802734285593,
+          0.00048399128718301654
+        ],
+        [
+          0.0003328142047394067,
+          0.9990027546882629,
+          0.00033205648651346564,
+          0.0003323856508359313
+        ],
+        [
+          0.00026297924341633916,
+          0.00026350270491093397,
+          0.9992063641548157,
+          0.000267108844127506
+        ],
+        [
+          0.0002635449345689267,
+          0.00026125420117750764,
+          0.0002640893799252808,
+          0.9992110729217529
+        ],
+        [
+          0.9985610842704773,
+          0.0004801977484021336,
+          0.0004790562961716205,
+          0.00047976337373256683
+        ],
+        [
+          0.0004081977822352201,
+          0.9987828135490417,
+          0.00040183172677643597,
+          0.0004071581643074751
+        ],
+        [
+          0.00029520411044359207,
+          0.00029752854607068,
+          0.999106228351593,
+          0.000300942687317729
+        ],
+        [
+          0.0002886463771574199,
+          0.00028478281456045806,
+          0.0002879985549952835,
+          0.999138593673706
+        ],
+        [
+          0.9986932873725891,
+          0.0004376807773951441,
+          0.0004332558310125023,
+          0.00043582162470556796
+        ],
+        [
+          0.00040352987707592547,
+          0.998785674571991,
+          0.0004041962092742324,
+          0.000406626146286726
+        ],
+        [
+          0.00036185572389513254,
+          0.0003657726338133216,
+          0.9989066123962402,
+          0.0003656974877230823
+        ],
+        [
+          0.00033029995393007994,
+          0.00032861746149137616,
+          0.00032837686012499034,
+          0.9990127086639404
+        ]
+      ],
+      "initial_probabilities": [
+        [
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735
+        ],
+        [
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735
+        ],
+        [
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735,
+          0.0003351253690198064
+        ],
+        [
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.0003351253690198064,
+          0.9989946484565735
+        ]
+      ],
+      "router_mean_l1_movement": 0.0004010408592876047,
+      "saved_at_step": 1500,
+      "test_bpb": 2.168354467360215
+    }
+  },
+  "config": {
+    "batch_sampling": "nonoverlap",
+    "batch_seed": 610002,
+    "batch_size": 8,
+    "disable_tf32": true,
+    "eval_batches": 256,
+    "gauge_selection": "first_valid",
+    "kmeans_iterations": 50,
+    "kmeans_restarts": 8,
+    "kmeans_seed": 630002,
+    "max_batch_nll_error": 1e-05,
+    "max_bpb_equivalence_error": 1e-05,
+    "max_condition": 30.0,
+    "max_effective_relative_l2": 1e-05,
+    "max_logit_abs_error": 0.0001,
+    "min_probability": 1e-08,
+    "search_family": "positive_stochastic",
+    "search_seed": 620002,
+    "search_trials": 5000,
+    "sequence_length": 128,
+    "temperature": 1.0
+  },
+  "gauge_search": {
+    "counts": {
+      "attempted": 5000,
+      "condition_pass": 4581,
+      "group_pass": 3769,
+      "invertible": 5000,
+      "partition_change": 0,
+      "simplex_pass": 4581
+    },
+    "max_condition": 30.0,
+    "message": "no partition-changing gauge with 4 groups and condition <= 30 was found in 5000 router-only trials",
+    "min_probability": 1e-08,
+    "original_assignment": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3
+    ],
+    "original_groups": 4,
+    "required_groups": 4,
+    "search_family": "positive_stochastic",
+    "search_inputs": "router_probabilities_only",
+    "seed": 620002,
+    "selection_rule": "first_valid",
+    "status": "no_partition_changing_gauge_found",
+    "trials": 5000
+  },
+  "numeric_controls": {
+    "search_failed_before_model_equivalence_or_decision_evaluation": true,
+    "tf32_disabled_during_audit": true
+  },
+  "status": "no_partition_changing_gauge_found"
+}

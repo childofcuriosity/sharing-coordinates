@@ -1,0 +1,139 @@
+{
+  "format": "llm-study-validation-v1",
+  "created_utc": "2026-09-24T20:51:35.405870+00:00",
+  "status": "Complete scoped research delivery; no upload",
+  "freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "files": {
+    "research/LLM_STUDY_FREEZE.json": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+    "research/LLM_ACCEPTANCE_POLICY.json": "a28cc236ca87f47549d75d3a8c6ab53178b491fe60dad2291f82a5dfb6993f5f",
+    "research/LLM_STRESS_PROTOCOL.json": "d96a2be119f4616eb3a2dc75dc0968b8c32c991f8a6c0cc2ed391dc0917bba7a",
+    "research/LLM_MODEL_BYTES.json": "276e20791ac041fe497256a727e766fa1b26eb64126b963ba141fe9f35bae77b",
+    "research/LLM_ENVIRONMENT.json": "1a6567c7fe1f8dfddaee21a86e4a9455aa8fa8ce19f9cda1466e44fbbae43adf",
+    "results/llm/summary.json": "03cbf817dbd9da5786ae2b8fe510b63181684f6e9f0b3b50ddaedf1cac716cbf",
+    "results/llm/recovery-cases.csv": "707eac0d5feba57a69bfab73e63516a760e129b06d9af93748e97344ec696a55",
+    "results/llm/decision-cases.csv": "735c889e53b1f595583e8decf133fb4a3e9e9a3c82773a1dc03e8ed862b4d1c7",
+    "results/llm/conditioning-stress.json": "5f0576ee7d53e551a9ef4469f99ad911aa65954b0521a8fd3a3638c34571b853",
+    "results/llm/action-repeat.json": "a7722018aa3cb22763e3a2720743c2f571dcc948a907aaab79a8639eb56fd83f",
+    "results/llm/cpu-replay.json": "52db9a0df2e45b284e718cad9a2b567415886ae2658f24e3c4c5358ca96c5dba",
+    "paper/main.pdf": "5055dbb3e209e1a244647067d50c212f5c8f048237d0003e8b9de5d0f90b19ea",
+    "research/LLM_ARXIV_PACKAGE.json": "81102a5ef3f47bfb13e3edf88515d7045ca40307177d5d336239d35e98e41080"
+  },
+  "coverage": {
+    "models": [
+      "pythia160m",
+      "pythia1b",
+      "pythia28b",
+      "qwen06b",
+      "qwen17b",
+      "qwen4b",
+      "qwen8b",
+      "smol360m",
+      "smol17b"
+    ],
+    "pretrained_models": 9,
+    "evaluation_adapter_checkpoints": 27,
+    "calibration_adapter_checkpoints": 4,
+    "evaluation_cases": 1620,
+    "calibration_cases": 144,
+    "method_outputs": 4860,
+    "joint_returned": 1080,
+    "joint_skipped_insufficient_rank": 540,
+    "decision_checkpoints": 9,
+    "decision_actions": 45,
+    "artificial_stress_cases": 72,
+    "scope": "K4 / 64 output channels, 256 adaptation steps; not independent pretraining seeds, all model types or official generation benchmarks"
+  },
+  "quality": {
+    "joint_max_factor_error": 0.03377528628589339,
+    "joint_bad_outputs": 0,
+    "incremental_decision_value_over_effective_clustering_demonstrated": false,
+    "retained_projected_combined_false_acceptances": 43,
+    "retained_projected_residual_false_acceptances": 20
+  },
+  "tests": {
+    "full_primary_passed": 171,
+    "full_primary_warnings": 1,
+    "full_primary_log_sha256": "5869976bcab7f4ca0aeffbce84ecd22a78976c1452a5aec2c33559a5edb9b9b6",
+    "isolated_cpu_llm_passed": 9,
+    "isolated_cpu_llm_log_sha256": "f4a62bceaa8fb3cff227351052b8c6e744b52305a2225194567bb44f0b4fe70a",
+    "initial_cpu_tolerance_failure_retained": "research/llm-run-logs/cpu-tests-initial.log",
+    "freeze_changed": false
+  },
+  "replay": {
+    "torch": "2.7.1+cpu",
+    "cases": 81,
+    "method_outputs": 243,
+    "max_estimate_orbit_difference": 1.3875544956339982e-10,
+    "acceptance_disagreements": 0,
+    "full_space_checks": 3,
+    "max_full_space_absolute_difference": 3.7192471324942744e-15,
+    "scope": "81 preselected query cases across all 27 checkpoints, three estimators. Reuses frozen observations; not independent backbone training or a proof."
+  },
+  "checks": {
+    "full_repository_verify": "passed",
+    "source_and_corpus_freeze": "passed",
+    "summary_and_csv_rebuild": "byte-identical",
+    "five_tables_and_two_figures_rebuild": "byte-identical",
+    "legacy_source_and_derived_artifacts": "passed",
+    "existing_theory_sections_unchanged": [
+      "sections/theory.tex",
+      "sections/appendix_theory.tex",
+      "sections/appendix_enhancement_theory.tex",
+      "sections/appendix_finite_noisy_theory.tex",
+      "sections/appendix_trusted_theory.tex"
+    ],
+    "isolated_full_space_residual_identity": "passed",
+    "secondary_hashes_and_grid": "passed"
+  },
+  "manuscript": {
+    "pages": 61,
+    "main_text_ends_page": 8,
+    "arxiv_files": 60,
+    "clean_builds": 3,
+    "pdf_text_matches": true,
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "template": "ICLR2027 retained",
+    "author": "Placeholder retained by user request",
+    "archive_sha256": "6f3a4a04023d414cb4b577d9392e0d4ac6e82caad1afdedcc1c0552c4dbe6c2b"
+  },
+  "visual_review": {
+    "contact_sheet_pages_inspected": 61,
+    "individual_new_content_pages": [
+      7,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "figures_enlarged_for_legibility": true,
+    "observed_clipping_or_overlap": false,
+    "scope": "Layout check; not pixel-level verification of every equation; final rate clarification inspected on affected pages"
+  },
+  "citations": {
+    "cited_keys": 57,
+    "bib_entries": 68,
+    "new_provenance_entries": 6,
+    "missing_keys": [],
+    "inherited_technical_access_limitations_retained": true
+  },
+  "compute": {
+    "hardware": "8 RTX5090 32607 MiB each",
+    "evaluation_training_seconds_sum": 351.3615618497133,
+    "evaluation_training_stage_seconds_sum": 798.9033781215549,
+    "evaluation_observation_seconds_sum": 1104.1148543385789,
+    "evaluation_cpu_recovery_seconds_sum": 747.5875776973553,
+    "decision_stage_seconds_sum": 305.72633630083874,
+    "peak_allocated_gpu_gib": 19.07652473449707,
+    "timing_scope": "Sum of per-job elapsed times under concurrency, not wall-clock makespan, device active time or total research effort"
+  },
+  "not_done": [
+    "Actual arXiv upload/processing",
+    "Author metadata completion (deferred)",
+    "External human peer review",
+    "Llama3.2 access-gated models",
+    "Full backbone training, arbitrary K/adapters/MoE or models above8B",
+    "Claim of additional downstream value or globally reliable rejection"
+  ]
+}

@@ -1,0 +1,36 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-adamw-seed0 64 events 1
+qwen06b-adamw-seed0 128 events 2
+qwen06b-adamw-seed0 192 events 2
+qwen06b-adamw-seed0 256 events 2
+qwen06b-adamw-seed0 complete 2 events validation 3.566359430551529 2.887784168124199
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-adamw-seed1 64 events 0
+qwen06b-adamw-seed1 128 events 0
+qwen06b-adamw-seed1 192 events 1
+qwen06b-adamw-seed1 256 events 1
+qwen06b-adamw-seed1 complete 1 events validation 3.5667110830545425 2.9089983105659485
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-adamw-seed2 64 events 2
+qwen06b-adamw-seed2 128 events 2
+qwen06b-adamw-seed2 192 events 2
+qwen06b-adamw-seed2 256 events 2
+qwen06b-adamw-seed2 complete 2 events validation 3.566654995083809 2.8973408341407776
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-sgd-seed0 64 events 0
+qwen06b-sgd-seed0 128 events 0
+qwen06b-sgd-seed0 192 events 0
+qwen06b-sgd-seed0 256 events 0
+qwen06b-sgd-seed0 complete 0 events validation 3.566359430551529 3.55169315636158
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-sgd-seed1 64 events 0
+qwen06b-sgd-seed1 128 events 0
+qwen06b-sgd-seed1 192 events 0
+qwen06b-sgd-seed1 256 events 0
+qwen06b-sgd-seed1 complete 0 events validation 3.5667110830545425 3.55104461312294
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b-sgd-seed2 64 events 0
+qwen06b-sgd-seed2 128 events 0
+qwen06b-sgd-seed2 192 events 0
+qwen06b-sgd-seed2 256 events 0
+qwen06b-sgd-seed2 complete 0 events validation 3.566654995083809 3.547403872013092

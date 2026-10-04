@@ -1,0 +1,705 @@
+{
+  "checkpoint": {
+    "language_config": {
+      "amp": true,
+      "batch_size": 32,
+      "checkpoint_load": null,
+      "checkpoint_save": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed1.pt",
+      "depth": 12,
+      "dimension": 256,
+      "eval_batches": 100,
+      "hard": false,
+      "hidden_dimension": 1024,
+      "log_every": 250,
+      "lr": 0.0003,
+      "num_bases": 4,
+      "num_heads": 8,
+      "router_init": "pattern_cycle",
+      "router_pattern": null,
+      "router_trainable": true,
+      "seed": 1,
+      "sequence_length": 128,
+      "steps": 1500,
+      "tau_end": 1.0,
+      "tau_start": 1.0,
+      "test_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/test.txt",
+      "train_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/train.txt",
+      "usage_strength": 0.0,
+      "validation_path": "/root/autodl-tmp/v2explorer_iclr/data/wikitext-2/valid.txt",
+      "vertex_strength": 0.0,
+      "warmup_steps": 500,
+      "weight_decay": 0.1
+    },
+    "metadata": {
+      "corpus_sha256": {
+        "combined": "f6981cccae2eed9c691dcb5589c1f5027c2edf3ea7b99b04b9e068c1f3d1adae",
+        "test": "d790b833ef8cf03a90db7bf1271b7520b83c45ce07ba3c1a9699df81e239eca0",
+        "train": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+        "validation": "f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8"
+      },
+      "extra": {
+        "best_validation_bpb": 2.19852793430379,
+        "checkpoint_kind": "final_predeclared_training_step",
+        "elapsed_seconds": 91.07693457603455,
+        "final_probabilities": [
+          [
+            0.9985862970352173,
+            0.000471952254883945,
+            0.00046908878721296787,
+            0.0004726157058030367
+          ],
+          [
+            0.00032603429281152785,
+            0.9990192651748657,
+            0.00032928091241046786,
+            0.00032533355988562107
+          ],
+          [
+            0.0002717313473112881,
+            0.00027284742100164294,
+            0.9991806149482727,
+            0.00027484423480927944
+          ],
+          [
+            0.0003288274456281215,
+            0.0003347164602018893,
+            0.00032955955248326063,
+            0.9990069270133972
+          ],
+          [
+            0.9985812902450562,
+            0.00048058570246212184,
+            0.0004662502615246922,
+            0.00047189637552946806
+          ],
+          [
+            0.0003416403487790376,
+            0.9989643096923828,
+            0.00034689268795773387,
+            0.00034713061177171767
+          ],
+          [
+            0.00028312005451880395,
+            0.0002783577365335077,
+            0.9991536140441895,
+            0.0002849555457942188
+          ],
+          [
+            0.0003166815440636128,
+            0.00031910656252875924,
+            0.00031794889946468174,
+            0.999046266078949
+          ],
+          [
+            0.9986822009086609,
+            0.0004418760072439909,
+            0.00043698088848032057,
+            0.00043897907016798854
+          ],
+          [
+            0.0004109080764465034,
+            0.9987634420394897,
+            0.0004102214879821986,
+            0.0004153518530074507
+          ],
+          [
+            0.00035045103868469596,
+            0.0003468893119134009,
+            0.9989526271820068,
+            0.0003500423626974225
+          ],
+          [
+            0.0003355888184159994,
+            0.00033741307561285794,
+            0.00033698586048558354,
+            0.998989999294281
+          ]
+        ],
+        "initial_probabilities": [
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ],
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ],
+          [
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735,
+            0.0003351253690198064
+          ],
+          [
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.0003351253690198064,
+            0.9989946484565735
+          ]
+        ],
+        "router_mean_l1_movement": 0.00031262170523405075,
+        "saved_at_step": 1500,
+        "test_bpb": 2.187842849985732
+      },
+      "format_version": 1
+    },
+    "parameters_frozen_for_audit": true,
+    "path": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed1.pt",
+    "primary_checks": {
+      "all_pass": true,
+      "checks": {
+        "checkpoint_kind_is_predeclared_final": true,
+        "positive_final_temperature": true,
+        "router_was_trainable": true,
+        "saved_at_step_is_1500": true,
+        "soft_router_not_hard": true,
+        "training_steps_is_1500": true
+      },
+      "expected_training_steps": 1500
+    },
+    "sha256": "ae09aaf044be8bbcdc7acf08827d96a47423a4422bff361e2d0b82513ab7a4d5"
+  },
+  "factor_diagnostics": {
+    "A_condition_number": 1.0017384342476292,
+    "A_frobenius_norm": 3.4603285167084987,
+    "A_full_column_rank": true,
+    "A_sigma_max": 1.73206648228156,
+    "A_sigma_min": 1.7290606240764381,
+    "B_condition_number": 1.0760503322466426,
+    "B_frobenius_norm": 57.1549573425734,
+    "B_full_row_rank": true,
+    "B_sigma_max": 29.41840524699806,
+    "B_sigma_min": 27.339246469611272,
+    "depth_n": 12,
+    "effective_dimension_d": 787712,
+    "maximum_A_entry": 0.9991805770535446,
+    "minimum_A_entry": 0.00027173132026057364,
+    "num_bases_K": 4,
+    "rank_A": 4,
+    "rank_B": 4,
+    "theorem_rank_assumptions_pass": true
+  },
+  "format": "router-response-audit-v1",
+  "formula_validation": {
+    "autograd_relative_tolerance": 1e-10,
+    "finite_difference_relative_tolerance": 1e-06,
+    "native_extracted_factor_model": {
+      "analytic_vs_autograd_max_abs_error": 0.0,
+      "analytic_vs_autograd_relative_l2_error": 0.0,
+      "best_finite_difference_relative_l2_error": 4.6323131114743345e-15,
+      "columns": 32,
+      "finite_difference": [
+        {
+          "epsilon": 0.01,
+          "max_abs_error": 1.3100631690576847e-14,
+          "relative_l2_error": 4.6323131114743345e-15
+        },
+        {
+          "epsilon": 0.001,
+          "max_abs_error": 2.0219936835985663e-14,
+          "relative_l2_error": 4.926903226471207e-15
+        },
+        {
+          "epsilon": 0.0001,
+          "max_abs_error": 2.2382096176443156e-13,
+          "relative_l2_error": 5.814923447824891e-14
+        },
+        {
+          "epsilon": 1e-05,
+          "max_abs_error": 1.9976797993592754e-12,
+          "relative_l2_error": 5.287309658406505e-13
+        }
+      ],
+      "linear_loss_effective_gradient": "fixed_G",
+      "rows": 4,
+      "seed": 750000
+    },
+    "nonpermutation_extracted_factor_model": {
+      "analytic_vs_autograd_max_abs_error": 1.1102230246251565e-16,
+      "analytic_vs_autograd_relative_l2_error": 2.047284219856605e-17,
+      "best_finite_difference_relative_l2_error": 6.416667632913798e-13,
+      "columns": 32,
+      "finite_difference": [
+        {
+          "epsilon": 0.01,
+          "max_abs_error": 9.374379317250714e-08,
+          "relative_l2_error": 4.74894232651963e-08
+        },
+        {
+          "epsilon": 0.001,
+          "max_abs_error": 9.374347964552499e-10,
+          "relative_l2_error": 4.748948020607748e-10
+        },
+        {
+          "epsilon": 0.0001,
+          "max_abs_error": 9.40159061713075e-12,
+          "relative_l2_error": 4.744664680804892e-12
+        },
+        {
+          "epsilon": 1e-05,
+          "max_abs_error": 1.237634994488701e-12,
+          "relative_l2_error": 6.416667632913798e-13
+        }
+      ],
+      "linear_loss_effective_gradient": "fixed_G",
+      "rows": 4,
+      "seed": 750000
+    },
+    "pass": true
+  },
+  "interpretation_boundary": {
+    "finite_probe_warning": "Gaussian probes are a detection audit, not equality certification; non-permutation gauges can approach permutations arbitrarily closely",
+    "identified_if_exact_full_response_were_available": "current softmax-router factor coordinates up to basis permutation, under strict positivity, full-rank A/B, and Euclidean-flow assumptions",
+    "not_identified": [
+      "historical sharing graph",
+      "generative truth",
+      "which gauge AdamW would select",
+      "reliability of a downstream router-based decision"
+    ]
+  },
+  "packing": {
+    "convention": "model.named_modules BasisLinear registration order; each module weight then bias; each tensor flattened after its basis axis",
+    "effective_dimension": 787712,
+    "excluded_parameters": "embeddings, LayerNorms, and other non-BasisLinear parameters are not part of the shared-router Theta=A B estimand",
+    "layout": [
+      {
+        "end": 196608,
+        "key": "attention.qkv.weight",
+        "module_name": "attention.qkv",
+        "parameter_name": "weight",
+        "parameter_shape_without_basis": [
+          768,
+          256
+        ],
+        "start": 0
+      },
+      {
+        "end": 262144,
+        "key": "attention.output.weight",
+        "module_name": "attention.output",
+        "parameter_name": "weight",
+        "parameter_shape_without_basis": [
+          256,
+          256
+        ],
+        "start": 196608
+      },
+      {
+        "end": 524288,
+        "key": "up.weight",
+        "module_name": "up",
+        "parameter_name": "weight",
+        "parameter_shape_without_basis": [
+          1024,
+          256
+        ],
+        "start": 262144
+      },
+      {
+        "end": 525312,
+        "key": "up.bias",
+        "module_name": "up",
+        "parameter_name": "bias",
+        "parameter_shape_without_basis": [
+          1024
+        ],
+        "start": 524288
+      },
+      {
+        "end": 787456,
+        "key": "down.weight",
+        "module_name": "down",
+        "parameter_name": "weight",
+        "parameter_shape_without_basis": [
+          256,
+          1024
+        ],
+        "start": 525312
+      },
+      {
+        "end": 787712,
+        "key": "down.bias",
+        "module_name": "down",
+        "parameter_name": "bias",
+        "parameter_shape_without_basis": [
+          256
+        ],
+        "start": 787456
+      }
+    ],
+    "reconstruction_audit": {
+      "max_abs_error": 0.0,
+      "per_tensor_max_abs_error": {
+        "attention.output.weight": 0.0,
+        "attention.qkv.weight": 0.0,
+        "down.bias": 0.0,
+        "down.weight": 0.0,
+        "up.bias": 0.0,
+        "up.weight": 0.0
+      },
+      "relative_l2_error": 0.0
+    },
+    "reconstruction_pass": true,
+    "reconstruction_relative_tolerance": 5e-06
+  },
+  "permutation_control": {
+    "control_tolerance": 5e-11,
+    "equivalence": {
+      "condition_number": 1.0000000000000002,
+      "effective_max_abs_error": 2.7755575615628914e-17,
+      "effective_relative_l2_error": 8.654654483158522e-17,
+      "minimum_transformed_probability": 0.00027173132026057364,
+      "row_sum_max_abs_error": 0.0
+    },
+    "gauge": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "pass": true,
+    "probe_audit": {
+      "detected_probe_count": 0,
+      "empirical_detection_rate": 0.0,
+      "interpretation": "empirical fixed-probe detection only; not a finite-sample recovery guarantee or a historical-structure claim",
+      "maximum_relative_response_difference": 8.819936915699749e-17,
+      "mean_squared_response_difference": 2.1946021491781693e-25,
+      "median_relative_response_difference": 8.813663685529179e-17,
+      "minimum_relative_response_difference": 8.8094987359684e-17,
+      "probe_count": 8,
+      "probe_distribution": "iid_standard_Gaussian_entries_generated_on_CPU",
+      "probe_seed_start": 740001,
+      "probes": [
+        {
+          "candidate_response_frobenius_norm": 5313.8744503091875,
+          "gradient_frobenius_norm": 3075.0278063699325,
+          "reference_response_frobenius_norm": 5313.8744503091875,
+          "relative_response_difference": 8.81898174711085e-17,
+          "response_difference_frobenius_norm": 4.686296178371543e-13,
+          "response_difference_over_gradient_norm": 1.5239849762216332e-16,
+          "seed": 740001,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5313.420929217353,
+          "gradient_frobenius_norm": 3074.8466440824295,
+          "reference_response_frobenius_norm": 5313.420929217353,
+          "relative_response_difference": 8.8094987359684e-17,
+          "response_difference_frobenius_norm": 4.680857495960831e-13,
+          "response_difference_over_gradient_norm": 1.5223060001932727e-16,
+          "seed": 740002,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5312.360078221726,
+          "gradient_frobenius_norm": 3073.813219097412,
+          "reference_response_frobenius_norm": 5312.360078221726,
+          "relative_response_difference": 8.813445737501324e-17,
+          "response_difference_frobenius_norm": 4.682019728747547e-13,
+          "response_difference_over_gradient_norm": 1.5231959117289388e-16,
+          "seed": 740003,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5315.8081410336,
+          "gradient_frobenius_norm": 3074.988883884748,
+          "reference_response_frobenius_norm": 5315.8081410336,
+          "relative_response_difference": 8.81643722871042e-17,
+          "response_difference_frobenius_norm": 4.686648879529057e-13,
+          "response_difference_over_gradient_norm": 1.524118966442649e-16,
+          "seed": 740004,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5317.201285729899,
+          "gradient_frobenius_norm": 3075.5012395911776,
+          "reference_response_frobenius_norm": 5317.201285729899,
+          "relative_response_difference": 8.819936915699749e-17,
+          "response_difference_frobenius_norm": 4.68973799082153e-13,
+          "response_difference_over_gradient_norm": 1.5248694848339358e-16,
+          "seed": 740005,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5314.513289196547,
+          "gradient_frobenius_norm": 3074.456901713737,
+          "reference_response_frobenius_norm": 5314.513289196547,
+          "relative_response_difference": 8.812205342332341e-17,
+          "response_difference_frobenius_norm": 4.683258239895403e-13,
+          "response_difference_over_gradient_norm": 1.523279847339835e-16,
+          "seed": 740006,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5313.831765764932,
+          "gradient_frobenius_norm": 3074.759808410796,
+          "reference_response_frobenius_norm": 5313.831765764932,
+          "relative_response_difference": 8.812876585001304e-17,
+          "response_difference_frobenius_norm": 4.68301435451459e-13,
+          "response_difference_over_gradient_norm": 1.523050464528814e-16,
+          "seed": 740007,
+          "small_ball_detected": false
+        },
+        {
+          "candidate_response_frobenius_norm": 5315.961569945467,
+          "gradient_frobenius_norm": 3075.19257510838,
+          "reference_response_frobenius_norm": 5315.961569945467,
+          "relative_response_difference": 8.813881633557034e-17,
+          "response_difference_frobenius_norm": 4.685425604603737e-13,
+          "response_difference_over_gradient_norm": 1.5236202254548585e-16,
+          "seed": 740008,
+          "small_ball_detected": false
+        }
+      ],
+      "small_ball_relative_threshold": 1e-08
+    }
+  },
+  "positive_stochastic_nonpermutation": {
+    "detected_by_at_least_one_fixed_probe": true,
+    "equivalence": {
+      "condition_number": 1.5384615384615385,
+      "effective_max_abs_error": 5.551115123125783e-17,
+      "effective_relative_l2_error": 1.697808166886258e-16,
+      "minimum_transformed_probability": 0.08767662535816938,
+      "row_sum_max_abs_error": 0.0
+    },
+    "gauge": [
+      [
+        0.7375,
+        0.0875,
+        0.0875,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.7375,
+        0.0875,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.0875,
+        0.7375,
+        0.0875
+      ],
+      [
+        0.0875,
+        0.0875,
+        0.0875,
+        0.7375
+      ]
+    ],
+    "is_nonpermutation": true,
+    "probe_audit": {
+      "detected_probe_count": 8,
+      "empirical_detection_rate": 1.0,
+      "interpretation": "empirical fixed-probe detection only; not a finite-sample recovery guarantee or a historical-structure claim",
+      "maximum_relative_response_difference": 0.5098224901555808,
+      "mean_squared_response_difference": 7231791.325510282,
+      "median_relative_response_difference": 0.5051310351033897,
+      "minimum_relative_response_difference": 0.5027961033296446,
+      "probe_count": 8,
+      "probe_distribution": "iid_standard_Gaussian_entries_generated_on_CPU",
+      "probe_seed_start": 740001,
+      "probes": [
+        {
+          "candidate_response_frobenius_norm": 3317.7437976224005,
+          "gradient_frobenius_norm": 3075.0278063699325,
+          "reference_response_frobenius_norm": 5313.8744503091875,
+          "relative_response_difference": 0.5053762131438789,
+          "response_difference_frobenius_norm": 2685.5057468192686,
+          "response_difference_over_gradient_norm": 0.8733273049616763,
+          "seed": 740001,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3321.242983589704,
+          "gradient_frobenius_norm": 3074.8466440824295,
+          "reference_response_frobenius_norm": 5313.420929217353,
+          "relative_response_difference": 0.5063619665755719,
+          "response_difference_frobenius_norm": 2690.514270962301,
+          "response_difference_over_gradient_norm": 0.8750076288000315,
+          "seed": 740002,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3316.8163881814016,
+          "gradient_frobenius_norm": 3073.813219097412,
+          "reference_response_frobenius_norm": 5312.360078221726,
+          "relative_response_difference": 0.5048858570629007,
+          "response_difference_frobenius_norm": 2682.1354711197146,
+          "response_difference_over_gradient_norm": 0.8725759439304159,
+          "seed": 740003,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3333.2963809728994,
+          "gradient_frobenius_norm": 3074.988883884748,
+          "reference_response_frobenius_norm": 5315.8081410336,
+          "relative_response_difference": 0.5092697262905581,
+          "response_difference_frobenius_norm": 2707.180156997302,
+          "response_difference_over_gradient_norm": 0.88038697348955,
+          "seed": 740004,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3314.949884109802,
+          "gradient_frobenius_norm": 3075.5012395911776,
+          "reference_response_frobenius_norm": 5317.201285729899,
+          "relative_response_difference": 0.5027961033296446,
+          "response_difference_frobenius_norm": 2673.4680870843695,
+          "response_difference_over_gradient_norm": 0.8692788195525976,
+          "seed": 740005,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3319.4509221386975,
+          "gradient_frobenius_norm": 3074.456901713737,
+          "reference_response_frobenius_norm": 5314.513289196547,
+          "relative_response_difference": 0.5048482636641245,
+          "response_difference_frobenius_norm": 2683.022806270792,
+          "response_difference_over_gradient_norm": 0.8726818726179719,
+          "seed": 740006,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3341.4701899701267,
+          "gradient_frobenius_norm": 3074.759808410796,
+          "reference_response_frobenius_norm": 5313.831765764932,
+          "relative_response_difference": 0.5098224901555808,
+          "response_difference_frobenius_norm": 2709.1109430901047,
+          "response_difference_over_gradient_norm": 0.8810805109652846,
+          "seed": 740007,
+          "small_ball_detected": true
+        },
+        {
+          "candidate_response_frobenius_norm": 3317.60176252618,
+          "gradient_frobenius_norm": 3075.19257510838,
+          "reference_response_frobenius_norm": 5315.961569945467,
+          "relative_response_difference": 0.5046024187961171,
+          "response_difference_frobenius_norm": 2682.447066421687,
+          "response_difference_over_gradient_norm": 0.8722858815848789,
+          "seed": 740008,
+          "small_ball_detected": true
+        }
+      ],
+      "small_ball_relative_threshold": 1e-08
+    },
+    "selection": "predeclared_default_fixed_before_checkpoint_response_inspection"
+  },
+  "protocol": {
+    "checkpoint": "/root/autodl-tmp/v2_1_decision/repo/results_primary/language_seed1.pt",
+    "device": "cuda",
+    "estimand": "current_layer_effective_parameter_Euclidean_instantaneous_response",
+    "eta_b": 1.0,
+    "eta_z": 1.0,
+    "excluded_claims": [
+      "AdamW_training_dynamics",
+      "optimizer_selection_stability",
+      "historical_or_generative_sharing_truth",
+      "downstream_router_decision_reliability"
+    ],
+    "gauge_family": "deterministic_positive_stochastic_shrink_to_uniform",
+    "gauge_strength": 0.35,
+    "gauge_strength_is_predeclared_default": true,
+    "minimum_probability": 1e-12,
+    "operator_materialized": false,
+    "output": "/root/autodl-tmp/v2_1_decision/repo/results_primary/response_audit_seed1.json",
+    "probe_count": 8,
+    "probe_seed": 740001,
+    "small_ball_relative_threshold": 1e-08
+  },
+  "response_definition": {
+    "eta_b": 1.0,
+    "eta_z": 1.0,
+    "formula": "eta_b A A^T G + (eta_z/tau^2) row_i[G_i B^T (diag(a_i)-a_i a_i^T)^2 B]",
+    "optimizer_warning": "hypothetical Euclidean gradient flow at the checkpoint; the training checkpoint used AdamW and this audit does not claim to reproduce AdamW state or its next update",
+    "sign": "reported_operator_is_minus_Theta_dot",
+    "temperature_tau": 1.0
+  },
+  "source_sha256": {
+    "experiments/run_response_audit.py": "df13788152a4dc88ff1553d67d467a0e62cc29a50d2eecad4090dd221e498010",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6"
+  },
+  "status": "completed_current_coordinate_response_audit",
+  "versions": {
+    "cuda_available": true,
+    "cuda_runtime": "11.3",
+    "python": "3.8.10",
+    "torch": "1.11.0+cu113"
+  }
+}

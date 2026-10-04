@@ -1,0 +1,13 @@
+# Frontier notes for the pretrained-model extension
+
+Scope: extension of Sharing Coordinates from controlled byte-LMs to frozen pretrained dense LMs; checked 2026-09-25 research date. No claim of a new general recovery algorithm or state of the art. The existing optimizer-response novelty review remains in frontier_response_identifiability.md and RELEASE_PRIOR_ART.md; this update does not replace its technical-access limitations.
+
+Primary sources accessed: official arXiv abstract and BibTeX endpoints for Pythia (2304.01373), Qwen3 (2505.09388), SmolLM2 (2502.02737), WikiText (1609.07843), GSM8K (2110.14168) and MBPP (2108.07732), plus official model cards/configs and pinned public dataset repositories. Raw BibTeX responses and model access/config metadata are retained. Titles and complete author lists are taken from those sources; entries are cited as arXiv reports, without invented venue/page information.
+
+Pythia provides a controlled model suite with shared training-data order; the selected three final checkpoints are useful for size coverage but still change both depth and width. Qwen3 dense releases add another attention architecture and larger sizes, but the selected non-Base checkpoints also introduce post-training confounds. SmolLM2 supplies a held-out public family after the proposed Llama3.2 downloads proved unavailable. None of these reports establishes that our specific adapter, training budget, gradient domains or recovery procedure should succeed.
+
+The benchmarks are not directly comparable to published task scores: this study uses full-sequence reference-text NLL and gradients on article-separated roles, not generated-answer correctness, MBPP execution or official perplexity evaluation. Model tokenizers differ, and public pretraining contamination remains unknown. Thus no external accuracy leaderboard is reproduced or challenged.
+
+The crucial cheaper decision baseline is internal: balanced effective-parameter clustering with the same group count, refit and update budget. It produces the same partition as both native and recovered routers at all nine decision units. This directly prevents an unsupported claim that factor recovery adds practical structural-selection value. Random balanced routing is another control, but beating random alone would not establish the need for recovery.
+
+Source URLs: https://arxiv.org/abs/2304.01373 ; https://arxiv.org/abs/2505.09388 ; https://arxiv.org/abs/2502.02737 ; https://arxiv.org/abs/1609.07843 ; https://arxiv.org/abs/2110.14168 ; https://arxiv.org/abs/2108.07732 . Exact data/model revisions are in the inventory locks rather than current branch URLs.

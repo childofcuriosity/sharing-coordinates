@@ -1,0 +1,3 @@
+{"stage": "experiments.recover_llm_shared", "model": "pythia1b", "seed": 101, "split": "calibration", "device": null, "exit_code": 0, "log": ".artifact-llm/recover_llm_shared-calibration-pythia1b-101-1790281244890482090.log"}
+{"stage": "experiments.recover_llm_shared", "model": "pythia160m", "seed": 102, "split": "calibration", "device": null, "exit_code": 0, "log": ".artifact-llm/recover_llm_shared-calibration-pythia160m-102-1790281244890687963.log"}
+{"stage": "experiments.recover_llm_shared", "model": "pythia1b", "seed": 102, "split": "calibration", "device": null, "exit_code": 0, "log": ".artifact-llm/recover_llm_shared-calibration-pythia1b-102-1790281244890899427.log"}

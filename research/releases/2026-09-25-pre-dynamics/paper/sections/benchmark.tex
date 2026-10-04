@@ -1,0 +1,90 @@
+\section{Detailed audit protocols and historical settings}
+\label{sec:benchmark}
+
+This appendix preserves the protocols for the original response and
+decision audits. The current numerical overview is in
+Section~\ref{sec:experiments}; the later controlled partition experiments and
+noisy-recovery studies have separate protocols in
+Appendices~\ref{app:enhancement-experiments} and~\ref{app:trusted-experiments}.
+They use different training configurations and must not be pooled as one
+replication rate.
+
+\subsection{Frozen-checkpoint response audit}
+
+We first audit the distinguishing observation used by the new theorem: the
+instantaneous Euclidean response of the \emph{current} softmax-router chart.
+At each of three independently trained soft-router byte-LM checkpoints, we
+verify the theorem's assumptions and exact gauge construction.  On a
+predeclared $4\times32$ extraction we check
+Equation~\ref{eq:response_blocks} against autograd and finite differences; on
+the full $12\times787{,}712$ factor model we evaluate eight seeded Gaussian
+directions plus a permutation control.  Separately, the $K=4$ interventions of
+Corollary~\ref{cor:response_tomography} reconstruct the structured response.
+Their full-dimensional outputs are analytic equation evaluations---not four
+full-model JVP calls---with the extraction supplying the implementation check.
+The Gaussian test is fixed-alternative; tomography assumes exact common
+product, rank/dimension conditions, and this response family.  Neither is an
+AdamW-trajectory or historical-graph claim.
+
+An additive full-dimensional audit replaces the analytic observations with
+reverse-mode factor gradients followed by forward-mode JVPs of the packed
+effective-parameter map. It retains the same three checkpoints and fixed
+gauge, uses two unseen response directions per chart to test reconstruction,
+and records a five-level fixed-norm observation-noise sensitivity grid.
+Its prospective local protocol, source bindings, and numerical gates are
+released separately from the original audit; no retraining is involved.
+
+\subsection{ASLoRA first-merge decision audit}
+\label{sec:aslora-protocol}
+
+This auxiliary decision experiment audits a documented reimplementation of the
+accessible ASLoRA-v2 first-merge rule~\citep{hu2024aslorav2}.  We train
+rank-eight, $\alpha=16$ adapters on
+RoBERTa-base/MRPC to the first scheduled merge opportunity, optimizer step
+$560$.  Query and value select separate pairs; a joint pair is sensitivity
+analysis.  Because the source leaves adjacent-versus-all-pairs candidates
+ambiguous, we report both.  A frozen bank contains identity, orthogonal,
+diagonal, and dense gauges.  Each float64 gauge selects only a layer-index
+action by running-$B$ distance; we then apply the same temporary directed tie
+in the unchanged canonical model and evaluate the full validation split.
+
+The selection proxy and the executed action are different estimands.  Writing
+$c=\alpha/r$, the common change of rank coordinates
+$B_{i,Q}=B_iQ$, $A_Q=Q^{-1}A$ leaves
+$cB_{i,Q}A_Q=cB_iA$ fixed, but scores a candidate
+$p=(\ell\leftarrow u)$ by the order-equivalent squared score
+\begin{equation}
+ s_p(Q)=\|({\bar B}_\ell-{\bar B}_u)Q\|_F^2.
+ \label{eq:aslora_selection_score}
+\end{equation}
+Executing that index action instead replaces the \emph{current} $B_\ell^t$
+by $B_u^t$; its immediate weight perturbation is
+$c(B_u^t-B_\ell^t)A$, and its lower-layer local RMS disturbance is
+$\{\mathbb E\|c(B_u^t-B_\ell^t)Ax_\ell\|_2^2\}^{1/2}$.  Without assumptions
+linking historical averages, current factors, and the lower-layer input
+moment, the running score is not guaranteed to estimate action cost.
+
+Three comparisons separate coordinate dependence from decision quality:
+current effective-update Frobenius distance is gauge invariant and uses only
+the prevalidation snapshot; current local-activation RMS is gauge invariant
+but post-hoc and label-free; validation loss is a labeled oracle never used for
+selection.  We exhaust query-only, value-only, joint-same-pair, and selected
+composite actions, not their full Cartesian product.  Product invariance,
+restoration, and canonical-action checks gate the run; passing live-float32
+re-execution remains a numerical diagnostic, not the causal estimand.
+
+\subsection{Historical byte-LM same-budget partition-fold search}
+
+The original three-checkpoint experiment asked whether a controlled
+downstream consequence found at one checkpoint replicated.  At each of the same three byte-LM
+checkpoints, a
+predeclared finite router-only search seeks a positive-stochastic gauge that
+changes the argmax partition at the same four-group budget.  Both partitions
+are refit from the same effective tensors and compared on paired held-out
+batches; literal factor hardening is only a confounded diagnostic.  Fixed-budget
+failures remain negative results, not proofs of non-existence, so one successful
+checkpoint establishes possibility rather than prevalence.  All three routers
+meet the protocol's initialization-dominated flag.  Signed-local and same-sorted-group-size searches were unexecuted
+post-run amendments to this original protocol. They were subsequently
+executed at three fresh, more extensively trained checkpoints under the
+separate protocol in Appendix~\ref{app:enhancement-experiments}.

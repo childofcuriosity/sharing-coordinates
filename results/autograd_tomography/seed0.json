@@ -1,0 +1,235 @@
+{
+  "format": "autograd-tomography-v1",
+  "seed": 0,
+  "dimensions": {
+    "L": 12,
+    "K": 4,
+    "D": 787712
+  },
+  "tau": 1.0,
+  "eta_z": 1.0,
+  "eta_b": 1.0,
+  "dtype": "torch.float64",
+  "device": "cuda:0",
+  "measurement": "reverse_autograd_gradient_then_forward_mode_jvp_of_full_packed_map",
+  "checkpoint_sha256": "6f9fce092e9a7dba6a24de9178736425cbf27d62b2e385ecce0b2210a217324d",
+  "source_sha256": {
+    "experiments/run_autograd_tomography.py": "3ba5fc82dd58faf09ddbacbae2c69c50ab510f9d3f6937a03b9658b883faea56",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/response_tomography.py": "88a4dd2c335e8d6e1cea0636705abc31331a60201f0a03ce7cba3548b066a6d0",
+    "research/AUTOGRAD_TOMOGRAPHY_PROTOCOL.md": "bc412147aea147154d08e7cee38929abdec6320a9b70f162ef5e4259858b23db"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "charts": {
+    "native": {
+      "product_relative_error": 1.4581925084841483e-16,
+      "logit_reencoding_relative_error": 1.434869148835222e-16,
+      "probes": [
+        {
+          "index": 0,
+          "formula_relative_error": 4.224616219129061e-17
+        },
+        {
+          "index": 1,
+          "formula_relative_error": 4.020353350413599e-17
+        },
+        {
+          "index": 2,
+          "formula_relative_error": 4.8627327726461864e-17
+        },
+        {
+          "index": 3,
+          "formula_relative_error": 5.911113944916332e-17
+        }
+      ],
+      "heldout": [
+        {
+          "seed": 910000,
+          "relative_error": 3.1945746641908035e-14
+        },
+        {
+          "seed": 920000,
+          "relative_error": 3.1936166423154964e-14
+        }
+      ],
+      "gram_relative_error": 3.19611906119844e-14,
+      "local_relative_error": 5.601039570560217e-11
+    },
+    "permutation": {
+      "product_relative_error": 1.6520367570103715e-16,
+      "logit_reencoding_relative_error": 1.434869148835222e-16,
+      "probes": [
+        {
+          "index": 0,
+          "formula_relative_error": 3.378544833097236e-17,
+          "relative_gap_from_native": 9.281007821947988e-17
+        },
+        {
+          "index": 1,
+          "formula_relative_error": 3.413408736276735e-17,
+          "relative_gap_from_native": 9.613282916750124e-17
+        },
+        {
+          "index": 2,
+          "formula_relative_error": 4.271154582959271e-17,
+          "relative_gap_from_native": 9.650210610699377e-17
+        },
+        {
+          "index": 3,
+          "formula_relative_error": 5.88508067695348e-17,
+          "relative_gap_from_native": 9.726805784677363e-17
+        }
+      ],
+      "heldout": [
+        {
+          "seed": 910000,
+          "relative_error": 3.196903539120973e-14
+        },
+        {
+          "seed": 920000,
+          "relative_error": 3.1959287963924456e-14
+        }
+      ],
+      "gram_relative_error": 3.19777349839927e-14,
+      "local_relative_error": 5.607317737013238e-11
+    },
+    "nonpermutation": {
+      "product_relative_error": 2.432673422955146e-16,
+      "logit_reencoding_relative_error": 1.683156628355023e-16,
+      "probes": [
+        {
+          "index": 0,
+          "formula_relative_error": 2.7024873322874964e-16,
+          "relative_gap_from_native": 0.9717191711212383
+        },
+        {
+          "index": 1,
+          "formula_relative_error": 3.5188545498153214e-16,
+          "relative_gap_from_native": 0.9734402346363842
+        },
+        {
+          "index": 2,
+          "formula_relative_error": 2.5427061008491395e-16,
+          "relative_gap_from_native": 0.9723494456425493
+        },
+        {
+          "index": 3,
+          "formula_relative_error": 2.8485908162289093e-16,
+          "relative_gap_from_native": 0.9712411608672562
+        }
+      ],
+      "heldout": [
+        {
+          "seed": 910000,
+          "relative_error": 4.643716611989636e-14
+        },
+        {
+          "seed": 920000,
+          "relative_error": 4.68182295503418e-14
+        }
+      ],
+      "gram_relative_error": 4.641759804931482e-14,
+      "local_relative_error": 4.2181467047358555e-14
+    }
+  },
+  "noise": [
+    {
+      "relative_noise": 0.0,
+      "absolute_noise_norms": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gram_absolute_error": 0.0,
+      "local_absolute_error": 0.0,
+      "gram_bound": 0.0,
+      "local_bound": 0.0,
+      "gram_roundoff_slack": 5.986824747886529e-08,
+      "local_roundoff_slack": 1e-08,
+      "bounds_pass": true
+    },
+    {
+      "relative_noise": 1e-10,
+      "absolute_noise_norms": [
+        1.1994365902176691e-09,
+        1.0394150309626332e-09,
+        1.0394179389146957e-09,
+        1.0394465063288572e-09
+      ],
+      "gram_absolute_error": 4.781890284587442e-12,
+      "local_absolute_error": 1.0338560245916123e-11,
+      "gram_bound": 1.1994365902176691e-09,
+      "local_bound": 1.0557489521921481e-08,
+      "gram_roundoff_slack": 5.986824747886529e-08,
+      "local_roundoff_slack": 1e-08,
+      "bounds_pass": true
+    },
+    {
+      "relative_noise": 1e-08,
+      "absolute_noise_norms": [
+        1.199436590217669e-07,
+        1.0394150309626334e-07,
+        1.0394179389146956e-07,
+        1.0394465063288572e-07
+      ],
+      "gram_absolute_error": 4.6218041591292066e-10,
+      "local_absolute_error": 1.117410994165381e-09,
+      "gram_bound": 1.199436590217669e-07,
+      "local_bound": 1.055748952192148e-06,
+      "gram_roundoff_slack": 5.986824747886529e-08,
+      "local_roundoff_slack": 1e-08,
+      "bounds_pass": true
+    },
+    {
+      "relative_noise": 1e-06,
+      "absolute_noise_norms": [
+        1.1994365902176689e-05,
+        1.0394150309626332e-05,
+        1.0394179389146955e-05,
+        1.039446506328857e-05
+      ],
+      "gram_absolute_error": 3.994395142386471e-08,
+      "local_absolute_error": 1.0702159912662524e-07,
+      "gram_bound": 1.1994365902176689e-05,
+      "local_bound": 0.00010557489521921479,
+      "gram_roundoff_slack": 5.986824747886529e-08,
+      "local_roundoff_slack": 1e-08,
+      "bounds_pass": true
+    },
+    {
+      "relative_noise": 0.0001,
+      "absolute_noise_norms": [
+        0.001199436590217669,
+        0.0010394150309626334,
+        0.0010394179389146957,
+        0.0010394465063288572
+      ],
+      "gram_absolute_error": 4.819821626909095e-06,
+      "local_absolute_error": 1.0462190245709254e-05,
+      "gram_bound": 0.001199436590217669,
+      "local_bound": 0.01055748952192148,
+      "gram_roundoff_slack": 5.986824747886529e-08,
+      "local_roundoff_slack": 1e-08,
+      "bounds_pass": true
+    }
+  ],
+  "gates": {
+    "formula_agreement": true,
+    "heldout_prediction": true,
+    "product_residual": true,
+    "permutation_control": true,
+    "fixed_alternative_separated": true,
+    "noise_bounds": true
+  },
+  "all_pass": true,
+  "seconds": 17.39378477120772,
+  "peak_cuda_allocated_bytes": 2026392576
+}

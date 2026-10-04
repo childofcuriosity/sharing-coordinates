@@ -1,0 +1,85 @@
+{
+  "format": "llm-acceptance-policy-v1",
+  "freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "calibration_inputs": {
+    "results/llm/calibration/pythia160m-seed101/recovery.json": "2f3d279b0a188e9cdcd1dd727c5fef24b47b00d5a3c7f1f1d9892d04fcd03f78",
+    "results/llm/calibration/pythia160m-seed102/recovery.json": "89b2a415ea57d3029e6e8858e8f276deb178aedc70f824c9f52fe0679804df4e",
+    "results/llm/calibration/pythia1b-seed101/recovery.json": "86def30f86ad08e29fa8317c155b3a7c2c084685cd310bde8dc23265e222d639",
+    "results/llm/calibration/pythia1b-seed102/recovery.json": "254d17eb135e4870b8aa4f411e5065dd8712b6ad163d44447081b644181be957"
+  },
+  "policy": {
+    "spectral": {
+      "residual_only_score": {
+        "threshold": null,
+        "accepted": 0,
+        "bad": 0,
+        "eligible": 0,
+        "total": 144,
+        "reason": "no_feasible_threshold"
+      },
+      "condition_only_score": {
+        "threshold": null,
+        "accepted": 0,
+        "bad": 0,
+        "eligible": 0,
+        "total": 144,
+        "reason": "no_feasible_threshold"
+      },
+      "empirical_score": {
+        "threshold": null,
+        "accepted": 0,
+        "bad": 0,
+        "eligible": 0,
+        "total": 144,
+        "reason": "no_feasible_threshold"
+      }
+    },
+    "projected_spectral": {
+      "residual_only_score": {
+        "threshold": 0.24775250911842422,
+        "accepted": 88,
+        "bad": 4,
+        "eligible": 96,
+        "total": 144
+      },
+      "condition_only_score": {
+        "threshold": 195.95297796760553,
+        "accepted": 65,
+        "bad": 3,
+        "eligible": 96,
+        "total": 144
+      },
+      "empirical_score": {
+        "threshold": 60.54868678341333,
+        "accepted": 88,
+        "bad": 4,
+        "eligible": 96,
+        "total": 144
+      }
+    },
+    "joint_fit": {
+      "residual_only_score": {
+        "threshold": 0.016622649683478416,
+        "accepted": 96,
+        "bad": 0,
+        "eligible": 96,
+        "total": 144
+      },
+      "condition_only_score": {
+        "threshold": 1022.6712374151604,
+        "accepted": 96,
+        "bad": 0,
+        "eligible": 96,
+        "total": 144
+      },
+      "empirical_score": {
+        "threshold": 52.35488772591703,
+        "accepted": 96,
+        "bad": 0,
+        "eligible": 96,
+        "total": 144
+      }
+    }
+  },
+  "scope": "Empirical calibration; no distribution-free or global theorem guarantee"
+}

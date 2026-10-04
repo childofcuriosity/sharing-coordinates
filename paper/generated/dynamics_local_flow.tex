@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+Step size & Updates & First crossing & Training time & Adjacent endpoint distance \\
+\midrule
+0.0200 & 20 & 9 & 0.180 & $2.06\times10^{-6}$ \\
+0.0100 & 40 & 17 & 0.170 & $1.03\times10^{-6}$ \\
+0.0050 & 80 & 34 & 0.170 & $5.14\times10^{-7}$ \\
+0.0025 & 160 & 68 & 0.170 & -- \\
+\bottomrule\end{tabular}
+\caption{Selected real-model local SGD with FP64 factors, backbone arithmetic and dtype-preserving RMSNorm. Training time is update count times step size. Endpoint distances compare each run to the next finer step size at time $0.4$, not to an exact flow solution. All four runs keep the weight partition fixed.}
+\label{tab:local-flow-refinement}
+\end{table}

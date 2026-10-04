@@ -1,0 +1,2 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+qwen06b 1 selection locked {'weight': 8822, 'isotropic_response': 8685, 'task_response': 8873, 'task_single': 8873, 'activation': 8685, 'direct_loss': 8822, 'random': 652}

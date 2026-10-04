@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Joint-fit factor error with $q=4$: maxima over three adaptation seeds, and (for natural queries) three text domains. Noise affects both product and response. $D$ is the adapter basis dimension, not the backbone parameter count. Each reported maximum includes all declared cases.}
+\label{tab:llm-models}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & $L$ & $D$ & Natural, $0$ & Natural, $10^{-4}$ & Designed, $10^{-4}$\\
+\midrule
+Pythia 160M & 12 & 49152 & $6.5\!\times\!10^{-14}$ & $1.6\!\times\!10^{-4}$ & $1.4\!\times\!10^{-4}$\\
+Pythia 1B & 16 & 131072 & $2.8\!\times\!10^{-13}$ & $5.7\!\times\!10^{-5}$ & $5.7\!\times\!10^{-5}$\\
+Pythia 2.8B & 32 & 163840 & $8.3\!\times\!10^{-13}$ & $3.9\!\times\!10^{-5}$ & $3.8\!\times\!10^{-5}$\\
+Qwen3 0.6B & 28 & 131072 & $6.6\!\times\!10^{-14}$ & $4.9\!\times\!10^{-5}$ & $4.9\!\times\!10^{-5}$\\
+Qwen3 1.7B & 28 & 131072 & $9.2\!\times\!10^{-14}$ & $4.2\!\times\!10^{-5}$ & $4.2\!\times\!10^{-5}$\\
+Qwen3 4B & 36 & 262144 & $1.0\!\times\!10^{-13}$ & $3.7\!\times\!10^{-5}$ & $3.7\!\times\!10^{-5}$\\
+Qwen3 8B & 36 & 262144 & $2.6\!\times\!10^{-13}$ & $3.7\!\times\!10^{-5}$ & $3.6\!\times\!10^{-5}$\\
+SmolLM2 360M & 32 & 61440 & $7.8\!\times\!10^{-14}$ & $3.8\!\times\!10^{-5}$ & $3.8\!\times\!10^{-5}$\\
+SmolLM2 1.7B & 24 & 131072 & $6.4\!\times\!10^{-14}$ & $4.5\!\times\!10^{-5}$ & $4.4\!\times\!10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{table}

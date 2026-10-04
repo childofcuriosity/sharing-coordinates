@@ -1,0 +1,15 @@
+{
+  "freeze_sha256": "40c7e5fa4f10dba271a4cd652b42a7941a050e5a63286b51faa5602042aeab2c",
+  "created_unix": 1790333400.4074025,
+  "selections": {
+    "results/pythia160m-seed0/selection.json": "f77a4f86427939b111c1431d44cb896e22737d486c9cbf9edab8b048b77fb75c",
+    "results/pythia160m-seed1/selection.json": "94e7365fcf18f03457d1726d35d00c95860340d4e8ea75a6a9ad01ee26fd741d",
+    "results/pythia160m-seed2/selection.json": "48e8308f6fe2c09ed6b90ac41688c583cba8bc07a9ea511819818c2eececb150",
+    "results/qwen06b-seed0/selection.json": "75fe302b1677ffd9dc7a2aa71b425503be3ab3515b0a29eb39c1f5190d157f27",
+    "results/qwen06b-seed1/selection.json": "66f957c10c49d2cc326a20a18eaac51fbc593264925c4d332a401c6f16ef5394",
+    "results/qwen06b-seed2/selection.json": "a1fa184a3c34820f4460a816216740565b0352024c4285f0c997bf53692cddd5",
+    "results/smol360m-seed0/selection.json": "5ddb090eefca415f78a948b5a81aa88a8f6c000f8182309e7d1371bbbf294da0",
+    "results/smol360m-seed1/selection.json": "67ceb1e955e66c1503374fdabf8a450a0641a9f708abbab1d4bf4de0fa0fb42d",
+    "results/smol360m-seed2/selection.json": "3b22c1380ee36961e19c179e73ec2ce37292610ddd273e82354ed5994c7f878a"
+  }
+}

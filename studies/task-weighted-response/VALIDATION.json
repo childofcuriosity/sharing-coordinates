@@ -1,0 +1,175 @@
+{
+  "created_unix": 1790334129.8570924,
+  "scope": "Separate exploratory extension; both versions retained, same nine checkpoints, not eighteen independent replications.",
+  "versions": {
+    "original": {
+      "units": 9,
+      "method_optimizer_rows": 126,
+      "synthetic_tests_passed": 5,
+      "unique_action_optimizer_recoveries": 68,
+      "recovery_steps_each": 64,
+      "recovery_prediction_tokens_each": 32768,
+      "maximum_recovery_peak_allocated_gib": 4.370215892791748,
+      "freeze_created_unix": 1790332446.9985566,
+      "selection_lock_created_unix": 1790332652.4133275,
+      "analysis_lock_created_unix": 1790332626.0961766,
+      "first_evaluation_job_unix": 1790332652.466395,
+      "verification": {
+        "units": 9,
+        "independent_direct_batch_objectives": 68,
+        "maximum_relative_objective_error": 3.430784336840803e-13,
+        "real_factor_autograd_jvp_checks": 9,
+        "maximum_relative_jvp_error": 2.868029080421854e-16,
+        "sources_and_artifacts_match": true,
+        "selection_before_evaluation_verified": true,
+        "parent_publication_pdf_unchanged": true
+      },
+      "primary_task_minus_weight": {
+        "sgd_mean_nll_difference": 0.00506956751147906,
+        "adamw_mean_nll_difference": 0.003831728051106135,
+        "sgd_lower_nll": 3,
+        "sgd_exact_ties": 2,
+        "sgd_higher_nll": 4,
+        "sgd_improved_by_at_least_0005": 1,
+        "sgd_worsened_by_at_least_0005": 3,
+        "same_partition": 2,
+        "heldout_response_better": 6
+      },
+      "costs": {
+        "weight": {
+          "selection_mean_seconds": 0.012250530016091134,
+          "sgd_recovery_mean_seconds": 10.491947027647662
+        },
+        "isotropic_response": {
+          "selection_mean_seconds": 0.010175034610761536,
+          "sgd_recovery_mean_seconds": 10.477643376371512
+        },
+        "task_response": {
+          "selection_mean_seconds": 2.7950780714551606,
+          "sgd_recovery_mean_seconds": 10.470107859724926
+        },
+        "task_single": {
+          "selection_mean_seconds": 2.7950169338534274,
+          "sgd_recovery_mean_seconds": 10.470107859724926
+        },
+        "activation": {
+          "selection_mean_seconds": 0.7684964389126334,
+          "sgd_recovery_mean_seconds": 10.482396733481437
+        },
+        "direct_loss": {
+          "selection_mean_seconds": 28.054744169271242,
+          "sgd_recovery_mean_seconds": 10.479026124450481
+        },
+        "random": {
+          "selection_mean_seconds": 0.0,
+          "sgd_recovery_mean_seconds": 10.478400519997296
+        }
+      },
+      "makespan_seconds": 772.0750856399536,
+      "summed_job_elapsed_seconds": 1391.3687410354614,
+      "actual_unique_recovery_seconds": 724.4406914827414,
+      "artifact_sha256": {
+        "FREEZE.json": "aa1d18287149773cb58e843e4e299ba17214ae253fbb26b65c365a1c10443152",
+        "SELECTION_LOCK.json": "ec53f506d528d8acd0e3d67034215ec43f85c1cef7f41b1edd5605a63dc3d066",
+        "ANALYSIS_PLAN_LOCK.json": "98bfae2dc61e1e696f7b8b9c14dd67d6a37be74cc6c2c9ffb10bcea37db09733",
+        "EXECUTION.json": "cb18feadbe6806a1f231e7eb4f1a2c80307742fb35e5049c6eb75494346ac657",
+        "results/all_methods.csv": "3205cafc104ba3b08a48585b6305db3d33a6c1acd51789e70d8be2458c0d0120",
+        "results/summary.json": "819db8a2f4ee205c7e55953423449a3142c938ef287fe911f70dfd5ae72e8717",
+        "logs/verification.json": "d83f624953d918fe60c3a007afb4651337e0dd4ee866aad87262453e66b0ba4f",
+        "logs/tests.log": "8cd7ef18c60b9798462a0287b2b02b83de44fcff1e7db01bb83307aaf79d5f3d",
+        "verify.py": "6838f30feee1d3ccde6bf76bf4db804718b2a0cd25fd7f19357bbf6978da0bb1",
+        "analyze.py": "2178f86e3509be93bd4e0173a4c970bd44181de6cfc2acbd13effd39d052d1ef"
+      }
+    },
+    "direct_batch_correction": {
+      "units": 9,
+      "method_optimizer_rows": 126,
+      "synthetic_tests_passed": 5,
+      "unique_action_optimizer_recoveries": 68,
+      "recovery_steps_each": 64,
+      "recovery_prediction_tokens_each": 32768,
+      "maximum_recovery_peak_allocated_gib": 4.405768871307373,
+      "freeze_created_unix": 1790333178.0997965,
+      "selection_lock_created_unix": 1790333400.4074025,
+      "analysis_lock_created_unix": 1790333178.1575549,
+      "first_evaluation_job_unix": 1790333400.4523458,
+      "verification": {
+        "units": 9,
+        "independent_direct_batch_objectives": 68,
+        "maximum_relative_objective_error": 4.23381204963439e-13,
+        "real_factor_autograd_jvp_checks": 9,
+        "maximum_relative_jvp_error": 2.455356314442306e-16,
+        "sources_and_artifacts_match": true,
+        "selection_before_evaluation_verified": true,
+        "parent_publication_pdf_unchanged": true
+      },
+      "primary_task_minus_weight": {
+        "sgd_mean_nll_difference": 0.005224318140082889,
+        "adamw_mean_nll_difference": 0.0035031603442298043,
+        "sgd_lower_nll": 3,
+        "sgd_exact_ties": 2,
+        "sgd_higher_nll": 4,
+        "sgd_improved_by_at_least_0005": 1,
+        "sgd_worsened_by_at_least_0005": 3,
+        "same_partition": 2,
+        "heldout_response_better": 7
+      },
+      "costs": {
+        "weight": {
+          "selection_mean_seconds": 0.012151335055629412,
+          "sgd_recovery_mean_seconds": 10.524800745045972
+        },
+        "isotropic_response": {
+          "selection_mean_seconds": 0.010327929320434729,
+          "sgd_recovery_mean_seconds": 10.521558879357245
+        },
+        "task_response": {
+          "selection_mean_seconds": 4.084986386872414,
+          "sgd_recovery_mean_seconds": 10.52922310302448
+        },
+        "task_single": {
+          "selection_mean_seconds": 3.0360479162902467,
+          "sgd_recovery_mean_seconds": 10.52922310302448
+        },
+        "activation": {
+          "selection_mean_seconds": 0.7681426549226873,
+          "sgd_recovery_mean_seconds": 10.516862898288915
+        },
+        "direct_loss": {
+          "selection_mean_seconds": 28.258234718607532,
+          "sgd_recovery_mean_seconds": 10.507290320677889
+        },
+        "random": {
+          "selection_mean_seconds": 0.0,
+          "sgd_recovery_mean_seconds": 10.563540988187823
+        }
+      },
+      "makespan_seconds": 777.0428900718689,
+      "summed_job_elapsed_seconds": 1422.8672351837158,
+      "actual_unique_recovery_seconds": 727.8092751237564,
+      "artifact_sha256": {
+        "FREEZE.json": "40c7e5fa4f10dba271a4cd652b42a7941a050e5a63286b51faa5602042aeab2c",
+        "SELECTION_LOCK.json": "76b0db59824d3621b370406cdb0d141da92fae645d0af752d2572ffba08ea17f",
+        "ANALYSIS_PLAN_LOCK.json": "83224ed1eed112676c6dc241c408e27336b17449cf89bc2f6a7eb9849b8fc348",
+        "EXECUTION.json": "05c1faca01d6ebe8700bd074e840f8a80b41cc539d4e489191833061d04b2c14",
+        "results/all_methods.csv": "c463308f625fe509f0c3fb0adc4f65001ab9395ebb0fc99040ae8f9be5e45539",
+        "results/summary.json": "3e107d0b6aedafc1f484d9fa0bd5e23fd82586a7cc1b993e5486c1400a628e99",
+        "logs/verification.json": "49ea13efe4e631570b4ddce67138f4a9c52aac27427f71e31049b3d9b6914755",
+        "logs/tests.log": "39e65eede1bf57ff84eb7a1ccc56d025cb8b02dc5024d847b06cc184cad47125",
+        "verify.py": "0d8b2c6b36a7f14525b49ac08c80a1656a67d9c4e2e70a110ba1562102b2e5f7",
+        "analyze.py": "2178f86e3509be93bd4e0173a4c970bd44181de6cfc2acbd13effd39d052d1ef"
+      }
+    }
+  },
+  "parent_manifest_before_after_equal": true,
+  "parent_manifest_sha256": "b62f856cca9222edb527641f39b921b2210c728cc829679cb42c34c046b2c4fe",
+  "parent_read_only_manifest_check_output": "verified MANIFEST.sha256",
+  "parent_pdf_sha256": "b1ebbe31e57f1b58907688b8cee4d8eb57604bffa95ba985f63485e2299782fb",
+  "parent_source_archive_sha256": "193c2cb250410cfb79a4d4be25fecce830e4bd47966dfe6f90ca7aead4be6d2c",
+  "numerical_diagnostic_failure_retained": true,
+  "numerical_scope": "Default FP32 batch-vs-single discrepancy triggered direct-batch math-SDPA correction. Does not claim all FP32 arithmetic equivalences now pass.",
+  "interpretation": "No stable practical advantage over weight clustering in this fixed experiment; no equivalence or population claim.",
+  "review": "scientific-critical-thinking self-assessment, not external peer review",
+  "final_study_manifest": "Written after this validation; independently check with write_manifest.py --check.",
+  "report_sha256": "a159e4f6e6fbe37f12748de96551ee4ebba6ef57a12c7d98f5f5fa0feefc46f2"
+}

@@ -1,0 +1,46 @@
+\section{Discussion and limitations}
+
+Optimizer response can distinguish factorizations that have the same
+effective weights.
+For positive full-rank softmax/shared-basis factors, complete Euclidean
+response identifies the current coordinates up to permutation on a common
+product fiber. Explicit inverse bounds extend this observation to noisy
+products and finitely many matrix-valued queries on declared nondegenerate
+domains. A decision can require less information: balanced
+Hilbert--Schmidt-response-optimal tying only needs off-diagonal router Gram
+entries. Thus response-optimal tying can differ from weight clustering while
+requiring less than full factor recovery.
+
+The identification guarantees require known positive Euclidean rates and
+temperature, internal access to the effective product and responses, and
+rank/interior margins; the specified finite-query construction additionally
+requires $D-K\ge L$ and a domain-dependent product-noise threshold.
+Constants are conservative, query optimality is unproved, and no efficient
+globally feasible recovery algorithm is supplied. Empirical rejection rules cannot certify these assumptions, and the
+experiments include false acceptances. The results do not identify an AdamW trajectory, historical
+sharing graph, or nonlinear output-mixture model.
+
+Decision equivalence has narrower conditions than identification. The
+response objective uses equal group capacities, matching hard/soft basis
+rates, fixed hard routes and an isotropic full-operator error. It need not
+minimize error for observed task gradients or an adaptive optimizer.
+The trajectory bound requires response control throughout an interval,
+which a single-checkpoint optimum does not provide. The proof and experiments establish that crossings are possible. Their
+frequency and attraction properties under natural training remain open:
+the evidence comes from a constructed loss, a selected real-model state,
+and a finite exploratory grid. In particular, ordinary SGD produced no
+crossings in the grid with its unretuned learning-rate schedule.
+
+The recovery experiments cover a fixed-rank 64-channel additive module in
+nine dense pretrained models up to 8B. The trajectory grid covers three
+models up to 0.6B with 12 selected projections; local refinement uses one
+selected SmolLM2 state and one fixed real batch. These are frozen-backbone
+adapter studies, not full-model training or architectural universality.
+Model-family comparisons confound architecture, pretraining and, for the
+selected Qwen models, post-training. In the original matched decision test, factor recovery provided no
+incremental benefit over effective-weight clustering. The later crossing
+experiments address how decisions change during training; downstream
+performance and compression gains remain unestablished. The results separate
+the information needed to identify current factors from that needed for a
+particular decision, and establish conditions under which training can move
+the decisions apart.

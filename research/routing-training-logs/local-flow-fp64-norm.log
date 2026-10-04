@@ -1,0 +1,7 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+FP64 lr 0.02 first crossing [9] loss 3.288428847600669 3.286896953323693
+FP64 lr 0.01 first crossing [17] loss 3.288428847600669 3.2868969996527406
+FP64 lr 0.005 first crossing [34] loss 3.288428847600669 3.286897022806286
+FP64 lr 0.0025 first crossing [68] loss 3.288428847600669 3.2868970343803117
+FP64 velocity -0.0001579293754365605 convergence [{'coarse_lr': 0.02, 'fine_lr': 0.01, 'endpoint_parameter_distance': 2.055111361372317e-06}, {'coarse_lr': 0.01, 'fine_lr': 0.005, 'endpoint_parameter_distance': 1.0272097407868568e-06}, {'coarse_lr': 0.005, 'fine_lr': 0.0025, 'endpoint_parameter_distance': 5.135184481072954e-07}]

@@ -1,0 +1,15 @@
+{
+  "freeze_sha256": "aa1d18287149773cb58e843e4e299ba17214ae253fbb26b65c365a1c10443152",
+  "created_unix": 1790332652.4133275,
+  "selections": {
+    "results/pythia160m-seed0/selection.json": "88fe7697b1313662ee978c67604fac48c60749e1651ab288179cb5beea01e8c9",
+    "results/pythia160m-seed1/selection.json": "33366f48975cc89b95fdd7693ca2e1c277da14fb71aa051573abecbaf35db0bb",
+    "results/pythia160m-seed2/selection.json": "5754a6bcbf96941c11996324da80ec1aa70b1cc33fb44e23593bb7b4f82b43bf",
+    "results/qwen06b-seed0/selection.json": "0f0b2b288addb71862b48fbdd8f9faeb1b9b042f72c832a7418784b3018471a8",
+    "results/qwen06b-seed1/selection.json": "8ef9b999a4ee1e1309581defe56f26b70da2053d8a444bf8bfa2d9b1fa598d11",
+    "results/qwen06b-seed2/selection.json": "e75eff174d73906316575e5b7174f4dca4afb3fddfce54d165135e4b62dd38ca",
+    "results/smol360m-seed0/selection.json": "f626b3bd11b0406c1dcb5687ad29f0466d37af9ae40a76c29405baf1affe87bf",
+    "results/smol360m-seed1/selection.json": "973aa1590466675cb2714b7b7ac0bedf6ef7977243eb3efc3ba5b40580b6b6dd",
+    "results/smol360m-seed2/selection.json": "2b43acaa8c21b760a93792a5947610eadd7e1d58c8af28324ca1a5711f62d657"
+  }
+}

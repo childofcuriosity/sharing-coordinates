@@ -1,0 +1,68 @@
+{
+  "weight": {
+    "sgd_mean_nll_difference": 0.005224318140082889,
+    "adamw_mean_nll_difference": 0.0035031603442298043,
+    "sgd_lower_nll": 3,
+    "sgd_exact_ties": 2,
+    "sgd_higher_nll": 4,
+    "sgd_improved_by_at_least_0005": 1,
+    "sgd_worsened_by_at_least_0005": 3,
+    "same_partition": 2,
+    "heldout_response_better": 7
+  },
+  "activation": {
+    "sgd_mean_nll_difference": 0.004362160546912087,
+    "adamw_mean_nll_difference": 0.003484018560912874,
+    "sgd_lower_nll": 2,
+    "sgd_exact_ties": 2,
+    "sgd_higher_nll": 5,
+    "sgd_improved_by_at_least_0005": 2,
+    "sgd_worsened_by_at_least_0005": 4,
+    "same_partition": 2,
+    "heldout_response_better": 7
+  },
+  "direct_loss": {
+    "sgd_mean_nll_difference": 0.0095270826584763,
+    "adamw_mean_nll_difference": 0.007597568134466807,
+    "sgd_lower_nll": 2,
+    "sgd_exact_ties": 0,
+    "sgd_higher_nll": 7,
+    "sgd_improved_by_at_least_0005": 1,
+    "sgd_worsened_by_at_least_0005": 5,
+    "same_partition": 0,
+    "heldout_response_better": 9
+  },
+  "isotropic_response": {
+    "sgd_mean_nll_difference": 0.0027876438366042245,
+    "adamw_mean_nll_difference": 0.0020787562761041853,
+    "sgd_lower_nll": 2,
+    "sgd_exact_ties": 4,
+    "sgd_higher_nll": 3,
+    "sgd_improved_by_at_least_0005": 1,
+    "sgd_worsened_by_at_least_0005": 2,
+    "same_partition": 4,
+    "heldout_response_better": 5
+  },
+  "task_single": {
+    "sgd_mean_nll_difference": 0.0,
+    "adamw_mean_nll_difference": 0.0,
+    "sgd_lower_nll": 0,
+    "sgd_exact_ties": 9,
+    "sgd_higher_nll": 0,
+    "sgd_improved_by_at_least_0005": 0,
+    "sgd_worsened_by_at_least_0005": 0,
+    "same_partition": 9,
+    "heldout_response_better": 0
+  },
+  "random": {
+    "sgd_mean_nll_difference": -0.03220277362399631,
+    "adamw_mean_nll_difference": -0.02429032449920972,
+    "sgd_lower_nll": 8,
+    "sgd_exact_ties": 0,
+    "sgd_higher_nll": 1,
+    "sgd_improved_by_at_least_0005": 6,
+    "sgd_worsened_by_at_least_0005": 1,
+    "same_partition": 0,
+    "heldout_response_better": 9
+  }
+}

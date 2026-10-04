@@ -1,0 +1,251 @@
+\section{Global stability from finite noisy observations}
+\label{app:finite-noisy}
+
+This section closes the observation-level gap between an exact-product
+finite-probe reconstruction and a full-operator inverse bound.
+It is an explicit measurement-level consequence of
+Theorem~\ref{thm:response_stability} and
+Corollary~\ref{cor:joint-stability}, not a new general inverse theorem.
+The conclusion is global over all feasible factors in a specified
+nondegenerate domain. No numerical recovery algorithm enters its proof.
+
+\paragraph{Domain, observations, and quantifiers.}
+Fix $L\ge K\ge2$, $D-K\ge L$, and known
+$\eta_B,\eta_Z,\tau>0$, with $\lambda=\eta_Z/\tau^2$.
+For positive $\alpha,s_A,s_B,M$, let
+\[
+ \mathcal D=\left\{(A,B):
+ \begin{array}{l}
+ A\in\mathbb R^{L\times K},\ A\mathbf1_K=\mathbf1_L,\
+ A_{ij}\ge\alpha,\ \sigma_{\min}(A)\ge s_A,\\
+ B\in\mathbb R^{K\times D},\
+ \sigma_{\min}(B)\ge s_B,\ \|B\|_F\le M
+ \end{array}\right\}.
+\]
+The margins describe an assumed parameter domain; they are not inferred
+from one candidate's conditioning.
+Given any observed product $\widehat\Theta\in\mathbb R^{L\times D}$,
+choose an orthonormal-row matrix $U\in\mathbb R^{K\times D}$ from its top
+$K$ right singular vectors, and set $\widehat P=U^\top U$.
+Choose $W\in\mathbb R^{L\times D}$ with
+$WW^\top=I_L$ and $WU^\top=0$; this is possible since $D-K\ge L$.
+All choices depend only on $\widehat\Theta$ and dimensions, with a fixed
+tie-breaking rule if needed. Writing $u_p^\top$ for row $p$ of $U$, define
+\begin{equation}
+ G_p=\frac{W+\mathbf1_Lu_p^\top}{\sqrt{2L}},
+ \qquad p=1,\ldots,K.
+ \label{eq:finite-noisy-probes}
+\end{equation}
+Orthogonality gives $\|G_p\|_F=1$. The complement code $W$ is deliberately
+repeated in every query. Probes are selected before seeing their responses.
+
+For any observed response matrices $\widehat R_p$, define
+\begin{equation}
+ \mathcal F=\left\{(A,B)\in\mathcal D:
+ \begin{array}{l}
+ \|AB-\widehat\Theta\|_F\le\varepsilon_\Theta,\\
+ \bigl(\sum_{p=1}^K
+ \|\mathcal R_{A,B}(G_p)-\widehat R_p\|_F^2\bigr)^{1/2}
+ \le\varepsilon_R
+ \end{array}\right\}.
+ \label{eq:finite-noisy-feasible}
+\end{equation}
+This is the entire feasible set in the original $D$-dimensional basis
+space, not a fit restricted to $\widehat P$.
+Noise may be deterministic, adversarial, and dependent on the product
+observation or probes, provided these norm bounds hold.
+
+\paragraph{Explicit constants.}
+Put
+\begin{align}
+ h&=\sqrt{2L}\bigl(K^{-1/2}+1+\sqrt L\bigr),&
+ \beta&=\frac{8\lambda M}{s_A}(h\sqrt K+1),\\
+ \kappa&=(s_B^{-2}+4s_A^{-2})^{1/2},&
+ L_R&=\left[(2\eta_B\sqrt L+24\lambda M^2)^2
+                         +(4\lambda M)^2\right]^{1/2}.
+ \label{eq:finite-noisy-bridge-constants}
+\end{align}
+To make the inherited inverse constant fully explicit, define
+\begin{align}
+ L_M&=\max\{1,4\sqrt L/s_A\},&
+ c_G&=\frac{4L}{\eta_Bs_A^2},&
+ c_H&=\frac{8}{\lambda s_B^2},\\
+ \mu_*&=\frac{\alpha}{2}
+              \left(1+\frac{1}{4L_M^2}\right),&
+ c_J&=\frac{L_M^2(c_G+c_H)}{\mu_*},&
+ c_D&=\frac{2\sqrt{LK}}{s_A}c_J,\\
+ c_{\rm row}
+ &=\left[Kc_D^2+(c_G+Kc_D^2)^2\right]^{1/2},&
+ \delta_0&=\min\left\{1,\frac1{2c_G},
+                      \frac1{2\sqrt K\,c_{\rm row}}\right\}.
+ \label{eq:finite-noisy-expanded}
+\end{align}
+Finally set
+\begin{align}
+ C_*&=\max\left\{
+ 2\sqrt{L+L_M^2M^2}\sqrt K\,c_{\rm row},
+ \frac{4\sqrt{L+M^2}}{\delta_0}\right\},\\
+ C_R&=2hC_*,\\
+ C_\Theta&=\beta C_*+2\kappa(1+C_*L_R),\\
+ \varepsilon_0&=\min\{\alpha s_B/4,s_As_B/8\}.
+ \label{eq:finite-noisy-final-constants}
+\end{align}
+These constants can be very large. No sharpness or useful numerical
+accuracy at a particular finite noise level is asserted.
+
+\begin{theorem}[Whole-feasible-set diameter from $K$ noisy probes]
+\label{thm:finite-noisy-diameter}
+Under the preceding definitions, if
+$0\le\varepsilon_\Theta\le\varepsilon_0$ and $\varepsilon_R\ge0$, then
+\begin{equation}
+ \operatorname{diam}_{d_{\rm perm}}(\mathcal F)
+ \le C_\Theta\varepsilon_\Theta+C_R\varepsilon_R,
+ \qquad
+ d_{\rm perm}(x,x')=
+ \min_{\Pi\in\mathfrak S_K}
+ \left(\|A'-A\Pi\|_F^2+
+       \|B'-\Pi^\top B\|_F^2\right)^{1/2}.
+ \label{eq:finite-noisy-diameter}
+\end{equation}
+No smallness restriction on $\varepsilon_R$ is needed.
+Empty feasible sets have diameter zero by convention; recovery
+interpretations require a nonempty feasible set.
+\end{theorem}
+
+\begin{proof}
+We give the observation-to-operator bridge first, then apply the explicit
+global factor inverse to the original, unprojected factors.
+
+\emph{Step 1: uniform control outside the observed subspace.}
+For every $(A,B)\in\mathcal F$, $AB$ is a rank-$K$ competitor in the best
+rank-$K$ approximation of $\widehat\Theta$. Hence
+\[
+ \|\widehat\Theta(I-\widehat P)\|_F\le\varepsilon_\Theta,
+ \qquad
+ \|AB(I-\widehat P)\|_F\le2\varepsilon_\Theta.
+\]
+Since $A$ has a left inverse with $\|A^\dagger\|_2\le s_A^{-1}$,
+\begin{equation}
+ \|B-B\widehat P\|_F\le2\varepsilon_\Theta/s_A.
+ \label{eq:finite-noisy-tail}
+\end{equation}
+Set $\overline B=B\widehat P$. This is an analytical device, not an
+assumption that the true basis lies in the estimated subspace.
+For $S_i=\operatorname{diag}(a_i)-a_i a_i^\top$,
+$\|S_i\|_2\le1$ and $\|\overline B\|_2,\|B\|_2\le M$, so
+\[
+ \|B^\top S_i^2B-\overline B^\top S_i^2\overline B\|_2
+ \le2M\|B-\overline B\|_F.
+\]
+The shared Gram term is unchanged; the remaining operator difference
+is block diagonal. Thus, uniformly over $\mathcal F$,
+\begin{equation}
+ \|\mathcal R_{A,B}-\mathcal R_{A,\overline B}\|_{F\to F}
+ \le t,\qquad t=\frac{4\lambda M}{s_A}\varepsilon_\Theta.
+ \label{eq:finite-noisy-compression}
+\end{equation}
+No rank property of $\overline B$ is required.
+
+\emph{Step 2: stable decoding on a common support.}
+Consider the larger linear class
+$\mathcal S(G)=QG+\mathcal T(GU^\top)U$,
+where $Q\in\mathbb R^{L\times L}$ and $\mathcal T$ right-multiplies row $i$
+by an arbitrary $K\times K$ matrix $T_i$. Symmetry is unnecessary.
+For the difference of two such operators, let
+$E_p=\Delta\mathcal S(G_p)$ and
+$E=(\sum_p\|E_p\|_F^2)^{1/2}$.
+Set $c=(2L)^{-1/2}$. Complement projection gives
+$E_pW^\top=c\,\Delta Q$, whence
+\begin{equation}
+ \|\Delta Q\|_F\le\frac{E}{c\sqrt K}.
+ \label{eq:finite-noisy-Q}
+\end{equation}
+Projection onto $U$ gives, row by row,
+\[
+ E_pU^\top
+ =c(\Delta Q\mathbf1_L)e_p^\top
+   +c\,[e_p^\top\Delta T_i]_{i=1}^L.
+\]
+Stacking the $K$ equations enumerates every row of every $\Delta T_i$.
+The triangle inequality and
+$\|\Delta Q\mathbf1_L\|_2\le\sqrt L\,\|\Delta Q\|_F$ give
+\begin{equation}
+ \left(\sum_i\|\Delta T_i\|_F^2\right)^{1/2}
+ \le E/c+\sqrt K\|\Delta Q\mathbf1_L\|_2
+ \le (1+\sqrt L)E/c.
+ \label{eq:finite-noisy-T}
+\end{equation}
+The shared term has induced norm $\|\Delta Q\|_2$ and the local
+direct sum has norm at most $\max_i\|\Delta T_i\|_2$.
+Equations~\ref{eq:finite-noisy-Q}--\ref{eq:finite-noisy-T} therefore imply
+\begin{equation}
+ \|\Delta\mathcal S\|_{F\to F}\le h E.
+ \label{eq:finite-noisy-norming}
+\end{equation}
+For a projected factor response, take $Q=\eta_BAA^\top$ and
+$T_i=\lambda U\overline B^\top S_i^2\overline B U^\top$.
+The lemma applies even if those projected factors fail the domain's
+rank margins.
+
+\emph{Step 3: return to the original full operators.}
+Choose any $x=(A,B),x'=(A',B')\in\mathcal F$.
+Their observed response stacks differ by at most $2\varepsilon_R$.
+Each unit-norm probe incurs at most $t$ error under
+Equation~\ref{eq:finite-noisy-compression}; the stack incurs at most
+$\sqrt K\,t$ for each pair. Applying
+Equation~\ref{eq:finite-noisy-norming}, then adding the two full-operator
+compression errors, yields
+\begin{align}
+ \|\mathcal R_x-\mathcal R_{x'}\|_{F\to F}
+ &\le h(2\varepsilon_R+2\sqrt K\,t)+2t\\
+ &=2h\varepsilon_R+\beta\varepsilon_\Theta.
+ \label{eq:finite-noisy-full-response}
+\end{align}
+Every pair uses the same observed $U,W$ and probes.
+
+\emph{Step 4: the global factor inverse.}
+The two original factors obey the domain bounds with
+$L_A=\sqrt L$ and $L_B=M$, and
+$\|AB-A'B'\|_F\le2\varepsilon_\Theta$.
+Our threshold ensures
+$2\varepsilon_\Theta\le\min\{\alpha s_B/2,s_As_B/4\}$,
+exactly the product-error condition of
+Corollary~\ref{cor:joint-stability}.
+That corollary's $C_*$ is the constant of
+Theorem~\ref{thm:response_stability} evaluated at
+$(\alpha/2,s_A/2,s_B/2,2\sqrt L,2M)$, which expands to
+Equations~\ref{eq:finite-noisy-expanded}--\ref{eq:finite-noisy-final-constants}.
+It includes the bounded-domain argument for large response differences,
+not just a local inverse estimate.
+Consequently,
+\[
+ d_{\rm perm}(x,x')
+ \le C_*\|\mathcal R_x-\mathcal R_{x'}\|_{F\to F}
+       +\kappa(1+C_*L_R)\|AB-A'B'\|_F.
+\]
+Substituting Equation~\ref{eq:finite-noisy-full-response} proves the claimed
+bound for an arbitrary pair in $\mathcal F$, hence for its entire diameter.
+No connected-component or candidate-neighborhood premise was used.
+\end{proof}
+
+\paragraph{Recovery interpretation and boundaries.}
+If the true factors belong to $\mathcal D$ and satisfy the declared noise
+bounds, they lie in $\mathcal F$, so every feasible factor estimate obeys
+the displayed error bound. This does not prove that a particular solver
+finds a feasible point. It does not verify domain membership from noisy
+data, establish optimality of $K$ queries, or cover passive task-gradient
+queries or unknown AdamW state. Each query returns a full $L\times D$
+response, not one scalar.
+
+No smooth choice of singular-vector basis is needed: the proof holds for
+every chosen best rank-$K$ right subspace and orthonormal bases.
+It does not assume a singular-value gap in the observation. For a nonempty
+feasible set under the stated threshold, separation at the $K$th cut also
+follows from the rank margins and perturbation inequalities, but that
+fact is not needed in the proof.
+
+For $K=1$, row stochasticity fixes $A=\mathbf1_L$ and the response's
+softmax term vanishes. Directly,
+$d_{\rm perm}(x,x')=\|B-B'\|_F\le2\varepsilon_\Theta/\sqrt L$.
+Thus the boundary case needs no response information or small-noise
+threshold. The nontrivial theorem concerns $K\ge2$.

@@ -1,0 +1,996 @@
+{
+  "scope": "Retained operational job logs; timestamps are local filesystem/log records, not external trusted timestamps. The first calibration unit was run manually before the campaign.",
+  "acceptance_policy_mtime_utc": "2026-09-24T20:21:14.321282+00:00",
+  "jobs": [
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia160m",
+      "seed": 102,
+      "split": "calibration",
+      "device": 2,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-calibration-pythia160m-102-1790280917060574007.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:17.060574+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia1b",
+      "seed": 101,
+      "split": "calibration",
+      "device": 1,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-calibration-pythia1b-101-1790280917060201052.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:17.060201+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia1b",
+      "seed": 102,
+      "split": "calibration",
+      "device": 3,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-calibration-pythia1b-102-1790280917060393265.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:17.060393+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia160m",
+      "seed": 102,
+      "split": "calibration",
+      "device": 2,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-calibration-pythia160m-102-1790280933631171138.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:33.631171+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia1b",
+      "seed": 101,
+      "split": "calibration",
+      "device": 1,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-calibration-pythia1b-101-1790280938264470674.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:38.264471+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia1b",
+      "seed": 102,
+      "split": "calibration",
+      "device": 3,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-calibration-pythia1b-102-1790280940873787858.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:40.873788+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia1b",
+      "seed": 101,
+      "split": "calibration",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-calibration-pythia1b-101-1790281244890482090.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:44.890482+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia160m",
+      "seed": 102,
+      "split": "calibration",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-calibration-pythia160m-102-1790281244890687963.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:44.890688+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia1b",
+      "seed": 102,
+      "split": "calibration",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-calibration-pythia1b-102-1790281244890899427.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:44.890899+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia160m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia160m-0-1790280933507232822.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:33.507233+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia1b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia1b-0-1790280933507567217.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:33.507567+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen06b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen06b-0-1790280933507395464.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:33.507396+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia28b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia28b-0-1790280933507737109.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:33.507737+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia160m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia160m-0-1790280952761354222.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:52.761354+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia1b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia1b-0-1790280956021884625.log",
+      "started_utc_from_log_filename": "2026-09-24T20:15:56.021885+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen17b-0-1790280969763931290.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:09.763931+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen06b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen06b-0-1790280963510179373.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:03.510179+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia28b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia28b-0-1790280969247859405.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:09.247859+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen4b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen4b-0-1790280993237426202.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:33.237426+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen17b-0-1790281000146282806.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:40.146283+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol360m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol360m-0-1790281016680531602.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:56.680532+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol360m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol360m-0-1790281042032741073.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:22.032741+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol17b-0-1790281038573752628.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:18.573753+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen8b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen8b-0-1790281001805299357.log",
+      "started_utc_from_log_filename": "2026-09-24T20:16:41.805300+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia160m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia160m-1-1790281063149519223.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:43.149519+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia160m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia160m-1-1790281079888856002.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:59.888856+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol17b-0-1790281063972523603.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:43.972523+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen4b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen4b-0-1790281037446963689.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:17.446964+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia1b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia1b-1-1790281097156621380.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:17.156621+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia28b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia28b-1-1790281101609129653.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:21.609130+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen06b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen06b-1-1790281112008915739.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:32.008916+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen8b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen8b-0-1790281066908245249.log",
+      "started_utc_from_log_filename": "2026-09-24T20:17:46.908245+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia1b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia1b-1-1790281119212992387.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:39.212992+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen17b-1-1790281141260694687.log",
+      "started_utc_from_log_filename": "2026-09-24T20:19:01.260695+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen06b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen06b-1-1790281139328634135.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:59.328634+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia28b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia28b-1-1790281131817167097.log",
+      "started_utc_from_log_filename": "2026-09-24T20:18:51.817167+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen4b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen4b-1-1790281157130349428.log",
+      "started_utc_from_log_filename": "2026-09-24T20:19:17.130349+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol360m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol360m-1-1790281178887272601.log",
+      "started_utc_from_log_filename": "2026-09-24T20:19:38.887273+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen17b-1-1790281171957069780.log",
+      "started_utc_from_log_filename": "2026-09-24T20:19:31.957070+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol360m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol360m-1-1790281203545140942.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:03.545141+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol17b-1-1790281210639680946.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:10.639681+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen8b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen8b-1-1790281177881436711.log",
+      "started_utc_from_log_filename": "2026-09-24T20:19:37.881437+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia160m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia160m-2-1790281224497313478.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:24.497313+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia160m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia160m-2-1790281240505976807.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:40.505977+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol17b-1-1790281236292742497.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:36.292742+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen4b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen4b-1-1790281200679676834.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:00.679677+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia1b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia1b-2-1790281257245811503.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:57.245811+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen06b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen06b-2-1790281275868962861.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:15.868963+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "pythia28b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-pythia28b-2-1790281275357659694.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:15.357660+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen8b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen8b-1-1790281239514225643.log",
+      "started_utc_from_log_filename": "2026-09-24T20:20:39.514226+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia1b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia1b-2-1790281279393999220.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:19.393999+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen06b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen06b-2-1790281303267616025.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:43.267616+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen17b-2-1790281314073291162.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:54.073291+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "pythia28b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-pythia28b-2-1790281306761978394.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:46.761978+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen4b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen4b-2-1790281317372692560.log",
+      "started_utc_from_log_filename": "2026-09-24T20:21:57.372693+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol360m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol360m-2-1790281355194744637.log",
+      "started_utc_from_log_filename": "2026-09-24T20:22:35.194745+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen17b-2-1790281345674548776.log",
+      "started_utc_from_log_filename": "2026-09-24T20:22:25.674549+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol360m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol360m-2-1790281381159031578.log",
+      "started_utc_from_log_filename": "2026-09-24T20:23:01.159032+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "qwen8b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-qwen8b-2-1790281342108672137.log",
+      "started_utc_from_log_filename": "2026-09-24T20:22:22.108672+00:00"
+    },
+    {
+      "stage": "experiments.train_llm_shared",
+      "model": "smol17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/train_llm_shared-evaluation-smol17b-2-1790281383983862983.log",
+      "started_utc_from_log_filename": "2026-09-24T20:23:03.983863+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen4b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen4b-2-1790281363150792335.log",
+      "started_utc_from_log_filename": "2026-09-24T20:22:43.150792+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "smol17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-smol17b-2-1790281410320433598.log",
+      "started_utc_from_log_filename": "2026-09-24T20:23:30.320434+00:00"
+    },
+    {
+      "stage": "experiments.observe_llm_shared",
+      "model": "qwen8b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/observe_llm_shared-evaluation-qwen8b-2-1790281408427450584.log",
+      "started_utc_from_log_filename": "2026-09-24T20:23:28.427451+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia1b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia1b-0-1790281498105542208.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.105542+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia160m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia160m-1-1790281498109288494.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.109288+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia1b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia1b-1-1790281498110208378.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.110208+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia160m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia160m-0-1790281498104822297.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.104822+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol17b-0-1790281498108842487.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.108843+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen17b-0-1790281498105718081.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.105718+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen06b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen06b-0-1790281498105162972.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.105163+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen06b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen06b-1-1790281508862744957.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:08.862745+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia28b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia28b-1-1790281498111279404.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.111279+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen17b-1-1790281510112645528.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:10.112646+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol360m",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol360m-0-1790281498108001555.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.108001+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia28b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia28b-0-1790281498105015740.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.105016+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia160m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia160m-2-1790281528120362870.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:28.120363+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen8b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen8b-0-1790281498107302754.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.107303+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen4b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen4b-0-1790281498105943844.log",
+      "started_utc_from_log_filename": "2026-09-24T20:24:58.105944+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia1b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia1b-2-1790281533631016982.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:33.631017+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol17b-1-1790281527740712502.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:27.740712+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen4b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen4b-1-1790281510503564374.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:10.503564+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen8b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen8b-1-1790281511037050086.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:11.037050+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol360m",
+      "seed": 1,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol360m-1-1790281520261687220.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:20.261687+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen06b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen06b-2-1790281536637369771.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:36.637370+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol17b-2-1790281543877750047.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:43.877750+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen17b-2-1790281536819727769.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:36.819728+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "pythia28b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-pythia28b-2-1790281534372316021.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:34.372316+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "smol360m",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-smol360m-2-1790281543023708823.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:43.023709+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen4b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen4b-2-1790281538354899232.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:38.354899+00:00"
+    },
+    {
+      "stage": "experiments.recover_llm_shared",
+      "model": "qwen8b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": null,
+      "exit_code": 0,
+      "log": ".artifact-llm/recover_llm_shared-evaluation-qwen8b-2-1790281540395419958.log",
+      "started_utc_from_log_filename": "2026-09-24T20:25:40.395420+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "pythia1b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 1,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-pythia1b-0-1790281617669606320.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.669606+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "pythia1b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-pythia1b-1-1790281617670274130.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.670274+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "pythia1b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 7,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-pythia1b-2-1790281617672110677.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.672111+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "smol17b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 3,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-smol17b-0-1790281617670084627.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.670085+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "smol17b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 6,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-smol17b-1-1790281617671526979.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.671527+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "qwen4b",
+      "seed": 1,
+      "split": "evaluation",
+      "device": 5,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-qwen4b-1-1790281617670484893.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.670485+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "qwen4b",
+      "seed": 0,
+      "split": "evaluation",
+      "device": 2,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-qwen4b-0-1790281617669799293.log",
+      "started_utc_from_log_filename": "2026-09-24T20:26:57.669799+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "smol17b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 4,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-smol17b-2-1790281645947442643.log",
+      "started_utc_from_log_filename": "2026-09-24T20:27:25.947443+00:00"
+    },
+    {
+      "stage": "experiments.run_llm_decisions",
+      "model": "qwen4b",
+      "seed": 2,
+      "split": "evaluation",
+      "device": 1,
+      "exit_code": 0,
+      "log": ".artifact-llm/run_llm_decisions-evaluation-qwen4b-2-1790281645661431884.log",
+      "started_utc_from_log_filename": "2026-09-24T20:27:25.661432+00:00"
+    }
+  ]
+}

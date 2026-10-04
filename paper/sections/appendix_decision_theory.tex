@@ -1,0 +1,297 @@
+\section{Balanced decisions: equivalence, conflict, and dynamics}
+\label{app:decision-proofs}
+
+This appendix supplies proofs and exact certificates for
+Section~\ref{sec:sharing-dynamics}. Every partition has $K$ groups of
+size $m=L/K$. All displayed layer indices are one-based. For row vectors
+$x_i$ and a group $U$ of size $m$,
+\begin{equation}
+ \sum_{i\in U}\|x_i-\bar x_U\|^2
+ =\frac1m\sum_{i<j,\ i,j\in U}\|x_i-x_j\|^2. \label{eq:pairwise-sse}
+\end{equation}
+This identity follows by expanding both sides; it also provides finite
+integer certificates when all rows have a common rational denominator.
+
+\subsection{Equivalence cases}
+
+\begin{proposition}[Two-basis equivalence]
+\label{prop:two-basis-decisions}
+Let $K=2$, $L=2m$, and $b_1\ne b_2$. The globally optimal unlabeled
+partitions for maximizing $S_A$ and minimizing $J_\Theta$ coincide,
+including ties.
+\end{proposition}
+\begin{proof}
+Write $a_i=(t_i,1-t_i)$ and $\theta_i=b_2+t_i(b_1-b_2)$.
+Assign a size-$m$ subset $U$ to the first basis, put $s=\sum_{i\in U}t_i$
+and $T=\sum_i t_i$. Its coefficient score is $m-T+2s$, maximized by
+the top-$m$ sum. Removing the common translation and positive scale from
+the weight SSE, minimizing it is equivalent to maximizing
+$s^2+(T-s)^2$, hence $|s-T/2|$. The smallest and largest feasible sums
+are the bottom-$m$ and top-$m$ sums; they are complementary and thus
+correspond to the same unlabeled partitions. A convex quadratic attains
+its maximum over these sums only at those endpoints, unless all feasible
+sums coincide, in which case all partitions are tied. All endpoint
+realizations are precisely the tied sorting optima, proving the claim.
+\end{proof}
+
+The condition on $b_1,b_2$ matters: identical bases make all weight
+partitions optimal. Nor does the proposition certify a heuristic clustering
+algorithm's output. For $m=1$ every unlabeled partition is the singleton
+partition, independently of $K$.
+
+\begin{proposition}[Isotropy on the simplex tangent space]
+\label{prop:simplex-isotropy}
+If $P_0BB^\top P_0=\lambda P_0$, $\lambda>0$, then
+$J_\Theta(H)=\lambda J_A(H)$ for every balanced $H$.
+\end{proposition}
+\begin{proof}
+For $X=(I-Q_H)A$, stochasticity gives $X\ones=0$, so $XP_0=X$.
+Thus $\operatorname{tr}(XBB^\top X^\top)=\lambda\|X\|_F^2$.
+\end{proof}
+
+\subsection{Exact interior examples and sufficient information}
+\label{app:decision-examples}
+
+Set $A=N/23$, $B=[I_3\ \ 0_{3\times6}]$, where
+\begin{equation}
+ N=\begin{pmatrix}
+ 8&11&4\\8&5&10\\10&9&4\\5&11&7\\6&10&7\\11&5&7
+ \end{pmatrix}. \label{eq:decision-counter-matrix}
+\end{equation}
+Every router entry is at least $4/23$, and the determinant of the first
+three rows of $N$ is $276\ne0$; $B$ has three unit singular values.
+The unique coefficient optimum has labels $(2,3,1,2,3,1)$, partition
+$\mathcal C=\{\{1,4\},\{2,5\},\{3,6\}\}$, and score $60/23$.
+For an explicit optimality certificate on the integer scale, subtract
+column prices $(1,7/2,0)$ from each row of $N$. Each row now has a
+\emph{strict} unique maximum at the assigned column, and those maxima
+use each column twice. Adding the fixed price contribution to their sum
+gives 60. Swapping the assignments of rows 4 and 5 gives score 59;
+all scores are integers, so the runner-up gap is exactly $1/23$.
+
+The unique weight and router-clustering optimum is instead
+$\mathcal D=\{\{1,3\},\{2,6\},\{4,5\}\}$, cost $14/529$;
+its runner-up costs $31/529$, while $\mathcal C$ costs $41/529$.
+Table~\ref{tab:decision-certificates} exhausts the 15 unlabeled partitions.
+Thus isotropic bases do not equate coefficient assignment with free-center
+clustering. Strict gaps imply an open neighborhood of disagreement.
+Replacing $A$ by $(1-r)\ones\ones^\top/3+rA$, $0<r\le1$, multiplies
+coefficient-score differences by $r$ and clustering-cost differences by
+$r^2$. The same example can therefore approach the uniform router;
+its rank margin then shrinks. Proximity to uniformity alone is not an
+agreement condition.
+
+For $K=4$, append a fourth column and two rows: let $\widetilde N$ have
+first six rows $(16N_{i1}+23,16N_{i2}+23,16N_{i3}+23,23)$ and last two
+rows $(23,23,23,391)$. Then $\widetilde A=\widetilde N/460$ and
+$\widetilde B=[I_4\ \ 0_{4\times8}]$ are positive and full rank.
+Enumerating its 105 pair partitions gives $\mathcal C$ and $\mathcal D$
+respectively, with the pair $\{7,8\}$ added. The $K=3$ example already
+establishes non-equivalence; this extension matches the experimental
+number of bases.
+
+\paragraph{Weight--response tradeoff.}
+In Equation~\eqref{eq:decision-counter-matrix}, replace $B$ by
+$[\operatorname{Diag}(4,1,1)\ \ 0]$. Router clustering still uniquely
+selects $\mathcal D$. Weight clustering uniquely selects
+$\mathcal E=\{\{1,2\},\{3,6\},\{4,5\}\}$, with
+\[
+ (J_\Theta(\mathcal D),J_A(\mathcal D))=(119,14)/529,
+ \qquad
+ (J_\Theta(\mathcal E),J_A(\mathcal E))=(65,50)/529.
+\]
+For $\eta_B=1$, Theorem~\ref{thm:response-partition} gives response-error
+increase $2Dm(50-14)/529=1296/529$ when choosing $\mathcal E$.
+Neither objective uniformly controls the other.
+
+\begin{corollary}[Effective weights do not determine the response optimum]
+\label{cor:decision-information}
+There exist two strictly positive full-rank routers and full-row-rank
+bases with the same product but different unique balanced
+Hilbert--Schmidt-response-optimal partitions.
+\end{corollary}
+\begin{proof}
+Use the isotropic example above and
+\[
+ M=\tfrac1{10}\begin{pmatrix}2&1&7\\4&4&2\\5&2&3\end{pmatrix},
+ \qquad A'=AM,\quad B'=M^{-1}B.
+\]
+The matrix is positive and row stochastic, with determinant $-7/100$.
+Both factors retain their ranks, $A'$ is strictly positive, and
+$A'B'=AB$. Router-clustering costs now have denominator $230^2$:
+$\mathcal E$ uniquely costs $200/52900$, and runner-up $\mathcal D$
+costs $212/52900$ (Table~\ref{tab:decision-certificates}). Theorem~\ref{thm:response-partition}
+therefore selects $\mathcal D$ for the first factorization and
+$\mathcal E$ for the second. Any rule observing only their common product
+has the same input and cannot always return the unique optimum in both.
+\end{proof}
+
+Both worlds use their stated Euclidean factor metric. This is not a
+passive coordinate substitution accompanied by a transformed optimizer.
+The result does not make full reconstruction necessary: the
+partition-dependent term in Theorem~\ref{thm:response-partition} is a
+sum of within-group off-diagonal entries of $AA^\top$. Those entries
+are already specified by off-diagonal response blocks. This observation
+is consistent with the insufficiency of Gram information for recovering
+all factors in Section~\ref{sec:response_identifiability}: deciding and
+identifying are distinct targets.
+
+\input{generated/decision_certificates.tex}
+
+\subsection{A fixed loss that crosses a decision boundary}
+\label{app:decision-crossing-proof}
+
+For Theorem~\ref{thm:decision-crossing}, take $B_0=[I_3\ \ 0_{3\times6}]$
+and $A_0=N_0/92$, with
+\begin{equation}
+ N_0=\begin{pmatrix}
+ 40&24&28\\24&44&24\\32&28&32\\43&37&12\\24&20&48\\37&31&24
+ \end{pmatrix}. \label{eq:crossing-counter-matrix}
+\end{equation}
+Its rows sum to 92 and are positive. The first three rows are linearly
+independent, so $A_0$ has column rank three. Define assignments
+$p=(1,2,3,2,3,1)$ and $q=(1,2,3,1,3,2)$. They alone maximize the
+coefficient score, both attaining $238/92$. Indeed, subtract integer
+column prices $(6,0,0)$ from $N_0$. Rows 1,2,3,5 have strict maxima at
+columns 1,2,3,3; only rows 4 and 6 tie between columns 1 and 2. Capacity
+two forces one to each column, leaving exactly $p,q$. The next distinct
+integer assignment score is 228; only positivity of the remaining gap
+is needed. Table~\ref{tab:decision-certificates} shows that global weight
+clustering uniquely selects the unlabeled partition of $p$, costing
+$506/8464$ versus $578/8464$ for the runner-up.
+
+Set $E=H_p-H_q$ with rows $e_i^\top$, and define fixed matrices by
+\begin{equation}
+ (G_0)_i=B_0^\top C_i^2e_i,\qquad
+ T=A_0B_0-G_0,\qquad
+ \ell(\Theta)=\tfrac12\|\Theta-T\|_F^2, \label{eq:crossing-target}
+\end{equation}
+where rows of $G_0$ are written as columns in the first expression and
+$C_i$ is evaluated at $A_0$. Initialize the reference solution at
+$Z_0=\log A_0$, $B_0$, at time zero. The loss is fixed, smooth and
+bounded below; its gradient there is $G_0$. The exact chain rule is
+\[
+ \dot z_i=-C_iB_0g_i,\qquad
+ \dot a_i=-C_i^2B_0g_i,\qquad
+ \dot B=-A_0^\top G_0.
+\]
+Consequently Equation~\eqref{eq:crossing-speed} holds. Its strict sign
+follows because $\ker C_i=\operatorname{span}(\ones)$, every nonzero
+$e_i$ is orthogonal to $\ones$, and $B_0^\top$ is injective. At least
+one $e_i$ is nonzero.
+
+The smooth vector field has a solution on a two-sided neighborhood of
+zero. By continuity, all other assignment gaps, the unique clustering
+gap, positive entries and the two rank margins persist in a smaller
+neighborhood. The strict negative derivative gives $S_p>S_q$ just
+before zero and $S_p<S_q$ just after it. Weight clustering keeps $p$.
+Choose a sufficiently small negative-time point as a forward initial
+condition: the same fixed squared loss now trains from agreement into
+disagreement. Choose two such endpoints with strict gaps. Continuous
+dependence on initial conditions preserves their decisions and preserves
+the weight optimum on the intervening compact interval for a small open
+neighborhood of starting states. This proves Theorem~\ref{thm:decision-crossing}.
+
+The numerical experiment uses an explicit negative tangent displacement
+from $(Z_0,B_0)$ rather than inverse integration. Its observed crossing
+checks that particular discrete initialization; the theorem's proof does
+not rely on the numerical solver.
+
+\paragraph{Local router velocities are not structurally restricted.}
+At any positive router and full-row-rank basis, every row velocity $v_i$
+with $\ones^\top v_i=0$ is realized at that point by choosing
+\[
+ g_i=-\frac{\tau^2}{\eta_Z}
+ B^\top(BB^\top)^{-1}(C_i^2)^+v_i.
+\]
+Substitution into $\dot a_i=-(\eta_Z/\tau^2)C_i^2Bg_i$ gives $v_i$,
+because $C_i^2(C_i^2)^+$ projects onto $\ones^\perp$. A fixed squared
+loss with target $AB-G$ realizes that gradient at the point. The induced
+$\dot B$ is not independently controlled. Natural tasks do not provide
+arbitrary gradients, so this lemma supplies no typicality claim.
+
+\subsection{Separation, margins, and trajectory error}
+\label{app:decision-stability}
+
+\begin{proposition}[A sufficient agreement regime]
+\label{prop:near-hard-agreement}
+Suppose a balanced labeling $c$ satisfies $a_{i,c(i)}\ge1-\epsilon_A$,
+$0\le\epsilon_A<1/2$. Let $d$ be the minimum separation of distinct
+basis rows and $D_B$ their maximum separation. If
+$d>4\epsilon_A D_B$, coefficient assignment and global balanced weight
+clustering uniquely select $c$.
+\end{proposition}
+\begin{proof}
+Each own coefficient strictly exceeds the others and its pointwise best
+labeling is balanced, so coefficient assignment is unique. Every
+$\theta_i$ is within $\epsilon=\epsilon_A D_B$ of $b_{c(i)}$.
+Within-group distances are at most $2\epsilon$; between-group distances
+are at least $d-2\epsilon>2\epsilon$. All equal-capacity partitions
+have the same number of within-group pairs. A different partition loses
+and gains the same positive number of pairs; every new pair is strictly
+more expensive than every lost pair. Equation~\eqref{eq:pairwise-sse}
+therefore proves strict SSE optimality.
+\end{proof}
+
+More generally, for any given balanced partition, minimum between-group
+squared distance exceeding maximum within-group squared distance certifies
+its global SSE optimality by the same argument. Failure of this sufficient
+condition is not evidence of non-optimality. Under the proposition's
+separation, farthest-first seeding selects one center from each true group;
+pointwise nearest-center assignment is then unique and balanced. Recomputed
+centers stay within their respective $\epsilon$ balls, so balanced Lloyd
+iterations retain that partition. This condition was not shown to hold
+for most trained checkpoints.
+
+\begin{proposition}[Finite-time margin protection]
+\label{prop:decision-margin}
+Initially let the unique labeled coefficient winner have gap $\Gamma_A>0$
+and the unique unlabeled global weight-clustering winner have SSE gap
+$\Gamma_\Theta>0$, with identical partitions. Let
+$X_0=(I-\ones\ones^\top/L)\Theta(0)$. Both decisions remain unchanged
+under perturbations satisfying
+\begin{equation}
+ \sqrt{2L}\|\Delta A\|_F<\Gamma_A,\qquad
+ 2\|X_0\|_F\|\Delta\Theta\|_F+\|\Delta\Theta\|_F^2<\Gamma_\Theta.
+ \label{eq:decision-margin}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The difference of two assignment matrices has norm at most $\sqrt{2L}$;
+Cauchy--Schwarz bounds every score-gap perturbation. The difference of
+two orthogonal projections has operator norm at most one. Expanding each
+competing quadratic SSE difference bounds its change by
+$2\|X_0\|_F\varepsilon+\varepsilon^2$, where
+$\varepsilon=\|\Delta\Theta\|_F$. Centering is valid because every
+$Q_H$ preserves $\ones$ and centering does not increase perturbation norm.
+\end{proof}
+
+If $\|B(t)\|_2\le\beta$ and $\|\nabla\ell(\Theta(t))\|_F\le M$
+on an interval, then
+\begin{equation}
+ \|\dot A\|_F\le v_A:=\frac{\eta_Z\beta M}{4\tau^2},\qquad
+ \|\dot\Theta\|_F\le v_\Theta:=
+ \left(\eta_BL+\frac{\eta_Z\beta^2}{4\tau^2}\right)M.
+ \label{eq:decision-speed-bounds}
+\end{equation}
+Indeed, Gershgorin's bound gives
+$\|C_i\|_2\le\max_k2a_{ik}(1-a_{ik})\le1/2$, and
+$\|A\|_2^2\le\|A\|_F^2\le L$.
+Substituting $v_At$ and $v_\Theta t$ for the perturbations in
+Equation~\eqref{eq:decision-margin} yields an explicit protected interval.
+This is conditional stability, not attraction toward agreement.
+
+\paragraph{Proof of Equation~\eqref{eq:trajectory-sharing-bound}.}
+Write $E(t)=\Theta_s(t)-\Theta_h(t)$ and subtract the two ODEs:
+\[
+ \dot E=-(\mathcal R_s-\mathcal R_H)\nabla\ell(\Theta_s)
+         -\mathcal R_H\bigl(\nabla\ell(\Theta_s)-\nabla\ell(\Theta_h)\bigr).
+\]
+The hypotheses give an upper Dini derivative of $\|E\|_F$ bounded by
+$M\delta+c\|E\|_F$, since $\|HH^\top\|_2=m$ and
+$c=\eta_BmL_\ell$. Integrating this scalar inequality yields
+$\|E(t)\|_F\le e^{ct}\|E(0)\|_F+M\delta(e^{ct}-1)/c$;
+the continuous $c=0$ limit is $\|E(0)\|_F+M\delta t$.
+Group-mean initialization gives $\|E(0)\|_F=\sqrt{J_\Theta(H)}$.
+The bound requires response control over the entire interval, not just
+at its start, and supplies no lower bound or ranking of final task losses.

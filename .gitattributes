@@ -1,0 +1,13 @@
+# Preserve the exact released bytes bound by MANIFEST.sha256 and source attestations.
+# These seven files were originally hashed with CRLF; all other files retain
+# their existing checkout policy. Keep the Git representation normalized to LF.
+results/aslora_summary.csv text eol=crlf
+results/response_table.csv text eol=crlf
+results/router_decisions_table.csv text eol=crlf
+results/gauge_full.json text eol=crlf
+results/response_tomography_seed0.json text eol=crlf
+results/response_tomography_seed1.json text eol=crlf
+results/response_tomography_seed2.json text eol=crlf
+
+# Handoff inventories bind exact bytes; disable automatic line-ending conversion.
+* -text

@@ -1,0 +1,34 @@
+{
+  "scope": "Constructed training, 18 natural-language trajectories, selected local SGD and precision diagnostics; no original manuscript rewrite",
+  "full_tests_passed": 181,
+  "full_repository_verify": "passed",
+  "independent_projector_checks": 120,
+  "fresh_lm_backward_replay": "exact loss, gradients and update for SmolLM2 seed1 update71",
+  "visual_review": "Four-panel plot inspected; readable labels and no observed overlap",
+  "source_protocol_hash_checks": "passed",
+  "original_llm_delivery_hashes": "preserved",
+  "limitations": [
+    "Selected local point is post hoc",
+    "SGD ordinary-initialization grid had zero events",
+    "Euclidean response objective is not an AdamW optimum",
+    "No downstream recovery advantage demonstrated",
+    "No external human review"
+  ],
+  "files": {
+    "research/ROUTING_TRAINING_REVIEW.md": "074be4c174e7eca317edb6003c79c4125125db14272f5c8f56680eb576df0fa6",
+    "results/routing_training/summary.json": "8793fd8fa5fbbab2383322271734bf005a7dfad9f5594efdcc584d1839632c56",
+    "results/routing_training/record_verification.json": "830fb1dc4c5eb467260d70f30938b59a0ae7410257595aed6dbf97785dc899be",
+    "results/routing_training/crossing_evidence.png": "780abdef53f8f2f3a0efb9a418a98f799e0e0cf8c65f614b5bc506b53f43b9e0",
+    "results/routing_training/crossing_evidence.pdf": "c36859494031b7ffeb55bd65ff0b79c516b01efe838c09c4c4531d04b9a225e1",
+    "research/routing-training-logs/full-verify.log": "5b667fc67ce967bdbfa163d2aefac9d2dfc55af0bca6e5a4723ba8fade090e08",
+    "experiments/train_routing_crossing.py": "709d83648859fe0dd630ac4ef26e8c6e1eff152a21535ffc3a13f9ad5eb30d5e",
+    "experiments/train_llm_routing_trajectory.py": "07d6d8f4da845cc6640ed47e16a951310763a7a642056d99acceb1ecbc32e453",
+    "experiments/audit_llm_routing_events.py": "5f8cf34b53e07fae217e4b510bd73a0d6af88cdc2c3e208a2591f88c4d920d77",
+    "experiments/replay_llm_routing_backward.py": "a7985c8eb571a9f413b0e102b50de5dd69eaf2dd99a7f294ca99fa84db8c4bc1",
+    "experiments/train_llm_local_flow.py": "b1dd5cf6a219d9dc006597284b68cc972a9b861f04f14512a24e6661da7dfdda",
+    "experiments/train_llm_local_flow_fp64.py": "d0dffb08ea8710241e038994ab2a5956b969a507ddafd3cb45c37aa18f9d0843",
+    "experiments/train_llm_local_flow_fp64_norm.py": "8ff811eb19720d8a39723b7d504600a6a7c05644acf81b6d2ee47377ef950562",
+    "experiments/summarize_routing_training.py": "2313d991fe66b8ae7443a951bdba4afa91e7b96b9a5ceabe501ba14419bf89af",
+    "experiments/verify_routing_training_records.py": "0d8f41496f05d12bfe39ad3bc1f7586102da2723264450645e87b8b9024842b0"
+  }
+}

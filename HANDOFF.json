@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-29",
+  "branch": "handoff/unified-project-20260929",
+  "local_snapshot": "sharing-coordinates-local-20260929",
+  "local_snapshot_inventory_sha256": "f86eed704a5ee10b6888df4a4cb363258fc3bef8e3250a5571b1bb67d7b51c03",
+  "full_research_manifest_sha256": "1d28c6d6525227aec39f8c52311e6e56ec5408f18f2da8c1c20f2df37ce30127",
+  "scope": "Lightweight handoff; not the complete experimental replay artifact",
+  "retained_source_files": 1039,
+  "excluded_files": 485
+}

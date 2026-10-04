@@ -1,0 +1,29 @@
+{
+  "ntt": {
+    "raw_bibtex": "research/publication-sources/ntt.bib",
+    "html_sha256": "ad3079c97bb1908fc15305aee60e11b11b27f3fad2c24ce4b7bc2914220212d7",
+    "fields": {
+      "title": "Finding trainable sparse networks through Neural Tangent Transfer",
+      "author": "Liu, Tianlin and Zenke, Friedemann",
+      "booktitle": "Proceedings of the 37th International Conference on Machine Learning",
+      "pages": "6336--6347",
+      "year": "2020",
+      "volume": "119",
+      "series": "Proceedings of Machine Learning Research",
+      "publisher": "PMLR",
+      "url": "https://proceedings.mlr.press/v119/liu20o.html"
+    }
+  },
+  "kernel-kmeans": {
+    "raw_bibtex": "research/publication-sources/kernel-kmeans.bib",
+    "html_sha256": "24d27e4433929a9197cd657f140510c21695d951c6ee5428b920dac3a10a9429",
+    "fields": {
+      "title": "Kernel k-means, Spectral Clustering and Normalized Cuts",
+      "author": "Inderjit S. Dhillon AND Yuqiang Guan AND Brian J. Kulis",
+      "booktitle": "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)",
+      "pages": "551--556",
+      "year": "2004",
+      "url": "https://bigdata.oden.utexas.edu/publication/kernel-k-means-spectral-clustering-and-normalized-cuts/"
+    }
+  }
+}

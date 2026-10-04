@@ -1,0 +1,96 @@
+{
+  "format": "llm-study-freeze-v1",
+  "created_utc": "2026-09-24T20:13:29.471545+00:00",
+  "config": {
+    "rank": 4,
+    "channels": 64,
+    "steps": 256,
+    "batch": 4,
+    "length": 128,
+    "basis_lr": 0.001,
+    "router_lr": 0.01,
+    "warmup": 16,
+    "minimum_lr_fraction": 0.1,
+    "weight_decay": 0.0,
+    "clip": 1.0,
+    "queries": [
+      1,
+      4,
+      8
+    ],
+    "query_pool": 12,
+    "noise": [
+      0.0,
+      1e-06,
+      0.0001,
+      0.01
+    ],
+    "starts": 3,
+    "max_evaluations": 80,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "calibration_models": [
+      "pythia160m",
+      "pythia1b"
+    ],
+    "calibration_seeds": [
+      101,
+      102
+    ],
+    "calibration_domain": "general",
+    "evaluation_domains": [
+      "general",
+      "code",
+      "math"
+    ],
+    "good_error": 0.05,
+    "bad_error": 0.1,
+    "acceptance_bad_target": 0.05,
+    "minimum_calibration_accepted": 20,
+    "decision_models": [
+      "pythia1b",
+      "qwen4b",
+      "smol17b"
+    ],
+    "decision_steps": 64,
+    "decision_noise": [
+      0.0001,
+      0.01
+    ],
+    "decision_query": 4,
+    "decision_lr": 0.0001
+  },
+  "models": {
+    "pythia160m": "EleutherAI/pythia-160m",
+    "pythia1b": "EleutherAI/pythia-1b",
+    "pythia28b": "EleutherAI/pythia-2.8b",
+    "qwen06b": "Qwen/Qwen3-0.6B",
+    "qwen17b": "Qwen/Qwen3-1.7B",
+    "qwen4b": "Qwen/Qwen3-4B",
+    "qwen8b": "Qwen/Qwen3-8B",
+    "smol360m": "HuggingFaceTB/SmolLM2-360M",
+    "smol17b": "HuggingFaceTB/SmolLM2-1.7B"
+  },
+  "source_sha256": {
+    "src/llm_shared.py": "42a69c513e50f9ae7ee8e08406549898cfdada32400e8934346215ec504497a3",
+    "src/llm_observations.py": "ba941ff2217a455da44048beecb4065ccc797a9f2ffa01aafe98bc03e051ed76",
+    "src/llm_decisions.py": "82c7a66404dd3ebb04f5928f60ceebbd77be3e1269439c7509bb11300ded7f64",
+    "src/trusted_recovery.py": "9848ec73fd594fb593cace3e49cd22ad2833019038893bd87b376afbe9186e91",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/response_tomography.py": "88a4dd2c335e8d6e1cea0636705abc31331a60201f0a03ce7cba3548b066a6d0",
+    "src/response_factor_recovery.py": "5a547467d14607f7000033633cc516dcd611c382e28da76fce221061ff670718",
+    "experiments/llm_protocol.py": "1b214698e82658be3765176ce880bb182e0d21c8023dac24008b559e85f9d1e0",
+    "experiments/train_llm_shared.py": "f9bd763c53cc7f51fad857cbab2f19f8153b3862fb27037c22589440580a444f",
+    "experiments/observe_llm_shared.py": "37e67211ba9d795b1dc5212e31b44586526c535fc65c13cb3c5f1a31e4fe9221",
+    "experiments/recover_llm_shared.py": "c36b04a9590187021d199312b9bb81ceb6c57ae11eb0ad49b74469372a64682b",
+    "experiments/calibrate_llm_recovery.py": "af1456977bb665781ea59d303ab9c29ec4fe6f67554a20feda93b1d0dceff312",
+    "experiments/run_llm_decisions.py": "ae97fcbc18da988b6ed8b8a6a57dce23ffe243b0d8a6007223c04068d7be9ff3",
+    "experiments/run_autograd_tomography.py": "3ba5fc82dd58faf09ddbacbae2c69c50ab510f9d3f6937a03b9658b883faea56",
+    "research/LLM_STUDY_PROTOCOL.md": "ad10b28bc27d54af74613ca3eeea2f25821055ad00f9381c0aedb9d6f768b931",
+    "research/LLM_CORPUS_LOCK.json": "a6d0e014dc9fe8a29b831c2be0d3bdad47d00d19ddee8f47dde5992c78abc2ef",
+    "research/LLM_ACCESS_INVENTORY.json": "3fd492ad4b381d4f27450e7e63e98172f57764bd50c4a81a5528f25bf0a0238a"
+  }
+}

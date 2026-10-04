@@ -1,0 +1,126 @@
+{
+  "across_seed": {
+    "all_fixed_nonpermutation_probes_detected": true,
+    "all_formula_checks_pass": true,
+    "all_permutation_controls_pass": true,
+    "all_rank_assumptions_pass": true,
+    "maximum_effective_relative_l2_error": 1.697808166886258e-16,
+    "maximum_formula_autograd_relative_error": 2.047284219856605e-17,
+    "maximum_formula_fd_relative_error": 9.56559153506065e-13,
+    "maximum_over_seed_medians": 0.50579142960789,
+    "mean_median_relative_response_difference": 0.5051407503074253,
+    "minimum_over_seed_medians": 0.5044997862109962
+  },
+  "claim_boundary": "This validates a fixed non-permutation alternative at three frozen checkpoints. The probes are not a universal equality certificate, and the Euclidean response is not the checkpoint AdamW trajectory or a historical sharing graph.",
+  "input_files": [
+    "results/primary_remote/response_audit_seed0.json",
+    "results/primary_remote/response_audit_seed1.json",
+    "results/primary_remote/response_audit_seed2.json"
+  ],
+  "protocol": {
+    "checkpoint_probe_evaluations": 24,
+    "fixed_gauge_strength": 0.35,
+    "probe_seed_starts": [
+      740000,
+      740001,
+      740002
+    ],
+    "probe_windows_overlap": true,
+    "probes_per_seed": 8,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "source_sha256": {
+      "experiments/run_response_audit.py": "df13788152a4dc88ff1553d67d467a0e62cc29a50d2eecad4090dd221e498010",
+      "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+      "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+      "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6"
+    },
+    "unique_gaussian_draws": 10
+  },
+  "seed_rows": [
+    {
+      "A_sigma_min": 1.7290647316696526,
+      "B_sigma_min": 27.4451783276227,
+      "checkpoint_sha256": "6f9fce092e9a7dba6a24de9178736425cbf27d62b2e385ecce0b2210a217324d",
+      "detected_probes": 8,
+      "effective_relative_l2_error": 1.58332035343846e-16,
+      "formula_best_native_fd_relative_error": 5.705764840852488e-15,
+      "formula_best_transformed_fd_relative_error": 7.451519179834693e-13,
+      "formula_extraction_columns": 32,
+      "formula_extraction_rows": 4,
+      "formula_native_autograd_relative_error": 0.0,
+      "formula_transformed_autograd_relative_error": 0.0,
+      "formula_worst_autograd_relative_error": 0.0,
+      "formula_worst_fd_relative_error": 7.451519179834693e-13,
+      "minimum_A_entry": 0.0002883325595424839,
+      "nonpermutation_median_relative_response_difference": 0.5044997862109962,
+      "nonpermutation_minimum_relative_response_difference": 0.503388564719438,
+      "permutation_max_relative_response_difference": 8.819747314738265e-17,
+      "probe_count": 8,
+      "seed": 0,
+      "source_sha256": {
+        "experiments/run_response_audit.py": "df13788152a4dc88ff1553d67d467a0e62cc29a50d2eecad4090dd221e498010",
+        "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+        "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+        "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6"
+      }
+    },
+    {
+      "A_sigma_min": 1.7290606240764381,
+      "B_sigma_min": 27.339246469611272,
+      "checkpoint_sha256": "ae09aaf044be8bbcdc7acf08827d96a47423a4422bff361e2d0b82513ab7a4d5",
+      "detected_probes": 8,
+      "effective_relative_l2_error": 1.697808166886258e-16,
+      "formula_best_native_fd_relative_error": 4.6323131114743345e-15,
+      "formula_best_transformed_fd_relative_error": 6.416667632913798e-13,
+      "formula_extraction_columns": 32,
+      "formula_extraction_rows": 4,
+      "formula_native_autograd_relative_error": 0.0,
+      "formula_transformed_autograd_relative_error": 2.047284219856605e-17,
+      "formula_worst_autograd_relative_error": 2.047284219856605e-17,
+      "formula_worst_fd_relative_error": 6.416667632913798e-13,
+      "minimum_A_entry": 0.00027173132026057364,
+      "nonpermutation_median_relative_response_difference": 0.5051310351033897,
+      "nonpermutation_minimum_relative_response_difference": 0.5027961033296446,
+      "permutation_max_relative_response_difference": 8.819936915699749e-17,
+      "probe_count": 8,
+      "seed": 1,
+      "source_sha256": {
+        "experiments/run_response_audit.py": "df13788152a4dc88ff1553d67d467a0e62cc29a50d2eecad4090dd221e498010",
+        "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+        "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+        "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6"
+      }
+    },
+    {
+      "A_sigma_min": 1.7290149091303781,
+      "B_sigma_min": 27.371451682684242,
+      "checkpoint_sha256": "77006e2d6d5c024ddca274f3cd029c9d4672a0c53ed1d99ac7528453521c2fe4",
+      "detected_probes": 8,
+      "effective_relative_l2_error": 1.6317209715592078e-16,
+      "formula_best_native_fd_relative_error": 5.402986385929067e-15,
+      "formula_best_transformed_fd_relative_error": 9.56559153506065e-13,
+      "formula_extraction_columns": 32,
+      "formula_extraction_rows": 4,
+      "formula_native_autograd_relative_error": 0.0,
+      "formula_transformed_autograd_relative_error": 5.106076786862227e-18,
+      "formula_worst_autograd_relative_error": 5.106076786862227e-18,
+      "formula_worst_fd_relative_error": 9.56559153506065e-13,
+      "minimum_A_entry": 0.00026125418812434053,
+      "nonpermutation_median_relative_response_difference": 0.50579142960789,
+      "nonpermutation_minimum_relative_response_difference": 0.50418123498383,
+      "permutation_max_relative_response_difference": 8.82414194419779e-17,
+      "probe_count": 8,
+      "seed": 2,
+      "source_sha256": {
+        "experiments/run_response_audit.py": "df13788152a4dc88ff1553d67d467a0e62cc29a50d2eecad4090dd221e498010",
+        "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+        "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+        "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6"
+      }
+    }
+  ]
+}

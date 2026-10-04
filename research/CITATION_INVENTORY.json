@@ -1,0 +1,226 @@
+{
+  "scope": "Structural keys in main.tex, manuscript sections, and generated tables; unused template examples excluded. Not claim verification.",
+  "bibliography_entries": 68,
+  "cited_entries": 57,
+  "missing_keys": [],
+  "uncited_keys": [
+    "barbarino2025robustness",
+    "liao2015bounded",
+    "liu2019darts",
+    "lv2026coupling",
+    "makkuva2020learning",
+    "nguyen2024least",
+    "nguyen2024topk",
+    "shen2010scalable",
+    "wang2021rethinking",
+    "ye2026polysemantic",
+    "yoon2026misrouted"
+  ],
+  "citation_locations": {
+    "abdolali2021simplex": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_secondary_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "afsari2008sensitivity": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/appendix_trusted_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "aladrah2026implicit": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "allal2025smollm2": [
+      "paper/sections/experiments.tex"
+    ],
+    "amsel2026query": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "austin2021mbpp": [
+      "paper/sections/experiments.tex"
+    ],
+    "behling2018local": [
+      "paper/sections/appendix_trusted_theory.tex"
+    ],
+    "bhaskara2014uniqueness": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "biderman2023pythia": [
+      "paper/sections/experiments.tex"
+    ],
+    "chen2026beyond": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "chiu2012matrix": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "cobbe2021gsm8k": [
+      "paper/sections/experiments.tex"
+    ],
+    "davidhay2024dynamic": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "donoho2003correct": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "dorrell2026convex": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "fu2018identifiability": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "gillis2023partial": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "goel2026training": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "gong2026twistedmerge": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "halikias2024structured": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "han2026w2t": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "he2025rasa": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "hu2024aslorav2": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/benchmark.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "hu2026aslora": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "jacot2018neural": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "karuturi2026gl": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "kassis2026scientificagentskillslibrary": [
+      "paper/sections/ai_disclosure.tex"
+    ],
+    "khilar2026crosslayer": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "lau2026symmetry": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "li2026e2lora": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "marcotte2026intrinsic": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "merity2016wikitext": [
+      "paper/sections/experiments.tex"
+    ],
+    "mishra2014fixedrank": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "mu2026lisa": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "nguyen2023demystifying": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "novak2022fast": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "otto2023recovering": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "plummer2022neural": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "putterman2024learning": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "savarese2019learning": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "singh2026loss": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "stupariu2026optimizer": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "tran2025linear": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "tu2016lowrank": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "uyuk2026fips": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "vanoostrum2023invariance": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "varre2026gradient": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "vuthanh2023bounded": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/appendix_theory.tex",
+      "paper/sections/introduction.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "wang2025basis": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "wang2025complete": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "wang2025gaugefiber": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "yang2025qwen3": [
+      "paper/sections/experiments.tex"
+    ],
+    "yeh2022equivariance": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "yen2025lora": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "zhang2025geosharing": [
+      "paper/sections/appendix_literature.tex"
+    ],
+    "zheng2026loras": [
+      "paper/sections/appendix_literature.tex",
+      "paper/sections/related_work.tex"
+    ],
+    "zhussip2026share": [
+      "paper/sections/appendix_literature.tex"
+    ]
+  }
+}

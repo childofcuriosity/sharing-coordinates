@@ -1,0 +1,1009 @@
+{
+  "format": "trusted-recovery-v1",
+  "kind": "synthetic",
+  "split": "development",
+  "seed": 0,
+  "pilot": true,
+  "records": [
+    {
+      "key": {
+        "kind": "synthetic",
+        "split": "development",
+        "seed": 0,
+        "regime": "interior",
+        "noise": 0.0,
+        "q": 4
+      },
+      "status": "ok",
+      "methods": {
+        "spectral": {
+          "solver": {
+            "combined_eigenvalue_gap": 0.3333063471749639,
+            "gram_min_eigenvalue": 4.606273336826867e-17,
+            "pullback_min_eigenvalue": -1.3481376388499444e-17,
+            "psd_clipped_negative_norm": 1.5528129651656232e-17,
+            "joint_diagonalization_relative_residual": 5.8667846755835736e-09,
+            "product_relative_residual": 1.885493479384751e-09,
+            "router_min_entry": 0.04066291734784345,
+            "router_row_sum_max_error": 8.376601856596722e-09
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 8.740778622563028e-09,
+            "noise_budget": 0.0,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.04066291734784345,
+            "router_row_sum_error": 8.376601856596722e-09,
+            "router_sigma_min": 0.30435835880204704,
+            "basis_sigma_min": 2.356816716344661,
+            "tangent_sigma_min": 0.2288441059969611,
+            "tangent_sigma_max": 1.9243920247281754,
+            "linearized_score": 3.863231951746412e-08,
+            "subspace_ratio": 0.0,
+            "empirical_score": 7.37586881811812e-08,
+            "local_radius": 0.00011792805658022636,
+            "curvature_upper_bound": 1864.4902811874872,
+            "local_distance_bound": 7.350983440119118e-08,
+            "boundary_separation": 1.4022382778489056e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 7.938462433768007e-09,
+            "residual_only_score": 1.1807641455472837e-08,
+            "condition_only_score": 4.3697870025688115
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16805510892829806,
+                0.4379530700799779,
+                0.39399182655900666
+              ],
+              [
+                0.11771187995561666,
+                0.6648182975970894,
+                0.21746982244729468
+              ],
+              [
+                0.04066291734784345,
+                0.12967128059978034,
+                0.8296658058553377
+              ],
+              [
+                0.3755056867640206,
+                0.06339836528474353,
+                0.5610959563278378
+              ],
+              [
+                0.2343194097533264,
+                0.1691149999258369,
+                0.5965655986866584
+              ],
+              [
+                0.10178570024648614,
+                0.15050434070760776,
+                0.7477099590459069
+              ]
+            ],
+            "c": [
+              [
+                -2.2598254344952524,
+                -0.6275443931801024,
+                2.659310893686754
+              ],
+              [
+                -1.1055325379523917,
+                2.9871557165055065,
+                -0.24062996657521266
+              ],
+              [
+                -2.7614827369517325,
+                -1.0200080161683478,
+                -0.6990944193689048
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 9.958910929245061e-09,
+            "router_relative_error": 4.484456423461177e-09,
+            "basis_relative_error": 8.892106470500369e-09,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "projected_spectral": {
+          "solver": {},
+          "status": "ok",
+          "diagnostics": {
+            "residual": 3.5146448215842256e-09,
+            "noise_budget": 0.0,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.04066291719320394,
+            "router_row_sum_error": 2.220446049250313e-16,
+            "router_sigma_min": 0.3043583568545657,
+            "basis_sigma_min": 2.3568167150801655,
+            "tangent_sigma_min": 0.2288441049848218,
+            "tangent_sigma_max": 1.924392024472145,
+            "linearized_score": 1.5795228030121067e-08,
+            "subspace_ratio": 0.0,
+            "empirical_score": 3.069019900211959e-08,
+            "local_radius": 0.00011792805563370565,
+            "curvature_upper_bound": 1864.4902879619276,
+            "local_distance_bound": 2.9558117316526974e-08,
+            "boundary_separation": 1.4022382603534511e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 3.308626300861903e-09,
+            "residual_only_score": 4.826980031100598e-09,
+            "condition_only_score": 4.36978702189565
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16805510799268777,
+                0.4379530676417694,
+                0.3939918243655428
+              ],
+              [
+                0.11771187995561658,
+                0.664818297597089,
+                0.21746982244729454
+              ],
+              [
+                0.04066291719320394,
+                0.12967128010664544,
+                0.8296658027001506
+              ],
+              [
+                0.37550568361855896,
+                0.06339836475368067,
+                0.5610959516277604
+              ],
+              [
+                0.234319407793052,
+                0.16911499851105094,
+                0.5965655936958969
+              ],
+              [
+                0.10178570024648605,
+                0.15050434070760763,
+                0.7477099590459062
+              ]
+            ],
+            "c": [
+              [
+                -2.259825489275098,
+                -0.6275444034955712,
+                2.6593109102046295
+              ],
+              [
+                -1.1055325298636223,
+                2.9871557224079304,
+                -0.24062996906496126
+              ],
+              [
+                -2.76148274207004,
+                -1.0200080172103259,
+                -0.6990944218594798
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 5.0426292310164e-09,
+            "router_relative_error": 2.734326269648879e-09,
+            "basis_relative_error": 4.236929243285648e-09,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "joint_fit": {
+          "solver": {
+            "residual": 1.2482946906481908e-15,
+            "nfev": 2,
+            "njev": 2,
+            "status": 1,
+            "optimality": 1.0073201519740769e-16,
+            "start_index": 0,
+            "starts": [
+              {
+                "residual": 1.2482946906481908e-15,
+                "nfev": 2,
+                "njev": 2,
+                "status": 1,
+                "optimality": 1.0073201519740769e-16,
+                "start_index": 0
+              },
+              {
+                "residual": 1.3336697926267245e-15,
+                "nfev": 5,
+                "njev": 5,
+                "status": 1,
+                "optimality": 2.0502031771474327e-16,
+                "start_index": 1
+              },
+              {
+                "residual": 4.558682476055396e-15,
+                "nfev": 26,
+                "njev": 20,
+                "status": 1,
+                "optimality": 1.7706771991555125e-15,
+                "start_index": 2
+              }
+            ],
+            "competitive_start_disagreement": 3.81648235041357e-15
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 1.2482946906481908e-15,
+            "noise_budget": 0.0,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.040662916080189467,
+            "router_row_sum_error": 0.0,
+            "router_sigma_min": 0.3043583574196434,
+            "basis_sigma_min": 2.356816714521911,
+            "tangent_sigma_min": 0.22884410491350501,
+            "tangent_sigma_max": 1.92439202324727,
+            "linearized_score": 4.3698415710768513e-10,
+            "subspace_ratio": 0.0,
+            "empirical_score": 8.739684130064451e-10,
+            "local_radius": 0.00011792805591660113,
+            "curvature_upper_bound": 1864.4902850327085,
+            "local_distance_bound": 1.0498142155233831e-14,
+            "boundary_separation": 1.402238261802974e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 1.2709024457346154e-15,
+            "residual_only_score": 1.781413107977678e-15,
+            "condition_only_score": 4.369787023257447
+          },
+          "estimate": {
+            "a": [
+              [
+                0.1680551070725358,
+                0.43795306822421776,
+                0.39399182470324645
+              ],
+              [
+                0.11771187995561662,
+                0.6648182975970893,
+                0.21746982244729413
+              ],
+              [
+                0.040662916080189467,
+                0.1296712793321272,
+                0.8296658045876835
+              ],
+              [
+                0.375505683971819,
+                0.06339836249254327,
+                0.5610959535356378
+              ],
+              [
+                0.23431940696471937,
+                0.16911499713723005,
+                0.5965655958980506
+              ],
+              [
+                0.10178570024648566,
+                0.150504340707608,
+                0.7477099590459063
+              ]
+            ],
+            "c": [
+              [
+                -2.2598254813631744,
+                -0.6275443829326601,
+                2.6593109068409215
+              ],
+              [
+                -1.1055325326020782,
+                2.987155715335685,
+                -0.24062996807685488
+              ],
+              [
+                -2.76148274093255,
+                -1.0200080152979658,
+                -0.699094418251632
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 2.395245308691641e-15,
+            "router_relative_error": 3.7247533200858797e-16,
+            "basis_relative_error": 2.36610697472756e-15,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        }
+      }
+    },
+    {
+      "key": {
+        "kind": "synthetic",
+        "split": "development",
+        "seed": 0,
+        "regime": "interior",
+        "noise": 1e-06,
+        "q": 4
+      },
+      "status": "ok",
+      "methods": {
+        "spectral": {
+          "solver": {
+            "combined_eigenvalue_gap": 0.33330645679829374,
+            "gram_min_eigenvalue": -1.0537335791378854e-07,
+            "pullback_min_eigenvalue": -1.2496701032708267e-07,
+            "psd_clipped_negative_norm": 1.543593955989172e-07,
+            "joint_diagonalization_relative_residual": 0.0001230437807899684,
+            "product_relative_residual": 7.011494631515144e-05,
+            "router_min_entry": 0.040663116391689416,
+            "router_row_sum_max_error": 0.0002213678901086258
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 0.00014655266140971456,
+            "noise_budget": 1.4142149765880717e-06,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": false,
+            "router_min_entry": 0.040663116391689416,
+            "router_row_sum_error": 0.0002213678901086258,
+            "router_sigma_min": 0.30436877844127036,
+            "basis_sigma_min": 2.3568352659635803,
+            "tangent_sigma_min": 0.22885168456736843,
+            "tangent_sigma_max": 1.9244031396133188,
+            "linearized_score": 0.0006465627581725084,
+            "subspace_ratio": 7.038397007520697e-06,
+            "empirical_score": 0.0012631918229785032,
+            "local_radius": 0.00011793435641991534,
+            "curvature_upper_bound": 1864.453566960507,
+            "local_distance_bound": 0.0012443589986653471,
+            "boundary_separation": 1.402358833487795e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 0.00013970228525746482,
+            "residual_only_score": 0.00020247076596987653,
+            "condition_only_score": 4.369642294267771
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16805492128203722,
+                0.4379533467395248,
+                0.393991796713961
+              ],
+              [
+                0.11771234782245589,
+                0.6648187598479824,
+                0.21746903069791526
+              ],
+              [
+                0.040663116391689416,
+                0.12967102965989752,
+                0.8296654911679713
+              ],
+              [
+                0.37550596403490016,
+                0.06340004707251506,
+                0.5610970212919074
+              ],
+              [
+                0.23439309578579798,
+                0.1691883663658635,
+                0.5966399057384472
+              ],
+              [
+                0.10178627028417976,
+                0.15050440093393136,
+                0.747709928486306
+              ]
+            ],
+            "c": [
+              [
+                -2.259441096941627,
+                -0.6276350507967721,
+                2.659212132999661
+              ],
+              [
+                -1.105599876659437,
+                2.987169779149149,
+                -0.24061385294264753
+              ],
+              [
+                -2.7614327103798777,
+                -1.0200172061487272,
+                -0.6991103161953226
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 0.00010367842646143632,
+            "router_relative_error": 7.287935497891191e-05,
+            "basis_relative_error": 7.374154684692481e-05,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "projected_spectral": {
+          "solver": {},
+          "status": "ok",
+          "diagnostics": {
+            "residual": 4.8996754944674676e-05,
+            "noise_budget": 1.4142149765880717e-06,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.040663131143478096,
+            "router_row_sum_error": 2.220446049250313e-16,
+            "router_sigma_min": 0.30436435053539584,
+            "basis_sigma_min": 2.356763674014303,
+            "tangent_sigma_min": 0.22884926791909743,
+            "tangent_sigma_max": 1.9243860135319333,
+            "linearized_score": 0.00022028066936654575,
+            "subspace_ratio": 7.038397007520697e-06,
+            "empirical_score": 0.0004324857859665917,
+            "local_radius": 0.00011793127417548248,
+            "curvature_upper_bound": 1864.4806271719756,
+            "local_distance_bound": 0.00042394586147819543,
+            "boundary_separation": 1.4023087510531586e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 4.714867060601917e-05,
+            "residual_only_score": 6.799764065777135e-05,
+            "condition_only_score": 4.369688437690432
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16805491040291468,
+                0.43795331838838764,
+                0.39399177120869755
+              ],
+              [
+                0.11771233153479436,
+                0.6648186678581179,
+                0.21746900060708768
+              ],
+              [
+                0.040663131143478096,
+                0.12967107670202802,
+                0.8296657921544939
+              ],
+              [
+                0.37550482535432206,
+                0.06339985481883825,
+                0.5610953198268396
+              ],
+              [
+                0.2343412201643247,
+                0.16915092178319843,
+                0.5965078580524769
+              ],
+              [
+                0.10178620924254046,
+                0.15050431067583142,
+                0.747709480081628
+              ]
+            ],
+            "c": [
+              [
+                -2.2598914956387013,
+                -0.6276854673941583,
+                2.6592466290326016
+              ],
+              [
+                -1.105521416720374,
+                2.98717901794346,
+                -0.24062004657165229
+              ],
+              [
+                -2.761489763941173,
+                -1.0200230663248788,
+                -0.6991065369606729
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 5.0919858582261356e-05,
+            "router_relative_error": 4.073528776050262e-05,
+            "basis_relative_error": 3.055271394011571e-05,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "joint_fit": {
+          "solver": {
+            "residual": 1.3458921592231658e-06,
+            "nfev": 3,
+            "njev": 3,
+            "status": 1,
+            "optimality": 4.113681262995353e-16,
+            "start_index": 0,
+            "starts": [
+              {
+                "residual": 1.3458921592231658e-06,
+                "nfev": 3,
+                "njev": 3,
+                "status": 1,
+                "optimality": 4.113681262995353e-16,
+                "start_index": 0
+              },
+              {
+                "residual": 1.3458921592246564e-06,
+                "nfev": 5,
+                "njev": 5,
+                "status": 1,
+                "optimality": 8.734486193177689e-16,
+                "start_index": 1
+              },
+              {
+                "residual": 1.345892159240009e-06,
+                "nfev": 29,
+                "njev": 22,
+                "status": 1,
+                "optimality": 2.3273346346816274e-15,
+                "start_index": 2
+              }
+            ],
+            "competitive_start_disagreement": 1.3125224598293077e-14
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 1.3458921592231658e-06,
+            "noise_budget": 1.4142149765880717e-06,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.040662946577557466,
+            "router_row_sum_error": 1.1102230246251565e-16,
+            "router_sigma_min": 0.30435840606465986,
+            "basis_sigma_min": 2.3568174632934804,
+            "tangent_sigma_min": 0.22884414187825325,
+            "tangent_sigma_max": 1.9243919661103497,
+            "linearized_score": 1.2061515375297167e-05,
+            "subspace_ratio": 7.038397007520697e-06,
+            "empirical_score": 2.3902949392299656e-05,
+            "local_radius": 0.00011792804451941288,
+            "curvature_upper_bound": 1864.4907113372278,
+            "local_distance_bound": 2.3212460824320896e-05,
+            "boundary_separation": 1.4022383910682139e-05,
+            "local_feasible_component_pass": true,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 1.2955278296408194e-06,
+            "residual_only_score": 1.8681054739045778e-06,
+            "condition_only_score": 4.369786317414266
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16805494859965459,
+                0.43795334370044475,
+                0.3939917076999007
+              ],
+              [
+                0.11771183062625828,
+                0.664818442312496,
+                0.21746972706124582
+              ],
+              [
+                0.040662946577557466,
+                0.12967123882025863,
+                0.8296658146021838
+              ],
+              [
+                0.3755057967887512,
+                0.06339823299179277,
+                0.5610959702194561
+              ],
+              [
+                0.23431933211765313,
+                0.1691150604081253,
+                0.5965656074742216
+              ],
+              [
+                0.10178569074307814,
+                0.15050447283032337,
+                0.7477098364265985
+              ]
+            ],
+            "c": [
+              [
+                -2.2598253597186346,
+                -0.6275451799808633,
+                2.65931196858092
+              ],
+              [
+                -1.1055321400538578,
+                2.987155214702682,
+                -0.2406301728809651
+              ],
+              [
+                -2.761483305418381,
+                -1.0200077671565126,
+                -0.6990946371533764
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 1.357624537819146e-06,
+            "router_relative_error": 2.6858415758501313e-07,
+            "basis_relative_error": 1.330791845475091e-06,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        }
+      }
+    },
+    {
+      "key": {
+        "kind": "synthetic",
+        "split": "development",
+        "seed": 0,
+        "regime": "interior",
+        "noise": 0.001,
+        "q": 4
+      },
+      "status": "ok",
+      "methods": {
+        "spectral": {
+          "solver": {
+            "combined_eigenvalue_gap": 0.3333809126044912,
+            "gram_min_eigenvalue": -0.00010530585025486524,
+            "pullback_min_eigenvalue": -0.00012479804005302897,
+            "psd_clipped_negative_norm": 0.0001545797255045244,
+            "joint_diagonalization_relative_residual": 0.004074672773207056,
+            "product_relative_residual": 0.002117858046014316,
+            "router_min_entry": 0.04085928648062077,
+            "router_row_sum_max_error": 0.007096955416212358
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 0.005253670545213377,
+            "noise_budget": 0.0014156291915646598,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": false,
+            "router_min_entry": 0.04085928648062077,
+            "router_row_sum_error": 0.007096955416212358,
+            "router_sigma_min": 0.304180164210223,
+            "basis_sigma_min": 2.3624768580485274,
+            "tangent_sigma_min": 0.22893744430436946,
+            "tangent_sigma_max": 1.9251004574552784,
+            "linearized_score": 0.02913153790566163,
+            "subspace_ratio": 0.0070917961541978256,
+            "empirical_score": 0.05731175703002813,
+            "local_radius": 0.00011794122958890183,
+            "curvature_upper_bound": 1864.7444632143408,
+            "local_distance_bound": 0.056057576350616825,
+            "boundary_separation": 1.4031741339168437e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 0.005035878054704923,
+            "residual_only_score": 0.007277439246019252,
+            "condition_only_score": 4.368005430647302
+          },
+          "estimate": {
+            "a": [
+              [
+                0.16786447526681283,
+                0.438229223816299,
+                0.3939691093217699
+              ],
+              [
+                0.11818142244847189,
+                0.6652814898220646,
+                0.2166801242491726
+              ],
+              [
+                0.04085928648062077,
+                0.12942658390204295,
+                0.829352796681459
+              ],
+              [
+                0.37579456076980844,
+                0.06506329997054842,
+                0.5621692266461902
+              ],
+              [
+                0.23657947407405328,
+                0.17107254958020354,
+                0.5994449317619556
+              ],
+              [
+                0.10235273386712736,
+                0.15056529153803133,
+                0.7476790082923935
+              ]
+            ],
+            "c": [
+              [
+                -2.2363143618544346,
+                -0.6391025022126235,
+                2.661774112273768
+              ],
+              [
+                -1.1103631327468446,
+                2.987530997940392,
+                -0.2420461710407232
+              ],
+              [
+                -2.760473231792336,
+                -1.0185211704966155,
+                -0.7012247976919223
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 0.005645947985716115,
+            "router_relative_error": 0.0027301792049061065,
+            "basis_relative_error": 0.004941948013335441,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "projected_spectral": {
+          "solver": {},
+          "status": "ok",
+          "diagnostics": {
+            "residual": 0.0022609644482256726,
+            "noise_budget": 0.0014156291915646598,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.04087405562314029,
+            "router_row_sum_error": 0.0,
+            "router_sigma_min": 0.3035391418696978,
+            "basis_sigma_min": 2.3574351152680153,
+            "tangent_sigma_min": 0.22860460837124189,
+            "tangent_sigma_max": 1.925832307559624,
+            "linearized_score": 0.01608276301158259,
+            "subspace_ratio": 0.0070917961541978256,
+            "empirical_score": 0.03304390582179325,
+            "local_radius": 0.00011749382097767329,
+            "curvature_upper_bound": 1869.0070327347394,
+            "local_distance_bound": 0.030946137792811395,
+            "boundary_separation": 1.3958996686866795e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 0.0024617661180922536,
+            "residual_only_score": 0.0033424919829862605,
+            "condition_only_score": 4.374365010070368
+          },
+          "estimate": {
+            "a": [
+              [
+                0.1678539326290513,
+                0.4382017010664385,
+                0.39394436630451013
+              ],
+              [
+                0.11816452060669122,
+                0.6651863438824777,
+                0.21664913551083115
+              ],
+              [
+                0.04087405562314029,
+                0.1294733668938206,
+                0.8296525774830391
+              ],
+              [
+                0.3746604309051771,
+                0.06486694206840926,
+                0.5604726270264137
+              ],
+              [
+                0.23491231186999256,
+                0.16986701097661724,
+                0.5952206771533902
+              ],
+              [
+                0.10229166229775696,
+                0.15047545262216147,
+                0.7472328850800816
+              ]
+            ],
+            "c": [
+              [
+                -2.2689400877867927,
+                -0.6452947001863979,
+                2.667018828905459
+              ],
+              [
+                -1.104259950814004,
+                2.989120268402534,
+                -0.2431741981797101
+              ],
+              [
+                -2.7608069795453924,
+                -1.0183807591168588,
+                -0.70141220426325
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 0.004421842991577408,
+            "router_relative_error": 0.0015791815362982803,
+            "basis_relative_error": 0.004130239837779018,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        },
+        "joint_fit": {
+          "solver": {
+            "residual": 0.0013458443428394115,
+            "nfev": 7,
+            "njev": 6,
+            "status": 2,
+            "optimality": 2.2691773143553793e-12,
+            "start_index": 1,
+            "starts": [
+              {
+                "residual": 0.0013458443428394182,
+                "nfev": 9,
+                "njev": 4,
+                "status": 3,
+                "optimality": 1.899024425895568e-12,
+                "start_index": 0
+              },
+              {
+                "residual": 0.0013458443428394115,
+                "nfev": 7,
+                "njev": 6,
+                "status": 2,
+                "optimality": 2.2691773143553793e-12,
+                "start_index": 1
+              },
+              {
+                "residual": 0.0013458443428394288,
+                "nfev": 26,
+                "njev": 20,
+                "status": 1,
+                "optimality": 7.407053310429305e-13,
+                "start_index": 2
+              }
+            ],
+            "competitive_start_disagreement": 1.380626452307891e-10
+          },
+          "status": "ok",
+          "diagnostics": {
+            "residual": 0.0013458443428394115,
+            "noise_budget": 0.0014156291915646598,
+            "numerical_noise_floor": 1e-10,
+            "feasibility": true,
+            "router_min_entry": 0.04069294934990801,
+            "router_row_sum_error": 1.1102230246251565e-16,
+            "router_sigma_min": 0.3044081604421,
+            "basis_sigma_min": 2.3575567033612512,
+            "tangent_sigma_min": 0.22888145276203725,
+            "tangent_sigma_max": 1.9243335265092973,
+            "linearized_score": 0.012065082605339419,
+            "subspace_ratio": 0.0070917961541978256,
+            "empirical_score": 0.023910125650632857,
+            "local_radius": 0.00011791706992129891,
+            "curvature_upper_bound": 1864.9141123464337,
+            "local_distance_bound": 0.02321954311865479,
+            "boundary_separation": 1.4023741387940205e-05,
+            "local_feasible_component_pass": false,
+            "certificate_scope": "conditional estimated-subspace local component; numerical non-interval evaluation",
+            "no_global_truth_guarantee": true,
+            "heldout_residual": 0.0012954813686709686,
+            "residual_only_score": 0.0018680388035922737,
+            "condition_only_score": 4.36907398101705
+          },
+          "estimate": {
+            "a": [
+              [
+                0.1678965229317949,
+                0.4382285504752048,
+                0.3938749265930004
+              ],
+              [
+                0.11766262296618007,
+                0.6649632208950199,
+                0.21737415613879998
+              ],
+              [
+                0.04069294934990801,
+                0.12963088862652408,
+                0.8296761620235679
+              ],
+              [
+                0.375619249584442,
+                0.06326871535840879,
+                0.5611120350571492
+              ],
+              [
+                0.23424465137440706,
+                0.16917832885639073,
+                0.5965770197692022
+              ],
+              [
+                0.1017756336183974,
+                0.15063672471631867,
+                0.7475876416652839
+              ]
+            ],
+            "c": [
+              [
+                -2.2597071026872846,
+                -0.6283421902434294,
+                2.660361949034983
+              ],
+              [
+                -1.1051400831208233,
+                2.986655378325895,
+                -0.24083321792010706
+              ],
+              [
+                -2.7620470751798796,
+                -1.019760000904851,
+                -0.6993104871772448
+              ]
+            ]
+          },
+          "evaluation": {
+            "orbit_relative_error": 0.0013571061673556435,
+            "router_relative_error": 0.000268749950773658,
+            "basis_relative_error": 0.0013302295341157781,
+            "permutation": [
+              0,
+              2,
+              1
+            ],
+            "quality": "good"
+          }
+        }
+      }
+    }
+  ],
+  "starts": 3,
+  "max_evaluations": 80,
+  "observation_file": "results/trusted_recovery/development/pilot0.pt",
+  "observation_sha256": "390736496054038dacec620bb583f0965f4f320c670ff8be0a161bacfdd40324",
+  "source_sha256": {
+    "experiments/run_trusted_recovery.py": "19c8c5e7bc6a07160a4fd7d85feb22f58e1a0790fc3bab4b00c695aefd993252",
+    "src/trusted_recovery.py": "912a5e036c95cf86a4e4c3f8a6182ca307ad7a30bfb43d340f44f8486ba40e6f",
+    "experiments/train_enhancement.py": "732b5e713fc8c5cffe81467675bcd2370dd3957054abb79ad63aa77b616bac7e",
+    "src/response_factor_recovery.py": "5a547467d14607f7000033633cc516dcd611c382e28da76fce221061ff670718",
+    "research/TRUSTED_RECOVERY_PROTOCOL.md": "d03989d7e7adbeab12bb2a6e47124497680a49274aa1d2800e44c00ad4ba5f6a"
+  },
+  "torch_version": "2.7.0a0+7c8ec84dab.nv25.03",
+  "seconds": 0.8672659448347986
+}

@@ -1,0 +1,42 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-adamw-seed0 64 events 1
+smol360m-adamw-seed0 128 events 1
+smol360m-adamw-seed0 192 events 1
+smol360m-adamw-seed0 256 events 1
+smol360m-adamw-seed0 complete 1 events validation 3.037201553583145 2.805724650621414
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-adamw-seed1 64 events 0
+smol360m-adamw-seed1 128 events 3
+smol360m-adamw-seed1 192 events 3
+smol360m-adamw-seed1 256 events 3
+smol360m-adamw-seed1 complete 3 events validation 3.035883665084839 2.8101703971624374
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-adamw-seed2 64 events 2
+smol360m-adamw-seed2 128 events 2
+smol360m-adamw-seed2 192 events 2
+smol360m-adamw-seed2 256 events 2
+smol360m-adamw-seed2 complete 2 events validation 3.036279708147049 2.804008662700653
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-sgd-seed0 64 events 0
+smol360m-sgd-seed0 128 events 0
+smol360m-sgd-seed0 192 events 0
+smol360m-sgd-seed0 256 events 0
+smol360m-sgd-seed0 complete 0 events validation 3.037201553583145 3.0357078164815903
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-sgd-seed1 64 events 0
+smol360m-sgd-seed1 128 events 0
+smol360m-sgd-seed1 192 events 0
+smol360m-sgd-seed1 256 events 0
+smol360m-sgd-seed1 complete 0 events validation 3.035883665084839 3.035191774368286
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+smol360m-sgd-seed2 64 events 0
+smol360m-sgd-seed2 128 events 0
+smol360m-sgd-seed2 192 events 0
+smol360m-sgd-seed2 256 events 0
+smol360m-sgd-seed2 complete 0 events validation 3.036279708147049 3.0368945598602295

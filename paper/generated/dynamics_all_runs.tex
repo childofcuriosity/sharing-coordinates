@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Model & Optimizer & Seed & Coeff. & Router only & Response & Valid NLL before/after \\
+\midrule
+Pythia-160M & adamw & 0 & -- & -- & 10 & 4.3082/4.3030 \\
+Pythia-160M & adamw & 1 & -- & -- & 61 & 4.3090/4.2026 \\
+Pythia-160M & adamw & 2 & 6 & -- & 6,52 & 4.3165/4.2819 \\
+Pythia-160M & sgd & 0 & -- & -- & -- & 4.3082/4.3291 \\
+Pythia-160M & sgd & 1 & -- & -- & -- & 4.3090/4.2969 \\
+Pythia-160M & sgd & 2 & -- & -- & -- & 4.3165/4.2986 \\
+Qwen3-0.6B & adamw & 0 & -- & -- & 8,80 & 3.5664/2.8878 \\
+Qwen3-0.6B & adamw & 1 & -- & -- & 156 & 3.5667/2.9090 \\
+Qwen3-0.6B & adamw & 2 & 12 & -- & 12 & 3.5667/2.8973 \\
+Qwen3-0.6B & sgd & 0 & -- & -- & -- & 3.5664/3.5517 \\
+Qwen3-0.6B & sgd & 1 & -- & -- & -- & 3.5667/3.5510 \\
+Qwen3-0.6B & sgd & 2 & -- & -- & -- & 3.5667/3.5474 \\
+SmolLM2-360M & adamw & 0 & -- & -- & 5 & 3.0372/2.8057 \\
+SmolLM2-360M & adamw & 1 & 71 & 71 & 97 & 3.0359/2.8102 \\
+SmolLM2-360M & adamw & 2 & 26 & -- & 26 & 3.0363/2.8040 \\
+SmolLM2-360M & sgd & 0 & -- & -- & -- & 3.0372/3.0357 \\
+SmolLM2-360M & sgd & 1 & -- & -- & -- & 3.0359/3.0352 \\
+SmolLM2-360M & sgd & 2 & -- & -- & -- & 3.0363/3.0369 \\
+\bottomrule\end{tabular}
+\caption{All 18 exploratory runs. Event columns give every transition step, not independent samples. Validation uses 32 fixed WikiText validation blocks per model, not a full-corpus benchmark. Identical seeds reuse the same initial router across models; architecture, pretraining, and selected layers differ. SGD uses the original schedule without retuning.}
+\label{tab:all-dynamics-runs}
+\end{table}

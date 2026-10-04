@@ -1,0 +1,7 @@
+# FP64 follow-up: diagnose FP32 endpoint roundoff
+
+2026-09-25. Adaptive precision follow-up, declared after all four FP32 local runs: all crossed the coefficient boundary, but adjacent-resolution endpoint differences increased (.0000102, .0000211, .0000465) as more small FP32 updates accumulated. Thus the FP32 runs do not establish discretization convergence.
+
+Repeat exactly the selected step-70 SmolLM2 state and actual text batch, fixed loss, equal-rate SGD and duration .4 at rates .02, .01, .005, .0025. All model parameters and shared factors use FP64; replace the shared injection's hard-coded hidden.float() conversion with dtype-preserving F.linear, without changing its mathematical operation. Disable TF32/autocast, no clipping/momentum/decay. The pretrained backbone values remain those of the locally cached BF16 weights, converted to FP64; this improves arithmetic precision, not pretrained weight information. Some architecture-internal rotary constants may originate in FP32, but are fixed with respect to the trained adapter.
+
+Record every partition/margin, fixed-batch loss and old-minus-new score. Retain all results regardless of convergence. Compare adjacent-resolution final parameter distances; report empirical ratios rather than a rigorous error bound. This remains a post hoc selected local experiment, not a representative initialization sample. No new natural-task or optimizer selection is performed.

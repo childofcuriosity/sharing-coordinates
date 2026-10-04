@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering\small
+\caption{Post-recovery NLL minus native-router partition, averaged over three seeds. All actions use four balanced groups, a common effective-tensor refit and 64 matched updates. Both recovered and effective-clustering partitions equal the native partition at all nine checkpoints. Small Pythia discrepancies under equivalent partitions are numerical execution variation, not structural improvements. Per-seed values and immediate losses are retained in the released CSV.}
+\label{tab:llm-decisions}
+\begin{tabular}{llrrr}
+\toprule
+Model & Action & General & Code & Math\\
+\midrule
+Pythia 1B & Effective clustering & -0.0004 & -0.0005 & -0.0001\\
+Pythia 1B & Random balanced & +0.0629 & -0.0196 & -0.0291\\
+Pythia 1B & Recovered, $10^{-4}$ & -0.0004 & -0.0005 & -0.0002\\
+Pythia 1B & Recovered, $10^{-2}$ & +0.0001 & -0.0007 & -0.0003\\
+Qwen3 4B & Effective clustering & +0.0000 & +0.0000 & +0.0000\\
+Qwen3 4B & Random balanced & +0.0801 & +0.0096 & +0.0010\\
+Qwen3 4B & Recovered, $10^{-4}$ & +0.0000 & +0.0000 & +0.0000\\
+Qwen3 4B & Recovered, $10^{-2}$ & +0.0000 & +0.0000 & +0.0000\\
+SmolLM2 1.7B & Effective clustering & +0.0000 & +0.0000 & +0.0000\\
+SmolLM2 1.7B & Random balanced & +0.1050 & -0.0041 & -0.0238\\
+SmolLM2 1.7B & Recovered, $10^{-4}$ & +0.0000 & +0.0000 & +0.0000\\
+SmolLM2 1.7B & Recovered, $10^{-2}$ & +0.0000 & +0.0000 & +0.0000\\
+\bottomrule
+\end{tabular}
+\end{table}

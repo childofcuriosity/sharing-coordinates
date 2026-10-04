@@ -1,0 +1,127 @@
+{
+  "scope": "Focused noisy-recovery research result; no general trust guarantee, no public submission.",
+  "created_utc": "2026-09-24T18:10:12.386173+00:00",
+  "scientific_review": "research/TRUSTED_RECOVERY_REVIEW.md",
+  "primary_environment": {
+    "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "tests_passed": 162,
+    "warnings": 1,
+    "skips": 0,
+    "tests_log_sha256": "763d26626b506e3428560d2cdcd99700150e1246df78b0a62c76a1439419e18d"
+  },
+  "independent_cpu_environment": {
+    "torch": "2.7.1+cpu",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "system_site_packages": false,
+    "tests_passed": 162,
+    "warnings": 309,
+    "skips": 0,
+    "tests_log_sha256": "d99c961ada1c02b4e87be0b153b2e54bc23683ed6f994e4a405475d4df2dc723",
+    "replay_cases": 1968,
+    "quality_classifications_match": true,
+    "bitwise_numerical_identity": false,
+    "disagreements": {
+      "spectral": {
+        "status": 0,
+        "quality": 0,
+        "acceptance": 4,
+        "max_abs_error_difference": 4.036177770645916e-07,
+        "local_pass": 0
+      },
+      "projected_spectral": {
+        "status": 0,
+        "quality": 0,
+        "acceptance": 0,
+        "max_abs_error_difference": 2.9070884401960484e-06,
+        "local_pass": 0
+      },
+      "joint_fit": {
+        "status": 0,
+        "quality": 0,
+        "acceptance": 2,
+        "max_abs_error_difference": 0.017003249361467132,
+        "local_pass": 0
+      }
+    },
+    "comparison": "research/TRUSTED_REPLAY_COMPARISON.json",
+    "derived_summary_exact": true,
+    "record_recomputation_passed": true,
+    "derived_log_sha256": "2574c8ae24961c758e4f58f86191c6cd5bf190ff43a62fec31e8fbe373fb6e58"
+  },
+  "evidence": {
+    "new_training_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "training_steps": 6000,
+    "calibration_synthetic_seeds": 20,
+    "evaluation_synthetic_seeds": 40,
+    "calibration_language_checkpoints": 2,
+    "evaluation_language_checkpoints": 4,
+    "calibration_rows": 984,
+    "evaluation_rows": 1968,
+    "full_coordinate_checks": 16,
+    "record_recomputation": {
+      "checked_estimates": 8850,
+      "recorded_failures": 6,
+      "max_residual_recompute_difference": 2.7755575615628914e-17
+    },
+    "summary_sha256": "52289b4ef389e141168d1daeabc9ad371fc5fc086a7c25d984887c767bf24b18",
+    "source_freeze_sha256": "0d68f88eb3afd77c958afdc902312e2a35faf96694ad5df105896fb5dd5e28ba",
+    "policy_sha256": "6f4614eb99c9b5d351f11f4ce9e170b0b5694acf41a62e782207fb16179dae11"
+  },
+  "manuscript": {
+    "path": "paper/main.pdf",
+    "sha256": "6ae04eb330984d1a83f31bd1194e93b7898f3aafbc397cf0fbba3598b0a5274b",
+    "pages": 52,
+    "template": "ICLR 2027 retained",
+    "authors": "placeholder retained",
+    "visual_review": "research/VISUAL_REVIEW.md"
+  },
+  "local_package": {
+    "path": "dist/sharing-coordinates-arxiv-draft.tar.gz",
+    "sha256": "9fcbb39455590853a219106e52b529c49002e507f57258e6eec4b84a4178a5ad",
+    "files": 49,
+    "clean_pdflatex_builds": 3,
+    "extracted_text_matches": true,
+    "uploaded": false
+  },
+  "citation_review": {
+    "manuscript_keys": 51,
+    "primary_passage_checks": 48,
+    "limited_checks": 2,
+    "procedural_software_metadata_checks": 1,
+    "unused_template_examples_excluded": true
+  },
+  "full_release_verification": {
+    "status": "passed",
+    "tests_passed": 162,
+    "log": ".artifact-handover/trusted-final-verify.log",
+    "log_sha256": "afa05c635275faf050ddd8cfa18ff1cfdf07e50d82eae66116847e5de8ae6dc9",
+    "checks": [
+      "historical source attestations",
+      "all tests",
+      "all derived summaries/tables",
+      "trusted source/calibration/checkpoint bindings",
+      "complete CPU replay comparison",
+      "8850 saved-estimate residual/error recomputations",
+      "497-entry manifest"
+    ],
+    "completed_utc": "2026-09-24T18:11:30.405571+00:00",
+    "final_documentation_inventory_note": "Only this validation record is updated after full verification; final manifest is refreshed and checked afterward."
+  },
+  "limitations": [
+    "Controlled known relative-noise model, not adversarial or optimizer-state noise.",
+    "Only four held-out language training replicates; bad-rejection recall undefined there.",
+    "Combined diagnostic misses 5% calibration target and is not uniformly better than residual-only.",
+    "Local theorem conditional on a feasible component; noisy-subspace truth membership unproved.",
+    "Floating singular values are not interval-certified; 70 selected synthetic joint fits exhaust budget."
+  ]
+}

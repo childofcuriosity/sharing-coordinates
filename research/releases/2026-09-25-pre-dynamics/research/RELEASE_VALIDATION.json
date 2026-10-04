@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-09-24T19:19:09.788651+00:00",
+  "scope": "Final scoped theoretical arXiv release recommendation; no upload or human peer-review claim.",
+  "scientific_review": "research/RELEASE_REVIEW.md",
+  "recommendation": "recommend_public_preprint",
+  "manuscript": {
+    "title": "Sharing Coordinates: Identifiability from Optimizer Response",
+    "pdf": "paper/main.pdf",
+    "pdf_sha256": "3c09fbb791448eba34635fb78fddaae3325784a4530c1fe8cda05c574c6a99aa",
+    "pdf_text_sha256": "a31de800d1ba92a9bc0c5aa6f5f97d75ce8b981c88454fc4db9ba1306ad5e43e",
+    "pages": 54,
+    "main_text_ends_page": 7,
+    "author_placeholder_retained": true,
+    "template": "ICLR2027"
+  },
+  "source_sha256": {
+    "paper/main.tex": "d831fefcf5b0709eb29171cbf63c6d9ce8d8a715fc940d925bab1e3574db71b3",
+    "paper/sections/ai_disclosure.tex": "cd2a17ac99aea07d3d6cac4929f389d9264d336f63bf74015d302d32e7639138",
+    "paper/sections/appendix.tex": "101be9e032e551aa90042329511e41b48c22381ec811cfe21d04fcc7b609cf75",
+    "paper/sections/appendix_detailed_results.tex": "36b52783158508f0807165b94d4e53be3476ac985f067f32e957020ba326b959",
+    "paper/sections/appendix_enhancement_experiments.tex": "8c0f39726f490e479a51d094d3da349ebbfb31e3503cadd124382218cfd1efc8",
+    "paper/sections/appendix_enhancement_theory.tex": "bd0ca56c5ca41b41370a3c170457c40f8342facf6a2374bd325673be83ace3dd",
+    "paper/sections/appendix_finite_noisy_theory.tex": "edfc698ea8469b97bf259510057661f12a27ad53f7b43574866acefefc463293",
+    "paper/sections/appendix_literature.tex": "4011efec37df9a633fd065afc31dfe5f08c41cbc8b672c2cb2171c3eef75ba55",
+    "paper/sections/appendix_secondary_theory.tex": "b6ee731e5345528a435752c1c432a62d4a5a770bff41f6c2d1fcf5e62cbde647",
+    "paper/sections/appendix_theory.tex": "2ba63eb32221fe50c4c127bb54ca0bff1bbb8f0fa659088b3a56b4323e3cd171",
+    "paper/sections/appendix_trusted_experiments.tex": "c2a9610c978ab5a131e1f2cf7f7364f83471960fba8443f22ce4f32d26e9508d",
+    "paper/sections/appendix_trusted_theory.tex": "12fc7b52dc6014da046b62f591426f140088e7d820ca65b1e3109db0441d5031",
+    "paper/sections/benchmark.tex": "a64342e9c13a9f852063d8ea3ac637e19713e70688e37a5a8fb15cac19bbb048",
+    "paper/sections/discussion.tex": "8791a185911990dc55c8d26180d1acd02c9dcb339aad1a36e24b87f6c78638f7",
+    "paper/sections/experiments.tex": "6d250f6515501d6b02f1937cce804681e373cd3d29a8fe6155f0f2c6ac4f99d4",
+    "paper/sections/introduction.tex": "9a93082765be16f4b17ed5f38b685d323d42d4b7abc4dfa38ca572213ef20872",
+    "paper/sections/problem.tex": "b6a0b93737f044df95a04668a546d9aed093d98fa0ff784c4eaf82656352e427",
+    "paper/sections/related_work.tex": "096b44be74e941dcff33e23e1f12f6e793dac919a3db662c03af883a4c6466b7",
+    "paper/sections/theory.tex": "12527bb405f8496661256d86a6cf486cdd6d42e0c02dae5aaf64a8d460ee4c15",
+    "paper/references.bib": "5f2c895e8f4b105a91d8049d4fa449ad55e0b246d3fc7db04e95c9def0bb8c88"
+  },
+  "audit_sha256": {
+    "research/RELEASE_EDITORIAL_AUDIT.md": "718008ca65af5ed932be2523d38a63bbcf0a4ab2e0a7490a6d3a098c2977370e",
+    "research/RELEASE_MATH_REBUILD.md": "7dde74889979dfbf2e94d1b99fdeb12bc3cd3cc21cab28c5250d54169f4f4ff6",
+    "research/RELEASE_PRIOR_ART.md": "180e32a779ff2eee482ddba8a17842324d37182554a92bd0cff01597b13c34a6",
+    "research/RELEASE_REVIEW.md": "ebf48a4204eb90d36fae2f3bfc8bb64cbb6434378beaabc6ac66fb431742478b"
+  },
+  "archive": {
+    "path": "dist/sharing-coordinates-arxiv-draft.tar.gz",
+    "sha256": "321ba7dfb730468c5c1c76f5f5693178830122b5a94ba5fe70a21781e95c6d1f",
+    "files": 51,
+    "clean_pdflatex_builds": 3,
+    "no_shell_escape": true,
+    "pdf_text_matches_worktree": true,
+    "package_report_sha256": "d35f5ce0b3e74b35201aaf14ed4c47ffcc7471939e9a3e85ca3fd92cfc4c9633",
+    "preview_pdf_sha256": "3267e943ee936456cc3feb603b4473bbf77fc9a4fe78f5fb0896a47af32cc133"
+  },
+  "checks": {
+    "autograd_tomography": {
+      "status": "passed",
+      "log_sha256": "f19e772f1d1f3b73b6cc3066ee92a7f468b55c5ab1a3b3b69f82dc73fdaf11ab"
+    },
+    "factor_recovery": {
+      "status": "passed",
+      "log_sha256": "cd15ea913d50c84a32e6d5e175110aa4540757faff0a1c02b48d99d97b77ee55"
+    },
+    "enhancement": {
+      "status": "passed",
+      "log_sha256": "cc5da71ac72cce05883584722ba9207b7496fba0caf99a42b4900a276f0fe74b"
+    },
+    "trusted_recovery": {
+      "status": "passed",
+      "log_sha256": "a6118c098b49d012647011357c80a17dc40132cdac21509e0ca2141b03a75aac"
+    },
+    "trusted_replay_comparison": {
+      "status": "passed",
+      "log_sha256": "6ef3b0391e416ec95b5bed650451cd0030ad66721c33919b3b7b504d7897269b"
+    },
+    "source_attestation": {
+      "status": "passed",
+      "log_sha256": "12b61015305a769d1836b70cc25e64bd9ece10aa858bfb59db9f8e107266e762"
+    }
+  },
+  "latex": {
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "multiply_defined_labels": false
+  },
+  "visual_review": {
+    "all_pages_contact_sheet_checked": 54,
+    "individual_pages_checked": [
+      1,
+      4,
+      5,
+      6,
+      29,
+      30
+    ],
+    "clipping_or_overlap_observed": false,
+    "limitation": "Dense legacy tables require zoom; contact-sheet review is not pixel-level proof checking."
+  },
+  "citations": {
+    "keys": 51,
+    "missing_keys": [],
+    "primary_source_coverage_record": "research/CITATION_COVERAGE.json",
+    "fresh_comparison": "research/RELEASE_PRIOR_ART.md",
+    "limited_technical_access_checks_retained": 2
+  },
+  "inherited_tests": {
+    "record": "research/TRUSTED_RECOVERY_VALIDATION.json",
+    "primary_passed": 162,
+    "isolated_cpu_passed": 162,
+    "rerun_this_round": false,
+    "reason": "No numerical runtime, experiment, test, or data changes. Package-report status strings alone changed and packaging was executed."
+  },
+  "changed_executable_data_or_generated_files_since_previous_manifest": [
+    "scripts/package_arxiv.py"
+  ],
+  "new_training_or_numerical_experiment_this_round": false,
+  "not_done": [
+    "Actual arXiv upload/processing",
+    "External human peer review",
+    "Author metadata completion (deferred by user)"
+  ]
+}

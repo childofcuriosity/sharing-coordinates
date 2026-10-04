@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-29",
+  "reason": "User requested one unified sharing-coordinates project",
+  "old_location": "aslora/task-weighted-response",
+  "new_location": "aslora/sharing-coordinates/studies/task-weighted-response",
+  "changed_files": {
+    "studies/task-weighted-response/common.py": {
+      "before_sha256": "810fe7eb65ba640d18c956da78723239122516b88701ec5dcd88a8d59d288821",
+      "after_sha256": "cfaf17bf6c151d3297d3931e6af0219d84fdad5647819a654f49e9d0b652837a",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/common.py"
+    },
+    "studies/task-weighted-response/batch-correction/common.py": {
+      "before_sha256": "a4d92c63c025714e0e3a707fe3fdec83c97c7b26a40ca8e54a31b1b44d9b9bec",
+      "after_sha256": "4feec8dcc28354420e65b514fd8df3aa3be47a9452cbbb28374b4190405a621b",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/batch-correction/common.py"
+    },
+    "studies/task-weighted-response/launch.py": {
+      "before_sha256": "5aaf19a6939ea4e99cc88c72ea38f07dfee02a5dd33ede4293bf26143d15f3a3",
+      "after_sha256": "0969ce02009800487bc2600b7382bfadfc12a735653a0f3140ae9690c74f8c41",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/launch.py"
+    },
+    "studies/task-weighted-response/README.md": {
+      "before_sha256": "8be63e776dc7a03718a21db044014a5c35c4639a04391c791e3667347be3689b",
+      "after_sha256": "b4e3e51f420748371ae7c800f08b1be5fa4ce840e033b184b50eedc0a99ca821",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/README.md"
+    },
+    "studies/task-weighted-response/batch-correction/README.md": {
+      "before_sha256": "cbe21486eb06e2d439affc842305885c174ca0ac50bff217e77406738e8fa75f",
+      "after_sha256": "f840432a4d20457b5b419edff0667eb55b87871bf802737b42575b2dd5d1ed08",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/batch-correction/README.md"
+    },
+    "studies/task-weighted-response/research/prepare_batch_correction.py": {
+      "before_sha256": "cb0b165cf0dddb94a3a238798fc96c809f44e202c74488a6c17856f31789543d",
+      "after_sha256": "0d5037f7a5e0e9cc669a9367334311ebabe6d5b33f85b3356bb7c8defbd44bb5",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/research/prepare_batch_correction.py"
+    },
+    "studies/task-weighted-response/research/build_validation.py": {
+      "before_sha256": "8bc5fe9b8e497c983b5b077436f05d8407c998eddc4bd8cb71eabe382b84eccd",
+      "after_sha256": "66d7598487f1bb5173ba94ec6780342977affdb0b151022bffef0a5ba84b885c",
+      "before_file": "research/releases/2026-09-29-project-unification/before/studies/task-weighted-response/research/build_validation.py"
+    }
+  }
+}

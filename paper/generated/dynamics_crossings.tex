@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+Model & Optimizer & Coefficient & Router only & Response \\
+\midrule
+Pythia-160M & AdamW & 1/3 & 0/3 & 3/3 \\
+Qwen3-0.6B & AdamW & 1/3 & 0/3 & 3/3 \\
+SmolLM2-360M & AdamW & 2/3 & 1/3 & 3/3 \\
+All three & SGD & 0/9 & 0/9 & 0/9 \\
+\bottomrule\end{tabular}
+\caption{Runs with at least one strict agreement-to-disagreement transition against global weight clustering, over the entire 256-step trajectory. Coefficient means $S_A$ assignment; router only is its subset with unchanged weight partition; response means $J_A$ clustering under the Euclidean-response objective, not an AdamW-optimal decision. All runs use 12 selected projections, $K=4$, and 64 channels. Counts are descriptive, not prevalence estimates.}
+\label{tab:training-crossings}
+\end{table}

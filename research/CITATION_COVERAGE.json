@@ -1,0 +1,107 @@
+{
+  "scope": "Coverage of the independent takeover follow-up ledger, not a verdict on all historical reviews or entire source papers",
+  "checked_passage_count": 48,
+  "cited_key_count": 57,
+  "evidence_ledger": "research/frontier_response_identifiability.md",
+  "checked_passages": [
+    "abdolali2021simplex",
+    "afsari2008sensitivity",
+    "aladrah2026implicit",
+    "amsel2026query",
+    "behling2018local",
+    "bhaskara2014uniqueness",
+    "chen2026beyond",
+    "chiu2012matrix",
+    "davidhay2024dynamic",
+    "donoho2003correct",
+    "dorrell2026convex",
+    "fu2018identifiability",
+    "gillis2023partial",
+    "goel2026training",
+    "gong2026twistedmerge",
+    "halikias2024structured",
+    "han2026w2t",
+    "he2025rasa",
+    "hu2024aslorav2",
+    "jacot2018neural",
+    "khilar2026crosslayer",
+    "lau2026symmetry",
+    "li2026e2lora",
+    "marcotte2026intrinsic",
+    "mishra2014fixedrank",
+    "mu2026lisa",
+    "nguyen2023demystifying",
+    "novak2022fast",
+    "otto2023recovering",
+    "plummer2022neural",
+    "putterman2024learning",
+    "savarese2019learning",
+    "singh2026loss",
+    "stupariu2026optimizer",
+    "tran2025linear",
+    "tu2016lowrank",
+    "uyuk2026fips",
+    "vanoostrum2023invariance",
+    "varre2026gradient",
+    "vuthanh2023bounded",
+    "wang2025basis",
+    "wang2025complete",
+    "wang2025gaugefiber",
+    "yeh2022equivariance",
+    "yen2025lora",
+    "zhang2025geosharing",
+    "zheng2026loras",
+    "zhussip2026share"
+  ],
+  "pending_followup": [],
+  "note": "All 57 manuscript cited keys have a recorded disposition: 48 inherited primary-text passage checks, 2 inherited limited technical checks, 1 procedural-software metadata check, and 6 new official model/dataset provenance checks. This is not verification of every statement in the sources.",
+  "limited_checks": {
+    "hu2026aslora": {
+      "scope": "publisher metadata and indexed abstract/highlights",
+      "limitation": "journal full text unavailable; algorithm citation uses arXiv v2"
+    },
+    "karuturi2026gl": {
+      "scope": "historical official metadata record re-inspected; access attempts repeated",
+      "limitation": "current forum/PDF challenge and API 403; technical coverage and priority remain unresolved"
+    }
+  },
+  "software_attribution_checks": {
+    "kassis2026scientificagentskillslibrary": {
+      "scope": "procedural-skill attribution, current arXiv abstract metadata and exported BibTeX checked 2026-09-25",
+      "sources": [
+        "https://arxiv.org/abs/2609.00065",
+        "https://arxiv.org/bibtex/2609.00065"
+      ],
+      "current_version": "v2, September 2 2026; unversioned DOI cited",
+      "limitation": "attribution only; not evidence validating this research or independently assessing skill effectiveness"
+    }
+  },
+  "additional_ledger": "research/TRUSTED_RECOVERY_PROOF.md",
+  "provenance_checks": {
+    "biderman2023pythia": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/2304.01373"
+    },
+    "yang2025qwen3": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/2505.09388"
+    },
+    "allal2025smollm2": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/2502.02737"
+    },
+    "merity2016wikitext": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/1609.07843"
+    },
+    "cobbe2021gsm8k": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/2110.14168"
+    },
+    "austin2021mbpp": {
+      "scope": "Official abstract and exported BibTeX checked for model-suite/dataset provenance; no benchmark performance claim",
+      "source": "https://arxiv.org/abs/2108.07732"
+    }
+  },
+  "provenance_ledger": "research/LLM_CITATION_AUDIT.md"
+}

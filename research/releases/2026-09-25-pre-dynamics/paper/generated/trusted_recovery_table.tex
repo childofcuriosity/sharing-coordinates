@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Frozen held-out noisy recovery. Each synthetic instance contributes 48 correlated variants; each language checkpoint contributes 12. Acceptance uses the calibrated empirical score. Bad means factor error $>0.10$; good means $\le0.05$. Local passes concern only a numerical restricted-subspace component.}
+\label{tab:trusted-recovery}
+\begin{tabular}{llrrrrr}
+\toprule
+Domain & Method & Median error & Bad/total & Accept & Bad/accept & Local \\
+\midrule
+Synthetic & Spectral & 0.0041 & 564/1920 & 196 & 0/196 & 0 \\
+Synthetic & Projected & 0.0033 & 566/1920 & 1396 & 56/1396 & 0 \\
+Synthetic & Joint fit & 0.0001 & 227/1920 & 1782 & 92/1782 & 140 \\
+Byte-LM & Spectral & 0.00017 & 1/48 & 0 & -- & 0 \\
+Byte-LM & Projected & 0.0002 & 1/48 & 48 & 1/48 & 0 \\
+Byte-LM & Joint fit & 3.3e-05 & 0/48 & 48 & 0/48 & 2 \\
+\bottomrule
+\end{tabular}
+\end{table}

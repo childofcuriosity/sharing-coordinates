@@ -1,0 +1,90 @@
+\section{Earlier synthetic and byte-language-model illustrations}
+\label{app:earlier-illustrations}
+
+These experiments preceded the pretrained-model study in
+Section~\ref{sec:experiments}. They check the response formula and finite
+reconstruction, and measure the effects of precision and conditioning.
+The global claims rely on the theory. They use the exact-product design of
+Corollary~\ref{cor:response_tomography} or rank-checked natural/Gaussian
+probes, \emph{not} the repeated-complement design of
+Corollary~\ref{cor:finite-noisy-main}. Thus they do not empirically evaluate
+its whole-feasible-set diameter bound. All numerical tables come from
+validated result records; protocols, negative results, source hashes, and
+replay limitations are retained in
+Appendices~\ref{sec:benchmark}--\ref{app:trusted-experiments}.
+
+\paragraph{Independent full-dimensional response measurements.}
+Three soft-router byte-LM checkpoints have $L=12$, $K=4$, and $D=787{,}712$.
+We measure responses by reverse-mode differentiation of a linear effective
+loss followed by a forward-mode JVP of the packed factor-to-product map.
+The observation code does not call Equation~\ref{eq:response_blocks}.
+For each native, permutation, and fixed non-permutation chart, four designed
+probes reconstruct the response and two unseen Gaussian probes test its
+predictions. Table~\ref{tab:autograd-tomography} shows numerical agreement
+with the formula, successful held-out prediction, and separation of the
+fixed alternative. The experiment checks this fixed alternative; separation of every feasible
+alternative follows from the theorem under its assumptions.
+
+\input{generated/autograd_tomography_table.tex}
+
+\paragraph{Natural directions and finite precision.}
+Actual byte-LM cross-entropy gradients with respect to independent effective
+layer weights supply 16 directions per checkpoint. Controlled autodiff
+responses are measured at a fixed checkpoint; the first $q\in\{1,4,8,12\}$
+directions fit the structural estimator and the last four test prediction.
+With the exact product row space, four directions meet the sufficient
+reconstruction ranks at all six checkpoints in
+Table~\ref{tab:natural-gradients}. Factor errors use permutation alignment
+only for evaluation. One direction has insufficient local rank and gives
+errors $0.258$--$1.34$ at the three longer-trained checkpoints.
+
+% Keep the generated second table after the first without changing its source.
+\begingroup
+\let\originaltable\table
+\renewcommand{\table}[1][]{\originaltable[H]}
+\input{generated/natural_gradients_table.tex}
+\endgroup
+
+Finite Euclidean steps reveal an arithmetic limit. At step size $10^{-5}$,
+the longer-trained checkpoints have FP64 response errors
+$3.3\times10^{-8}$--$5.2\times10^{-8}$, but FP32 subtraction errors
+$0.0208$--$0.0260$ and BF16 errors about one. These tests cast factors and
+arithmetic to the stated precision; they do not test mixed-precision
+training with FP32 master weights. The step-size sweep is in
+Appendix~\ref{app:enhancement-experiments}.
+
+\paragraph{Noisy recovery and diagnostic failures.}
+A separate frozen development/calibration/evaluation protocol compares
+spectral recovery, simplex projection with a basis refit, and three-start
+constrained joint least squares. Both the product and measured responses
+receive relative noise up to $10^{-2}$; the estimated product subspace is
+recomputed. On 1,920 held-out synthetic variants across 40 seeds, joint
+fitting reduces the median factor error from $3.34\times10^{-3}$ for
+projected spectral recovery to $1.01\times10^{-4}$, and errors above $0.10$
+from 566 to 227. All 48 variants at four fresh byte-LM checkpoints have
+joint-fit errors below $0.0107$.
+
+The largest joint-fit error is $10.54$, and a
+combined diagnostic falsely accepts an error of $0.82$. Its accepted-bad
+fraction is $92/1782=5.16\%$, with seed-cluster bootstrap interval
+$[4.50\%,5.79\%]$; residual-only rejection yields $68/1757=3.87\%$.
+The combined score therefore shows no advantage here, and its point
+estimate exceeds the $5\%$ calibration target. The candidate-local checks
+also do not exclude distant solutions or establish truth membership in the
+fitted subspace. Appendix~\ref{app:trusted-experiments} retains all methods,
+tail errors, failed solver statuses, and independent CPU replay differences.
+None of these diagnostics is the global certificate above.
+
+\paragraph{Auxiliary structural decisions.}
+Identifying coordinates under an optimizer does not make actions derived
+from them product invariant. In a documented reimplementation of ASLoRA's
+first RoBERTa/MRPC merge rule, a fixed grid changes the primary action in
+$11/30$ seed--gauge instances. Only the selected layer indices are carried
+back to a common canonical model; validation-loss differences have both
+signs. A separate controlled byte-LM partition audit finds changes at all
+three longer-trained checkpoints, but matched recovery training greatly
+reduces the performance gaps. These are bounded decision witnesses, not
+applications of the softmax theorem to LoRA, universal harm claims, or
+full-training regret evaluations. Detailed results, failed signed-local
+searches, and the earlier initialization-dominated experiment remain in
+Appendices~\ref{app:detailed-results} and~\ref{app:enhancement-experiments}.

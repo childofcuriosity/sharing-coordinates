@@ -1,0 +1,203 @@
+\section{Detailed numerical results and auxiliary decisions}
+\label{app:detailed-results}
+
+The audit and extension tables are generated from validated summary JSON artifacts,
+including negative seeds and failed searches; exact paths and hashes are
+recorded in Appendix~\ref{app:experimental-details}.
+
+\subsection{A non-permutation chart is visible in optimizer response}
+
+\input{generated/response_table.tex}
+
+Table~\ref{tab:response-audit} checks the response formula and separates
+a fixed alternative at frozen checkpoints under
+Theorem~\ref{thm:response_stabilizer}'s assumptions.  All stated rank conditions hold. The
+non-permutation reparameterization preserves the effective model to at most
+\ResponseEffectiveMax{} relative error.  On the declared $4\times32$
+extraction, the analytic response agrees with autograd within numerical
+precision, and the worst finite-difference error across native and transformed
+charts is \ResponseFormulaMax{}.  The maximum permutation-control discrepancy
+is \ResponsePermutationMax{} after rounding, whereas all
+\ResponseProbeDetected{}/\ResponseProbeExpected{} checkpoint--probe
+evaluations detect a change (eight per checkpoint, with overlapping seed
+windows and 10 unique Gaussian draws; per-seed medians
+$[\ResponseMedianMin{},\ResponseMedianMax{}]$).
+The separate structured audit reduces the all-gradient quantifier to
+\ResponseTomographyProbeCount{} designed analytic response evaluations, which
+reconstruct all response components with worst relative error
+\ResponseTomographyReconstructionMax{}; the
+permutation control stays below \ResponseTomographyPermutationMax{}; the
+minimum across seeds of each seed's maximum fixed non-permutation difference
+over the four designed probes is \ResponseTomographyNonpermutationMin{} after
+rounding.  This does not say that every individual probe reaches that value.
+These are analytic evaluations of
+Equation~\ref{eq:response_blocks}, validated on the extraction, not four
+full-model JVP calls.  The eight Gaussian probes remain a fixed-alternative
+test; the designed certificate assumes exact common product and the stated
+response family.  Neither audit describes AdamW or a historical graph.
+
+\paragraph{Independent full-dimensional response measurements.}
+A subsequent audit obtains the responses by differentiating the complete
+packed map $(Z,B)\mapsto\operatorname{softmax}(Z/\tau)B$ at all three
+released checkpoints. Reverse-mode differentiation of a linear probe loss
+gives the factor gradients; a forward-mode JVP then measures the induced
+effective-parameter response. The observation code does not call the analytic
+response formula. Each native, permutation, and fixed non-permutation chart
+uses four designed probes and two unseen Gaussian probes.
+Table~\ref{tab:autograd-tomography} reports formula agreement and prediction of
+the unseen responses from the reconstructed operator. The maximum relative
+formula discrepancy is $3.71\times10^{-16}$, and the maximum held-out response
+error is $5.08\times10^{-14}$. A five-level observation-noise grid from zero
+to $10^{-4}$ relative Frobenius norm satisfies the deterministic component
+error bounds, with recorded floating-point slack. These measurements concern
+the full shared-parameter map, not an end-to-end language-model loss or an
+AdamW step; operator reconstruction does not itself implement noisy factor
+recovery. The additive records preserve the original analytic audit.
+
+
+
+\paragraph{Exploratory reconstruction of the factors.}
+The construction in Appendix~\ref{app:response_tomography} recovers factors
+from the effective product and measured components, without supplying the
+original factors to the reconstruction. We test it on the native charts of
+the same three checkpoints, using fresh autodiff observations and one fixed
+Gaussian weight vector for joint diagonalization. Table~\ref{tab:factor-recovery}
+reports the errors after a common permutation chosen only for evaluation.
+The noiseless combined relative errors are below $3.7\times10^{-9}$.
+All five noise levels complete without a rank or eigengap failure, but the
+unprojected noisy estimates need not have exact unit row sums. These are
+three checkpoint diagnostics with exact effective products, not independent
+training replications, adversarial-noise tests, or a general stability result
+for the PSD-clipped recovery algorithm.
+
+\input{generated/factor_recovery_table.tex}
+
+\subsection{Gauge-equivalent ASLoRA states change the first merge decision}
+\label{sec:aslora-results}
+
+\input{generated/aslora_table.tex}
+
+The primary per-projection action changes under both interpretations of
+the source's candidate set.  Among \ASLORATotalGaugeInstances{} predeclared gauge instances,
+the raw-running-$B$ action changes in
+\ASLORAAdjacentPrimaryChanges{} instances for adjacent candidates and
+\ASLORAAllPrimaryChanges{} instances for all pairs.  Every seed has at least
+one changed action with a nonzero canonical validation consequence under both
+candidate readings.  The signs in Table~\ref{tab:aslora-chain} go in both
+directions: the experiment demonstrates representation-dependent decisions,
+not that every gauge-induced change is harmful or that the identity action is
+optimal.  The joint-same-pair sensitivity does not replicate (one seed for
+adjacent candidates and none for all pairs), and Appendix
+Table~\ref{tab:aslora-baselines} shows that neither gauge-invariant rule
+uniformly improves on raw running \(B\) across all seeds under both candidate
+readings.  The causal contrast uses a
+float64-equivalent snapshot only to select layer indices, then executes the
+same temporary tie in the unchanged canonical model; factorized-float32
+re-execution is a passing secondary diagnostic.  The experiment links the change in coordinates to action selection and
+validation outcomes for this first merge, task, and fixed gauge grid.
+
+\subsection{Prospective controls: learned routers and recovery training}
+\label{sec:enhanced-decisions}
+
+The historical example in Appendix~\ref{app:historical-fold-witness}
+motivated a separate extension whose protocol was recorded before execution. We train three fresh width-128, twelve-layer,
+four-basis byte LMs for a fixed 6,000 steps with random router initialization
+and a separate router learning rate. Router L1 movement is $0.593$--$0.729$;
+all three models pass the unigram-improvement and router-movement gates.
+Both gauge families receive 5,000 router-only trials, now requiring the same
+sorted group-size multiset as the native partition. Positive-stochastic
+search finds a first valid candidate in every seed; signed-local search fails
+in all three. Failures are retained and never replaced by larger searches.
+
+\input{generated/enhanced_decisions_table.tex}
+
+Every fold uses the same native effective tensors. Hard routes remain fixed
+while all remaining parameters receive identical minibatches, optimizer
+initialization, update counts, and learning rates. Table~\ref{tab:enhanced-decisions}
+shows substantial immediate differences in two seeds, but much smaller
+differences after 500 recovery updates. Conditional paired 95\% bootstrap
+intervals at that stage are $[-0.00094,0.00112]$, $[0.01654,0.01989]$, and
+$[0.00244,0.00437]$ BPB, respectively; they describe the fixed evaluation
+blocks, not uncertainty over training populations. The same-size
+effective-parameter local-search baseline selects the native partition in
+two seeds and performs slightly worse after recovery in the third.
+The decision remains sensitive to coordinates after controlling for the
+earlier initialization and group-size differences. The results do not
+establish persistent large losses or a consistently better invariant rule. This is one architecture and corpus,
+with a fixed training budget rather than a convergence certificate.
+
+\subsection{Natural task gradients and finite arithmetic}
+\label{sec:natural-gradients}
+
+We differentiate actual byte-LM cross-entropy with respect to independent
+layer-effective weights, holding other parameters fixed. A separate forward
+and chain-rule check agrees with the original model. At each of the three
+original and three new checkpoints, 16 fixed training minibatches supply
+natural directions. Controlled reverse/forward autodiff measures the response;
+the first $q\in\{1,4,8,12\}$ directions fit the estimator, and the last four
+test prediction. The estimator uses the exact product row space and known
+response structure, not the true factors.
+
+
+
+At $q=4$, all six checkpoints meet the rank conditions of
+Proposition~\ref{prop:natural-probes}. The largest held-out response error is
+below $10^{-13}$ and the factor error below $3.1\times10^{-8}$.
+This is stronger than separation of a single alternative chart, but remains
+conditional on the known Euclidean response family and precise measurements.
+A single direction has insufficient local rank; at the new checkpoints its
+factor errors range from $0.258$ to $1.34$. Generic linear prediction from the
+observed gradient span also differs from the structural estimator. These
+directions are measurements at fixed checkpoints, not observations of an
+uncontrolled training trajectory.
+
+Explicit finite Euclidean steps expose a numerical boundary. At step size
+$10^{-5}$, the new checkpoints' FP64 response errors are
+$3.3\times10^{-8}$--$5.2\times10^{-8}$, whereas FP32 subtraction errors are
+$0.0208$--$0.0260$ and BF16 errors are about one.
+Here factors and arithmetic are cast to the stated precision; this is not a
+test of BF16 training with FP32 master weights. Appendix
+Figure~\ref{fig:enhancement-precision} reports the step-size tradeoff and the
+separate joint-noise conditioning diagnostic.
+
+\subsection{Noisy recovery and the limits of observable rejection}
+\label{sec:trusted-recovery}
+
+We fix a prospective development/calibration/evaluation split before
+measuring the final outcomes. Forty held-out synthetic seeds each contribute
+48 correlated noise/probe/regime variants; four freshly trained byte-LM
+checkpoints each contribute 12. Both product and autodiff response
+observations receive relative noise from zero to $10^{-2}$, and the rank-$K$
+product row subspace is re-estimated from the noisy product.
+Three fixed methods use the same observations: spectral recovery,
+simplex projection with a basis refit, and three-start constrained joint
+least squares. The estimator never receives the true factors.
+Appendix~\ref{app:trusted-experiments} gives splits, budgets, calibration,
+and all diagnostic comparators.
+
+\input{generated/trusted_recovery_table.tex}
+
+Joint fitting reduces the synthetic median factor error from
+$3.34\times10^{-3}$ for projected spectral recovery to $1.01\times10^{-4}$,
+and the number of errors above $0.10$ from $566$ to $227$ out of $1920$.
+At the four byte-LM checkpoints, all 48 joint-fit errors are below $0.0107$,
+including the $1\%$ observation-noise cases. These are controlled Euclidean
+measurements at checkpoints, not noisy AdamW trajectory observations.
+
+We also test whether a diagnostic based on observations can identify
+unreliable estimates. With its threshold fixed on separate calibration
+data, the combined residual/conditioning/subspace/multi-start score accepts
+$1782/1920$ synthetic outputs, including 92 bad outputs. Its $5.16\%$
+accepted-bad fraction has a seed-cluster bootstrap interval of
+$[4.50\%,5.79\%]$ and has a point estimate above the $5\%$ calibration target;
+the interval includes that target.
+Residual-only rejection accepts $1757/1920$ with $68/1757=3.87\%$ bad.
+The combined score therefore shows no advantage over residual-only rejection.
+The full evaluation retains a joint-fit error of $10.54$, and a falsely
+accepted error of $0.82$. These failures prevent a general reliability claim.
+
+The explicit local separation bound in
+Proposition~\ref{prop:trusted-local} addresses a different question.
+Only $140/1920$ synthetic and $2/48$ language outputs pass its numerical
+local-component conditions. These passes neither establish truth membership
+in the restricted subspace nor rule out distant solutions.

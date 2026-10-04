@@ -1,0 +1,40 @@
+{
+  "scope": "local research-draft completion audit; not public submission or independent peer review",
+  "tests": {
+    "passed": 148,
+    "warnings": 1,
+    "skipped": 0,
+    "verify_exit_code": 0,
+    "log_sha256": "fa48c3d42c183331797f54ac8310bd0d7904cd199b2b26e0699bf4b2c01c4965"
+  },
+  "citation_dispositions": {
+    "primary_text_passage_checks": 47,
+    "limited_checks": 2
+  },
+  "legacy_derivation_checks": {
+    "key_numbers.tex": true,
+    "distillation_table.tex": true,
+    "factorization_table.tex": true,
+    "distillation_full_table.tex": true,
+    "saturation_table.tex": true,
+    "gauge_table.tex": true,
+    "probe_table.tex": true,
+    "language_table.tex": true,
+    "factorization_full_table.tex": true,
+    "factorization_loss_vs_ari.pdf": true,
+    "gauge_equivalence.pdf": true,
+    "saturation_recovery.pdf": true,
+    "distillation_loss_vs_ari.pdf": true,
+    "probe_phase_diagram.pdf": true,
+    "language_router_tradeoff.pdf": true,
+    "summary.json": true
+  },
+  "manuscript_sha256": "660e5a7af6408f2fbfd242607ffe43a5f81c635889e85aefed0026421403ae79",
+  "archive_sha256": "712e1c2bce65ff2393a36a913c1b31ef225ffa2f6cfaba1bbad437029c4e3659",
+  "archive_dependency_count": 39,
+  "clean_pdf_text_matches": true,
+  "clean_pdflatex_passes": 3,
+  "original_training_rerun": false,
+  "public_submission": false,
+  "human_author_approval": false
+}

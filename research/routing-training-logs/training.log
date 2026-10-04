@@ -1,0 +1,41 @@
+{
+  "primary": {
+    "runs": 8,
+    "eligible": 8,
+    "crossings": 8,
+    "sustained": 8,
+    "nonincreasing_loss": 8
+  },
+  "perturbations": {
+    "0.0001": {
+      "runs": 20,
+      "eligible": 20,
+      "crossings": 20,
+      "sustained": 20,
+      "nonincreasing_loss": 20
+    },
+    "0.001": {
+      "runs": 20,
+      "eligible": 20,
+      "crossings": 20,
+      "sustained": 20,
+      "nonincreasing_loss": 20
+    },
+    "0.01": {
+      "runs": 20,
+      "eligible": 16,
+      "crossings": 16,
+      "sustained": 16,
+      "nonincreasing_loss": 20
+    }
+  },
+  "control_crossing": false
+}
+primary-torch.float64-0.02 first 5 loss 0.05574690826207453 0.047394157147237354 endpoint_error 0.0002651139330251596
+primary-torch.float64-0.01 first 10 loss 0.05574690826207453 0.047403958213581406 endpoint_error 0.00013149323652691315
+primary-torch.float64-0.005 first 20 loss 0.05574690826207453 0.047408838255929966 endpoint_error 6.548541859396208e-05
+primary-torch.float64-0.0025 first 40 loss 0.05574690826207453 0.04741127318775805 endpoint_error 3.267798723717081e-05
+primary-torch.float32-0.02 first 5 loss 0.0557468980550766 0.04739413782954216 endpoint_error 0.00026516415409013103
+primary-torch.float32-0.01 first 10 loss 0.0557468980550766 0.047403961420059204 endpoint_error 0.00013134452578059794
+primary-torch.float32-0.005 first 20 loss 0.0557468980550766 0.04740883409976959 endpoint_error 6.559654797749426e-05
+primary-torch.float32-0.0025 first 40 loss 0.0557468980550766 0.04741128161549568 endpoint_error 3.253681617102277e-05

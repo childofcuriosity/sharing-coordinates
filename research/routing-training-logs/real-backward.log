@@ -1,0 +1,26 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (11452 > 8192). Running this sequence through the model will result in indexing errors
+{
+  "unit": "smol360m-adamw-seed1",
+  "kind": "router_boundary",
+  "step": 71,
+  "nll": 3.2875020503997803,
+  "nll_abs_error": 0.0,
+  "gradient_norm": 0.062201496213674545,
+  "gradient_replay": {
+    "logits": {
+      "max_abs": 0.0,
+      "relative": 0.0
+    },
+    "bases": {
+      "max_abs": 0.0,
+      "relative": 0.0
+    }
+  },
+  "actual_update_max_abs_error": 0.0,
+  "coefficient_score_velocity_under_clipped_euclidean_descent": -0.00015736709018024456,
+  "scope": "Fresh pretrained-backbone forward/backward on recorded natural language batch, then restored optimizer update. Euclidean direction is a local diagnostic, not an AdamW trajectory theorem.",
+  "source_sha256": "a7985c8eb571a9f413b0e102b50de5dd69eaf2dd99a7f294ca99fa84db8c4bc1",
+  "event_checkpoint_sha256": "5f9b5d9235e8771772339aaacb6255c66660c0097b7bb88071eb92fb5d40f57f",
+  "passed": true
+}

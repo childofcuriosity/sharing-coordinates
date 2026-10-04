@@ -1,0 +1,74 @@
+{
+  "spectral": {
+    "residual_only_score": {
+      "threshold": null,
+      "accepted": 0,
+      "bad": 0,
+      "eligible": 0,
+      "total": 144,
+      "reason": "no_feasible_threshold"
+    },
+    "condition_only_score": {
+      "threshold": null,
+      "accepted": 0,
+      "bad": 0,
+      "eligible": 0,
+      "total": 144,
+      "reason": "no_feasible_threshold"
+    },
+    "empirical_score": {
+      "threshold": null,
+      "accepted": 0,
+      "bad": 0,
+      "eligible": 0,
+      "total": 144,
+      "reason": "no_feasible_threshold"
+    }
+  },
+  "projected_spectral": {
+    "residual_only_score": {
+      "threshold": 0.24775250911842422,
+      "accepted": 88,
+      "bad": 4,
+      "eligible": 96,
+      "total": 144
+    },
+    "condition_only_score": {
+      "threshold": 195.95297796760553,
+      "accepted": 65,
+      "bad": 3,
+      "eligible": 96,
+      "total": 144
+    },
+    "empirical_score": {
+      "threshold": 60.54868678341333,
+      "accepted": 88,
+      "bad": 4,
+      "eligible": 96,
+      "total": 144
+    }
+  },
+  "joint_fit": {
+    "residual_only_score": {
+      "threshold": 0.016622649683478416,
+      "accepted": 96,
+      "bad": 0,
+      "eligible": 96,
+      "total": 144
+    },
+    "condition_only_score": {
+      "threshold": 1022.6712374151604,
+      "accepted": 96,
+      "bad": 0,
+      "eligible": 96,
+      "total": 144
+    },
+    "empirical_score": {
+      "threshold": 52.35488772591703,
+      "accepted": 96,
+      "bad": 0,
+      "eligible": 96,
+      "total": 144
+    }
+  }
+}

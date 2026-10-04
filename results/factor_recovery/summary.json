@@ -1,0 +1,462 @@
+{
+  "format": "factor-recovery-summary-v1",
+  "rows": [
+    {
+      "seed": 0,
+      "noiseless_gate": true,
+      "records": [
+        {
+          "relative_noise": 0.0,
+          "absolute_noise_norms": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "status": "ok",
+          "orbit_relative_error": 3.6608926379654347e-09,
+          "router_relative_error": 2.911098582449191e-09,
+          "basis_relative_error": 2.219828810960843e-09,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.01672090449181418,
+            "gram_min_eigenvalue": -2.882519291133069e-14,
+            "pullback_min_eigenvalue": -7.179109788905268e-17,
+            "psd_clipped_negative_norm": 1.2081934088541253e-16,
+            "joint_diagonalization_relative_residual": 3.045293858733032e-07,
+            "product_relative_residual": 1.8949343756363293e-09,
+            "router_min_entry": 0.0002883332584069498,
+            "router_row_sum_max_error": 1.0938640881974493e-08
+          }
+        },
+        {
+          "relative_noise": 1e-10,
+          "absolute_noise_norms": [
+            1.199436590217669e-09,
+            1.0394150309626334e-09,
+            1.0394179389146957e-09,
+            1.039446506328857e-09
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.47465439202566e-08,
+          "router_relative_error": 1.161118845888384e-08,
+          "basis_relative_error": 9.090701852131085e-09,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016720904495555522,
+            "gram_min_eigenvalue": -1.1068615245194453e-12,
+            "pullback_min_eigenvalue": -4.069282570700699e-15,
+            "psd_clipped_negative_norm": 5.3055891279590145e-15,
+            "joint_diagonalization_relative_residual": 8.089597195589843e-08,
+            "product_relative_residual": 7.273456649380542e-09,
+            "router_min_entry": 0.00028833255725670495,
+            "router_row_sum_max_error": 4.1494249591877974e-08
+          }
+        },
+        {
+          "relative_noise": 1e-08,
+          "absolute_noise_norms": [
+            1.199436590217669e-07,
+            1.0394150309626334e-07,
+            1.0394179389146957e-07,
+            1.0394465063288572e-07
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.8903512830823218e-07,
+          "router_relative_error": 1.4569467694801264e-07,
+          "basis_relative_error": 1.204464231246575e-07,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016720903507120743,
+            "gram_min_eigenvalue": -1.466033801091468e-10,
+            "pullback_min_eigenvalue": -3.6391931280205435e-13,
+            "psd_clipped_negative_norm": 4.5224088368768234e-13,
+            "joint_diagonalization_relative_residual": 9.192241029441409e-06,
+            "product_relative_residual": 8.258866666513504e-08,
+            "router_min_entry": 0.00028833244379692177,
+            "router_row_sum_max_error": 4.897240339918341e-07
+          }
+        },
+        {
+          "relative_noise": 1e-06,
+          "absolute_noise_norms": [
+            1.1994365902176692e-05,
+            1.0394150309626332e-05,
+            1.0394179389146955e-05,
+            1.039446506328857e-05
+          ],
+          "status": "ok",
+          "orbit_relative_error": 2.134119821346139e-06,
+          "router_relative_error": 1.663053262640317e-06,
+          "basis_relative_error": 1.3374308421312382e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016720830928465436,
+            "gram_min_eigenvalue": -1.5054212692893437e-08,
+            "pullback_min_eigenvalue": -3.2627745302290084e-11,
+            "psd_clipped_negative_norm": 4.948253570404521e-11,
+            "joint_diagonalization_relative_residual": 0.0002086696558807181,
+            "product_relative_residual": 9.95375224296921e-07,
+            "router_min_entry": 0.0002883049320225803,
+            "router_row_sum_max_error": 6.261242905702957e-06
+          }
+        },
+        {
+          "relative_noise": 0.0001,
+          "absolute_noise_norms": [
+            0.001199436590217669,
+            0.0010394150309626334,
+            0.0010394179389146957,
+            0.0010394465063288574
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.8127570381179785e-05,
+          "router_relative_error": 1.5399094096670396e-05,
+          "basis_relative_error": 9.564345713456704e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.01672104331745161,
+            "gram_min_eigenvalue": -1.0450676398995418e-06,
+            "pullback_min_eigenvalue": -2.6008500406524825e-09,
+            "psd_clipped_negative_norm": 5.142643304459845e-09,
+            "joint_diagonalization_relative_residual": 0.001451471773287602,
+            "product_relative_residual": 1.213150231708724e-05,
+            "router_min_entry": 0.00028590142620914537,
+            "router_row_sum_max_error": 6.062206038381923e-05
+          }
+        }
+      ],
+      "record_sha256": "5948e1b84d688e33101ef93cfe9bfc96684ded6c9948c3d606aca757ff76b7b2"
+    },
+    {
+      "seed": 1,
+      "noiseless_gate": true,
+      "records": [
+        {
+          "relative_noise": 0.0,
+          "absolute_noise_norms": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "status": "ok",
+          "orbit_relative_error": 3.232117334232091e-09,
+          "router_relative_error": 2.568379677230757e-09,
+          "basis_relative_error": 1.9621438010073554e-09,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016824485486869767,
+            "gram_min_eigenvalue": -6.975712679232817e-14,
+            "pullback_min_eigenvalue": -1.1957538446768613e-16,
+            "psd_clipped_negative_norm": 1.4794755791978492e-16,
+            "joint_diagonalization_relative_residual": 1.0688926014174195e-07,
+            "product_relative_residual": 1.659781125627487e-09,
+            "router_min_entry": 0.00027173132021841113,
+            "router_row_sum_max_error": 1.2045790587222882e-08
+          }
+        },
+        {
+          "relative_noise": 1e-10,
+          "absolute_noise_norms": [
+            1.1994761150400805e-09,
+            1.039363822736787e-09,
+            1.039419379690537e-09,
+            1.0394453202738522e-09
+          ],
+          "status": "ok",
+          "orbit_relative_error": 2.260934118649724e-08,
+          "router_relative_error": 1.773957220217707e-08,
+          "basis_relative_error": 1.4017485044443135e-08,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016824485483116436,
+            "gram_min_eigenvalue": -1.2863312265368193e-12,
+            "pullback_min_eigenvalue": -1.849859806927473e-15,
+            "psd_clipped_negative_norm": 2.976136135801355e-15,
+            "joint_diagonalization_relative_residual": 8.609497449981883e-07,
+            "product_relative_residual": 1.0884193347933734e-08,
+            "router_min_entry": 0.0002717403770587566,
+            "router_row_sum_max_error": 5.613100295676077e-08
+          }
+        },
+        {
+          "relative_noise": 1e-08,
+          "absolute_noise_norms": [
+            1.1994761150400803e-07,
+            1.0393638227367871e-07,
+            1.039419379690537e-07,
+            1.0394453202738522e-07
+          ],
+          "status": "ok",
+          "orbit_relative_error": 2.0109592350536246e-07,
+          "router_relative_error": 1.5057474206461562e-07,
+          "basis_relative_error": 1.332922259647916e-07,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.01682448616847998,
+            "gram_min_eigenvalue": -1.2895603259234424e-10,
+            "pullback_min_eigenvalue": -1.9368387575905123e-13,
+            "psd_clipped_negative_norm": 2.4873477084999813e-13,
+            "joint_diagonalization_relative_residual": 8.778533688261174e-06,
+            "product_relative_residual": 7.020470361506307e-08,
+            "router_min_entry": 0.00027173129235192895,
+            "router_row_sum_max_error": 4.77577616786462e-07
+          }
+        },
+        {
+          "relative_noise": 1e-06,
+          "absolute_noise_norms": [
+            1.19947611504008e-05,
+            1.0393638227367869e-05,
+            1.0394193796905368e-05,
+            1.0394453202738522e-05
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.9607803226542947e-06,
+          "router_relative_error": 1.5037934035522617e-06,
+          "basis_relative_error": 1.2582785355957497e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016824434211230144,
+            "gram_min_eigenvalue": -1.1825635107378693e-08,
+            "pullback_min_eigenvalue": -2.6951360113276622e-11,
+            "psd_clipped_negative_norm": 3.2531553642587415e-11,
+            "joint_diagonalization_relative_residual": 1.634925949399038e-05,
+            "product_relative_residual": 8.249614629401262e-07,
+            "router_min_entry": 0.00027172549523214886,
+            "router_row_sum_max_error": 5.34913700755979e-06
+          }
+        },
+        {
+          "relative_noise": 0.0001,
+          "absolute_noise_norms": [
+            0.0011994761150400804,
+            0.001039363822736787,
+            0.001039419379690537,
+            0.001039445320273852
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.612693298623522e-05,
+          "router_relative_error": 1.2926817434607926e-05,
+          "basis_relative_error": 9.642373076936935e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.0168153335527621,
+            "gram_min_eigenvalue": -1.41135349790179e-06,
+            "pullback_min_eigenvalue": -1.3924968248433855e-09,
+            "psd_clipped_negative_norm": 2.0113913297803475e-09,
+            "joint_diagonalization_relative_residual": 0.00023491607064551624,
+            "product_relative_residual": 8.604879767670147e-06,
+            "router_min_entry": 0.0002716578301428098,
+            "router_row_sum_max_error": 6.676124973603592e-05
+          }
+        }
+      ],
+      "record_sha256": "cb0dd863ce962327b86feeaf60e714934007f11abc3cec7ba343e9e5af15c8ca"
+    },
+    {
+      "seed": 2,
+      "noiseless_gate": true,
+      "records": [
+        {
+          "relative_noise": 0.0,
+          "absolute_noise_norms": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "status": "ok",
+          "orbit_relative_error": 3.2829555589598614e-09,
+          "router_relative_error": 2.661641096552234e-09,
+          "basis_relative_error": 1.921838670453292e-09,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016674891436211703,
+            "gram_min_eigenvalue": -1.1214852482936907e-13,
+            "pullback_min_eigenvalue": -8.190358533662817e-17,
+            "psd_clipped_negative_norm": 1.5993180449659562e-16,
+            "joint_diagonalization_relative_residual": 7.049107614762444e-08,
+            "product_relative_residual": 1.847233114728188e-09,
+            "router_min_entry": 0.0002612541880535776,
+            "router_row_sum_max_error": 1.207839006589495e-08
+          }
+        },
+        {
+          "relative_noise": 1e-10,
+          "absolute_noise_norms": [
+            1.1994591619453984e-09,
+            1.0393971604571673e-09,
+            1.0394082998986525e-09,
+            1.0394517083451815e-09
+          ],
+          "status": "ok",
+          "orbit_relative_error": 2.0667487767888623e-08,
+          "router_relative_error": 1.595323372855732e-08,
+          "basis_relative_error": 1.313923073234681e-08,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016674891435115358,
+            "gram_min_eigenvalue": -1.5365553472533254e-12,
+            "pullback_min_eigenvalue": -4.039808649973594e-15,
+            "psd_clipped_negative_norm": 4.695860938340443e-15,
+            "joint_diagonalization_relative_residual": 1.3944812034785692e-06,
+            "product_relative_residual": 9.084450950314361e-09,
+            "router_min_entry": 0.0002612694364547457,
+            "router_row_sum_max_error": 6.098277882671255e-08
+          }
+        },
+        {
+          "relative_noise": 1e-08,
+          "absolute_noise_norms": [
+            1.1994591619453982e-07,
+            1.0393971604571673e-07,
+            1.0394082998986525e-07,
+            1.0394517083451816e-07
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.6322519223731962e-07,
+          "router_relative_error": 1.4135281760398934e-07,
+          "basis_relative_error": 8.16201221288186e-08,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.01667489126346089,
+            "gram_min_eigenvalue": -1.577600527566572e-10,
+            "pullback_min_eigenvalue": -1.391953894894607e-13,
+            "psd_clipped_negative_norm": 2.554112501792026e-13,
+            "joint_diagonalization_relative_residual": 1.7278596317024544e-05,
+            "product_relative_residual": 1.1565305949841373e-07,
+            "router_min_entry": 0.00026125400356697787,
+            "router_row_sum_max_error": 6.485594306049336e-07
+          }
+        },
+        {
+          "relative_noise": 1e-06,
+          "absolute_noise_norms": [
+            1.1994591619453984e-05,
+            1.0393971604571672e-05,
+            1.0394082998986525e-05,
+            1.0394517083451814e-05
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.9624974744805834e-06,
+          "router_relative_error": 1.5173059971228072e-06,
+          "basis_relative_error": 1.2446601337063188e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016674947546452823,
+            "gram_min_eigenvalue": -1.230536186411095e-08,
+            "pullback_min_eigenvalue": -2.8264740268813043e-11,
+            "psd_clipped_negative_norm": 4.7826757874855956e-11,
+            "joint_diagonalization_relative_residual": 0.00014880764589766582,
+            "product_relative_residual": 8.69704658296131e-07,
+            "router_min_entry": 0.00026213030912129845,
+            "router_row_sum_max_error": 5.990898852781257e-06
+          }
+        },
+        {
+          "relative_noise": 0.0001,
+          "absolute_noise_norms": [
+            0.0011994591619453982,
+            0.0010393971604571671,
+            0.0010394082998986527,
+            0.0010394517083451816
+          ],
+          "status": "ok",
+          "orbit_relative_error": 1.585702408103864e-05,
+          "router_relative_error": 1.30811613838475e-05,
+          "basis_relative_error": 8.962612875516618e-06,
+          "evaluation_permutation": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "diagnostics": {
+            "combined_eigenvalue_gap": 0.016670774820979672,
+            "gram_min_eigenvalue": -1.1639419703294306e-06,
+            "pullback_min_eigenvalue": -3.42768508483667e-09,
+            "psd_clipped_negative_norm": 4.05393288402656e-09,
+            "joint_diagonalization_relative_residual": 0.00139799883708649,
+            "product_relative_residual": 9.55947084918912e-06,
+            "router_min_entry": 0.00026169663645188475,
+            "router_row_sum_max_error": 5.98898782668833e-05
+          }
+        }
+      ],
+      "record_sha256": "5f3ffc0b843d49f69bef44f01d614acd023e095f8b76985543e3258ee32349a6"
+    }
+  ],
+  "scope": "native charts of three existing checkpoints; exact product, fixed random weights, PSD-clipped estimator"
+}

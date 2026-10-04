@@ -1,0 +1,145 @@
+\section{From identified coordinates to sharing decisions}
+\label{sec:sharing-dynamics}
+
+Once the factors are known, choosing which layers to tie still requires
+an objective. We compare three choices and ask whether their preferred
+partitions can diverge during training. Let $L=Km$ and let $\mathcal H_m$ contain binary $L\times K$
+assignment matrices with one entry per row and $m$ per column. For
+$H\in\mathcal H_m$, $Q_H=HH^\top/m$ projects onto group-constant rows.
+Partitions are compared without group labels. Define
+\begin{align}
+ S_A(H)&=\langle A,H\rangle, &
+ J_\Theta(H)&=\|(I-Q_H)AB\|_F^2, &
+ J_A(H)&=\|(I-Q_H)A\|_F^2. \label{eq:three-decisions}
+\end{align}
+\emph{Coefficient assignment} maximizes $S_A$: it assigns to fixed simplex
+vertices, since $\|A-H\|_F^2=\|A\|_F^2+L-2S_A(H)$.
+\emph{Weight clustering} minimizes $J_\Theta$, refitting each group center;
+it is router clustering in the metric $BB^\top$.
+\emph{Router clustering} minimizes $J_A$ with free centers. These are
+different objectives, even when the original factors are known exactly.
+
+\subsection{What response information is sufficient for a decision?}
+
+After fixing $H$, optimize only the hard-shared bases with rate $\eta_B$.
+Their effective response is
+$\mathcal R_H=\eta_B(HH^\top)\otimes I_D$; it does not depend on their
+initial fitted values. Here $\|\cdot\|_{\rm HS}$ denotes the Frobenius norm
+of the full $LD\times LD$ operator, distinct from $\|\cdot\|_{F\to F}$.
+
+\begin{theorem}[Response-optimal balanced tying]
+\label{thm:response-partition}
+For the soft response in Equation~\eqref{eq:response_blocks} and hard
+responses with the same $\eta_B>0$, there is a scalar $c(A,B)$ independent
+of $H\in\mathcal H_m$ such that
+\begin{equation}
+ \|\mathcal R_{A,B}-\mathcal R_H\|_{\rm HS}^2
+ =c(A,B)+2\eta_B^2 Dm J_A(H). \label{eq:response-partition}
+\end{equation}
+Thus the global minimizers are exactly the balanced router-clustering
+partitions. Off-diagonal entries of $AA^\top$ suffice to select them.
+\end{theorem}
+\begin{proof}
+Set $\gamma=\eta_Z/\tau^2$ and $T_i=B^\top C_i^2B$.
+Blockwise expansion gives
+\begin{align*}
+ \|\mathcal R_{A,B}-\mathcal R_H\|_{\rm HS}^2
+ ={}&\eta_B^2D\|AA^\top-HH^\top\|_F^2\\
+ &+2\eta_B\gamma\sum_i(\|a_i\|^2-1)\operatorname{tr}T_i
+   +\gamma^2\sum_i\|T_i\|_F^2.
+\end{align*}
+The last two terms are partition independent. Use
+$\|HH^\top\|_F^2=Lm$ and
+$\langle AA^\top,HH^\top\rangle=\|H^\top A\|_F^2
+=m(\|A\|_F^2-J_A(H))$. Diagonal Gram entries contribute the same sum
+for every partition, proving the final assertion.
+\end{proof}
+
+The reduction uses standard Gram-based clustering algebra
+\citep{dhillon2004kernel}. Under the equal-capacity and learning-rate
+assumptions, the full softmax covariance contribution is independent of
+the partition. The metric averages
+squared response error over isotropic effective gradients. It need not select
+the best partition for actual task gradients, operator norm, AdamW, or final
+loss. Unlike full factor identification, this decision does not require
+recovering $A$: the off-diagonal response blocks already provide the
+sufficient Gram entries. Response-Gram clustering is therefore a simpler
+sufficient alternative for this objective.
+
+\paragraph{Equivalence and strict conflicts.}
+For $K=2$ and $b_1\ne b_2$, coefficient assignment and global balanced
+weight clustering have exactly the same optimal unlabeled partitions.
+Writing $a_i=(t_i,1-t_i)$, both select the top $L/2$ values of $t_i$ and
+their complement. This includes ties and is a global-objective statement.
+For arbitrary $K$, if
+$P_0BB^\top P_0=\lambda P_0$, where
+$P_0=I-\ones\ones^\top/K$ and $\lambda>0$, then
+$J_\Theta=\lambda J_A$. This equates the two free-center clustering
+objectives, not coefficient assignment.
+
+For $K=3$, strictly interior full-rank examples separate all these claims
+(Appendix~\ref{app:decision-proofs}). One example with $L=6,D=9$ and
+basis condition number four has a unique weight-optimal partition with
+$(J_\Theta,J_A)=(65,50)/529$, whereas the unique response-optimal
+partition has $(119,14)/529$. A separate, exact product-preserving change
+of factors gives two identical effective models with \emph{different unique}
+response-optimal partitions. Consequently no decision using only $\Theta$
+can always be response optimal. Response information can therefore matter even when full coordinate
+reconstruction is unnecessary.
+
+\subsection{Training reachability and finite-time limits}
+
+The static examples leave open whether training can move from agreement
+to disagreement. The following existence result shows that it can.
+
+\begin{theorem}[A realizable transverse decision crossing]
+\label{thm:decision-crossing}
+There is a fixed squared loss $\ell(\Theta)=\tfrac12\|\Theta-T\|_F^2$
+and a nonempty open set of initial softmax/shared-basis states with
+$K=3,L=6,D=9$ such that, under Euclidean factor gradient flow with
+$\eta_B=\eta_Z=\tau=1$, coefficient assignment and global balanced weight
+clustering start with the same unique partition and subsequently disagree.
+The weight partition stays fixed through the crossing; both factors remain
+full rank and the router stays strictly positive on the considered interval.
+\end{theorem}
+
+\paragraph{Mechanism.}
+Appendix~\ref{app:decision-crossing-proof} gives rational factors at a tie
+between exactly two coefficient assignments, $H_p,H_q$, with a strict
+weight-clustering gap. Put $E=H_p-H_q$ and set the fixed loss gradient at
+that point to $g_i=B^\top C_i^2 e_i$ by choosing $T=AB-G$. Then
+\begin{equation}
+ \left.\frac{d}{dt}\langle A,H_p-H_q\rangle\right|_{t=0}
+ =-\sum_i\|B^\top C_i^2e_i\|^2<0. \label{eq:crossing-speed}
+\end{equation}
+Local ODE existence and the strict remaining gaps give a crossing while
+the weight optimum stays fixed. Taking a nearby earlier point as the
+initial state produces ordinary forward training under the same loss.
+Continuous dependence yields an open neighborhood of such initial states.
+The constructed target proves that the crossing is reachable. Its
+frequency and attraction properties under natural data remain open.
+
+Positive margins can also protect agreement for a finite time.
+Appendix~\ref{app:decision-stability} gives explicit bounds using initial
+assignment/clustering gaps and bounds on $\|B\|_2$ and
+$\|\nabla\ell\|_F$. Under these conditions, agreement persists for the bounded interval;
+it need neither hold indefinitely nor inevitably break down.
+
+\paragraph{Why static and dynamic objectives can both matter.}
+Consider soft and hard trajectories of the same loss. Assume its gradient
+is $L_\ell$-Lipschitz between the trajectories,
+$\|\nabla\ell(\Theta_s(t))\|_F\le M$, and
+$\|\mathcal R_s(t)-\mathcal R_H\|_{F\to F}\le\delta$ throughout the
+interval. With $c=\eta_BmL_\ell$ and group-mean initialization,
+\begin{equation}
+ \|\Theta_s(t)-\Theta_h(t)\|_F
+ \le e^{ct}\sqrt{J_\Theta(H)}
+       +M\delta\frac{e^{ct}-1}{c}. \label{eq:trajectory-sharing-bound}
+\end{equation}
+The last quotient is $t$ at $c=0$. This standard trajectory perturbation
+bound, proved in Appendix~\ref{app:decision-stability}, separates initial
+weight distortion from continuing response distortion. Matching training
+kernels is already a compression objective~\citep{pmlr-v119-liu20o}.
+Our instantaneous Hilbert--Schmidt optimum only bounds operator mismatch
+at that time; it does not supply a uniform-in-time $\delta$ or guarantee
+lower downstream loss.

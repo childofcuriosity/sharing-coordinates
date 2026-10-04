@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-25",
+  "scope": "Integrated response-identification, decision-theory and training-dynamics preprint; no upload",
+  "recommendation": "Recommend public scoped theoretical preprint; no external human peer review claimed",
+  "pdf_pages": 72,
+  "main_discussion_ends_on_page": 11,
+  "template": "ICLR2027 retained by request",
+  "author_metadata": "Intentionally deferred placeholder; fill before actual submission",
+  "tests": {
+    "passed": 181,
+    "failed": 0,
+    "seconds": 24.9
+  },
+  "exact_certificates": "Independent integer/rational enumeration passed, K=3 and K=4",
+  "projector_checks": {
+    "count": 120,
+    "max_absolute_difference": 7.105427357601002e-14
+  },
+  "archived_dependencies_verified": 106,
+  "unchanged_inherited_theory_appendices": 5,
+  "frozen_llm_sources": "check_freeze passed",
+  "generated_dynamics_tables_and_figures": "byte-identical rebuild passed",
+  "packaging": {
+    "files": 69,
+    "clean_builds": 3,
+    "pdf_text_matches": true,
+    "archive_sha256": "193c2cb250410cfb79a4d4be25fecce830e4bd47966dfe6f90ca7aead4be6d2c",
+    "undefined_references_or_overfull_boxes": false
+  },
+  "visual_review": "All final 72 pages inspected in overview, main figure and changed appendix tables at larger scale",
+  "citations": {
+    "compiled_keys": 59,
+    "missing_keys": 0,
+    "new_primary_source_verified": 2,
+    "inherited_source_scope": "See PUBLICATION_CITATION_AUDIT.json; not all earlier citations freshly searched"
+  },
+  "initial_verify": "All tests and derivation/provenance checks passed; final manifest check failed while new release audit documents were being added. Log retained. Manifest regenerated after documentation closure.",
+  "final_repository_verify": "passed",
+  "limitations": [
+    "Selected local real-model state and batch are post hoc",
+    "Ordinary SGD grid has no detected crossings",
+    "Response optimum is Euclidean, not AdamW",
+    "Native-factor dynamics experiments do not test full recovery advantage",
+    "No new downstream gain, compression speedup or population-frequency claim"
+  ],
+  "files": {
+    "dist/sharing-coordinates-arxiv-draft.tar.gz": "193c2cb250410cfb79a4d4be25fecce830e4bd47966dfe6f90ca7aead4be6d2c",
+    "dist/sharing-coordinates-preview.pdf": "b067944a54662e35a91e00139c28f0835b818f434fd26e6135c65af829a02049",
+    "experiments/generate_dynamics_paper.py": "d125b87970bfdf8079a4372707f4d51628b9e2f8676755aae3de6d40676f7581",
+    "paper/figures/dynamics_controls.pdf": "b874cdc586a50dff2f5b030f7f903935b9983aa6314b14da1c74061f67dbb066",
+    "paper/figures/dynamics_crossing.pdf": "7f451efc806cfad81fad23ded23a339d554306068a5a5e94f561cdd38ab8ce1f",
+    "paper/generated/decision_certificates.tex": "fa2c707e44aecff9a4b791a6e70842d120b084749960023e2076f9ae3dc09ddd",
+    "paper/generated/dynamics_all_runs.tex": "3093db803b1b11dc90cf692aaa12b85e23bd61568961a8e1e544e6048ec343ad",
+    "paper/generated/dynamics_crossings.tex": "33708888e56de577276127e03d2d42721b2988878f4d0fba9196036b07813a07",
+    "paper/generated/dynamics_local_flow.tex": "7a015ae4e21bbb74298b24dd2f5fd53a2816838380f2e71ca6afb88f3c7234aa",
+    "paper/main.pdf": "b1ebbe31e57f1b58907688b8cee4d8eb57604bffa95ba985f63485e2299782fb",
+    "paper/main.tex": "1817621bf1601d1d7467c9b6496efacd9f72e5544804fd95eb88fd0f8325b9d0",
+    "paper/references.bib": "b551ba1308a92c18d17615756b74cab790b4da6c97caabb16adbca423b011ec0",
+    "research/PUBLICATION_ARXIV_PACKAGE.json": "2e97d6cf8bc6a3707816d00d512d1084d2c39884a392eff2a04a2ace23329ac3",
+    "research/PUBLICATION_CITATION_AUDIT.json": "6bf999edce433eccd8c1045e57d64d930c0ec6ff0c39da10e583cd36f1d118cc",
+    "research/PUBLICATION_REPRODUCIBILITY.md": "80e7df7c8377a1608bec7a9877d36865e4b9d4f787d5bb356fd03e3a1d032508",
+    "research/PUBLICATION_REVIEW.md": "6146d29bb35a302053ed880bc3a76f6ab5f870d2a689ef66ffd0cdba66784bc5",
+    "research/PUBLICATION_VISUAL_REVIEW.md": "caac98ca151050d0b0114ddcfc2d422a93d92cd22be1d44427d76448da0dc42f",
+    "research/publication-logs/full-verify.log": "8c0c28580264981c2573cbb6d86faac9f6ea76a729a64b96d9b1b861edcfe839",
+    "research/publication-logs/generated-check.log": "b379d3ccc8e91bb45c4a8fc3bedd4f4b9abe3667ba44890271dd6e07c1e84802",
+    "research/publication-logs/package.log": "0483106f874579e9b35cfcaad52b66dee7abcd90ee32f82c2be060798082b8f1",
+    "research/releases/2026-09-25-pre-dynamics/SNAPSHOT.json": "91023c2125ec2907e220b4dfeb75cedf005b255bd8c4c32781f1fea3b7cdd9c0",
+    "results/llm/summary.json": "03cbf817dbd9da5786ae2b8fe510b63181684f6e9f0b3b50ddaedf1cac716cbf",
+    "results/routing_training/summary.json": "8793fd8fa5fbbab2383322271734bf005a7dfad9f5594efdcc584d1839632c56",
+    "scripts/check_decision_certificates.py": "5dc601e448ff8169bdb28be20419eff0b856e34c68f36c9dd660183ecdf577a6",
+    "scripts/package_arxiv.py": "bc375f294b50c47aae0fce9a010e35bd62b3f3c377fe589a1c170a943869dc1c",
+    "scripts/run_all.sh": "6d8cfde3596f13950b2329211ca536304ac1b41188e304978464ec85b988497e",
+    "scripts/verify_publication_records.py": "5121b09ed95fcd88c108f79705ed5f7569362e921df25e91bda0566ea045ccb6",
+    "research/publication-logs/full-verify-final.log": "2b5051e67665cbbe7d46d838fc1b4418ee8ceff4a27066837b4264acad7ce5e1"
+  },
+  "closure": "After successful complete read-only verification, this status record and its log were added; the repository manifest was regenerated and checked once more. No manuscript, source or experimental result was changed during closure."
+}

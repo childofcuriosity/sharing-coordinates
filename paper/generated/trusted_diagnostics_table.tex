@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Synthetic held-out diagnostic comparison (percent). Coverage is the accepted fraction; bad rejection is recall on errors $>0.10$; good rejection is false rejection on errors $\le0.05$; accepted bad is the bad fraction among accepted outputs. Each threshold was frozen using calibration only.}
+\label{tab:trusted-diagnostics}
+\begin{tabular}{llrrrr}
+\toprule
+Method & Score & Coverage & Bad reject & Good reject & Accepted bad \\
+\midrule
+Spectral & Combined & 10.21 & 100.00 & 85.04 & 0.00 \\
+Spectral & Residual & 10.21 & 100.00 & 85.04 & 0.00 \\
+Spectral & Condition & 10.26 & 100.00 & 84.96 & 0.00 \\
+Projected & Combined & 72.71 & 90.11 & 0.00 & 4.01 \\
+Projected & Residual & 72.66 & 92.23 & 0.00 & 3.15 \\
+Projected & Condition & 21.30 & 98.06 & 70.48 & 2.69 \\
+Joint fit & Combined & 92.81 & 59.47 & 0.18 & 5.16 \\
+Joint fit & Residual & 91.51 & 70.04 & 0.18 & 3.87 \\
+Joint fit & Condition & 24.32 & 91.63 & 72.73 & 4.07 \\
+\bottomrule
+\end{tabular}
+\end{table}

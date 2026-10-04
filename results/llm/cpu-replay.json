@@ -1,0 +1,4230 @@
+{
+  "format": "llm-cpu-replay-v1",
+  "freeze_sha256": "4721048fd7c607a553b8fcca0e335a5818e00b94cefa42f877fca5b6e8e86727",
+  "policy_sha256": "a28cc236ca87f47549d75d3a8c6ab53178b491fe60dad2291f82a5dfb6993f5f",
+  "input_sha256": {
+    "results/llm/evaluation/pythia160m-seed0/observations.pt": "7580028080eb0ec8e7441ba5f47d9d7db1d091cafd6189560819e7c782716e6f",
+    "results/llm/evaluation/pythia160m-seed0/recovery.json": "e06c08a62a18761fb0cd1729f11602b912096bab1c92462d79f413c5481b7c64",
+    "results/llm/evaluation/pythia160m-seed1/observations.pt": "eda760309793e5b687b85a1d1239ce12f8ef3202ffada04491841db35c0c8661",
+    "results/llm/evaluation/pythia160m-seed1/recovery.json": "082a69ea54c408ece3674986c72c08e1b3be6749a0bef2871c57dac7fb878915",
+    "results/llm/evaluation/pythia160m-seed2/observations.pt": "7e4351a4fe66adafb37772deeaa5c576c9617d201c5fc347f7723dea3affb521",
+    "results/llm/evaluation/pythia160m-seed2/recovery.json": "21a401cfd5ee2227d4f23459a0b90528cfe5ba02a056f699a5179c5d2983e782",
+    "results/llm/evaluation/pythia1b-seed0/observations.pt": "045e9aa8f9e907f688249e35b9151108d00346eb6f56a732ce7a21dbba263ddb",
+    "results/llm/evaluation/pythia1b-seed0/recovery.json": "8cbd8e774bd164da3e5ea30e248676f8acd4027ab5f3b4982fd01df8c6ff4df9",
+    ".cache/llm/gradients/evaluation/pythia1b-seed0/general.pt": "6c2ed0c6bac41efba3725f56caec4032ce1c5cec0542587659b5fd8342d1249f",
+    "results/llm/evaluation/pythia1b-seed1/observations.pt": "7084a34c7e8a78f237b9afd703d9fe8ee8cbfef85b81c54894d19d63c6bbda62",
+    "results/llm/evaluation/pythia1b-seed1/recovery.json": "d118bf37cc51417a857635863b20cbaf83ed2ca3e9d1e99352bf3b3f2ae6026e",
+    "results/llm/evaluation/pythia1b-seed2/observations.pt": "dc0b18f2d0890ceddea603cc0a414a128907e16d6b71d6609e4234a3c602b41e",
+    "results/llm/evaluation/pythia1b-seed2/recovery.json": "90d5f2e2fd38d101f28fd59c05446c338dcf13063add367bd246577cbb040a5c",
+    "results/llm/evaluation/pythia28b-seed0/observations.pt": "13e4313152221e3d4adb2abf26e347306384817a34149c4372c21051420b11a8",
+    "results/llm/evaluation/pythia28b-seed0/recovery.json": "5cf8fe6deff5612b44812a54a21abd4d1798f0e59c39d505b343e49b7a5b7df6",
+    "results/llm/evaluation/pythia28b-seed1/observations.pt": "62629509b50cae5658a888055460b6fb47297103129d4b0810d0dadadd6784b7",
+    "results/llm/evaluation/pythia28b-seed1/recovery.json": "3b84d4f882c70808fce906d4fdc41ab61be976fa7a32ed13865e285c0d81367d",
+    "results/llm/evaluation/pythia28b-seed2/observations.pt": "b6eeb0ab5b115d13643bc7cdbc8c676cf386f340fdfa6870e9a76e534729fdb5",
+    "results/llm/evaluation/pythia28b-seed2/recovery.json": "4d0b11a256bbbf1437353c8e4c62b6f2d7eec892f5377e261361b2c85db54908",
+    "results/llm/evaluation/qwen06b-seed0/observations.pt": "0a8f9390fb116e4203d4abb16de426c2de088eb6bb35b961ea03b62bd54c8761",
+    "results/llm/evaluation/qwen06b-seed0/recovery.json": "d5e8548de77102688e62a50d3a739fce689552896492c8db44412f7ff3a1ada1",
+    "results/llm/evaluation/qwen06b-seed1/observations.pt": "d16e7a487d9729ba2694099b7b4491cc9872b761b5c3d763e33ac63b594a3b6b",
+    "results/llm/evaluation/qwen06b-seed1/recovery.json": "5e6428bffac40092181dbdaec677aea2f83f4e7d565c6f28113548b3d5f77ffa",
+    "results/llm/evaluation/qwen06b-seed2/observations.pt": "612a6c24f5be672ef69def1b54bce85d58ded3ba736da1f8bfde70d916f2340a",
+    "results/llm/evaluation/qwen06b-seed2/recovery.json": "f6dbb728f58055780cd0db3ec21ae291237121e51bb9f9c9fcd86d67935aab02",
+    "results/llm/evaluation/qwen17b-seed0/observations.pt": "f67b7d90c6eb36a35ef9ca5d125e59a09425cb8cb1349a05f80714949a927f58",
+    "results/llm/evaluation/qwen17b-seed0/recovery.json": "01a167d9ea212ad2e541c1e6ee7cfad1f9103c5cc67b4e23502b09dbabfc9016",
+    "results/llm/evaluation/qwen17b-seed1/observations.pt": "089e155ee9c436f318a41961971b3ddaf3bb8654f3d06a4db09aed5d8b96180d",
+    "results/llm/evaluation/qwen17b-seed1/recovery.json": "fbb2bf0bfd928af7c9ae3fa9955f4f38e8f6bf9d98bc19e2cd5e0cd38df42067",
+    "results/llm/evaluation/qwen17b-seed2/observations.pt": "72b1c74d4c1ef2f5beb278dc766fe5eb521f764ed729c546133514686467f61f",
+    "results/llm/evaluation/qwen17b-seed2/recovery.json": "0efaff44799faa76ed44176dc619aca0efbf8ac2264b4a68f365e23f4238e1be",
+    "results/llm/evaluation/qwen4b-seed0/observations.pt": "f78dc55c3dc96eda237b07711bf96aa96c5feab6fd45f3ebb6f90086983ed674",
+    "results/llm/evaluation/qwen4b-seed0/recovery.json": "47ada960007861d8578aef6e27e437b6fe34e6998b9aa4730027b4af204118df",
+    ".cache/llm/gradients/evaluation/qwen4b-seed0/general.pt": "11486ffb2d83b5793693bc3cd1d01112f7c5ea36539dea5fbedc8db11a92a062",
+    "results/llm/evaluation/qwen4b-seed1/observations.pt": "55ad84b3a9d25824771f8daf144cdcf528f9fe59bbac1ed70cc3d0636ffa04cb",
+    "results/llm/evaluation/qwen4b-seed1/recovery.json": "4e53eb11adfe2f6554b8cd1adfb81f4da20fd377eecf15b68a1dc9d1455e7040",
+    "results/llm/evaluation/qwen4b-seed2/observations.pt": "58edd19d5c05ca08b6d92ae6e09b9124b86b518fb3334aaf7d1e4524bf2050a3",
+    "results/llm/evaluation/qwen4b-seed2/recovery.json": "5d8b19a6973a2cdd0f557ff3dc0b21492f2046bcd5be9196f50609320c642cc9",
+    "results/llm/evaluation/qwen8b-seed0/observations.pt": "a1f69e9c810a5c4441c5446a2313207409fb18da8005e7197b8c8127a82277ba",
+    "results/llm/evaluation/qwen8b-seed0/recovery.json": "696b32d70265becef74f644473e2a8012ecd366f00fc8b04d337935ec0f08eea",
+    "results/llm/evaluation/qwen8b-seed1/observations.pt": "80850363d85853c530651168bda1c226915b22f99f47023273f1af7136de7159",
+    "results/llm/evaluation/qwen8b-seed1/recovery.json": "77f8f4111e518c51811c262904910f82d623d154a36b2b4c5a923f7564db8a76",
+    "results/llm/evaluation/qwen8b-seed2/observations.pt": "fc489e74ecba8c4f523595f23e3f6a6d00d33a082c7a1ede1865f9bef0f72a90",
+    "results/llm/evaluation/qwen8b-seed2/recovery.json": "de0ce12e11445a21dee85f2110ab8a24bc14c0f99addc57653862907f55865d1",
+    "results/llm/evaluation/smol360m-seed0/observations.pt": "dc26a817aca341406511497d5cbc3ba2ba1c73364b123bbf0acef2dbdcc86271",
+    "results/llm/evaluation/smol360m-seed0/recovery.json": "274facd0d22b0517e938a98f7e365a19e1c80463b8dddba4e8a5b12947081d27",
+    "results/llm/evaluation/smol360m-seed1/observations.pt": "dc5ced51e89fa451b5f24541c2eb56e75d10a55bc5dbebb83b0a8c774bb414f3",
+    "results/llm/evaluation/smol360m-seed1/recovery.json": "1ab215db670c636685bc46ba4682024b4902e9eb7b31257e94b8244359bb1c6e",
+    "results/llm/evaluation/smol360m-seed2/observations.pt": "c6e402ca3c05e981076bf03d13cbe62b90b53d6f32a0bee1a8f03a1e2968240e",
+    "results/llm/evaluation/smol360m-seed2/recovery.json": "e0430eb2d19bb518148ca1984ef28fde0e2a6a85b4746d3111e7b9c26efa29f9",
+    "results/llm/evaluation/smol17b-seed0/observations.pt": "19ea6248efed26e9f6e3cf1cda069b70c382744bd171f670c4082fa3d728271c",
+    "results/llm/evaluation/smol17b-seed0/recovery.json": "565bf25d0e277c950925d39f09df836ca086386458c3d926d57d101a6fe2cb54",
+    ".cache/llm/gradients/evaluation/smol17b-seed0/general.pt": "c5964d5bdc2f24a498ed838ab592efa97ac45215294a92dbec01b0507746e650",
+    "results/llm/evaluation/smol17b-seed1/observations.pt": "9c68e4f8e02195a86059e24defec623516c7b0a68a640270de79c7e90680a579",
+    "results/llm/evaluation/smol17b-seed1/recovery.json": "28434f680d5ba5138f101642d75eb13d0f41111c0ebc64bec9fb21ec9423e855",
+    "results/llm/evaluation/smol17b-seed2/observations.pt": "63c91fbc82ab2331f5cb1c1ae04313d9b0b8de3e1bdb55bf9b08402620847b22",
+    "results/llm/evaluation/smol17b-seed2/recovery.json": "1ba47956f45b778b638ca293202ee099904a3cb8d88f924ecfca979ee255684d"
+  },
+  "source_sha256": "b673c513a6a1a2c0267b452911dadb136fc85503ae667ef56532a79a3d1c5b16",
+  "torch": "2.7.1+cpu",
+  "numpy": "1.26.4",
+  "scipy": "1.15.2",
+  "python": "3.12.3",
+  "records": [
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.770129819242645e-08,
+      "error_replay": 3.7696492465587674e-08,
+      "estimate_orbit_difference": 9.047703956339186e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.7917959268228284e-08,
+      "error_replay": 1.7917335076247843e-08,
+      "estimate_orbit_difference": 4.668421858695114e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.916721561029507e-14,
+      "error_replay": 5.916721561029507e-14,
+      "estimate_orbit_difference": 0.0,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.08067034035603277,
+      "error_replay": 0.08067034035603228,
+      "estimate_orbit_difference": 8.891112684392741e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.08066946990958679,
+      "error_replay": 0.08066946990958662,
+      "estimate_orbit_difference": 5.162744659253613e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.00012232435353721802,
+      "error_replay": 0.00012232435353721138,
+      "estimate_orbit_difference": 2.956223141761819e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1156766588546019,
+      "error_replay": 1.1156766588546028,
+      "estimate_orbit_difference": 1.7415038542164825e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.631950425051296,
+      "error_replay": 0.6319504250512962,
+      "estimate_orbit_difference": 1.3486141425290244e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.012232836117366508,
+      "error_replay": 0.012232836117366518,
+      "estimate_orbit_difference": 2.14962048425535e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.295536597990784e-12,
+      "error_replay": 3.2957558652593547e-12,
+      "estimate_orbit_difference": 1.5051873259629696e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.658038647845589e-12,
+      "error_replay": 5.658034808623811e-12,
+      "estimate_orbit_difference": 9.202454469069402e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.7390901986188927e-14,
+      "error_replay": 3.757533244533621e-14,
+      "estimate_orbit_difference": 4.359119890258066e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.26599549511685056,
+      "error_replay": 0.265995495116852,
+      "estimate_orbit_difference": 7.898261827288392e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.15938179771617197,
+      "error_replay": 0.15938179771617447,
+      "estimate_orbit_difference": 5.753958782487788e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.00014221424030012327,
+      "error_replay": 0.00014221424030036705,
+      "estimate_orbit_difference": 1.0288750370088326e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.5720731506178973,
+      "error_replay": 2.572073150617895,
+      "estimate_orbit_difference": 1.0470313902985536e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.7019923570560588,
+      "error_replay": 0.7019923570560577,
+      "estimate_orbit_difference": 1.94385903585829e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.03377528628589339,
+      "error_replay": 0.033775286285897474,
+      "estimate_orbit_difference": 4.667160704669753e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.335845917501593e-09,
+      "error_replay": 8.324509017639738e-09,
+      "estimate_orbit_difference": 1.1336899945742403e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.831191076472548e-09,
+      "error_replay": 5.823260325567543e-09,
+      "estimate_orbit_difference": 7.930751229403548e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.8003053834904698e-14,
+      "error_replay": 1.7897993208495833e-14,
+      "estimate_orbit_difference": 5.959768423460355e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.03239082604780726,
+      "error_replay": 0.032390826047807623,
+      "estimate_orbit_difference": 2.7869095082515366e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.03567985409540458,
+      "error_replay": 0.03567985409540464,
+      "estimate_orbit_difference": 1.7023406031852372e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.607279177770888e-05,
+      "error_replay": 8.60727917777205e-05,
+      "estimate_orbit_difference": 3.206941698143907e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1674219184359023,
+      "error_replay": 1.1674219184358905,
+      "estimate_orbit_difference": 1.5808555002448062e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.0644058432507815,
+      "error_replay": 1.0644058432507693,
+      "estimate_orbit_difference": 1.6648924125550462e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia160m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.008616667886882024,
+      "error_replay": 0.008616667886881937,
+      "estimate_orbit_difference": 7.685844339734334e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.30527385656944e-08,
+      "error_replay": 2.3054197500692603e-08,
+      "estimate_orbit_difference": 2.5572792376372014e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.8820149249056986e-08,
+      "error_replay": 2.8821246808610794e-08,
+      "estimate_orbit_difference": 2.958734481421229e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.2761356808050128e-14,
+      "error_replay": 2.2739483340025358e-14,
+      "estimate_orbit_difference": 2.611821496911698e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.002965721378358692,
+      "error_replay": 0.002965721378358468,
+      "estimate_orbit_difference": 1.0287949308642719e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0034152550992497793,
+      "error_replay": 0.0034152550992494813,
+      "estimate_orbit_difference": 7.525938992348263e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.421144709550326e-05,
+      "error_replay": 5.4211447095504336e-05,
+      "estimate_orbit_difference": 1.814822346460129e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05033735602668035,
+      "error_replay": 0.05033735602668071,
+      "estimate_orbit_difference": 1.3179568432926504e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.062024707235070066,
+      "error_replay": 0.06202470723507001,
+      "estimate_orbit_difference": 6.201315186287349e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.005421032353127272,
+      "error_replay": 0.005421032353127272,
+      "estimate_orbit_difference": 2.790169292002479e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.1320356818813902e-08,
+      "error_replay": 2.131925245808069e-08,
+      "estimate_orbit_difference": 3.1026385942270287e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.6857229908226314e-08,
+      "error_replay": 2.685596837058499e-08,
+      "estimate_orbit_difference": 4.1372695320685365e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.6075081285936555e-14,
+      "error_replay": 1.611522196100709e-14,
+      "estimate_orbit_difference": 1.7992135030753452e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0017740340945516684,
+      "error_replay": 0.001774034094551654,
+      "estimate_orbit_difference": 9.552799608349243e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0018224429803986178,
+      "error_replay": 0.0018224429803986412,
+      "estimate_orbit_difference": 8.089036004665151e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.5396676664731574e-05,
+      "error_replay": 5.5396676664767265e-05,
+      "estimate_orbit_difference": 2.7876286527693855e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06701616667104665,
+      "error_replay": 0.06701616667104651,
+      "estimate_orbit_difference": 6.679447630981678e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06862589679087965,
+      "error_replay": 0.0686258967908796,
+      "estimate_orbit_difference": 4.2661453569059444e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.00553961713730853,
+      "error_replay": 0.005539617137308531,
+      "estimate_orbit_difference": 1.788377370576438e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.8589757889967226e-08,
+      "error_replay": 1.8584603542067678e-08,
+      "estimate_orbit_difference": 8.122197607092278e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.4967005795383624e-08,
+      "error_replay": 2.49568255078766e-08,
+      "estimate_orbit_difference": 7.780643021271112e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.8783771408033527e-14,
+      "error_replay": 2.876935970990331e-14,
+      "estimate_orbit_difference": 2.623383559912483e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0021002893784626804,
+      "error_replay": 0.002100289378462702,
+      "estimate_orbit_difference": 6.933439938768298e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0028367576711363575,
+      "error_replay": 0.0028367576711364226,
+      "estimate_orbit_difference": 6.046222683960396e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.6715339104281617e-05,
+      "error_replay": 5.671533910382864e-05,
+      "estimate_orbit_difference": 1.8396930675735984e-13,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04952732364364903,
+      "error_replay": 0.049527323643648806,
+      "estimate_orbit_difference": 7.599757242322737e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.057412252646717093,
+      "error_replay": 0.057412252646716976,
+      "estimate_orbit_difference": 4.320007829401682e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia1b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.005671686802424824,
+      "error_replay": 0.0056716868024248275,
+      "estimate_orbit_difference": 2.7815218807983066e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.259285925147055e-08,
+      "error_replay": 3.259350368024104e-08,
+      "estimate_orbit_difference": 3.5178363740677047e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.714610922241669e-08,
+      "error_replay": 3.7146538761765807e-08,
+      "estimate_orbit_difference": 3.931625403951976e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.0688452772021367e-14,
+      "error_replay": 5.070092627754319e-14,
+      "estimate_orbit_difference": 2.599077692587046e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.015907893846461508,
+      "error_replay": 0.015907893846463492,
+      "estimate_orbit_difference": 2.2367109510373634e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.01713713686309726,
+      "error_replay": 0.017137136863099294,
+      "estimate_orbit_difference": 2.174708696828705e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.8265370091833726e-05,
+      "error_replay": 3.8265370091832384e-05,
+      "estimate_orbit_difference": 2.1888401208658658e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.5850646019934513,
+      "error_replay": 1.585064601993403,
+      "estimate_orbit_difference": 2.3524635496204944e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.6813317181337557,
+      "error_replay": 1.6813317181337037,
+      "estimate_orbit_difference": 2.411809934977905e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0038949429610666275,
+      "error_replay": 0.0038949429610626177,
+      "estimate_orbit_difference": 2.1355074972129125e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.2527412433253544e-08,
+      "error_replay": 2.25275063656257e-08,
+      "estimate_orbit_difference": 8.304153823860148e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.7239521011485092e-08,
+      "error_replay": 2.7239610332817197e-08,
+      "estimate_orbit_difference": 1.1742756761175027e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.402560029899083e-14,
+      "error_replay": 4.402575279915492e-14,
+      "estimate_orbit_difference": 1.876428801460772e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.002353722442327625,
+      "error_replay": 0.002353722442327689,
+      "estimate_orbit_difference": 9.290108014409508e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0027910413350041687,
+      "error_replay": 0.0027910413350040694,
+      "estimate_orbit_difference": 4.512109803644188e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.7649001504347074e-05,
+      "error_replay": 3.764900150541809e-05,
+      "estimate_orbit_difference": 2.0819905804062928e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05204725565717725,
+      "error_replay": 0.05204725565717718,
+      "estimate_orbit_difference": 4.176516924096407e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06691339311014838,
+      "error_replay": 0.06691339311014828,
+      "estimate_orbit_difference": 3.9342497603285793e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037648785824914237,
+      "error_replay": 0.0037648785824914302,
+      "estimate_orbit_difference": 2.838710399504156e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.7896130970485676e-08,
+      "error_replay": 3.7896184148958165e-08,
+      "estimate_orbit_difference": 1.13095123394561e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.737485371178565e-08,
+      "error_replay": 4.7374949692688046e-08,
+      "estimate_orbit_difference": 1.2821634875251267e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.801032343773064e-14,
+      "error_replay": 4.800465102013731e-14,
+      "estimate_orbit_difference": 2.585939993185274e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.005866819088846426,
+      "error_replay": 0.005866819088846401,
+      "estimate_orbit_difference": 6.743757531877356e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.006964472739316941,
+      "error_replay": 0.006964472739316932,
+      "estimate_orbit_difference": 3.682372617889421e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.761812933181019e-05,
+      "error_replay": 3.761812933143871e-05,
+      "estimate_orbit_difference": 5.0344933289312636e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.07420068745190422,
+      "error_replay": 0.0742006874519043,
+      "estimate_orbit_difference": 1.211506925629255e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.09422308562925769,
+      "error_replay": 0.09422308562925769,
+      "estimate_orbit_difference": 2.7854830641318196e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "pythia28b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003761931935485336,
+      "error_replay": 0.003761931935485338,
+      "estimate_orbit_difference": 2.0289045166433353e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.5069301410952842e-08,
+      "error_replay": 2.50750706280664e-08,
+      "estimate_orbit_difference": 3.5367914634397635e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.431949517168593e-08,
+      "error_replay": 2.432172922529139e-08,
+      "estimate_orbit_difference": 1.7779947710977405e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.10585932647553e-14,
+      "error_replay": 3.108967223667135e-14,
+      "estimate_orbit_difference": 2.676481398734343e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003142322567575089,
+      "error_replay": 0.0031423225675749644,
+      "estimate_orbit_difference": 1.026558930866027e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003980395716116253,
+      "error_replay": 0.003980395716116044,
+      "estimate_orbit_difference": 8.542070429520844e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.9010065138059375e-05,
+      "error_replay": 4.9010065356197356e-05,
+      "estimate_orbit_difference": 2.6172315143427143e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05700031377214705,
+      "error_replay": 0.05700031377214728,
+      "estimate_orbit_difference": 1.7874016131367215e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06991766351982759,
+      "error_replay": 0.06991766351982767,
+      "estimate_orbit_difference": 1.4312416195633443e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004901423957764184,
+      "error_replay": 0.004901423957764197,
+      "estimate_orbit_difference": 3.1367877516291237e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.2010861134713258e-08,
+      "error_replay": 1.2013005026968855e-08,
+      "estimate_orbit_difference": 3.3357037987883967e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.208928317742655e-08,
+      "error_replay": 1.2090633080274915e-08,
+      "estimate_orbit_difference": 2.9185958291041193e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.3972391965185857e-14,
+      "error_replay": 2.3972391965185857e-14,
+      "estimate_orbit_difference": 0.0,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.006495001217875297,
+      "error_replay": 0.006495001217875137,
+      "estimate_orbit_difference": 9.578855289642086e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.00810331648728506,
+      "error_replay": 0.008103316487285114,
+      "estimate_orbit_difference": 5.633299938702744e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.506177075835161e-05,
+      "error_replay": 4.5061770758355e-05,
+      "estimate_orbit_difference": 1.8570451593354464e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.10690324061308171,
+      "error_replay": 0.10690324061308162,
+      "estimate_orbit_difference": 1.3958687607318357e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.11536669715469842,
+      "error_replay": 0.11536669715469845,
+      "estimate_orbit_difference": 6.550405628438543e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0045066148499481725,
+      "error_replay": 0.004506614849948169,
+      "estimate_orbit_difference": 2.1825976170116352e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.148492953989327e-09,
+      "error_replay": 8.147276455738266e-09,
+      "estimate_orbit_difference": 2.4842757214278277e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.39726508526966e-09,
+      "error_replay": 8.396360247224476e-09,
+      "estimate_orbit_difference": 2.522639109934125e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.665115919125076e-14,
+      "error_replay": 2.6648630270982278e-14,
+      "estimate_orbit_difference": 2.313085227150018e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.001972193184390838,
+      "error_replay": 0.0019721931843908248,
+      "estimate_orbit_difference": 5.282271183110052e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.002216297137680294,
+      "error_replay": 0.0022162971376804,
+      "estimate_orbit_difference": 4.936696508894538e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.410264729489419e-05,
+      "error_replay": 4.410264729489792e-05,
+      "estimate_orbit_difference": 2.495507020582454e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05834743608142677,
+      "error_replay": 0.05834743608142595,
+      "estimate_orbit_difference": 1.9664616253198714e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06650933357437873,
+      "error_replay": 0.0665093335743778,
+      "estimate_orbit_difference": 1.5203428433579808e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen06b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004410394369356697,
+      "error_replay": 0.004410394369356698,
+      "estimate_orbit_difference": 1.7184130110329254e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.3206990378920687e-08,
+      "error_replay": 1.320887998168397e-08,
+      "estimate_orbit_difference": 9.416354095964365e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.623890791836846e-08,
+      "error_replay": 1.6241002657060054e-08,
+      "estimate_orbit_difference": 9.937634853867785e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.0418752579480524e-14,
+      "error_replay": 3.0424092189960823e-14,
+      "estimate_orbit_difference": 3.320530641153038e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0015186707771617587,
+      "error_replay": 0.0015186707771618767,
+      "estimate_orbit_difference": 7.232455364777535e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.002036493703852327,
+      "error_replay": 0.0020364937038522867,
+      "estimate_orbit_difference": 4.442774040875084e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.228962828121351e-05,
+      "error_replay": 4.2289628281211414e-05,
+      "estimate_orbit_difference": 1.87922635061609e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.041664028336539344,
+      "error_replay": 0.04166402833653929,
+      "estimate_orbit_difference": 1.2321306373482352e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05410663092254853,
+      "error_replay": 0.054106630922548415,
+      "estimate_orbit_difference": 3.973440816002912e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0042289843955962995,
+      "error_replay": 0.004228984395596295,
+      "estimate_orbit_difference": 2.27165974395675e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.229699789666618e-08,
+      "error_replay": 3.2298386301583215e-08,
+      "estimate_orbit_difference": 4.095318708845222e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.7752533370709416e-08,
+      "error_replay": 3.775371851951938e-08,
+      "estimate_orbit_difference": 4.608083361420498e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.553860825559206e-14,
+      "error_replay": 3.555470047013035e-14,
+      "estimate_orbit_difference": 2.4158006121681436e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.005378067238598926,
+      "error_replay": 0.005378067238599116,
+      "estimate_orbit_difference": 1.29084765594725e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.007729619031001526,
+      "error_replay": 0.007729619031001507,
+      "estimate_orbit_difference": 3.9639544417849773e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.1136498624481094e-05,
+      "error_replay": 4.113649862447908e-05,
+      "estimate_orbit_difference": 2.1054251024094145e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.08245697955889426,
+      "error_replay": 0.08245697955889414,
+      "estimate_orbit_difference": 1.32579632840179e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.09383717323088551,
+      "error_replay": 0.09383717323088556,
+      "estimate_orbit_difference": 4.0392005556715727e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004113640466837194,
+      "error_replay": 0.004113640466837195,
+      "estimate_orbit_difference": 2.1209859769086775e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.322640999473841e-09,
+      "error_replay": 8.32279454245557e-09,
+      "estimate_orbit_difference": 7.165472849789475e-13,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1880597576962136e-08,
+      "error_replay": 1.1880859720294702e-08,
+      "estimate_orbit_difference": 1.0434534748126023e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.548690196089662e-14,
+      "error_replay": 2.546506842278549e-14,
+      "estimate_orbit_difference": 2.050430071870725e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.005245526983800921,
+      "error_replay": 0.0052455269838017505,
+      "estimate_orbit_difference": 1.4881104938868135e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0059422312337665505,
+      "error_replay": 0.0059422312337672634,
+      "estimate_orbit_difference": 1.419457915560726e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.0109753524341216e-05,
+      "error_replay": 4.010975349150836e-05,
+      "estimate_orbit_difference": 2.1314812914156626e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.8783462885845915,
+      "error_replay": 0.8783462885845956,
+      "estimate_orbit_difference": 3.028415911997018e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.8925486693970974,
+      "error_replay": 0.8925486693971021,
+      "estimate_orbit_difference": 3.217713595182487e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.016656237790593848,
+      "error_replay": 0.016656237790597783,
+      "estimate_orbit_difference": 6.184998623564572e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.554069686579875e-08,
+      "error_replay": 2.553981072007122e-08,
+      "estimate_orbit_difference": 1.2430387553147535e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.036753118612333e-08,
+      "error_replay": 3.036734521252463e-08,
+      "estimate_orbit_difference": 9.88717480841065e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.6099342607483495e-14,
+      "error_replay": 5.607782297935766e-14,
+      "estimate_orbit_difference": 2.4210588816814715e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0034548658047685375,
+      "error_replay": 0.003454865804768975,
+      "estimate_orbit_difference": 1.5674975120740113e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037502688505850184,
+      "error_replay": 0.0037502688505856047,
+      "estimate_orbit_difference": 1.4656424573145627e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.744006257350348e-05,
+      "error_replay": 3.744006257350298e-05,
+      "estimate_orbit_difference": 2.2135877056100855e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.11071323950287164,
+      "error_replay": 0.1107132395028718,
+      "estimate_orbit_difference": 1.1073828553362667e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.1227691214007496,
+      "error_replay": 0.12276912140074916,
+      "estimate_orbit_difference": 7.666494022419051e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037439732422736008,
+      "error_replay": 0.003743973242273603,
+      "estimate_orbit_difference": 1.9033938903123874e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1653236149884293e-08,
+      "error_replay": 1.1653029742118271e-08,
+      "estimate_orbit_difference": 1.8562438119932363e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.6305452296625232e-08,
+      "error_replay": 1.6305196078068332e-08,
+      "estimate_orbit_difference": 2.3860846634547095e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.052109884513237e-14,
+      "error_replay": 4.0518821759842365e-14,
+      "estimate_orbit_difference": 2.2957225291318127e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003186233516620969,
+      "error_replay": 0.003186233516620985,
+      "estimate_orbit_difference": 8.410843840495489e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004519201290435098,
+      "error_replay": 0.004519201290435078,
+      "estimate_orbit_difference": 6.22933046787176e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.726466790637374e-05,
+      "error_replay": 3.7264667906373554e-05,
+      "estimate_orbit_difference": 2.555381689387585e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04487655950087732,
+      "error_replay": 0.04487655950087741,
+      "estimate_orbit_difference": 9.11062857356857e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05704269663923363,
+      "error_replay": 0.05704269663923369,
+      "estimate_orbit_difference": 4.1069613268093713e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003726484408448631,
+      "error_replay": 0.0037264844084486316,
+      "estimate_orbit_difference": 2.708099417927523e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.373813362012776e-08,
+      "error_replay": 1.3739020767072074e-08,
+      "estimate_orbit_difference": 2.611863920270486e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.7417358387774715e-08,
+      "error_replay": 1.741843027964176e-08,
+      "estimate_orbit_difference": 3.271174477867453e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.1117295101408545e-14,
+      "error_replay": 5.1133623499096704e-14,
+      "estimate_orbit_difference": 2.1384367442196246e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.013511764438883786,
+      "error_replay": 0.013511764438873116,
+      "estimate_orbit_difference": 1.0860190434031926e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.013927096945814385,
+      "error_replay": 0.013927096945803895,
+      "estimate_orbit_difference": 1.0628157297271352e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.615173237803919e-05,
+      "error_replay": 3.6151732380089815e-05,
+      "estimate_orbit_difference": 1.2180790480162178e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.10235917370398226,
+      "error_replay": 0.10235917370398111,
+      "estimate_orbit_difference": 1.6777907737663902e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.10614217234496141,
+      "error_replay": 0.10614217234495987,
+      "estimate_orbit_difference": 1.6790099608725131e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen4b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0036151724450777575,
+      "error_replay": 0.003615172445077756,
+      "estimate_orbit_difference": 1.9261677196147592e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 8.522324906904175e-09,
+      "error_replay": 8.532169649677062e-09,
+      "estimate_orbit_difference": 2.627916975641057e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 9.957172609091499e-09,
+      "error_replay": 9.96227933074064e-09,
+      "estimate_orbit_difference": 2.719468912835975e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.813519799353797e-14,
+      "error_replay": 3.8138168398508766e-14,
+      "estimate_orbit_difference": 2.0780441792322034e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0026897004855193194,
+      "error_replay": 0.002689700485519442,
+      "estimate_orbit_difference": 1.4525599934773557e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0033913208577341764,
+      "error_replay": 0.003391320857734247,
+      "estimate_orbit_difference": 7.30463759225606e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.64434798067157e-05,
+      "error_replay": 3.6443479806713786e-05,
+      "estimate_orbit_difference": 2.176868600324133e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04339308859224718,
+      "error_replay": 0.043393088592247234,
+      "estimate_orbit_difference": 1.0103000816427366e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.054878088010881385,
+      "error_replay": 0.05487808801088152,
+      "estimate_orbit_difference": 6.385558214505986e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0036443695108692113,
+      "error_replay": 0.0036443695108692113,
+      "estimate_orbit_difference": 2.0023556991915927e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.443691255091449e-12,
+      "error_replay": 1.443766659042895e-12,
+      "estimate_orbit_difference": 1.3282930098749154e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.2076207112030776e-12,
+      "error_replay": 2.2076714459182547e-12,
+      "estimate_orbit_difference": 3.287066097034489e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 6.721960187498911e-14,
+      "error_replay": 6.721668676756423e-14,
+      "estimate_orbit_difference": 2.4694977150648875e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0017879906859199915,
+      "error_replay": 0.0017879906859199711,
+      "estimate_orbit_difference": 1.423721538378152e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0024120475875926404,
+      "error_replay": 0.0024120475875925008,
+      "estimate_orbit_difference": 1.3534230316418515e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.5244778444828065e-05,
+      "error_replay": 3.524477844482772e-05,
+      "estimate_orbit_difference": 1.9722306947249297e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.03615444350744721,
+      "error_replay": 0.036154443507447315,
+      "estimate_orbit_difference": 6.238331899105128e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04411003291152175,
+      "error_replay": 0.04411003291152184,
+      "estimate_orbit_difference": 4.692284950519412e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0035245005509500667,
+      "error_replay": 0.003524500550751529,
+      "estimate_orbit_difference": 1.3875544956339982e-10,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.4098759439920132e-08,
+      "error_replay": 1.4097524428697594e-08,
+      "estimate_orbit_difference": 4.48235538629875e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.72556923147686e-08,
+      "error_replay": 1.7254712520045002e-08,
+      "estimate_orbit_difference": 4.537685353469422e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.774043409212575e-14,
+      "error_replay": 5.774601139620786e-14,
+      "estimate_orbit_difference": 2.543099965623769e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0014045490819911879,
+      "error_replay": 0.0014045490819916133,
+      "estimate_orbit_difference": 1.5926329037722872e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0018272002510923203,
+      "error_replay": 0.00182720025109236,
+      "estimate_orbit_difference": 5.228484304022886e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.529198951406301e-05,
+      "error_replay": 3.529198951406317e-05,
+      "estimate_orbit_difference": 2.073706245452597e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.051821951973505365,
+      "error_replay": 0.0518219519735054,
+      "estimate_orbit_difference": 7.712694377421177e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06020918497642565,
+      "error_replay": 0.06020918497642567,
+      "estimate_orbit_difference": 2.798112904272725e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "qwen8b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0035292035721906953,
+      "error_replay": 0.003529203572190694,
+      "estimate_orbit_difference": 1.813680955691033e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1563532549760272e-08,
+      "error_replay": 1.1559681469573584e-08,
+      "estimate_orbit_difference": 8.068590410930991e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.5324933107527777e-08,
+      "error_replay": 1.5322304361317773e-08,
+      "estimate_orbit_difference": 7.955498434925087e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.670316722540174e-14,
+      "error_replay": 4.669806958658547e-14,
+      "estimate_orbit_difference": 2.754662204801855e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003021449582350191,
+      "error_replay": 0.0030214495823500517,
+      "estimate_orbit_difference": 1.0135278267128234e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004429125272469092,
+      "error_replay": 0.004429125272469097,
+      "estimate_orbit_difference": 5.647499396740217e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.7959782140898035e-05,
+      "error_replay": 3.795978214089942e-05,
+      "estimate_orbit_difference": 2.27806979390202e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04994758929525464,
+      "error_replay": 0.04994758929525465,
+      "estimate_orbit_difference": 9.09602444102595e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06493224313377301,
+      "error_replay": 0.06493224313377295,
+      "estimate_orbit_difference": 5.716023907971013e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037958984953874488,
+      "error_replay": 0.003795898495387448,
+      "estimate_orbit_difference": 1.7589806281645894e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.1846325798902844e-08,
+      "error_replay": 1.1844221416220457e-08,
+      "estimate_orbit_difference": 9.927726835964157e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.650806904609887e-08,
+      "error_replay": 1.6505714372526712e-08,
+      "estimate_orbit_difference": 1.3475229330899344e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 5.6816696321326434e-14,
+      "error_replay": 5.6833268480588264e-14,
+      "estimate_orbit_difference": 2.614683068215306e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.024590305803878006,
+      "error_replay": 0.02459030580387799,
+      "estimate_orbit_difference": 1.3122221497383623e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.030250442569912803,
+      "error_replay": 0.030250442569912918,
+      "estimate_orbit_difference": 6.574771988881307e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.703034596155954e-05,
+      "error_replay": 3.7030345961561485e-05,
+      "estimate_orbit_difference": 2.2088047585304104e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.08546091002405784,
+      "error_replay": 0.0854609100240591,
+      "estimate_orbit_difference": 1.9726005175750562e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.09929822065215912,
+      "error_replay": 0.09929822065216012,
+      "estimate_orbit_difference": 1.4306838308445788e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037030712523412547,
+      "error_replay": 0.003703071252341262,
+      "estimate_orbit_difference": 2.4568262597467596e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.2447448445087314e-08,
+      "error_replay": 1.2447166271621623e-08,
+      "estimate_orbit_difference": 2.5854850805804138e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.522973580077931e-08,
+      "error_replay": 1.5229451988632466e-08,
+      "estimate_orbit_difference": 3.5526178073288786e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 7.145378117953093e-14,
+      "error_replay": 7.146286720992351e-14,
+      "estimate_orbit_difference": 2.84471905195429e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003948668543266124,
+      "error_replay": 0.003948668543266077,
+      "estimate_orbit_difference": 5.071859122659833e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.006028372150206429,
+      "error_replay": 0.006028372150206352,
+      "estimate_orbit_difference": 4.622837406979065e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.678099211296324e-05,
+      "error_replay": 3.678099211296134e-05,
+      "estimate_orbit_difference": 1.7556691675969893e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.12559761494757893,
+      "error_replay": 0.12559761494757818,
+      "estimate_orbit_difference": 1.519177572091331e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.1439217659415885,
+      "error_replay": 0.14392176594158737,
+      "estimate_orbit_difference": 1.7060174775665396e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol360m",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0036782074228357475,
+      "error_replay": 0.003678207422835741,
+      "estimate_orbit_difference": 2.1680996261860065e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.2349692162084194e-08,
+      "error_replay": 1.235296331174432e-08,
+      "estimate_orbit_difference": 1.535223846929568e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.7065631472255018e-08,
+      "error_replay": 1.706862961227053e-08,
+      "estimate_orbit_difference": 2.2366238867115215e-11,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.003760972605548e-14,
+      "error_replay": 2.0030754694431763e-14,
+      "estimate_orbit_difference": 2.936874286555284e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0037100494711437048,
+      "error_replay": 0.003710049471143636,
+      "estimate_orbit_difference": 7.218573676974309e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004156753085321092,
+      "error_replay": 0.004156753085321076,
+      "estimate_orbit_difference": 7.552447545533051e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.383264750781701e-05,
+      "error_replay": 4.383264750781623e-05,
+      "estimate_orbit_difference": 2.2024414964678016e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.04757069677093573,
+      "error_replay": 0.04757069677093579,
+      "estimate_orbit_difference": 5.79313563725061e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.05655649356358275,
+      "error_replay": 0.05655649356358266,
+      "estimate_orbit_difference": 3.0695511417096577e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 0,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004383261108257228,
+      "error_replay": 0.004383261108257227,
+      "estimate_orbit_difference": 2.3706901552894687e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 3.1986180102057292e-09,
+      "error_replay": 3.1985916829081435e-09,
+      "estimate_orbit_difference": 9.14301152590609e-14,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.556720768065867e-09,
+      "error_replay": 4.556686962068456e-09,
+      "estimate_orbit_difference": 1.3244173301348033e-13,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.5603421204092985e-14,
+      "error_replay": 2.560940074565969e-14,
+      "estimate_orbit_difference": 2.1985302164951758e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.016765837597492794,
+      "error_replay": 0.016765837597491676,
+      "estimate_orbit_difference": 1.935531228022079e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.01725359623877578,
+      "error_replay": 0.01725359623877461,
+      "estimate_orbit_difference": 1.2735184319036676e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.2133545006385174e-05,
+      "error_replay": 4.2133545006387755e-05,
+      "estimate_orbit_difference": 1.9882470673224557e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.2831793911560402,
+      "error_replay": 0.2831793911560381,
+      "estimate_orbit_difference": 2.857812065954433e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.3023226451158878,
+      "error_replay": 0.30232264511588597,
+      "estimate_orbit_difference": 2.15543527114008e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 1,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.004213384666327468,
+      "error_replay": 0.004213384666327467,
+      "estimate_orbit_difference": 2.4661124379778614e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 1.60415287163548e-08,
+      "error_replay": 1.604139943627397e-08,
+      "estimate_orbit_difference": 7.788512013146635e-13,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.1446853948381322e-08,
+      "error_replay": 2.1446630262482833e-08,
+      "estimate_orbit_difference": 1.0953188234949493e-12,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "designed",
+      "noise": 0.0,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 2.479660822414084e-14,
+      "error_replay": 2.4734564586923234e-14,
+      "estimate_orbit_difference": 2.4332535922867025e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0030970543827404003,
+      "error_replay": 0.003097054382740353,
+      "estimate_orbit_difference": 8.354439147395753e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.003673486868916208,
+      "error_replay": 0.0036734868689161575,
+      "estimate_orbit_difference": 4.901543778113238e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.0001,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 4.228468946519245e-05,
+      "error_replay": 4.228468946519289e-05,
+      "estimate_orbit_difference": 1.849686278619205e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.06527724960172708,
+      "error_replay": 0.06527724960172722,
+      "estimate_orbit_difference": 1.0291414584080133e-15,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "projected_spectral",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.07372260372982975,
+      "error_replay": 0.07372260372982961,
+      "estimate_orbit_difference": 4.066151327228049e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    },
+    {
+      "model": "smol17b",
+      "seed": 2,
+      "family": "natural_general",
+      "noise": 0.01,
+      "method": "joint_fit",
+      "status_original": "ok",
+      "status_replay": "ok",
+      "error_original": 0.0042284172299019915,
+      "error_replay": 0.004228417229901992,
+      "estimate_orbit_difference": 2.799540809368328e-16,
+      "acceptance_agreement": {
+        "residual_only_score": true,
+        "condition_only_score": true,
+        "empirical_score": true
+      }
+    }
+  ],
+  "direct_full_space_checks": [
+    {
+      "model": "pythia1b",
+      "full_response": 0.2736804511017874,
+      "compressed_response": 0.27368045110178735,
+      "full_total": 0.29318601496628405,
+      "compressed_total": 0.293186014966281,
+      "max_absolute_difference": 3.0531133177191805e-15
+    },
+    {
+      "model": "qwen4b",
+      "full_response": 0.2646076398286457,
+      "compressed_response": 0.26460763982864427,
+      "full_total": 0.283332046176486,
+      "compressed_total": 0.2833320461764858,
+      "max_absolute_difference": 1.4432899320127035e-15
+    },
+    {
+      "model": "smol17b",
+      "full_response": 0.288702817449411,
+      "compressed_response": 0.2887028174494137,
+      "full_total": 0.30883023914952146,
+      "compressed_total": 0.3088302391495252,
+      "max_absolute_difference": 3.7192471324942744e-15
+    }
+  ],
+  "seconds": 59.72424300806597,
+  "scope": "81 preselected query cases across all 27 checkpoints, three estimators. Reuses frozen observations; not independent backbone training or a proof."
+}

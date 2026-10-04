@@ -1,0 +1,170 @@
+{
+  "start_unix": 1790333179.232106,
+  "end_unix": 1790333956.2749958,
+  "makespan_seconds": 777.0428900718689,
+  "per_job_elapsed_seconds": 1422.8672351837158,
+  "records": [
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 0,
+      "device": "cuda:3",
+      "start_unix": 1790333179.2333205,
+      "elapsed_seconds": 32.48280167579651,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 1,
+      "device": "cuda:3",
+      "start_unix": 1790333211.7161717,
+      "elapsed_seconds": 32.05084276199341,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 2,
+      "device": "cuda:3",
+      "start_unix": 1790333243.76705,
+      "elapsed_seconds": 32.13160228729248,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 0,
+      "device": "cuda:4",
+      "start_unix": 1790333179.2335846,
+      "elapsed_seconds": 73.28662943840027,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 1,
+      "device": "cuda:4",
+      "start_unix": 1790333252.520245,
+      "elapsed_seconds": 72.02822160720825,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 2,
+      "device": "cuda:4",
+      "start_unix": 1790333324.5484989,
+      "elapsed_seconds": 75.83469080924988,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 0,
+      "device": "cuda:5",
+      "start_unix": 1790333179.23382,
+      "elapsed_seconds": 36.67002248764038,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 1,
+      "device": "cuda:5",
+      "start_unix": 1790333215.903873,
+      "elapsed_seconds": 36.01426362991333,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 2,
+      "device": "cuda:5",
+      "start_unix": 1790333251.918166,
+      "elapsed_seconds": 36.05192041397095,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 0,
+      "device": "cuda:3",
+      "start_unix": 1790333400.4523458,
+      "elapsed_seconds": 84.4965078830719,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 1,
+      "device": "cuda:3",
+      "start_unix": 1790333484.9488852,
+      "elapsed_seconds": 57.6001181602478,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 2,
+      "device": "cuda:3",
+      "start_unix": 1790333542.5490382,
+      "elapsed_seconds": 70.68644404411316,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 0,
+      "device": "cuda:4",
+      "start_unix": 1790333400.452549,
+      "elapsed_seconds": 186.08862686157227,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 1,
+      "device": "cuda:4",
+      "start_unix": 1790333586.541207,
+      "elapsed_seconds": 184.4180178642273,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 2,
+      "device": "cuda:4",
+      "start_unix": 1790333770.9592519,
+      "elapsed_seconds": 185.29411029815674,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 0,
+      "device": "cuda:5",
+      "start_unix": 1790333400.4527347,
+      "elapsed_seconds": 88.68456196784973,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 1,
+      "device": "cuda:5",
+      "start_unix": 1790333489.1373281,
+      "elapsed_seconds": 69.19658064842224,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 2,
+      "device": "cuda:5",
+      "start_unix": 1790333558.3339403,
+      "elapsed_seconds": 69.85127234458923,
+      "exit_code": 0
+    }
+  ]
+}

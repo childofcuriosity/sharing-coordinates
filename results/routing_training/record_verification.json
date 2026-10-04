@@ -1,0 +1,30 @@
+{
+  "projector_checks": 120,
+  "max_absolute_cost_difference": 7.105427357601002e-14,
+  "original_llm_hashes_preserved": true,
+  "source_sha256": "0d8f41496f05d12bfe39ad3bc1f7586102da2723264450645e87b8b9024842b0",
+  "input_sha256": {
+    "results/llm_routing_trajectories/pythia160m-adamw-seed0/trajectory.json": "013b9d70274ae3d15c7b4ac44de66bdf82c792638c4fcb083e66dbe36dc3d54b",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed1/trajectory.json": "2ef25c9f2aaf5d8c1d8c2cf1651029c26c73745a0a94739063d367f7f95e64e2",
+    "results/llm_routing_trajectories/pythia160m-adamw-seed2/trajectory.json": "c66cc1a7d8e2062d185f824ea550687becc6a78318f844b5e2278f5b1f3f00b3",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed0/trajectory.json": "cf215a6d07f8354b1c722d7129988bf650ee7e6c9f33491efeaf725783490583",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed1/trajectory.json": "bead21a19a076bbe3f7ea5bc5e2b3f66b39345dc6f56db74e6bf5c9541d872ff",
+    "results/llm_routing_trajectories/pythia160m-sgd-seed2/trajectory.json": "fd9396e3d898a0a7206c07278cc8d7101a552bc8df248e3788e117f47b273062",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed0/trajectory.json": "3ed923830b3354a0e59bc217279450716c9e8f00cd96b25d913a0c87ca294b9a",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed1/trajectory.json": "e1a9fbb2426a4198d0cc4a0171e8eae1933f1ca98d36ec9aba4bd20755bdf7ac",
+    "results/llm_routing_trajectories/qwen06b-adamw-seed2/trajectory.json": "c66f94a25b27b0946a612dcf2d8611591e479dd7b80eba83e650f40a1e5b3fec",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed0/trajectory.json": "6e989a29df79928f532e9112039f21ec1560e5be70edb509915cf465b842d006",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed1/trajectory.json": "79b059620d1e36334cd74078b6f2251d61affafd66a0ca663295c0ffa90e2f3c",
+    "results/llm_routing_trajectories/qwen06b-sgd-seed2/trajectory.json": "997a44ceb7b890db715b6ecdc39bad7fb2b9d5cdf4426d5ae76599b5eae8740f",
+    "results/llm_routing_trajectories/smol360m-adamw-seed0/trajectory.json": "6e613d7d191dd070c06fda88864435b6443f81bf2107c318d09ef88133727ad1",
+    "results/llm_routing_trajectories/smol360m-adamw-seed1/trajectory.json": "5b57f8ce4bdc383f16edb5eed9531975dbd4d5599142e035871f396836c81bea",
+    "results/llm_routing_trajectories/smol360m-adamw-seed2/trajectory.json": "6ccc61a26021eee63139c531b0fc9083eb3ef5219b57661c19922d47b548a5c3",
+    "results/llm_routing_trajectories/smol360m-sgd-seed0/trajectory.json": "7aa0a040e949d185918666445bea7bbe256329d9d8713bd8766df108a42dcb00",
+    "results/llm_routing_trajectories/smol360m-sgd-seed1/trajectory.json": "034a350e1e38cfb91214495fabd861a58efb87b7e3122d4b629ff8447cfeb217",
+    "results/llm_routing_trajectories/smol360m-sgd-seed2/trajectory.json": "c47ef9f2c1ebeb705e465376ca1218497ba6a3cd9482f08d0dfda9e75d02c90e",
+    "results/routing_training/training.json": "8aa55c789a11f3d1e60628ace6f54e305b50d17e2a1106f1598f75f44c79d884",
+    "results/llm_local_flow/local_flow.json": "280c3e97534fc105d91d553e1dee846936a65dc0b293f20fa58a829f288ddb89",
+    "results/llm_local_flow_fp64/local_flow.json": "fd69544fe7a5f57073fb0102e1e384c986a7d0c7648274c0846897e7b70e4d3b",
+    "results/llm_local_flow_fp64_norm/local_flow.json": "358793b08076f0b473a4be994ec70195b09032c13a0e2ab9d46f71a2abc54050"
+  }
+}

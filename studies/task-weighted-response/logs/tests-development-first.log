@@ -1,0 +1,22 @@
+Running 5 items in this shard
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+__________________ test_task_covariance_can_change_partition ___________________
+
+    def test_task_covariance_can_change_partition():
+        rng,a,b,idx=fixture();gs=rng.normal(size=(5,6,7));gs[:,0]*=10
+        ys=np.array([response(a,b,g) for g in gs]);costs,_=task_costs(*moments(gs,ys),indices=idx)
+>       assert np.argmin(costs)!=np.argmin(clustering_costs(a,np.eye(3),idx))
+E       assert 3 != 3
+E        +  where 3 = <function argmin at 0x7f8f9d7fd3f0>(array([386.51112713, 410.83985355, 392.28815821, 386.22369372,\n       404.99471501, 405.69600523, 531.78372118, 537.20277432,\n       556.45575988, 549.35353855, 536.0015704 , 549.69685082,\n       591.65666618, 596.85639337, 591.29868823]))
+E        +    where <function argmin at 0x7f8f9d7fd3f0> = np.argmin
+E        +  and   3 = <function argmin at 0x7f8f9d7fd3f0>(array([0.347362  , 0.40419527, 0.48373943, 0.1832556 , 0.36283828,\n       0.4670157 , 0.42939426, 0.67566756, 0.70030082, 0.54402833,\n       0.61071896, 0.75810162, 0.64159976, 0.62874623, 0.75149563]))
+E        +    where <function argmin at 0x7f8f9d7fd3f0> = np.argmin
+E        +    and   array([0.347362  , 0.40419527, 0.48373943, 0.1832556 , 0.36283828,\n       0.4670157 , 0.42939426, 0.67566756, 0.70030082, 0.54402833,\n       0.61071896, 0.75810162, 0.64159976, 0.62874623, 0.75149563]) = clustering_costs(array([[0.49785455, 0.06917303, 0.43297242],\n       [0.1871565 , 0.08258822, 0.73025528],\n       [0.71878312, 0.098990...67, 0.39119626, 0.43129807],\n       [0.22696727, 0.51405948, 0.25897325],\n       [0.13799304, 0.72789369, 0.13411327]]), array([[1., 0., 0.],\n       [0., 1., 0.],\n       [0., 0., 1.]]), array([[[0, 1],\n        [2, 3],\n        [4, 5]],\n\n       [[0, 1],\n        [2, 4],\n        [3, 5]],\n\n       [[0, 1],\n  ...,\n        [3, 4]],\n\n       [[0, 5],\n        [1, 3],\n        [2, 4]],\n\n       [[0, 5],\n        [1, 4],\n        [2, 3]]]))
+E        +      where array([[1., 0., 0.],\n       [0., 1., 0.],\n       [0., 0., 1.]]) = <function eye at 0x7f8f9d183d80>(3)
+E        +        where <function eye at 0x7f8f9d183d80> = np.eye
+
+tests/test_weighted.py:52: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_weighted.py::test_task_covariance_can_change_partition - as...
+1 failed, 4 passed in 4.29s

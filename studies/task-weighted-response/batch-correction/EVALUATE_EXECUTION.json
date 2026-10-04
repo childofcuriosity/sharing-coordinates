@@ -1,0 +1,86 @@
+{
+  "records": [
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 0,
+      "device": "cuda:3",
+      "start_unix": 1790333400.4523458,
+      "elapsed_seconds": 84.4965078830719,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 1,
+      "device": "cuda:3",
+      "start_unix": 1790333484.9488852,
+      "elapsed_seconds": 57.6001181602478,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "pythia160m",
+      "seed": 2,
+      "device": "cuda:3",
+      "start_unix": 1790333542.5490382,
+      "elapsed_seconds": 70.68644404411316,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 0,
+      "device": "cuda:4",
+      "start_unix": 1790333400.452549,
+      "elapsed_seconds": 186.08862686157227,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 1,
+      "device": "cuda:4",
+      "start_unix": 1790333586.541207,
+      "elapsed_seconds": 184.4180178642273,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "qwen06b",
+      "seed": 2,
+      "device": "cuda:4",
+      "start_unix": 1790333770.9592519,
+      "elapsed_seconds": 185.29411029815674,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 0,
+      "device": "cuda:5",
+      "start_unix": 1790333400.4527347,
+      "elapsed_seconds": 88.68456196784973,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 1,
+      "device": "cuda:5",
+      "start_unix": 1790333489.1373281,
+      "elapsed_seconds": 69.19658064842224,
+      "exit_code": 0
+    },
+    {
+      "phase": "evaluate",
+      "model": "smol360m",
+      "seed": 2,
+      "device": "cuda:5",
+      "start_unix": 1790333558.3339403,
+      "elapsed_seconds": 69.85127234458923,
+      "exit_code": 0
+    }
+  ],
+  "freeze_sha256": "40c7e5fa4f10dba271a4cd652b42a7941a050e5a63286b51faa5602042aeab2c"
+}

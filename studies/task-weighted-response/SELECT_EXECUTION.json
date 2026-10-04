@@ -1,0 +1,86 @@
+{
+  "records": [
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 0,
+      "device": "cuda:0",
+      "start_unix": 1790332447.8835094,
+      "elapsed_seconds": 34.92550873756409,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 1,
+      "device": "cuda:0",
+      "start_unix": 1790332482.80906,
+      "elapsed_seconds": 29.163280725479126,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "pythia160m",
+      "seed": 2,
+      "device": "cuda:0",
+      "start_unix": 1790332511.9723747,
+      "elapsed_seconds": 29.561808824539185,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 0,
+      "device": "cuda:1",
+      "start_unix": 1790332447.8837578,
+      "elapsed_seconds": 71.71995520591736,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 1,
+      "device": "cuda:1",
+      "start_unix": 1790332519.6037414,
+      "elapsed_seconds": 65.2155134677887,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "qwen06b",
+      "seed": 2,
+      "device": "cuda:1",
+      "start_unix": 1790332584.8192832,
+      "elapsed_seconds": 67.57385015487671,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 0,
+      "device": "cuda:2",
+      "start_unix": 1790332447.8840156,
+      "elapsed_seconds": 38.84254193305969,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 1,
+      "device": "cuda:2",
+      "start_unix": 1790332486.7265887,
+      "elapsed_seconds": 32.401854515075684,
+      "exit_code": 0
+    },
+    {
+      "phase": "select",
+      "model": "smol360m",
+      "seed": 2,
+      "device": "cuda:2",
+      "start_unix": 1790332519.1284773,
+      "elapsed_seconds": 32.527570724487305,
+      "exit_code": 0
+    }
+  ],
+  "freeze_sha256": "aa1d18287149773cb58e843e4e299ba17214ae253fbb26b65c365a1c10443152"
+}

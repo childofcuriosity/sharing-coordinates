@@ -1,0 +1,19 @@
+pythia160m-seed0-select exit 0
+smol360m-seed0-select exit 0
+pythia160m-seed1-select exit 0
+smol360m-seed1-select exit 0
+qwen06b-seed0-select exit 0
+pythia160m-seed2-select exit 0
+smol360m-seed2-select exit 0
+qwen06b-seed1-select exit 0
+qwen06b-seed2-select exit 0
+All 9 selections sealed; opening evaluation phase
+pythia160m-seed0-evaluate exit 0
+smol360m-seed0-evaluate exit 0
+pythia160m-seed1-evaluate exit 0
+smol360m-seed1-evaluate exit 0
+qwen06b-seed0-evaluate exit 0
+pythia160m-seed2-evaluate exit 0
+smol360m-seed2-evaluate exit 0
+qwen06b-seed1-evaluate exit 0
+qwen06b-seed2-evaluate exit 0

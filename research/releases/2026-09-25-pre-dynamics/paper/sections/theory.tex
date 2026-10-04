@@ -1,0 +1,240 @@
+\section{Identification and stability from optimizer response}
+\label{sec:theory}
+\subsection{Exact response identifies the current factors}
+\label{sec:response_identifiability}
+
+Writing router and gradient rows as columns $a_i,g_i$, and setting
+$C_i=\operatorname{Diag}(a_i)-a_ia_i^\top$, the chain rule gives
+\begin{equation}
+ [\mathcal R_{A,B}(G)]_i
+ =\eta_B\sum_{j=1}^L\langle a_i,a_j\rangle g_j
+  +\frac{\eta_Z}{\tau^2}B^\top C_i^2B g_i.
+ \label{eq:response_blocks}
+\end{equation}
+The first term couples layers through the router Gram matrix; the second
+records how the softmax coordinates move. The question is whether these
+two forms of information remove the static ambiguity.
+
+\begin{theorem}[Exact Euclidean-response stabilizer]
+\label{thm:response_stabilizer}
+Let \(A,A'\in\simplex_K^L\) be strictly positive with column rank \(K\),
+and let \(B,B'\in\RR^{K\times D}\) have row rank \(K\).  Suppose
+\(AB=A'B'\), and use the same \(\tau,\eta_Z,\eta_B>0\) in both
+parameterizations.  Then
+\begin{equation}
+ \mathcal R_{A,B}(G)=\mathcal R_{A',B'}(G)
+ \quad\text{for every }G\in\RR^{L\times D}
+ \label{eq:response_equal}
+\end{equation}
+if and only if there is a permutation matrix \(P\) such that
+\begin{equation}
+ A'=AP,\qquad B'=P^\top B.
+ \label{eq:response_permutation}
+\end{equation}
+The corresponding logits remain unidentified under the independent shifts
+\(z_i\mapsto z_i+c_i\ones\).
+\end{theorem}
+
+
+\paragraph{Proof idea.}
+Full rank and equal products imply $A'=AM$, $B'=M^{-1}B$, with
+$M\ones=\ones$. Off-diagonal response blocks determine the off-diagonal
+router Gram entries. A diagonal block is a scalar identity plus
+$\lambda B^\top C_i^2B$, where $\lambda=\eta_Z/\tau^2$ and the latter
+matrix is positive semidefinite and singular, including when $D=K$.
+Its smallest eigenvalue therefore separates the scalar part. Equal
+responses give $AA^\top=A'A'^\top$ and hence $MM^\top=I$.
+Cancelling the full-row-rank basis from the remaining blocks and taking
+the unique positive semidefinite square root yields
+$C_i=M C_i'M^\top$.
+The rank-one parts cancel, leaving
+$\operatorname{Diag}(a_i)=M\operatorname{Diag}(a_i')M^\top$ for every $i$.
+Because the router rows span $\RR^K$, this forces $M$ to be a signed
+permutation; $M\ones=\ones$ makes every sign positive.
+The converse follows by substitution. Appendix~\ref{app:response_proofs}
+gives the complete proof and the boundary examples.
+
+For $K\ge3$, Gram information alone is insufficient: non-permutation orthogonal
+transformations fixing $\ones$ can preserve positivity. The covariance
+blocks do the additional work. Dropping either rank assumption admits
+counterexamples, as does replacing the full response by one realized
+gradient. The theorem is a statement about a specified observation, not
+about all optimizers selecting the same chart.
+
+\subsection{Quantitative inverse and imperfect products}
+\label{sec:quantitative}
+
+\begin{corollary}[Stable response identification]
+\label{cor:response_stability}
+Fix \(K\ge2\), \(L\ge K\), and \(D\ge K\).  Restrict both
+factorizations to a uniformly nondegenerate set: every router entry is at
+least \(\alpha>0\), the smallest singular values of both routers and both
+basis matrices are at least \(s_A,s_B>0\), respectively, and their Frobenius
+norms are at most \(L_A,L_B\).  If \(AB=A'B'\) and both response operators
+use the same \(\tau,\eta_Z,\eta_B>0\), then a finite explicit constant \(C\),
+depending only on
+\(K,L,\alpha,s_A,s_B,L_A,L_B,\tau,\eta_Z,\eta_B\), satisfies
+\begin{equation}
+ \min_{P\in\mathfrak S_K}
+ \left(\|A'-AP\|_F^2+\|B'-P^\top B\|_F^2\right)^{1/2}
+ \le C\|\mathcal R_{A,B}-\mathcal R_{A',B'}\|_{F\to F}.
+ \label{eq:response_stability_main}
+\end{equation}
+Appendix~\ref{app:response_quantitative} gives a fully explicit, deliberately
+loose choice of \(C\), a complete proof, and explicit families showing why
+the interior and two rank margins enter; the norm bounds control the nonlocal
+diameter.  This is an inverse-stability statement, not a claim that its
+constant is tight in practical models.
+\end{corollary}
+
+
+\paragraph{Why a linear inverse is possible.}
+Near equality of the response first controls the Gram and squared-covariance
+data. A general positive semidefinite square-root estimate would lose a
+square root in the error. Here the compared router covariances share the
+kernel $\operatorname{span}(\ones)$, and the interior/rank margins give
+a uniform spectral gap on its orthogonal complement. A Sylvester equation
+therefore controls their difference linearly. The resulting approximate
+diagonal relations round to a permutation; a bounded-domain diameter
+handles large discrepancies. These steps give a global bound on the stated
+domain, not only near a preselected solution.
+
+The assumptions have distinct roles. Appendix~\ref{app:response_quantitative}
+gives families with a vanishing router rank margin, basis rank margin,
+or interior margin for which a uniform linear inverse fails. In the last
+family both factors remain well-conditioned while the factor discrepancy
+is of order $t$ and the response discrepancy is of order $t^2$.
+The constants are explicit but deliberately conservative.
+
+\paragraph{Small-product-perturbation bridge.}
+Equal products can be relaxed without assuming the two factors are already
+close. Write $e_\Theta=\|AB-A'B'\|_F$ and
+$e_R=\|\mathcal R_{A,B}-\mathcal R_{A',B'}\|_{F\to F}$.
+For two factors in the same nondegenerate domain, if
+$e_\Theta\le\min\{\alpha s_B/2,s_As_B/4\}$, then
+Corollary~\ref{cor:joint-stability} gives
+\begin{equation}
+ d_{\rm perm}((A,B),(A',B'))
+ \le C_*e_R+\kappa(1+C_*L_R)e_\Theta.
+ \label{eq:joint-main}
+\end{equation}
+Here $\kappa=(s_B^{-2}+4s_A^{-2})^{1/2}$; $C_*$ is the explicit inverse
+constant on the enlarged domain
+$(\alpha/2,s_A/2,s_B/2,2L_A,2L_B)$, and $L_R$ is its explicit forward
+Lipschitz bound. All constants are specified in
+Appendix~\ref{app:enhancement-theory}.
+The proof projects $A'$ onto $\operatorname{col}(A)$ and constructs a nearby
+intermediate basis with product exactly $AB$. It applies the same-product
+inverse there and then returns to the original pair.
+Only the product discrepancy must be small; no candidate-neighborhood or
+common local-branch premise is imposed.
+
+\subsection{Finite observations, including a noisy product}
+\label{sec:finite-observations}
+
+The response is structured: its shared part is a layer Gram matrix, and
+each local block is supported in the product row space. This permits
+finite reconstruction when that space is known exactly.
+
+\begin{corollary}[Finite structured response tomography]
+\label{cor:response_tomography}
+Under the hypotheses of Theorem~\ref{thm:response_stabilizer}, suppose
+$D-K\ge L$.  Let $S=\operatorname{row}(\Theta)$, choose an orthonormal
+basis $u_1,\ldots,u_K$ of $S$, and choose orthonormal
+$v_1,\ldots,v_L\in S^\perp$, all from \(\Theta\).  Define $K$ effective-gradient
+probes by
+
+\[
+ g_j^{(1)}=v_j+u_1,
+ \qquad
+ g_j^{(r)}=u_r\quad(2\le r\le K,\ 1\le j\le L).
+\]
+Their $K$ response matrices determine the complete operator
+$\mathcal R_{A,B}$.  Hence two exact full-rank charts of the same \(\Theta\)
+agree on these probes if and only if they differ by a simultaneous basis
+permutation (with the same residual logit row shifts as above).
+\end{corollary}
+
+
+Appendix~\ref{app:response_tomography} gives the decoder and its component
+noise bounds with an exact product. Natural task gradients can replace
+these designed probes when the complementary shared system and every
+layer's local system have full rank
+(Proposition~\ref{prop:natural-probes}). That condition must be checked
+at the checkpoint, not presumed from the number of gradients.
+
+With a noisy product, its estimated row space generally excludes part of
+the true basis. The following result controls that missing part uniformly
+over all feasible factors. Its queries repeat the complement code in
+\emph{every} probe, unlike Corollary~\ref{cor:response_tomography}.
+
+\begin{corollary}[Global diameter under finite noisy observations]
+\label{cor:finite-noisy-main}
+Let $L\ge K\ge2$ and $D-K\ge L$. Fix the known positive rates and
+temperature, and restrict factors to row-stochastic routers with entries
+at least $\alpha>0$, singular-value margins $s_A,s_B>0$, and $\|B\|_F\le M$
+for $M>0$.
+From an arbitrary observed product $\widehat\Theta$, choose its top-$K$
+right-singular frame $U$ and an orthonormal $L$-row complement frame $W$.
+There are exactly $K$ unit-Frobenius probes
+$G_p=(W+\mathbf1_Lu_p^\top)/\sqrt{2L}$, where $u_p^\top$ is row $p$ of $U$.
+For nonnegative error budgets, let $\mathcal F$ consist of all domain members
+whose product residual is at
+most $\varepsilon_\Theta$ and whose stacked response residual on these
+probes is at most $\varepsilon_R$. If
+$\varepsilon_\Theta\le\min\{\alpha s_B/4,s_As_B/8\}$, then
+\[
+ \operatorname{diam}_{d_{\rm perm}}(\mathcal F)
+ \le C_\Theta\varepsilon_\Theta+C_R\varepsilon_R.
+\]
+Appendix~\ref{app:finite-noisy} constructs the probes, expands every
+constant, and proves the bound for the entire feasible set in the original
+basis space. No true-subspace or local-branch premise is imposed.
+\end{corollary}
+
+
+Here the residuals are $\|AB-\widehat\Theta\|_F$ and
+$\bigl(\sum_{p=1}^K\|\mathcal R_{A,B}(G_p)-\widehat R_p\|_F^2\bigr)^{1/2}$.
+Each query returns a full $L\times D$ response, not a scalar. The constants
+depend only on the dimensions, declared domain margins, and known optimizer
+parameters. Noise can be deterministic, adversarial, or dependent on the
+chosen probes, provided these budgets hold.
+
+\paragraph{Why the bound covers the whole feasible set.}
+Let $\widehat P=U^\top U$. Every feasible rank-$K$ product competes with
+the best rank-$K$ approximation of $\widehat\Theta$, so
+\begin{equation}
+ \|B(I-\widehat P)\|_F\le 2\varepsilon_\Theta/s_A
+ \quad\text{for every }(A,B)\in\mathcal F.
+ \label{eq:uniform-subspace-main}
+\end{equation}
+Replacing $B$ temporarily by $B\widehat P$ changes the complete response
+by at most $4\lambda M\varepsilon_\Theta/s_A$. For two such projected
+operators, multiplication of each response by $W^\top$ recovers their shared
+Gram difference. Subtracting the recovered shared term and multiplying
+by $U^\top$ then recovers their local blocks.
+This is a stable decoder on a common linear operator family.
+Adding back both projection errors gives, for \emph{any} two feasible pairs,
+\begin{equation}
+ \|\mathcal R_{A,B}-\mathcal R_{A',B'}\|_{F\to F}
+ \le 2h\varepsilon_R+\beta\varepsilon_\Theta,
+ \label{eq:finite-bridge-main}
+\end{equation}
+where $h=\sqrt{2L}(K^{-1/2}+1+\sqrt L)$ and
+$\beta=8\lambda M(h\sqrt K+1)/s_A$.
+Their original products differ by at most $2\varepsilon_\Theta$;
+Equation~\ref{eq:joint-main} then proves the diameter bound for the original,
+unprojected factors. Appendix~\ref{app:finite-noisy} expands all constants
+and proves each step.
+
+\paragraph{What this guarantees.}
+If truth lies in the declared domain and satisfies the noise budgets, every
+feasible estimate is within the displayed bound of it, modulo labels.
+The theorem does not ensure that a solver finds a feasible estimate, infer
+domain membership from data, or provide numerically tight constants.
+It requires no smallness assumption on $\varepsilon_R$. For $K=1$, the
+router is fixed and the product alone gives diameter at most
+$2\varepsilon_\Theta/\sqrt L$ without response queries.
+The candidate-local numerical check in
+Proposition~\ref{prop:trusted-local} is a separate, weaker guarantee about
+one feasible component; it must not be substituted for this global result.

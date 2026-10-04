@@ -1,0 +1,25 @@
+{
+  "historical_study_files_checked": 431,
+  "original_tests_passed": 5,
+  "corrected_tests_passed": 5,
+  "original": {
+    "units": 9,
+    "independent_direct_batch_objectives": 68,
+    "maximum_relative_objective_error": 3.430784336840803e-13,
+    "real_factor_autograd_jvp_checks": 9,
+    "maximum_relative_jvp_error": 2.868029080421854e-16,
+    "sources_and_artifacts_match": true,
+    "selection_before_evaluation_verified": true,
+    "parent_publication_pdf_unchanged": true
+  },
+  "corrected": {
+    "units": 9,
+    "independent_direct_batch_objectives": 68,
+    "maximum_relative_objective_error": 4.23381204963439e-13,
+    "real_factor_autograd_jvp_checks": 9,
+    "maximum_relative_jvp_error": 2.455356314442306e-16,
+    "sources_and_artifacts_match": true,
+    "selection_before_evaluation_verified": true,
+    "parent_publication_pdf_unchanged": true
+  }
+}

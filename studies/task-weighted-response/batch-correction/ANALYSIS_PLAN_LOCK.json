@@ -1,0 +1,7 @@
+{
+  "created_unix": 1790333178.1575549,
+  "source_sha256": "2178f86e3509be93bd4e0173a4c970bd44181de6cfc2acbd13effd39d052d1ef",
+  "primary_comparison": "task_response-weight after64 SGD",
+  "selection_lock_present": false,
+  "evaluation_files_present": 0
+}

@@ -1,0 +1,420 @@
+{
+  "units": 9,
+  "independent_direct_batch_objectives": 68,
+  "maximum_relative_objective_error": 4.23381204963439e-13,
+  "real_factor_autograd_jvp_checks": 9,
+  "maximum_relative_jvp_error": 2.455356314442306e-16,
+  "checks": [
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "selection",
+      "index": 3219,
+      "relative_error": 6.778491004814969e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "selection",
+      "index": 3220,
+      "relative_error": 5.796517138492632e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "selection",
+      "index": 4501,
+      "relative_error": 6.140275907618538e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "selection",
+      "index": 4757,
+      "relative_error": 6.249851388720645e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "selection",
+      "index": 13631,
+      "relative_error": 5.0282633449976623e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "evaluation",
+      "index": 3219,
+      "relative_error": 6.755949835563336e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "evaluation",
+      "index": 3220,
+      "relative_error": 5.7198060363198e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "evaluation",
+      "index": 4501,
+      "relative_error": 6.153523002744332e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "evaluation",
+      "index": 4757,
+      "relative_error": 6.234968435861029e-14
+    },
+    {
+      "unit": "pythia160m-seed0",
+      "phase": "evaluation",
+      "index": 13631,
+      "relative_error": 5.0069816029365994e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "selection",
+      "index": 652,
+      "relative_error": 5.28919285585852e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "selection",
+      "index": 2992,
+      "relative_error": 6.533182736768199e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "selection",
+      "index": 7582,
+      "relative_error": 5.687616027124408e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "evaluation",
+      "index": 652,
+      "relative_error": 5.552825583086357e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "evaluation",
+      "index": 2992,
+      "relative_error": 6.819370419243556e-14
+    },
+    {
+      "unit": "pythia160m-seed1",
+      "phase": "evaluation",
+      "index": 7582,
+      "relative_error": 5.896853900530592e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "selection",
+      "index": 1732,
+      "relative_error": 8.392028182767547e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "selection",
+      "index": 1757,
+      "relative_error": 8.353678200085672e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "selection",
+      "index": 5228,
+      "relative_error": 5.961717842824321e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "selection",
+      "index": 11766,
+      "relative_error": 5.4355398084475994e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "evaluation",
+      "index": 1732,
+      "relative_error": 8.380201491403932e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "evaluation",
+      "index": 1757,
+      "relative_error": 8.35723569313488e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "evaluation",
+      "index": 5228,
+      "relative_error": 5.793110593003314e-14
+    },
+    {
+      "unit": "pythia160m-seed2",
+      "phase": "evaluation",
+      "index": 11766,
+      "relative_error": 5.2572108544778294e-14
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "selection",
+      "index": 3220,
+      "relative_error": 9.697314078723759e-14
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "selection",
+      "index": 4669,
+      "relative_error": 1.7241698387049219e-13
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "selection",
+      "index": 6741,
+      "relative_error": 2.062764687417373e-13
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "selection",
+      "index": 12919,
+      "relative_error": 1.9204378992372613e-13
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "evaluation",
+      "index": 3220,
+      "relative_error": 9.965199434172646e-14
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "evaluation",
+      "index": 4669,
+      "relative_error": 1.7779416942493056e-13
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "evaluation",
+      "index": 6741,
+      "relative_error": 2.0700807136238522e-13
+    },
+    {
+      "unit": "qwen06b-seed0",
+      "phase": "evaluation",
+      "index": 12919,
+      "relative_error": 1.9679563456755008e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "selection",
+      "index": 652,
+      "relative_error": 9.080177938345108e-14
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "selection",
+      "index": 8685,
+      "relative_error": 1.867804875772963e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "selection",
+      "index": 8822,
+      "relative_error": 1.819541454197425e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "selection",
+      "index": 8873,
+      "relative_error": 2.1036801232643917e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "evaluation",
+      "index": 652,
+      "relative_error": 8.828065894704129e-14
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "evaluation",
+      "index": 8685,
+      "relative_error": 1.8355742169977534e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "evaluation",
+      "index": 8822,
+      "relative_error": 1.7759769003667145e-13
+    },
+    {
+      "unit": "qwen06b-seed1",
+      "phase": "evaluation",
+      "index": 8873,
+      "relative_error": 1.997704802817193e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "selection",
+      "index": 1832,
+      "relative_error": 3.466376839552543e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "selection",
+      "index": 1837,
+      "relative_error": 2.921697227948139e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "selection",
+      "index": 1839,
+      "relative_error": 3.8791407413766223e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "selection",
+      "index": 5228,
+      "relative_error": 7.727343238355733e-14
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "evaluation",
+      "index": 1832,
+      "relative_error": 3.3543949413594316e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "evaluation",
+      "index": 1837,
+      "relative_error": 2.8441742032012e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "evaluation",
+      "index": 1839,
+      "relative_error": 3.767397259372138e-13
+    },
+    {
+      "unit": "qwen06b-seed2",
+      "phase": "evaluation",
+      "index": 5228,
+      "relative_error": 7.87076490299165e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "selection",
+      "index": 2951,
+      "relative_error": 7.840513273625287e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "selection",
+      "index": 3220,
+      "relative_error": 6.364901295486869e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "selection",
+      "index": 4501,
+      "relative_error": 7.641267041133362e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "selection",
+      "index": 10101,
+      "relative_error": 3.890652479395781e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "evaluation",
+      "index": 2951,
+      "relative_error": 8.014305198733796e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "evaluation",
+      "index": 3220,
+      "relative_error": 6.323272329520038e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "evaluation",
+      "index": 4501,
+      "relative_error": 7.245969963676934e-14
+    },
+    {
+      "unit": "smol360m-seed0",
+      "phase": "evaluation",
+      "index": 10101,
+      "relative_error": 3.84160787857819e-14
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "selection",
+      "index": 652,
+      "relative_error": 3.6836746558558394e-14
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "selection",
+      "index": 8685,
+      "relative_error": 8.627246124006987e-14
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "selection",
+      "index": 8873,
+      "relative_error": 2.0897680127204064e-13
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "evaluation",
+      "index": 652,
+      "relative_error": 3.59332178830745e-14
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "evaluation",
+      "index": 8685,
+      "relative_error": 8.024361853502836e-14
+    },
+    {
+      "unit": "smol360m-seed1",
+      "phase": "evaluation",
+      "index": 8873,
+      "relative_error": 2.0417903878878417e-13
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "selection",
+      "index": 1837,
+      "relative_error": 3.610285891282829e-13
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "selection",
+      "index": 1839,
+      "relative_error": 3.910720825368928e-13
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "selection",
+      "index": 5228,
+      "relative_error": 3.354995202891025e-14
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "evaluation",
+      "index": 1837,
+      "relative_error": 3.9815946569831644e-13
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "evaluation",
+      "index": 1839,
+      "relative_error": 4.23381204963439e-13
+    },
+    {
+      "unit": "smol360m-seed2",
+      "phase": "evaluation",
+      "index": 5228,
+      "relative_error": 3.4004194375210446e-14
+    }
+  ],
+  "sources_and_artifacts_match": true,
+  "selection_before_evaluation_verified": true,
+  "parent_publication_pdf_unchanged": true
+}

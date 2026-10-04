@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Adapter-induced change in held-out token NLL (adapted minus frozen backbone), averaged over three adapter seeds. Negative is lower. Domains use 32 fixed blocks per checkpoint. Tokenizers differ, so changes are within-model comparisons; these are not answer-accuracy or code-execution scores.}
+\label{tab:llm-adaptation}
+\begin{tabular}{lrrr}
+\toprule
+Model & General & Code & Math\\
+\midrule
+Pythia 160M & -0.0481 & +0.0303 & +0.1146\\
+Pythia 1B & -0.4439 & +0.0485 & +0.0812\\
+Pythia 2.8B & -0.4220 & +0.0301 & +0.0256\\
+Qwen3 0.6B & -0.7086 & -0.0392 & +0.0036\\
+Qwen3 1.7B & -0.5666 & -0.1779 & -0.2103\\
+Qwen3 4B & -0.6006 & -0.1514 & -0.2646\\
+Qwen3 8B & -0.4193 & -0.1729 & -0.2005\\
+SmolLM2 360M & -0.3016 & +0.0013 & +0.0216\\
+SmolLM2 1.7B & -0.3080 & +0.0071 & +0.0461\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,119 @@
+\section{Observable local separation for noisy recovery}
+\label{app:trusted-theory}
+
+This section specializes standard Lipschitz-Jacobian Taylor reasoning
+\citep[Section~2, equations (5)--(6)]{behling2018local} to the response
+measurement map. It is not a new generic inverse theorem.
+The distinction between exact diagonalization and sensitivity of approximate
+diagonalization is already central to \citet{afsari2008sensitivity}.
+Throughout the numerical study, $\eta_Z=\eta_B=\tau=1$.
+
+\paragraph{Exact objective compression in an estimated subspace.}
+Let $U\in\mathbb R^{K\times D}$ have orthonormal rows spanning the leading
+right-singular subspace of the observed product $\widehat\Theta$.
+Represent candidates by $B=CU$. For measured pairs $(G_p,\widehat R_p)$,
+write $X_p=G_pU^\top$, $G_p^\perp=G_p-X_pU$,
+$Y_p=\widehat R_pU^\top$, and
+$R_p^\perp=\widehat R_p-Y_pU$.
+With $Q=AA^\top$ and $S_i=\operatorname{diag}(a_i)-a_i a_i^\top$, the
+predicted parallel response is
+$QX_p+[C^\top S_i^2 C X_{p,i}]_i$, and the orthogonal response is
+$QG_p^\perp$. Set
+\[
+ H=\sum_pG_p^\perp(G_p^\perp)^\top,\qquad
+ T=\sum_pR_p^\perp(G_p^\perp)^\top.
+\]
+When $H\succ0$, least-squares orthogonality gives
+\begin{align}
+ \sum_p\|QG_p^\perp-R_p^\perp\|_F^2
+ &=\|QH^{1/2}-TH^{-1/2}\|_F^2
+   +\sum_p\|TH^{-1}G_p^\perp-R_p^\perp\|_F^2,\\
+ \|ACU-\widehat\Theta\|_F^2
+ &=\|AC-\widehat\Theta U^\top\|_F^2
+   +\|\widehat\Theta(I-U^\top U)\|_F^2.
+\end{align}
+The second terms are candidate independent, but are retained in every
+reported residual. Dividing product and response blocks by their respective
+observed Frobenius norms gives an exact small least-squares objective.
+Candidate-dependent differences are preserved isometrically, including
+their Jacobian singular values. Numerically singular $H$ is rejected.
+Crucially, a subspace estimated from noisy data need not contain the true
+basis. This restriction is not justified by the local result below.
+
+\paragraph{An explicit curvature bound.}
+At a strictly interior candidate $(A_0,C_0)$, use
+$A=A_0+s_A ZV^\top$, $C=C_0+s_C W$, where
+$s_A=\|A_0\|_F$, $s_C=\|C_0\|_F$, and $V$ is an orthonormal basis for
+$\mathbf1^\perp$. Let $x=\operatorname{vec}(Z,W)$ and
+$r\le r_0=\min_{ij}(A_0)_{ij}/(2s_A)$.
+All routers in this ball are strictly feasible.
+Set $b=s_C(1+r)$ and
+$c=\min\{1,\max_i\|S_i(A_0)\|_2+3s_A r\}$.
+The inequalities
+$\|DS_i[h]\|_2\le3\|h\|_2$ and
+$\|D^2S_i[h,k]\|_2\le2\|h\|_2\|k\|_2$
+follow by differentiating $\operatorname{diag}(a)-aa^\top$.
+Differentiating $(S_iC)^\top S_iC$ twice then bounds its bilinear Hessian
+by the largest eigenvalue $h(r)$ of
+\[
+ \begin{pmatrix}
+ (18+4c)b^2s_A^2 & 12cb s_As_C\\
+ 12cb s_As_C & 2c^2s_C^2
+ \end{pmatrix}.
+\]
+The matrix is symmetric with nonnegative entries, so its largest eigenvalue
+equals its spectral norm. For the normalized measurement map $F$, a
+conservative Hessian bound is
+\[
+ M(r)=\left[
+ \left(\frac{2s_As_C}{\|\widehat\Theta\|_F}\right)^2+
+ \left(\frac{(2s_A^2+h(r))\sqrt{\sum_p\|G_p\|_F^2}}
+ {\|(\widehat R_p)_p\|_F}\right)^2
+ \right]^{1/2}.
+\]
+The $2s_A^2$ term accounts for the Hessian of $AA^\top G_p$.
+The same derivation applies in full coordinates, with $C$ replaced by $B$.
+
+\begin{proposition}[Conditional local feasible-component separation]
+\label{prop:trusted-local}
+Let $\mu=\sigma_{\min}(DF(0))>0$, $\rho=\|F(0)-y\|$, and suppose
+$\|D^2F\|\le M$ on the closed radius-$r$ ball, with $\mu-Mr/2>0$.
+Every $x$ in this ball satisfies
+\[
+ \|F(x)-F(0)\|\ge(\mu-Mr/2)\|x\|.
+\]
+If $\rho\le\nu$ and $\rho+\nu<\mu r-Mr^2/2$, the connected component of
+$\{x:\|F(x)-y\|\le\nu\}$ containing zero lies inside the ball, and each of
+its points obeys
+\[
+ \|x\|\le\frac{\rho+\nu}{\mu-Mr/2}.
+\]
+\end{proposition}
+\begin{proof}
+The integral Taylor remainder has norm at most $M\|x\|^2/2$.
+Combining this with $\|DF(0)x\|\ge\mu\|x\|$ proves the first inequality.
+No feasible point can lie on the sphere of radius $r$, because its
+measurement difference from $F(0)$ would exceed $\rho+\nu$.
+The norm image of a connected set containing zero cannot reach beyond $r$
+without meeting $r$. The triangle inequality then gives the distance bound.
+\end{proof}
+
+The implementation takes $r=\min\{r_0,\mu/M(r_0)\}$ and recomputes $M(r)$.
+For known relative observation errors bounded by $\sigma<1$ in both
+blocks, $\nu=\sqrt2\,\sigma/(1-\sigma)$ is an observable normalized noise
+upper bound. The separately recorded $10^{-10}$ numerical floor affects
+empirical scores only. At zero declared noise, rounding can prevent a
+numerical local pass.
+
+\paragraph{Scope of the conclusion.}
+This proposition neither excludes distant components nor establishes that
+the true factors belong to the candidate's component. It is not a
+convergence guarantee for the optimizer. Its metric uses candidate norms,
+whereas benchmark errors use true-factor norms and a common permutation.
+In a noisy estimated subspace, the true factors can be outside the model
+class altogether. Floating-point singular values and curvature evaluations
+are not outward-rounded proofs; we call their successful evaluations
+\emph{numerical local passes}, not certified global recovery.
+Sixteen separate small full-coordinate checks place a known feasible point
+inside the calculated ball and satisfy the distance inequality. These are
+theorem sanity checks, not sixteen successful noisy-recovery trials.

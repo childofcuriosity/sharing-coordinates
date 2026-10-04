@@ -1,0 +1,355 @@
+\section{Detailed Prior-Art Audit}
+\label{app:literature}
+
+This appendix records the distinctions and exact variable maps behind the
+condensed audit in Section~\ref{sec:related-work}.  It separates uniqueness of
+a factorization, invariance of a computation or decision under
+refactorization, and recovery of a historical sharing graph.  The literature
+establishes strong results for the first two and contains a few
+coordinate-to-action systems, but our audit does not support a broad claim
+that cross-layer compression papers purport to recover a data-generating
+sharing graph.
+
+\paragraph{Simplex factorization: the static ambiguity is prior art.}
+For \(K\ge 2\), after transposition, our parameter-space model is exactly the unconstrained
+simplex-structured matrix factorization (SSMF)
+\[
+ X=WH,\qquad X=\Theta^\top,\quad W=B^\top,\quad H=A^\top.
+\]
+Section~IV-A of \citet{vuthanh2023bounded} already proves that unconstrained
+SSMF is non-identifiable.  In their notation,
+\begin{align*}
+ W(\delta)&=W\left((1+\delta)I-\frac{\delta}{K}\ones\ones^\top\right),\\
+ H(\delta)&=\left(\frac{1}{1+\delta}I+
+ \frac{\delta}{(1+\delta)K}\ones\ones^\top\right)H.
+\end{align*}
+Setting $s=\delta/(1+\delta)$ makes their coefficient transform
+$M_s=(1-s)I+s\ones\ones^\top/K$, so that
+$H(\delta)=(AM_s)^\top$ and
+$W(\delta)=(M_s^{-1}B)^\top$.  This is exactly our uniformizing gauge after
+transpose and substitution, not a distinct neural-network theorem.  The entropy consequence uses this uniformizing path, which preserves
+coordinate ordering and argmax assignments. Our local gauge description
+and argmax example use the broader family of feasible changes of basis;
+the argmax example is nonuniform. These specialize known factor ambiguity
+to router diagnostics, not a new foundational non-identifiability result.  Conversely, classical NMF and SSMF
+work gives recovery under additional support, sufficiently-scattered,
+facet-coverage, or volume assumptions
+\citep{donoho2003correct,fu2018identifiability,abdolali2021simplex,gillis2023partial}.
+These are condition-dependent positive boundaries, not consequences of the
+simplex constraint alone.
+
+\paragraph{LoRA gauges, invariant processing, and merge consequences.}
+The general low-rank gauge is also established prior art.  For full-rank LoRA
+factors, \citet{putterman2024learning} show that effective products separate
+$GL(r)$ orbits and develop invariant/equivariant processing of the factors.
+LoRA Done RITE constructs factor-optimization updates invariant to the same
+change of basis \citep{yen2025lora}.
+LoRA-S equips the full-rank factor quotient with an invariant metric and uses
+a Sylvester equation to lift preconditioned product-space directions;
+its invariance comparison uses the same product-space direction in both
+factor representations \citep{zheng2026loras}.  Thus ordinary factor-gradient chart dependence and
+quotient-invariant optimizer design are both established precedents.
+Gauge-aware federated LoRA explicitly
+shows why raw-factor aggregation is representation dependent and gives an
+invariant server representation \citep{chen2026beyond}; W2T obtains
+gauge-invariant adapter features through product-space QR--SVD processing
+\citep{han2026w2t}.  Thus neither the existence of the $GL(r)$ gauge, the use
+of effective products as invariants, nor the general warning against
+raw-factor aggregation is new here.
+
+TwistedMerge supplies a particularly important trained-model precedent
+\citep{gong2026twistedmerge}.  On trained rank-four residual adapters, its
+orthogonal, diagonal, and dense gauge scrambles change naive factor-averaging
+outcomes, whereas whitened synchronization and deterministic full-update SVD
+remain stable.  It therefore already covers the broad empirical consequence
+``equivalent trained factors can make naive merging behave differently.''
+Its action is averaging independently trained adapters in a single residual
+LoRA-form feature layer, not selecting a directed within-model layer tie from
+a shared factor; it provides neither an ASLoRA nearest-pair analysis nor the
+shared-softmax response stabilizer below.
+
+An ICML 2026 workshop poster explicitly studies the $GL(r)$ gauge and LoRA
+merging \citep{karuturi2026gl}.  We verified its official title, authors, and
+poster record, but could not obtain its primary full text during this audit.
+We therefore leave its coverage of maximal invariants, nearest-pair selection,
+Loewner-order tests, merge regret, ASLoRA, and optimizer-response stabilizers
+unadjudicated; no priority claim in this paper is inferred from its title.
+
+\paragraph{The few concrete coordinate-to-structure actions.}
+The closest cases differ in what they claim.  \citet{savarese2019learning}
+represent each convolutional layer as a linear combination of global
+templates, use coefficient cosine geometry as a sharing measure, infer an
+approximately recurrent pattern, and then evaluate the folded network.  This
+is architectural-discovery language followed by an empirical intervention,
+not an assertion that the coefficient plot alone authenticates a historical
+graph.  Neural Parameter Allocation Search learns factor coordinates or
+embeddings and clusters them after early training to make hard parameter
+groups \citep{plummer2022neural}; its claim is automated allocation under a
+parameter budget, not recovery of a planted sharing history.
+
+ASLoRA is the most direct target for our decision audit.  Its arXiv-v2 method
+shares one input-side LoRA factor $A$, ranks layer-specific historical
+averages of $B_i$ by raw Euclidean distance, and makes the lower layer use the
+selected upper layer's factor \citep{hu2024aslorav2}.  The paper motivates
+sharing $A$ as removing its and its initialization's influence and making
+$B$-similarity more reasonable and consistent.  This is a real
+coordinate-to-nearest-action rule, but it is not a claim that the selected
+pair recovers a historical generator.  We cite the arXiv version for these
+equations and algorithm details because the accessible formal journal record
+supports the broad global-$A$/selective-$B$ description but did not expose
+the full text \citep{hu2026aslora}.
+
+\paragraph{Recent boundary cases are controls, not offenders.}
+A full-text audit of three recent systems further narrows the reality claim.
+E2LoRA computes proxy entropy and relative mutual information from
+task-subset gradients of the pretrained model \emph{before} adapter
+fine-tuning, then fixes contiguous sharing intervals and interval ranks
+\citep{li2026e2lora}.  Although it calls the measured patterns intrinsic and
+reports stable structural decisions across subset seeds, it neither reads a
+jointly learned factor coordinate nor claims recovery of a historical graph;
+its seed/noise checks and downstream evaluation instead make it a positive
+proxy-to-allocation control.  RaSA fixes a global cross-layer rank pool by
+construction and evaluates reconstruction and task quality
+\citep{he2025rasa}, so there is no learned partition to interpret.  LiSA
+measures input-dependent attention-score similarity and sensitivity, then
+trains alignment and difference-compensation modules and directly evaluates
+the compressed model \citep{mu2026lisa}; this is nonlinear attention-output
+reuse, not the linear factor chart studied here.  These papers are negative
+evidence for a prevalence claim and positive examples of validating a
+structural intervention, not examples of historical-truth misinterpretation.
+
+Most other cross-layer sharing work is not evidence of the alleged
+misinterpretation.  Dynamic Layer Tying searches over explicit copying
+actions \citep{davidhay2024dynamic}; Basis Sharing and FiPS target
+compression, reconstruction, and downstream quality
+\citep{wang2025basis,uyuk2026fips}; Geo-Sharing selects a low-curvature
+compression assignment \citep{zhang2025geosharing}.  None of these claims a
+learned soft factor chart recovers a historical truth.
+
+MASA is an especially close mixed boundary case
+\citep[AAAI pp.~29262--29263; arXiv v2, supplementary p.~14]{zhussip2026share}.
+In its from-scratch path, each attention projection has
+$\widehat W=DC$: shared atoms $D$ and per-layer coefficients $C$ are jointly
+learned, each coefficient is stated to lie in $\mathbb R$, and the paper
+declines the atom soft constraints it has just described.  A block embedding
+plus three-layer MLP produces $C$ during training before the MLP is discarded.
+Thus the retained inference factor obeys
+$(D,C)\mapsto(DR,R^{-1}C)$.  Under
+$\Theta=\widehat W^\top$, this maps exactly to $A=C^\top$ and $B=D^\top$, but
+$A$ is unconstrained rather than row-simplex and the indirect MLP training law
+is not our Euclidean $Z/B$ response law.
+
+The paper calls coefficients atom contributions and shared atoms carriers of
+cross-layer statistical regularities.  More strongly, its arXiv v2 supplement
+uses atom cosine (Equation~18) to describe distinct versus redundant atoms and
+says raw-$C$ heatmaps reveal specialization, redundancy, and layer-wise
+adaptivity.  These are genuine, but weak, chart-level structural
+interpretations: the paper defines no historical or generative target, reports
+no structure-recovery metric, and makes no separate hard action from $C$.
+For pretrained models it instead groups consecutive blocks using KL divergence
+between vocabulary-space distributions of block outputs, then applies
+orthonormal matrix PCA, residual refinement, and downstream validation.  That
+action is function-derived rather than coefficient-derived; the PCA constraint
+removes general scale/shear freedom but still permits an orthogonal change of
+basis within the retained subspace.  MASA therefore shows that descriptive
+coordinate reading occurs, while remaining negative evidence for the stronger
+historical-recovery and coordinate-to-action narrative.  Likewise,
+\citet{yeh2022equivariance} is a positive recovery result for an explicitly
+defined planted equivariance/partition target under stated assumptions, not
+an example of the error studied here.  The defensible empirical claim is
+therefore narrow: some systems use learned coordinates to make structural
+actions, and those actions should be audited for representation dependence and
+downstream consequence.
+
+A separate 2026 preprint supplies a particularly relevant metric-to-decision
+warning without involving a learned factor chart.  In Pythia experiments,
+\citet{khilar2026crosslayer} report that cross-layer subspace coupling improves
+two-sided Frobenius reconstruction over a per-layer SVD baseline by (37.2\%)
+at 1.4B scale, yet produces WikiText-2 perplexity (159.14) versus (50.17)
+for that baseline.  Their measured per-layer activation error increases by a
+matching factor of about three.  This is direct prior evidence that a
+weight-space proxy can rank structural compression choices incorrectly and
+that deployed consequences or activation-matched controls are needed.  It is
+not a result about gauge-equivalent coordinates, a learned router, or the
+same-function-to-different-action chain isolated in our ASLoRA audit.
+
+\paragraph{Exact novelty boundary.}
+Jacobian--Gram response operators are standard tangent-kernel objects
+\citep{jacot2018neural}.  More generally, \citet{marcotte2026intrinsic} write
+the lifted Euclidean flow as
+$-D\phi(\theta)D\phi(\theta)^\top\nabla f$; for
+$\phi(U,V)=UV^\top$, their matrix-factor response acts as
+$G\mapsto UU^\top G+GVV^\top$.  Under
+$U\leftrightarrow A$, $V\leftrightarrow B^\top$, this is the direct
+non-softmax factor-response precedent, but it contains neither the rowwise
+$J(a_i)^2$ blocks nor a common-fiber stabilizer classification.
+For a single value--softmax output, the derivation in
+\citet[Lemma~D.2]{varre2026gradient} already contains
+$\dot\beta=(\|s\|^2I+VC(s)^2V^\top)r$, with
+$C(s)=\operatorname{Diag}(s)-ss^\top$ and $r=-\nabla\ell$.
+Thus the local squared-covariance response is also prior art.
+The reduction of a linear-factor $GL$ gauge to an orthogonal Euclidean
+isometry and optimizer-compatible softmax permutation/shift symmetries
+are further precedents \citep{singh2026loss,lau2026symmetry}.
+Gauge-correction work further derives quotient-volume biases and balanced
+representatives for stochastic dynamics with matrix-factor and attention
+symmetries \citep{aladrah2026implicit}; its target is a stationary
+implicit-bias law, not equality of the finite-width instantaneous response at
+two fixed charts.
+
+Two identifiability precedents rule out broader priority language.
+\citet[Thm.~4.1]{tran2025linear} prove that, for their ReLU expert class,
+equality of a dense softmax-MoE function over its input domain, together with
+pairwise distinct expert functions and pairwise distinct gate-vector
+differences in each model, identifies its expert functions and gates up to a common gate translation
+and a permutation.  \citet[Prop.~1 and Thm.~1]{nguyen2023demystifying} prove
+translation/label identifiability and a global linear lower bound from
+conditional-density Hellinger distance to a Voronoi parameter metric for an
+exact-fitted Gaussian softmax MoE on a compact parameter set.  Their
+observables are respectively an entire MoE function and a conditional
+density; neither compares two $AB$ charts on a common exact product fiber
+through their Euclidean instantaneous effective-gradient response.  We
+therefore claim neither the first softmax permutation/translation
+identifiability result nor the first global inverse bound for a softmax-gated
+model.  The Gram-to-Procrustes step also has a standard quantitative
+antecedent \citep[Lem.~5.4]{tu2016lowrank}; our quantitative addition is only
+the complete model-specific chain on the displayed uniform nondegenerate set.
+
+A still closer intermediate step is already known for nonnegative
+representations.  \citet[Theorem~2 and Appendix~D.2]{dorrell2026convex}
+consider a representation matrix \(Z\), its sample Gram \(Z^\top Z\), and
+orthogonal changes \(Z'=OZ\).  Under two tight-scattering/convex-hull
+conditions, nonnegativity of \(Z'\) forces \(O\) to be a permutation.  With
+\(Z=A^\top\), \(Z'=(A')^\top\), and \(O=M^\top\), the Gram step of our proof is
+exactly in that form.  Their scattering hypotheses are additional geometry,
+however, not consequences of a strictly positive full-rank router.  In fact,
+their first condition requires the convex hull of the representation columns
+to contain an ellipsoid that touches every coordinate hyperplane, whereas the
+convex hull of finitely many strictly positive router rows stays a positive
+distance from every such hyperplane.  Our local \(B^\top C_i^2B\) response
+blocks, not nonnegativity or the Gram alone, exclude the residual orthogonal
+ambiguity.  The cited theorem supplies no perturbation inverse, and its
+authors explicitly state that their sufficient scattering conditions are not
+proved necessary.  We therefore credit the orthogonal-to-permutation
+mechanism while retaining only the response-specific completion and stability
+chain as candidate additions.
+
+The subsequent diagonal-algebra step is also not a new mechanism.
+\citet[Theorem~2.3]{afsari2008sensitivity} proves essential uniqueness of a
+nonorthogonal exact joint diagonalizer precisely when no two columns of the
+matrix of diagonal entries are collinear.  Once our proof has obtained
+\(M^\top\operatorname{Diag}(a_i)M=\operatorname{Diag}(a_i')\) for every
+layer \(i\), their diagonal-entry matrix is \(A\); full column rank is stronger
+than their pairwise noncollinearity condition, so their result yields a
+monomial \(M\) before the row-sum constraint \(M\ones=\ones\) reduces it to a
+permutation.  Their Section~4 and Theorems~4.1--4.2 further give first-order,
+cost-function-specific perturbation formulas for stationary joint
+diagonalizers, with sensitivity controlled by diagonalizer conditioning and a
+modulus of uniqueness.  This directly precedes approximate diagonalization in
+our Steps 3--4.  It does not, however, recover the router Gram and covariance
+families from a response operator, nor give our global compact-set bound,
+conditioned on a common exact effective product, from response-operator
+distance to the simultaneous \((A,B)\) permutation orbit.  The candidate
+quantitative increment is therefore only that complete
+model-specific chain, not joint-diagonalization uniqueness or sensitivity.
+
+The same final step also has a global robust tensor precedent.  Stack the
+diagonal family into
+\(\mathcal T=\sum_{k=1}^K e_k\otimes e_k\otimes A'_{:k}\).  The approximate
+congruences in our proof compare its decomposition \([I,I,A']\) with
+\([M^\top,M^\top,A]\).  Under our singular-value and norm bounds, the three
+reference factors have robust Kruskal ranks \(K,K,K\); for \(K\ge2\), their
+sum satisfies \(3K\ge2K+2\).  Consequently,
+\citet[Theorem~5]{bhaskara2014uniqueness} already supplies global stability of these bounded tensor factors up to
+one permutation and diagonal rescalings. With its conditioning parameters
+fixed, Theorem~5 is linear in the discrepancy: its required tensor accuracy
+is the requested factor accuracy divided by a fixed polynomial in those
+parameters. The linear exponent is therefore not an addition of this paper.  This is stronger than viewing Afsari's result as the only robust
+precedent for Steps~3--4.  It still begins from two close tensor
+decompositions: it does not derive that tensor comparison from the complete
+response operator, enforce the common exact effective product, or give the
+tailored explicit linear end-to-end constant for the simultaneous \((A,B)\)
+orbit. We therefore do not claim the diagonal-tensor robust permutation
+step, its global character, or its linear error dependence as new.
+
+The optimizer metric is essential.  \citet[Thms.~1--2]{vanoostrum2023invariance}
+show that the pushforward of a natural parameter gradient is a tangent-space
+projection and is invariant under diffeomorphic reparameterization.  Along a
+feasible full-rank factor gauge $A'=AM$, $B'=M^{-1}B$, the two charts span the
+same product tangent space because
+\[
+ \{XB+AY:X\ones=0\}
+ =\{X'B'+A'Y':X'\ones=0\},
+ \qquad X'=XM,\quad Y'=M^{-1}Y.
+\]
+Thus this response does not reduce $GL(K)$ to
+permutations.  Riemannian quotient optimization explicitly treats
+$(G,H)$ and $(GM^{-1},HM^\top)$ as one point under invariant metrics
+\citep{mishra2014fixedrank}.  These are exact counter-boundaries to any
+metric-independent reading of our theorem, which concerns only the stated
+Euclidean $Z/B$ flow with common known positive rates and temperature.
+
+Two recent softmax-attention analyses provide additional, architecture-level
+boundaries.  \citet{wang2025complete} characterize the generic
+function-preserving group of standard multi-head attention as independent
+query--key and value--output $GL$ actions, together with head permutations;
+\citet{wang2025gaugefiber} study quotient/Fisher geometry and the horizontal
+natural gradient, assuming no Fisher degeneracy beyond gauge directions.
+Their factors are Q/K and V/output projection
+matrices, not a row-simplex shared router and basis bank, and their observable
+is the Transformer function or quotient geometry rather than equality of two
+Euclidean effective-gradient response operators.  Conversely,
+\citet{goel2026training} show that a Gaussian softmax self-attention population
+loss reduces to a weighted matrix-factorization loss and analyze a
+preconditioned, regularized optimizer.  In that model the Gaussian expectation
+cancels the softmax normalization before the factor loss is formed; the paper
+does not classify gauges from complete Jacobian--Gram response.  These sources
+therefore strengthen the prior-art boundary without implying
+Theorem~\ref{thm:response_stabilizer}.
+
+Finite operator observation is likewise not new.  In
+\citet[Sec.~3.3, Eqs.~(7)--(9)]{novak2022fast}, applying NTK--vector products
+to the $O$ identity columns reconstructs an $O\times O$ finite NTK.  The
+variable map here is $O\mapsto LD$, their NTK to the learning-rate-weighted
+response Jacobian Gram, and their identity column to $\operatorname{vec}(G)$.
+More general probing writes an operator in a known linear family and recovers
+its coefficients from matrix--vector products
+\citep{chiu2012matrix,halikias2024structured,otto2023recovering}; the formal
+COLT result of \citet{amsel2026query} gives broader approximate query bounds,
+including linear matrix families, with access to both operator directions.
+Our $K$-probe construction is only a response-specific use of the known
+support and shared-block form that compresses the generic $LD$ identity
+probes under $D-K\ge L$.  It is not claimed as a new matrix-probing
+principle.  We also checked the primary full text of
+\citet{stupariu2026optimizer}: its Adam/Muon experiments analyze performance,
+loss geometry, and ranks, but contain no response-stabilizer, inverse, or
+tomography theorem; workshop metadata alone is not used to infer priority.
+
+Against those components, our theoretical addition is restricted to the
+following combination in Theorem~\ref{thm:response_stabilizer} and the explicit
+nondegenerate quantitative inverse in
+Corollary~\ref{cor:response_stability}: for a full-rank softmax router and
+full-row-rank shared bases evaluated under the specified Euclidean $Z/B$
+response law,
+two charts on one common exact product fiber have equal complete instantaneous
+response for every effective gradient only when they differ by a basis
+permutation, while response closeness controls distance to that orbit only on the stated uniformly
+interior, well-conditioned, norm-bounded set.  We did not find this combined
+stabilizer or its model-specific inverse in the audited full texts; generic
+inverse-function and perturbation tools are not claimed as new.
+Corollary~\ref{cor:finite-noisy-main} further combines the response inverse
+with a uniform bound outside a noisy product's estimated row space, giving
+a whole-feasible-set diameter bound from $K$ designed queries under the
+stated domain, dimension, and product-noise conditions.  These results
+identify the current chart relative to a named optimizer metric; they do not
+identify an AdamW trajectory, a functional-equivalence partition, or a
+historical graph.
+
+Empirically, we conduct a scoped ASLoRA nearest-action audit.  A common
+$GL(r)$ change of basis preserves every adapted layer while it can change the
+raw running-$B$ ranking.  We distinguish that historical selection proxy from
+the current directed weight perturbation, layer-specific activation-weighted
+disturbance, and full-validation consequence of the candidate tie.  This
+system-specific chain---rather than a claim that gauge dependence or trained
+merge sensitivity is newly discovered---is an auxiliary empirical
+contribution.

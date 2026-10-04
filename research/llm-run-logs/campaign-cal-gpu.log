@@ -1,0 +1,6 @@
+{"stage": "experiments.train_llm_shared", "model": "pythia160m", "seed": 102, "split": "calibration", "device": 2, "exit_code": 0, "log": ".artifact-llm/train_llm_shared-calibration-pythia160m-102-1790280917060574007.log"}
+{"stage": "experiments.train_llm_shared", "model": "pythia1b", "seed": 101, "split": "calibration", "device": 1, "exit_code": 0, "log": ".artifact-llm/train_llm_shared-calibration-pythia1b-101-1790280917060201052.log"}
+{"stage": "experiments.train_llm_shared", "model": "pythia1b", "seed": 102, "split": "calibration", "device": 3, "exit_code": 0, "log": ".artifact-llm/train_llm_shared-calibration-pythia1b-102-1790280917060393265.log"}
+{"stage": "experiments.observe_llm_shared", "model": "pythia160m", "seed": 102, "split": "calibration", "device": 2, "exit_code": 0, "log": ".artifact-llm/observe_llm_shared-calibration-pythia160m-102-1790280933631171138.log"}
+{"stage": "experiments.observe_llm_shared", "model": "pythia1b", "seed": 101, "split": "calibration", "device": 1, "exit_code": 0, "log": ".artifact-llm/observe_llm_shared-calibration-pythia1b-101-1790280938264470674.log"}
+{"stage": "experiments.observe_llm_shared", "model": "pythia1b", "seed": 102, "split": "calibration", "device": 3, "exit_code": 0, "log": ".artifact-llm/observe_llm_shared-calibration-pythia1b-102-1790280940873787858.log"}

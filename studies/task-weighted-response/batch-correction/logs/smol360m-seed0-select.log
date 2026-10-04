@@ -1,0 +1,3 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Token indices sequence length is longer than the specified maximum sequence length for this model (23986 > 8192). Running this sequence through the model will result in indexing errors
+smol360m 0 selection locked {'weight': 4501, 'isotropic_response': 4501, 'task_response': 2951, 'task_single': 2951, 'activation': 10101, 'direct_loss': 4501, 'random': 3220}

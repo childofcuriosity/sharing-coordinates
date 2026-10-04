@@ -1,0 +1,31 @@
+{
+  "format": "trusted-source-freeze-v1",
+  "created_utc": "2026-09-24T17:52:09.469764+00:00",
+  "source_sha256": {
+    "src/trusted_recovery.py": "9848ec73fd594fb593cace3e49cd22ad2833019038893bd87b376afbe9186e91",
+    "experiments/build_trusted_observations.py": "481f22da802d84c9026a027b18e9cdb34a61a6d42465d16260e0f0ecd17ff5f2",
+    "experiments/run_trusted_recovery.py": "3d7ca258d3d3b5a1e9b32317dda4df064d8274a480d84d407326c6cbfd38b6e6",
+    "experiments/trusted_protocol.py": "ddd611cbc636c3acb54dd6a2ff581fa2e2c6ebbbc7316a77dbba0f736d21731c",
+    "experiments/calibrate_trusted_recovery.py": "2cc003cb856514fb463e1cbdcfa3effd61cffe5753621172e76ea113a05c6d21",
+    "research/TRUSTED_RECOVERY_PROTOCOL.md": "8a54fb7019a851c8f03d8f054addd8439236d5a46b73a8da2fd2c44a1e433d6e",
+    "experiments/train_enhancement.py": "732b5e713fc8c5cffe81467675bcd2370dd3957054abb79ad63aa77b616bac7e",
+    "experiments/run_autograd_tomography.py": "3ba5fc82dd58faf09ddbacbae2c69c50ab510f9d3f6937a03b9658b883faea56",
+    "src/response_factor_recovery.py": "5a547467d14607f7000033633cc516dcd611c382e28da76fce221061ff670718",
+    "src/response_identifiability.py": "77e2a69c05e8690d735578f4e24389fd697fb6163bed2b9c36800e503ff995e6",
+    "src/enhancement.py": "91d4071e8d1a2ea9c755baccbd5d525f597590230270af83854e13a2bfb516ee",
+    "src/language.py": "ecaa60d51756ba37888429f8b71962693085df62dd5358fe9bc896e43b46b0ad",
+    "src/models.py": "2de707405452dcf04159afef79ad3c717d34f355df6774986ccde82d6ea549d8",
+    "src/patterns.py": "a9f2a75dd3148759bc68760e1f4493f2628244e20c00ab967c6d23f4edb2b4c2"
+  },
+  "starts": 3,
+  "max_evaluations": 80,
+  "development_files": [
+    "results/trusted_recovery/development/language10.json",
+    "results/trusted_recovery/development/pilot0.json",
+    "results/trusted_recovery/development/synthetic0.json",
+    "results/trusted_recovery/development/synthetic1.json",
+    "results/trusted_recovery/development/synthetic2.json",
+    "results/trusted_recovery/development/synthetic3.json"
+  ],
+  "development_note": "One solver variant. Four synthetic seeds and byte-LM seed10 inspected; rank-contracted failures remain. No calibration/evaluation recovery outcomes existed at freeze."
+}
