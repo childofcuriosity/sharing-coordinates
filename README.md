@@ -4,6 +4,8 @@
 
 [Current paper](paper/main.pdf) | [LaTeX source](paper/main.tex) | [Evidence and scope](research/BALANCED_MANUSCRIPT_EVIDENCE.md)
 
+准备在博士申请后恢复研究时，先读[中文接续记录](research/BALANCED_MANUSCRIPT_EVIDENCE.md)：其中保存了研究动机、已有二阶段结果、可视化文献核查与研究人员讨论计划，以及下一步概率问题。
+
 This project asks whether initialization and optimization help make shared-weight interpretations reliable, even though the same effective weights admit different coefficient heatmaps. The current manuscript develops the balance relation and records the human reasoning that redirected the investigation toward actual training and the adequacy of existing practice.
 
 ## The mathematical result
