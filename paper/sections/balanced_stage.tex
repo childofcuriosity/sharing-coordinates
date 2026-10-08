@@ -1,0 +1,219 @@
+\section{From equivalent representations to actual training}
+Sharing a small bank of parameters across layers saves memory while allowing each layer to use a different combination of the bank. A coefficient heatmap makes these combinations visible. However, the same effective weights can admit different dictionaries and coefficients. A change of basis may alter the heatmap without changing the model's predictions.
+
+That observation was the starting point of this investigation. It was not the conclusion the human researcher wanted to draw. Constructing an equivalent representation says little about whether initialization and training produce such representations, and even less about whether a change in the plot alters the interpretation its users actually make. The researcher instead asked whether ordinary training favors representations in which existing interpretations remain adequate. This led to an implicit-bias approach: study the representations selected jointly by initialization and optimization, rather than treat all algebraically feasible decompositions as equally relevant.
+
+We isolate representation selection by assuming a unique optimal effective weight matrix $W_\star$ and taking successful optimization to that product as a premise. The endpoint must then lie in the fiber $DC=W_\star$; the question is which of its factorizations initialization and optimization select. This is the second stage of the investigation. Its central object is the balanced subset of that fiber. Balance couples dictionary and coefficient geometry, providing a reason why relational interpretations can be well defined without identifying each coordinate.
+
+This distinction gives the current narrative its scope. Equivalent heatmaps motivate a question; optimization restricts which representations are relevant; balance protects particular relations within those representations. The intended positive explanation is that coordinate ambiguity need not undermine existing practice. A general claim that problematic heatmaps are rare under practical training is still unproved. This working manuscript records that progress without treating the remaining probability question as answered.
+
+\section{A fixed optimal product and its factorization fiber}
+Let $w_\ell\in\R^m$ be a vectorized layer weight and write
+\begin{equation}\label{eq:model}
+ W=[w_1,\ldots,w_L]=DC,\qquad
+ D=[d_1,\ldots,d_r]\in\R^{m\times r},\quad C\in\R^{r\times L}.
+\end{equation}
+Column $c_\ell=C_{:,\ell}$ is the recipe for layer $\ell$, since $w_\ell=Dc_\ell$. Row $r_s=C_{s,:}$ records how basis $d_s$ is used across all layers. Clustering columns groups layers; clustering rows groups bases. Transposing an array for plotting or software storage does not change which objects are compared.
+
+The running example is three layer weights and two shared bases. It has $2m+6$ parameters rather than $3m$, saving parameters when $m>6$. More generally, $r<L$ and $mr+rL<mL$ express the intended compression setting. The model is algebraically related to a bottleneck two-layer linear network, but the original network need not have two layers, and $W$ is a stack of layer weights rather than its end-to-end linear operator.
+
+Assume the effective optimization problem has a unique minimizer over the represented rank class:
+\begin{equation}
+ W_\star=\mathop{\rm argmin}_{\operatorname{rank}(W)\leq r} L(W).
+\end{equation}
+We further assume that training converges to a factor pair attaining this optimal product. This is the starting premise for the present analysis, rather than a convergence problem we attempt to solve here. It requires neither zero loss nor the ability to fit a full-rank target exactly. Uniqueness fixes the product of the endpoint; representation selection remains to be understood. Define
+\begin{equation}
+ \mathcal F_\star=\{(D,C):DC=W_\star\},\qquad
+ \mathcal B_\star=\{(D,C)\in\mathcal F_\star:D^\top D=CC^\top\}.
+\end{equation}
+For any invertible $T$, the transformation $(D,C)\mapsto(DT,T^{-1}C)$ stays in $\mathcal F_\star$. The subset $\mathcal B_\star$ is the object singled out by balance. These sets have manifold descriptions on regular fixed-rank strata; we use ``fiber'' and ``subset'' globally because redundant factors and rank changes can introduce singularities. In particular, balance is a quadratic condition, not a hyperplane.
+
+All identities below hold at any balanced product, optimal or not. Under the unique-product assumption they become statements about the representations of the same $W_\star$. If optimal products are nonunique, they apply separately to each product and do not assert that different runs have identical geometries.
+
+\section{The balanced subset}
+\subsection{Balance relates a basis to its use across layers}
+Set $H=D^\top D-CC^\top$. At balance, its diagonal and off-diagonal entries give
+\begin{equation}\label{eq:direct}
+ \|d_s\|^2=\sum_\ell c_{s\ell}^2=\|r_s\|^2,
+ \qquad \langle d_s,d_t\rangle=\langle r_s,r_t\rangle.
+\end{equation}
+Each basis norm matches the aggregate coefficient norm for that basis. The second identity matches the relations between bases to the relations between their usage records. Different bases need not have equal norms, and different layers need not use them equally. Equivalently, $\|Da\|=\|C^\top a\|$ for every internal direction $a\in\R^r$.
+
+\begin{proposition}[Dictionary columns and coefficient rows]
+At balance, $\|d_s-d_t\|=\|r_s-r_t\|$ for all $s,t$. Cosine similarities also agree whenever the vectors are nonzero.
+\end{proposition}
+\begin{proof}
+Expand the squared distances using \eqref{eq:direct}; normalize its inner-product identity for the cosine claim.
+\end{proof}
+This is a direct $D$--$C$ correspondence. Comparing high-dimensional bases can be replaced by comparing their coefficient rows with exactly the same pairwise geometry. For identical distance-based objectives, the implication is equivalent decisions, not necessarily improved accuracy. It does not turn a layer-clustering problem into a basis-clustering problem.
+
+\subsection{Balance is a minimum-total-norm representation}
+For a scalar product $w=dc$, $d^2+c^2\geq2|w|$, with equality when $|d|=|c|$. A large basis and tiny coefficient can represent the same product but use a larger total squared magnitude. The matrix statement makes this meaning precise.
+
+\begin{proposition}[Variational characterization]
+For fixed $W$ and $r\geq\operatorname{rank}(W)$,
+\begin{equation}
+ \min_{DC=W}\tfrac12(\|D\|_F^2+\|C\|_F^2)=\|W\|_*.
+\end{equation}
+Its minimizers are exactly the balanced factorizations of width $r$.
+\end{proposition}
+\begin{proof}
+For a compact SVD $W=U\Sigma V^\top$, any factors satisfy
+\[
+\|W\|_*=\operatorname{tr}(U^\top DCV)
+\leq\|U^\top D\|_F\|CV\|_F
+\leq\tfrac12(\|D\|_F^2+\|C\|_F^2).
+\]
+The factors $U\Sigma^{1/2}$ and $\Sigma^{1/2}V^\top$ attain equality, padded with zeros if necessary. At any minimizer, the product-preserving variation $D(t)=D\exp(tS)$, $C(t)=\exp(-tS)C$ has objective derivative $\operatorname{tr}(SH)$ at zero. Taking all symmetric $S$ gives $H=0$. Conversely, Proposition~\ref{prop:gram} implies that balanced factors have objective $\operatorname{tr}(C^\top C)=\|W\|_*$.
+\end{proof}
+Thus balance removes unnecessary exchange of scale between factors. This characterization is a property of representations of a fixed product, not a claim that every task optimizer solves this auxiliary minimization problem.
+
+\subsection{The geometry of layers is determined by the product}
+\begin{proposition}[Coefficient Gram identity]\label{prop:gram}
+If $W=DC$ and $D^\top D=CC^\top$, then
+\begin{equation}\label{eq:gram}
+ G:=C^\top C=(W^\top W)^{1/2}.
+\end{equation}
+All balanced factorizations of a fixed $W$ therefore have the same coefficient-column lengths, pairwise distances, and defined angles.
+\end{proposition}
+\begin{proof}
+$W^\top W=C^\top D^\top DC=C^\top CC^\top C=G^2$.
+Since $G$ is positive semidefinite, uniqueness of the positive semidefinite square root gives \eqref{eq:gram}. Distances are $G_{ii}+G_{jj}-2G_{ij}$; defined cosines are $G_{ij}/\sqrt{G_{ii}G_{jj}}$.
+\end{proof}
+Equation~\eqref{eq:gram} is a matrix square root. It does not replace a signed coefficient heatmap with elementwise squares. If $W=U\Sigma V^\top$, the two Gram matrices are $V\Sigma^2V^\top$ and $V\Sigma V^\top$. Their directions in layer-index space agree, but their relative weights differ. Weight angles and coefficient angles need not coincide, and distance rankings can differ.
+
+\begin{corollary}[Two-sided proximity]
+At balance,
+\begin{equation}\label{eq:proximity}
+ \|w_i-w_j\|\leq\sqrt{\|W\|_{\rm op}}\,\|c_i-c_j\|,
+ \qquad
+ \|c_i-c_j\|\leq2^{1/4}\sqrt{\|w_i-w_j\|}.
+\end{equation}
+In particular, $c_i=c_j$ if and only if $w_i=w_j$.
+\end{corollary}
+\begin{proof}
+Let $A=(W^\top W)^{1/2}$ and $z=e_i-e_j$. Since $A^2\preceq\|W\|_{\rm op}A$, the first bound follows. Also $z^\top Az\leq\|Az\|\|z\|=\sqrt2\|Wz\|$ by Cauchy--Schwarz, giving the second. The case $i=j$ is immediate.
+\end{proof}
+Without balance there is already a one-sided bound $\|w_i-w_j\|\leq\|D\|_{\rm op}\|c_i-c_j\|$. The additional content is therefore not merely that nearby coefficients yield nearby weights: balance fixes the coefficient Gram matrix from the product and gives a converse proximity bound. It cannot by itself certify that a nearest-coefficient choice is the best downstream sharing choice.
+
+For imperfect balance the exact residual relation is
+\begin{equation}\label{eq:residual}
+ W^\top W=G^2+C^\top HC.
+\end{equation}
+This locates the error term that approximate-balance analysis must control. It is not evidence that any particular practical run makes the term small.
+
+\subsection{Why different-looking heatmaps can still agree}
+Any orthogonal $Q$ preserves product and balance under $(D,C)\mapsto(DQ^\top,QC)$. In the full-rank case $\operatorname{rank}(W_\star)=r$, a compact SVD gives the complete balanced family
+\begin{equation}
+ D=U\Sigma^{1/2}Q^\top,\qquad C=Q\Sigma^{1/2}V^\top,\qquad Q\in O(r).
+\end{equation}
+To see completeness, full-rank factors have the form $D=UA$, $C=A^{-1}\Sigma V^\top$; balance gives $(AA^\top)^2=\Sigma^2$, hence $AA^\top=\Sigma$ and the displayed orthogonal parameterization.
+
+A vector $(1,0)^\top$ can become $(1/\sqrt2,1/\sqrt2)^\top$ under such a rotation. Its appearance changes while its relations to all other transformed coefficient columns remain fixed. Thus protected relational readings do not suffer an exception inside $\mathcal B_\star$: the invariance is exact, not merely high-probability. By contrast, balance does not protect every cell value or identify the semantic role of one basis. The algebraic example illustrates freedom; it does not estimate how often training explores it. No uniform distribution over rotations is needed or proved here.
+
+\section{The optimization premise}
+\subsection{Gradient-flow selection inherited from initialization}
+Implicit bias supplies the route from all feasible representations toward representations relevant to training. Its precise form matters. For differentiable $L(DC)$, equal-rate Euclidean gradient flow, with time rescaled, is
+\begin{equation}
+ \dot D=-FC^\top,\qquad \dot C=-D^\top F,
+ \qquad F=\nabla_WL(W).
+\end{equation}
+Differentiation gives $\dot H=0$. This conservation law is established balance theory; see Du et al.~\cite{du}, Theorem 2.2. Under our premise that training reaches $W_\star$, it restricts the endpoint to
+\[
+ \{(D,C)\in\mathcal F_\star:D^\top D-CC^\top=H(0)\}.
+\]
+Thus initialization and the optimization rule jointly restrict the selected representation, even though the loss only fixes the product. Balanced initialization selects $\mathcal B_\star$. For nonzero initial imbalance, the same argument selects the corresponding invariant level set. Small initial imbalance remains small in absolute norm; controlling relative distortion near degenerate products requires an additional estimate.
+
+Adding the same isotropic decay $-\lambda D,-\lambda C$ gives $\dot H=-2\lambda H$. This calculation describes another optimization rule, generally changing the effective product as well. It cannot be described as guaranteed motion on the fixed optimal fiber, and its limiting product need not minimize the original unregularized loss.
+
+At a stationary point of the deterministic factor loss, ordinary gradient flow stops. A flat family of minima does not by itself imply later diffusion or drift within that family. Discrete updates, stochastic gradients, adaptive preconditioning, unequal rates, and coefficient-generating networks need separate arguments. The useful logical sequence is therefore
+\[
+ \text{optimization conditions}\ \Longrightarrow\ \text{balance}\ \Longrightarrow\ \text{protected relations}.
+\]
+Our two-stage formulation first fixes the attained product and then asks how its representation is selected. Gradient flow answers the latter question through a constraint inherited along training. SGD also admits a genuine second-stage selection mechanism, derived next.
+
+\subsection{SGD selects weighted balance after reaching the optimal fiber}
+Consider fixed matrix observations $Y_1,\ldots,Y_N\in\R^{m\times L}$ with mean $W_\star$ of rank $r$, and
+\[
+ L(W)=\frac1{2N}\sum_i\|W-Y_i\|_F^2
+      =\tfrac12\|W-W_\star\|_F^2+\text{constant}.
+\]
+The effective optimum is unique even when the minimum sample-averaged loss is positive. Take the factor width to be $r$, and assume isotropic empirical residual covariance:
+\[
+ \frac1N\sum_i\operatorname{vec}(Y_i-W_\star)
+ \operatorname{vec}(Y_i-W_\star)^\top=\sigma^2 I,\qquad \sigma>0.
+\]
+Ordinary SGD samples independent batches of size $B$ with replacement, using the same step size $\eta$ for both factors, without momentum or decay. Write $\tau^2=\sigma^2/B$. This noise comes from sampling the fixed observations. We begin at any specified $x_0=(D_0,C_0)\in\mathcal F_\star$, leaving the first-stage arrival distribution outside the present question.
+
+For $f(D,C)=DC$, its derivative is $J(\Delta D,\Delta C)=\Delta D C+D\Delta C$. On the optimal fiber the factor-loss Hessian is $\mathcal H=J^*J$ and the stochastic-gradient covariance is $\tau^2\mathcal H$. The small-step manifold limit of Li, Wang, and Arora~\cite{lwa}, Theorem 4.6 and Corollary 5.2, therefore gives, on time $t=n\eta^2$,
+\begin{equation}\label{eq:sgdflow}
+ \dot x=-\frac{\tau^2}{4}\operatorname{grad}_{\mathcal F_\star}\Psi(x),
+ \qquad \Psi(D,C)=L\|D\|_F^2+m\|C\|_F^2.
+\end{equation}
+Here $\Psi=\operatorname{tr}\mathcal H=\|J\|_{\rm HS}^2$. The gradient uses the induced Euclidean metric on the fiber. This is the limiting motion of SGD, not a projection added to its implementation: repeated departures from the fiber and restoration toward it leave a systematic tangential drift.
+
+The local hypotheses of that limit hold here. Minimal factor width makes the fiber smooth, with tangent space
+\[
+ T_x\mathcal F_\star=\{(DA,-AC):A\in\R^{r\times r}\}=\ker J.
+\]
+Consequently $\mathcal H$ is positive definite on the normal space. The polynomial loss has a local attracting neighborhood at each point; on compact fiber patches its excess loss is comparable to squared normal distance, and gradient-flow restoration is exponential. These facts give the smooth local endpoint map used by the cited limit. Finite observations give bounded sampling noise on these neighborhoods.
+
+\begin{proposition}[Second-stage attraction]
+Every solution of \eqref{eq:sgdflow} starting on $\mathcal F_\star$ approaches
+\[
+ \mathcal A_\star=\{(D,C)\in\mathcal F_\star:L D^\top D=m CC^\top\}.
+\]
+For every such entry point and every $\varepsilon,\theta>0$, there is a finite slow time $T$ and then an $\eta_0>0$ such that, for $0<\eta<\eta_0$,
+\[
+ \Pr\!\left[\operatorname{dist}\bigl(x_\eta(\lfloor T/\eta^2\rfloor),
+ \mathcal A_\star\bigr)<\varepsilon\right]>1-\theta.
+\]
+\end{proposition}
+\begin{proof}
+Along a tangent direction $(DA,-AC)$,
+$d\Psi=2\operatorname{tr}[A(LD^\top D-mCC^\top)]$.
+Thus all stationary points satisfy weighted balance. Along the flow,
+$\dot\Psi=-(\tau^2/4)\|\operatorname{grad}_{\mathcal F_\star}\Psi\|^2$.
+Its fiber sublevel sets are compact: both factors are bounded and their fixed rank-$r$ product prevents rank loss at a limit. The flow is global on each such set; bounded derivatives and finite dissipation force its gradient to zero. Every accumulation point therefore belongs to $\mathcal A_\star$, proving attraction. For each fixed finite $T$, the cited manifold theorem, localized around this compact trajectory, gives convergence in probability of the SGD endpoint to the deterministic limit. Choose $T$ so the limit is within $\varepsilon/2$ of the set, then choose $\eta$ small enough for the remaining error probability to be below $\theta$.
+\end{proof}
+
+For $W_\star=U\Sigma V^\top$, the selected family is
+\[
+ D=(m/L)^{1/4}U\Sigma^{1/2}Q^\top,\qquad
+ C=(L/m)^{1/4}Q\Sigma^{1/2}V^\top,\quad Q\in O(r).
+\]
+Hence $C^\top C=\sqrt{L/m}(W_\star^\top W_\star)^{1/2}$ and
+$D^\top D=(m/L)CC^\top$. The earlier geometric guarantees hold after this known scalar adjustment: layer angles are unchanged, and distances are multiplied by a common factor. Equivalently, rescaling $D$ by $(L/m)^{1/4}$ and $C$ by its reciprocal preserves $W_\star$ and gives ordinary balance.
+
+This result supplies the intended positive second-stage explanation. Every entry point is attracted to a family with the same layer-coefficient geometry; understanding the first-stage distribution over entry points is unnecessary for that conclusion. The probability statement is asymptotic, with $T$ chosen before the step-size threshold; it does not give a numerical guarantee for a specified practical schedule. On this time scale each point of the selected family is stationary. Remaining rotation on longer time scales is a separate question and is not needed for the geometric invariance proved here.
+
+\section{Reading the application claims}
+The relevance of a guarantee depends on what the original method uses the coordinates to say or do. We distinguish the following checked cases.
+
+MASA visualizes coefficients across layers to discuss atom usage and specialization; separate atom-cosine plots motivate possible redundancy and further compression~\cite{masa}, Figures 3--10. The direct row--basis correspondence concerns the latter geometry; the column-Gram identity concerns relations among layers. Neither assigns a unique meaning to each atom coordinate. Version 2 generates coefficients with block embeddings and a three-layer MLP, so the free-factor flow argument cannot be transferred automatically. Its pretrained PCA procedure is a separate setting. The coefficient-visualization prose reverses the axes shown in Figure 7(a): the actual figure has layers on rows and atoms on columns. This is a display convention, not a different mathematical relationship.
+
+NPAS clusters either direct coefficient vectors or embeddings mapped to coefficients by a shared affine transformation~\cite{npas}, Sections 3.1--3.2. Appendix B.3 compares grouping strategies. This is a motivated and empirically evaluated design. In an equal-size common-template reduction, its direct layer coefficients are the columns of our $C$; a row-oriented implementation does not change the comparison. Embedding distances require the extra map, and the full procedure resizes templates. Sharing a parameter group retains layer-specific weight generation rather than forcing identical layer weights.
+
+ASLoRA compares historical averages of $B_i$ with a shared $A$ for adaptive merging; its colored allocation diagram records which layers actually share a matrix~\cite{aslora}, Sections 3.2--3.5 and Figure 3. SuperWeights uses gradient similarity to address conflicting updates and compares it with coefficient clustering~\cite{sw}, Section 2.2 and Table 3. Current factor geometry alone does not guarantee historical-distance reliability, compatible future gradients, or preserved task performance.
+
+These readings establish specific possible contacts with the theory, not proof that the papers need it. A plot of a learned dictionary can be a correct description without claiming basis-independent semantics. Brief interpretation does not establish that the authors found nothing useful, nor that the mathematical ambiguity changes their conclusions. The present result has to be matched to an actual protected quantity before it can explain a practice.
+
+\section{How the research question changed}
+This account records the human researcher's stated reasoning through 9 October 2026. The starting interest was economical parameter sharing: combining fewer parameter sets across more layers. AI-assisted exploration emphasized equivalent decompositions and constructed counterexamples. The researcher challenged their practical relevance, asking whether initialization and training already favor representations for which existing interpretations remain adequate.
+
+That intervention changed the standard of evidence from existence to actual probability mass. High-dimensional random-vector geometry and measure arguments were proposed as possible tools, not commitments to a particular theorem. The researcher identified the joint effect of initialization and optimization as an implicit-bias question and proposed fixing the optimal effective product first, isolating its decomposition fiber before considering nonunique optimal products. Questions about remaining preference or motion within balanced representations followed. This development motivated the analysis; it does not establish a literal sequence of training phases or a rotational mixing time.
+
+Further corrections kept the setting tied to its purpose. The researcher required more layers than shared bases, rejected automatic transfer of overparameterized interpolation claims to bottleneck compression, and insisted that the interpreted heatmaps contain raw signed coefficients rather than squared shares. The positive question became why existing practice can be sufficient and when it is insufficient. The researcher then recognized that the relation between effective weights and coefficient geometry might explain useful similarity readings despite nonuniqueness.
+
+The final redirection was toward the application authors' actual claims. Checking what MASA, ASLoRA, and NPAS do separated basis usage, layer geometry, sharing assignments, and sharing decisions. The researcher distinguished mathematical novelty from application value, and chose to write this stage despite the absence of an established publishable contribution. These are substantive scientific decisions in the development of the work.
+
+AI assistance supplied literature retrieval, candidate technical tools, algebraic derivations, earlier implementation support, and drafting. The decision to investigate natural-training relevance, and the repeated corrections to preserve that motivation, came from the human researcher. We do not attribute those choices to AI. The conversation does not independently establish priority for every intermediate formula, and this account supports no general claim about AI scientific capability.
+
+\section{What remains for future work}
+The mathematical argument uses established balance and SGD manifold-limit results together with direct linear algebra; we do not claim a new proof technique. Word-embedding research already relates factor nonidentifiability to similarity evaluation and studies restrictions leaving orthogonal freedom~\cite{word}. The novelty of a particular shared-basis application has not been established. The progress at this stage is a precise, positive correspondence and a better specified question, rather than a demonstrated new method.
+
+The matrix SGD model establishes second-stage attraction and an asymptotic probability statement. Transfer to application training is the first unresolved link: do its actual parameterization, residual statistics, regularization, and optimizer preserve this mechanism, with what probability and error? Uniform sampling on a balanced family may illuminate conditional geometry, but cannot substitute for this training distribution. Neither constructed examples nor earlier exploratory experiments answer that population-level question.
+
+Downstream utility is the second link. For a common fixed dictionary, replacing two weights by their average incurs minimum total squared error $\frac12\|D(c_i-c_j)\|^2$. This describes that particular operation; it is not NPAS group sharing or a guarantee on task loss. Any decision extension must specify the operation, the quantity to preserve, and the additional effect of inputs or subsequent training.
+
+Grouping matrices by their shared low-rank approximation error is also existing research. The optimal rank-$r$ squared Frobenius error is the tail sum of squared singular values; Shamrai~\cite{svd} develops error-controlled clustering for concatenated SVD. Applying that identity to groups of layers is not by itself a new contribution. Future work should determine whether the balance correspondence adds a useful guarantee, a cheaper equivalent computation, or a better decision relative to such prior work. These possibilities remain questions, not results of this manuscript.

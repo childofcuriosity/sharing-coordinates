@@ -1,95 +1,30 @@
-\documentclass{article}
-\usepackage{style/iclr2027/iclr2027_conference,times}
-\input{style/iclr2027/math_commands.tex}
-\usepackage{amsmath,amssymb,amsthm,booktabs,multirow,graphicx,subcaption,float}
-\usepackage{microtype}
-\usepackage{hyperref}
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
 \hypersetup{hidelinks}
-\usepackage{url}
-
-\newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
-\newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
-\newtheorem{definition}{Definition}
-\newtheorem{example}{Example}
-\newcommand{\simplex}{\Delta}
-\newcommand{\ones}{\mathbf{1}}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\TyingBench}{\textsc{TyingBench}}
-\newcommand{\method}{\textsc{ShareProbe}}
-\IfFileExists{generated/key_numbers.tex}{\input{generated/key_numbers.tex}}{}
-\IfFileExists{generated/response_tomography_numbers.tex}{%
-  \input{generated/response_tomography_numbers.tex}}{}
-
-\title{Sharing Coordinates:\\
-Identifiability and Decisions from Optimizer Response}
-
-\author{Author information pending}
-
-% Local preprint draft: use the template's unnumbered layout, then replace
-% its conference-publication header immediately after the title.
-\iclrfinalcopy
-
+\newcommand{\R}{\mathbb R}
+\title{Sharing Coordinates:\\Balanced Factorizations and the Interpretation of Shared Weights}
+\author{}
+\date{Working manuscript --- 9 October 2026}
 \begin{document}
 \maketitle
-\lhead{Preprint --- September 2026}
-
 \begin{abstract}
-When layers share learned bases $B$ through a simplex router $A$, the effective
-weights $\Theta=AB$ need not determine the factors or their training
-response. We ask whether optimizer response identifies these factors and
-how much of that information is needed to choose a hard-sharing partition. For positive full-rank softmax factors on the same product
-fiber, complete response under fixed known positive Euclidean block rates
-and temperature is identical if and only if the factors differ by a common
-permutation. On uniformly nondegenerate domains we give an explicit inverse
-bound and, when $D-K\ge L$, a whole-feasible-set diameter bound from a noisy
-product and $K$ designed matrix-valued response queries, under a stated
-product-noise threshold. Choosing a partition requires less information than recovering the factors:
-balanced router-vector clustering minimizes full Hilbert--Schmidt response
-error, and off-diagonal router Gram entries suffice to select a minimizer. It can conflict with weight clustering, even across
-factorizations with the same effective product. We construct a fixed
-squared loss whose gradient flow separates coefficient assignment from weight clustering, and
-give conditional agreement and trajectory-error bounds. In controlled experiments on nine pretrained language models, factor
-recovery error was below $0.034$ in all 1,080 cases meeting the specified
-rank conditions. A separate three-model study found decision crossings
-during training. Local SGD from a selected real-model state and a
-controlled regression experiment reproduced crossings across numerical
-precisions and step sizes. The results establish identification under the
-specified optimizer and show that training can separate sharing decisions.
-They leave open how often crossings occur and whether full factor recovery
-improves downstream performance; they do not identify historical sharing
-graphs or extend the identification theorem to AdamW.
+Equivalent factorizations of shared layer weights can produce very different coefficient heatmaps. Their existence does not establish that an interpretation fails under ordinary training. We approach this question through implicit bias: with the optimal effective weight matrix fixed, which representations does optimization admit, and what do they preserve? In the balanced subset of the factorization fiber, dictionary-column geometry equals coefficient-row geometry, and the coefficient-column Gram matrix is the positive semidefinite square root of the effective-weight Gram matrix. These identities explain how relational information can remain determined despite coordinate ambiguity. For a matrix regression model with isotropic sampling residuals, the small-step SGD dynamics on the optimal fiber approach weighted balance from every entry point. This yields an asymptotic probability guarantee for proximity to the selected set and fixes relational geometry without identifying individual basis coordinates. The account also records the human reasoning that redirected the investigation from constructed ambiguity toward the adequacy of existing practice. The analysis uses established balance theory and elementary matrix arguments; novelty and downstream utility are not claimed to be settled. Transfer to practical training schedules and downstream parameter allocation remains open.
 \end{abstract}
-
-\input{sections/introduction}
-\input{sections/related_work}
-\input{sections/problem}
-\input{sections/theory}
-\input{sections/dynamics}
-\input{sections/experiments}
-\input{sections/discussion}
-
-\bibliography{references}
-\bibliographystyle{style/iclr2027/iclr2027_conference}
-
-\input{sections/ai_disclosure}
-
-\appendix
-\input{sections/appendix_decision_theory}
-\input{sections/appendix_dynamics_experiments}
-\input{sections/appendix_secondary_theory}
-\input{sections/appendix_theory}
-\input{sections/appendix_enhancement_theory}
-\input{sections/appendix_finite_noisy_theory}
-\input{sections/appendix_trusted_theory}
-\input{sections/appendix_literature}
-\input{sections/appendix_llm_study}
-\input{sections/appendix_earlier_experiments}
-\input{sections/benchmark}
-\input{sections/appendix_detailed_results}
-\input{sections/appendix}
-\input{sections/appendix_enhancement_experiments}
-\input{sections/appendix_trusted_experiments}
-
+\input{sections/balanced_stage}
+\begingroup\small
+\begin{thebibliography}{9}
+\setlength{\itemsep}{2pt}
+\bibitem{du} Simon S. Du, Wei Hu, and Jason D. Lee. Algorithmic Regularization in Learning Deep Homogeneous Models: Layers are Automatically Balanced. NeurIPS, 2018. \url{https://arxiv.org/abs/1806.00900}.
+\bibitem{lwa} Zhiyuan Li, Tianhao Wang, and Sanjeev Arora. What Happens after SGD Reaches Zero Loss? -- A Mathematical Framework. ICLR, 2022. \url{https://arxiv.org/abs/2110.06914}.
+\bibitem{masa} Magauiya Zhussip, Dmitriy Shopkhoev, Ammar Ali, and Stamatios Lefkimmiatis. Share Your Attention: Transformer Weight Sharing via Matrix-based Dictionary Learning. arXiv:2508.04581, version 2, 2026. \url{https://arxiv.org/html/2508.04581v2}.
+\bibitem{aslora} Junyan Hu, Xue Xiao, Mengqi Zhang, Yao Chen, Zhaochun Ren, Zhumin Chen, and Pengjie Ren. ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers. arXiv:2412.10135, version 2, 2024. \url{https://arxiv.org/html/2412.10135v2}.
+\bibitem{npas} Bryan A. Plummer, Nikoli Dryden, Julius Frost, Torsten Hoefler, and Kate Saenko. Neural Parameter Allocation Search. ICLR, 2022. \url{https://arxiv.org/pdf/2006.10598}.
+\bibitem{sw} Piotr Teterwak, Soren Nelson, Nikoli Dryden, Dina Bashkirova, Kate Saenko, and Bryan A. Plummer. Learning to Compose SuperWeights for Neural Parameter Allocation Search. WACV, 2024. \url{https://arxiv.org/abs/2312.01274}.
+\bibitem{word} Rachel Carrington, Karthik Bharath, and Simon Preston. Invariance and identifiability issues for word embeddings. NeurIPS, 2019. \url{https://arxiv.org/abs/1911.02656}.
+\bibitem{svd} Maksym Shamrai. Concatenated Matrix SVD: Compression Bounds, Incremental Approximation, and Error-Constrained Clustering. arXiv:2601.11626, version 1, 2026. \url{https://arxiv.org/html/2601.11626v1}.
+\end{thebibliography}
+\endgroup
 \end{document}
